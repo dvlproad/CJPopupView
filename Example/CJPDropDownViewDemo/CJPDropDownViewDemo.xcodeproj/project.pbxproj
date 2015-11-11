@@ -23,7 +23,7 @@
 		805A173F1BF2F7FB00424769 /* DropDownRadioButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 805A172F1BF2F7FB00424769 /* DropDownRadioButtons.m */; };
 		805A17401BF2F7FB00424769 /* down_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 805A17321BF2F7FB00424769 /* down_dark.png */; };
 		805A17411BF2F7FB00424769 /* RadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 805A17341BF2F7FB00424769 /* RadioButton.m */; };
-		805A17421BF2F7FB00424769 /* RadioButtonDropDown.xib in Resources */ = {isa = PBXBuildFile; fileRef = 805A17351BF2F7FB00424769 /* RadioButtonDropDown.xib */; };
+		805A17421BF2F7FB00424769 /* RadioButton_DropDown.xib in Resources */ = {isa = PBXBuildFile; fileRef = 805A17351BF2F7FB00424769 /* RadioButton_DropDown.xib */; };
 		805A17431BF2F7FB00424769 /* RadioButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 805A17371BF2F7FB00424769 /* RadioButtons.m */; };
 		805A17441BF2F7FB00424769 /* ArrayDictonaryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 805A173A1BF2F7FB00424769 /* ArrayDictonaryModel.m */; };
 		805A17451BF2F7FB00424769 /* TableViewArraySingle.m in Sources */ = {isa = PBXBuildFile; fileRef = 805A173C1BF2F7FB00424769 /* TableViewArraySingle.m */; };
@@ -67,7 +67,7 @@
 		805A17321BF2F7FB00424769 /* down_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down_dark.png; sourceTree = "<group>"; };
 		805A17331BF2F7FB00424769 /* RadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioButton.h; sourceTree = "<group>"; };
 		805A17341BF2F7FB00424769 /* RadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioButton.m; sourceTree = "<group>"; };
-		805A17351BF2F7FB00424769 /* RadioButtonDropDown.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RadioButtonDropDown.xib; sourceTree = "<group>"; };
+		805A17351BF2F7FB00424769 /* RadioButton_DropDown.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RadioButton_DropDown.xib; sourceTree = "<group>"; };
 		805A17361BF2F7FB00424769 /* RadioButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioButtons.h; sourceTree = "<group>"; };
 		805A17371BF2F7FB00424769 /* RadioButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioButtons.m; sourceTree = "<group>"; };
 		805A17391BF2F7FB00424769 /* ArrayDictonaryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayDictonaryModel.h; sourceTree = "<group>"; };
@@ -161,12 +161,12 @@
 		804DB32E1BF2E2C4002E9574 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				804DB32F1BF2E2C4002E9574 /* CombineTestVC.h */,
-				804DB3301BF2E2C4002E9574 /* CombineTestVC.m */,
-				804DB3311BF2E2C4002E9574 /* CombineTestVC.xib */,
 				804DB3321BF2E2C4002E9574 /* IndependentTestVC.h */,
 				804DB3331BF2E2C4002E9574 /* IndependentTestVC.m */,
 				804DB3341BF2E2C4002E9574 /* IndependentTestVC.xib */,
+				804DB32F1BF2E2C4002E9574 /* CombineTestVC.h */,
+				804DB3301BF2E2C4002E9574 /* CombineTestVC.m */,
+				804DB3311BF2E2C4002E9574 /* CombineTestVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -206,7 +206,7 @@
 				805A17311BF2F7FB00424769 /* image_RadioButton */,
 				805A17331BF2F7FB00424769 /* RadioButton.h */,
 				805A17341BF2F7FB00424769 /* RadioButton.m */,
-				805A17351BF2F7FB00424769 /* RadioButtonDropDown.xib */,
+				805A17351BF2F7FB00424769 /* RadioButton_DropDown.xib */,
 				805A17361BF2F7FB00424769 /* RadioButtons.h */,
 				805A17371BF2F7FB00424769 /* RadioButtons.m */,
 			);
@@ -314,7 +314,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				805A17421BF2F7FB00424769 /* RadioButtonDropDown.xib in Resources */,
+				805A17421BF2F7FB00424769 /* RadioButton_DropDown.xib in Resources */,
 				804DB3361BF2E2C4002E9574 /* CombineTestVC.xib in Resources */,
 				805A17401BF2F7FB00424769 /* down_dark.png in Resources */,
 				804DB3381BF2E2C4002E9574 /* IndependentTestVC.xib in Resources */,

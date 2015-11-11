@@ -27,7 +27,7 @@
         NSString *title = [array firstObject];
         [titles_head addObject:title];
     }
-    [comRadioButtons setTitles:titles_head radioButtonNidName:@"RadioButtonDropDown"];
+    [comRadioButtons setTitles:titles_head radioButtonNidName:@"RadioButton_DropDown"];
 }
 
 - (void)radioButtons:(RadioButtons *)radioButtons chooseIndex:(NSInteger)index{

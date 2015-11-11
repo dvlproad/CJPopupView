@@ -26,14 +26,14 @@
     
     CGRect rect_radioButtons111 = CGRectMake(0, 164, self.view.frame.size.width, 40);
     commonRadioButtons111 = [[RadioButtons alloc]initWithFrame:rect_radioButtons111];
-    [commonRadioButtons111 setTitles:@[@"人物", @"爱好"] radioButtonNidName:@"RadioButtonDropDown"];
+    [commonRadioButtons111 setTitles:@[@"人物", @"爱好"] radioButtonNidName:@"RadioButton_DropDown"];
     commonRadioButtons111.delegate = self;
     commonRadioButtons111.tag = 111;
     [self.view addSubview:commonRadioButtons111];
     
     CGRect rect_radioButtons222 = CGRectMake(0, 264, self.view.frame.size.width, 40);
     commonRadioButtons222 = [[RadioButtons alloc]initWithFrame:rect_radioButtons222];
-    [commonRadioButtons222 setTitles:@[@"人物", @"爱好", @"其他", @"地区"] radioButtonNidName:@"RadioButtonDropDown"];
+    [commonRadioButtons222 setTitles:@[@"人物", @"爱好", @"其他", @"地区"] radioButtonNidName:@"RadioButton_DropDown"];
     commonRadioButtons222.delegate = self;
     commonRadioButtons222.tag = 222;
     [self.view addSubview:commonRadioButtons222];
@@ -46,8 +46,8 @@
         @[
           @{kChooseArrayTitle:@"李",
             kChooseArrayValue:@[
-                    @{kChooseArrayTitle:@"李超前", kChooseArrayValue:@[@"有点忙", @"很忙"]},
-                    @{kChooseArrayTitle:@"李莎", kChooseArrayValue:@[@"非常忙", @"超级忙"]}]
+                    @{kChooseArrayTitle:@"先生", kChooseArrayValue:@[@"李先生1", @"李先生2"]},
+                    @{kChooseArrayTitle:@"女士", kChooseArrayValue:@[@"李女士3", @"李女士4"]}]
             },
           @{kChooseArrayTitle:@"0",
             kChooseArrayValue:@[@{kChooseArrayTitle:@"0-0", kChooseArrayValue:@[@"000", @"001", @"002"]},
@@ -78,8 +78,8 @@
         
     }else if(index == 1){
         NSArray *C_0_data = @[
-                              @{kChooseArrayTitle:@"爱", kChooseArrayValue: @[@"爱什么", @"爱碎觉", @"爱学习"]},
-                              @{kChooseArrayTitle:@"是", kChooseArrayValue: @[@"是妹妹", @"是女孩", @"是食肉动物", @"是什么鬼"]},
+                              @{kChooseArrayTitle:@"娱乐", kChooseArrayValue: @[@"爱旅行", @"爱唱歌", @"爱电影"]},
+                              @{kChooseArrayTitle:@"学习", kChooseArrayValue: @[@"爱读书", @"爱看报", @"爱书法", @"爱其他"]},
                               @{kChooseArrayTitle:@"0", kChooseArrayValue: @[@"0-0", @"0-1", @"0-2", @"0-3"]},
                               @{kChooseArrayTitle:@"1", kChooseArrayValue: @[@"1-1", @"1-2", @"1-3"]}
                               ];
@@ -100,7 +100,7 @@
         NSArray *chooseArray = @[@"区域", @"鼓楼", @"台江", @"仓山"];
         
         TableViewArraySingle *customView = [[TableViewArraySingle alloc]initWithFrame:CGRectZero];
-        [customView setFrame:CGRectMake(200, 0, self.view.frame.size.width*2/3, 200)];
+        [customView setFrame:CGRectMake(self.view.frame.size.width*2/4, 0, self.view.frame.size.width/4, 200)];
         customView.datas = chooseArray;
         [customView setDelegate:self];
         customView.tag = radioButtons.tag;
@@ -130,6 +130,7 @@
 - (void)tv_ArrayDictionary:(TableViewsArrayDictionary *)tv_ArrayDictionary didSelectText:(NSString *)text{
     NSLog(@"text1 = %@, %@", text, tv_ArrayDictionary.adModel.selecteds_titles);
     
+    //通过tag，反取到弹出该视图的RadioButtons
     NSInteger tag = tv_ArrayDictionary.tag;
     RadioButtons *comRadioButtons = nil;
     if (tag == commonRadioButtons111.tag) {
@@ -144,6 +145,7 @@
 - (void)tv_ArraySingle:(TableViewArraySingle *)tv_ArraySingle didSelectText:(NSString *)text{
     NSLog(@"text2 = %@", text);
     
+    //通过tag，反取到弹出该视图的RadioButtons
     NSInteger tag = tv_ArraySingle.tag;
     RadioButtons *comRadioButtons = nil;
     if (tag == commonRadioButtons111.tag) {

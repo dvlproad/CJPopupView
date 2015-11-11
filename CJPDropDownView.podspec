@@ -10,8 +10,8 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "7.0"
 
   s.source       = { :git => "https://github.com/dvlproad/CJPopup.git", :tag => "1.0.0" }
-  s.source_files  = "CJPDropDownView/**/*.{h,m}" #分清文件目录与spec相对应目录下的哪
-  s.resources = "CJPDropDownView/**/*.{png}"
+  s.source_files  = "CJPDropDownView/**/*.{h,m}"
+  s.resources = "CJPDropDownView/**/*.{png,xib}"
   s.frameworks = 'UIKit'
 
   # s.library   = "iconv"
