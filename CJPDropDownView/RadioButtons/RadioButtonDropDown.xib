@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RadioButton">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAe-7v-20B">
+                    <rect key="frame" x="0.0" y="0.0" width="80" height="44"/>
+                    <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="Button">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" red="1" green="0.0" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down_dark.png" translatesAutoresizingMaskIntoConstraints="NO" id="RVL-rl-VeM">
+                    <rect key="frame" x="66" y="16" width="12" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="12" id="elv-PA-nZc"/>
+                        <constraint firstAttribute="width" constant="12" id="vem-Tw-cCV"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="tAe-7v-20B" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="93l-Ky-ULI"/>
+                <constraint firstAttribute="trailing" secondItem="RVL-rl-VeM" secondAttribute="trailing" constant="2" id="W0r-GY-VLA"/>
+                <constraint firstAttribute="trailing" secondItem="tAe-7v-20B" secondAttribute="trailing" id="YE4-vY-ahC"/>
+                <constraint firstItem="tAe-7v-20B" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bJi-9m-N4j"/>
+                <constraint firstAttribute="centerY" secondItem="RVL-rl-VeM" secondAttribute="centerY" id="edQ-mZ-SaU"/>
+                <constraint firstAttribute="bottom" secondItem="tAe-7v-20B" secondAttribute="bottom" id="vKD-Wc-Suc"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btn" destination="tAe-7v-20B" id="qZf-9D-CiQ"/>
+                <outlet property="imageV" destination="RVL-rl-VeM" id="Cv5-fG-GtB"/>
+            </connections>
+            <point key="canvasLocation" x="57" y="323"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="down_dark.png" width="30" height="30"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
