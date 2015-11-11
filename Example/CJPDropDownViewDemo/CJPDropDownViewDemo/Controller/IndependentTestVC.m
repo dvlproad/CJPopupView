@@ -25,21 +25,21 @@
     [self.view addSubview:btn];
     
     CGRect rect_radioButtons111 = CGRectMake(0, 164, self.view.frame.size.width, 40);
-    commonRadioButtons111 = [[RadioButtons alloc]initWithFrame:rect_radioButtons111];
+    commonRadioButtons111 = [[RadioButtons_DropDown alloc]initWithFrame:rect_radioButtons111];
     [commonRadioButtons111 setTitles:@[@"人物", @"爱好"] radioButtonNidName:@"RadioButton_DropDown"];
     commonRadioButtons111.delegate = self;
     commonRadioButtons111.tag = 111;
     [self.view addSubview:commonRadioButtons111];
     
     CGRect rect_radioButtons222 = CGRectMake(0, 264, self.view.frame.size.width, 40);
-    commonRadioButtons222 = [[RadioButtons alloc]initWithFrame:rect_radioButtons222];
+    commonRadioButtons222 = [[RadioButtons_DropDown alloc]initWithFrame:rect_radioButtons222];
     [commonRadioButtons222 setTitles:@[@"人物", @"爱好", @"其他", @"地区"] radioButtonNidName:@"RadioButton_DropDown"];
     commonRadioButtons222.delegate = self;
     commonRadioButtons222.tag = 222;
     [self.view addSubview:commonRadioButtons222];
 }
 
-- (void)radioButtons:(RadioButtons *)radioButtons chooseIndex:(NSInteger)index{
+- (void)radioButtons:(RadioButtons_DropDown *)radioButtons chooseIndex:(NSInteger)index{
     
     if(index == 0){
         NSArray *C_0_data =
@@ -132,7 +132,7 @@
     
     //通过tag，反取到弹出该视图的RadioButtons
     NSInteger tag = tv_ArrayDictionary.tag;
-    RadioButtons *comRadioButtons = nil;
+    RadioButtons_DropDown *comRadioButtons = nil;
     if (tag == commonRadioButtons111.tag) {
         comRadioButtons = commonRadioButtons111;
     }else if (tag == commonRadioButtons222.tag){
@@ -147,7 +147,7 @@
     
     //通过tag，反取到弹出该视图的RadioButtons
     NSInteger tag = tv_ArraySingle.tag;
-    RadioButtons *comRadioButtons = nil;
+    RadioButtons_DropDown *comRadioButtons = nil;
     if (tag == commonRadioButtons111.tag) {
         comRadioButtons = commonRadioButtons111;
     }else if (tag == commonRadioButtons222.tag){

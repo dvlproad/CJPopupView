@@ -13,7 +13,7 @@
 - (id)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if(self){
-        comRadioButtons = [[RadioButtons alloc]initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
+        comRadioButtons = [[RadioButtons_DropDown alloc]initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
         comRadioButtons.delegate = self;
         [self addSubview:comRadioButtons];
     }

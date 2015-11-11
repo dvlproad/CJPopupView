@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-#import "RadioButtons.h"
+#import <RadioButtons/RadioButtons_DropDown.h>
 #import "TableViewsArrayDictionary.h"
 #import "TableViewArraySingle.h"
 
 @interface IndependentTestVC : UIViewController<RadioButtonsDelegate, TableViewsArrayDictionaryDelegate, TableViewArraySingleDelegate>{
-    RadioButtons *commonRadioButtons111;
-    RadioButtons *commonRadioButtons222;
+    RadioButtons_DropDown *commonRadioButtons111;
+    RadioButtons_DropDown *commonRadioButtons222;
 }
 
 @end

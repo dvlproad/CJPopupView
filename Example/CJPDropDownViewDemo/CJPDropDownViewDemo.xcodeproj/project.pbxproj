@@ -21,13 +21,10 @@
 		804DB33F1BF2E450002E9574 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 804DB33D1BF2E450002E9574 /* area.plist */; };
 		804DB3401BF2E450002E9574 /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 804DB33E1BF2E450002E9574 /* city.plist */; };
 		805A173F1BF2F7FB00424769 /* DropDownRadioButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 805A172F1BF2F7FB00424769 /* DropDownRadioButtons.m */; };
-		805A17401BF2F7FB00424769 /* down_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 805A17321BF2F7FB00424769 /* down_dark.png */; };
-		805A17411BF2F7FB00424769 /* RadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 805A17341BF2F7FB00424769 /* RadioButton.m */; };
-		805A17421BF2F7FB00424769 /* RadioButton_DropDown.xib in Resources */ = {isa = PBXBuildFile; fileRef = 805A17351BF2F7FB00424769 /* RadioButton_DropDown.xib */; };
-		805A17431BF2F7FB00424769 /* RadioButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 805A17371BF2F7FB00424769 /* RadioButtons.m */; };
 		805A17441BF2F7FB00424769 /* ArrayDictonaryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 805A173A1BF2F7FB00424769 /* ArrayDictonaryModel.m */; };
 		805A17451BF2F7FB00424769 /* TableViewArraySingle.m in Sources */ = {isa = PBXBuildFile; fileRef = 805A173C1BF2F7FB00424769 /* TableViewArraySingle.m */; };
 		805A17461BF2F7FB00424769 /* TableViewsArrayDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 805A173E1BF2F7FB00424769 /* TableViewsArrayDictionary.m */; };
+		B432783FFEBE5C0C4DBEF5A5 /* libPods-CJPDropDownViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E58B02A3290BD6D7AF1424 /* libPods-CJPDropDownViewDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0AD111FE8F0AC101C91679C7 /* Pods-CJPDropDownViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJPDropDownViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CJPDropDownViewDemo/Pods-CJPDropDownViewDemo.release.xcconfig"; sourceTree = "<group>"; };
 		804DB2ED1BF2E059002E9574 /* CJPDropDownViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CJPDropDownViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		804DB2F11BF2E059002E9574 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		804DB2F21BF2E059002E9574 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -64,18 +62,14 @@
 		804DB33E1BF2E450002E9574 /* city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city.plist; sourceTree = "<group>"; };
 		805A172E1BF2F7FB00424769 /* DropDownRadioButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDownRadioButtons.h; sourceTree = "<group>"; };
 		805A172F1BF2F7FB00424769 /* DropDownRadioButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropDownRadioButtons.m; sourceTree = "<group>"; };
-		805A17321BF2F7FB00424769 /* down_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down_dark.png; sourceTree = "<group>"; };
-		805A17331BF2F7FB00424769 /* RadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioButton.h; sourceTree = "<group>"; };
-		805A17341BF2F7FB00424769 /* RadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioButton.m; sourceTree = "<group>"; };
-		805A17351BF2F7FB00424769 /* RadioButton_DropDown.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RadioButton_DropDown.xib; sourceTree = "<group>"; };
-		805A17361BF2F7FB00424769 /* RadioButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioButtons.h; sourceTree = "<group>"; };
-		805A17371BF2F7FB00424769 /* RadioButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioButtons.m; sourceTree = "<group>"; };
 		805A17391BF2F7FB00424769 /* ArrayDictonaryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayDictonaryModel.h; sourceTree = "<group>"; };
 		805A173A1BF2F7FB00424769 /* ArrayDictonaryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayDictonaryModel.m; sourceTree = "<group>"; };
 		805A173B1BF2F7FB00424769 /* TableViewArraySingle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewArraySingle.h; sourceTree = "<group>"; };
 		805A173C1BF2F7FB00424769 /* TableViewArraySingle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewArraySingle.m; sourceTree = "<group>"; };
 		805A173D1BF2F7FB00424769 /* TableViewsArrayDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewsArrayDictionary.h; sourceTree = "<group>"; };
 		805A173E1BF2F7FB00424769 /* TableViewsArrayDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewsArrayDictionary.m; sourceTree = "<group>"; };
+		8AB060FA626C286B14DBE3C5 /* Pods-CJPDropDownViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJPDropDownViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CJPDropDownViewDemo/Pods-CJPDropDownViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		B4E58B02A3290BD6D7AF1424 /* libPods-CJPDropDownViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CJPDropDownViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B432783FFEBE5C0C4DBEF5A5 /* libPods-CJPDropDownViewDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,12 +91,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37C2403C00BDC2553D9440A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B4E58B02A3290BD6D7AF1424 /* libPods-CJPDropDownViewDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		804DB2E41BF2E059002E9574 = {
 			isa = PBXGroup;
 			children = (
 				804DB2EF1BF2E059002E9574 /* CJPDropDownViewDemo */,
 				804DB3091BF2E059002E9574 /* CJPDropDownViewDemoTests */,
 				804DB2EE1BF2E059002E9574 /* Products */,
+				C52CE8FE6EF3D49FCBAD7086 /* Pods */,
+				37C2403C00BDC2553D9440A3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,7 +189,6 @@
 			isa = PBXGroup;
 			children = (
 				805A172D1BF2F7FB00424769 /* DropDownRadioButtons */,
-				805A17301BF2F7FB00424769 /* RadioButtons */,
 				805A17381BF2F7FB00424769 /* TableViewArray */,
 			);
 			name = CJPDropDownView;
@@ -200,27 +204,6 @@
 			path = DropDownRadioButtons;
 			sourceTree = "<group>";
 		};
-		805A17301BF2F7FB00424769 /* RadioButtons */ = {
-			isa = PBXGroup;
-			children = (
-				805A17311BF2F7FB00424769 /* image_RadioButton */,
-				805A17331BF2F7FB00424769 /* RadioButton.h */,
-				805A17341BF2F7FB00424769 /* RadioButton.m */,
-				805A17351BF2F7FB00424769 /* RadioButton_DropDown.xib */,
-				805A17361BF2F7FB00424769 /* RadioButtons.h */,
-				805A17371BF2F7FB00424769 /* RadioButtons.m */,
-			);
-			path = RadioButtons;
-			sourceTree = "<group>";
-		};
-		805A17311BF2F7FB00424769 /* image_RadioButton */ = {
-			isa = PBXGroup;
-			children = (
-				805A17321BF2F7FB00424769 /* down_dark.png */,
-			);
-			path = image_RadioButton;
-			sourceTree = "<group>";
-		};
 		805A17381BF2F7FB00424769 /* TableViewArray */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +217,15 @@
 			path = TableViewArray;
 			sourceTree = "<group>";
 		};
+		C52CE8FE6EF3D49FCBAD7086 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8AB060FA626C286B14DBE3C5 /* Pods-CJPDropDownViewDemo.debug.xcconfig */,
+				0AD111FE8F0AC101C91679C7 /* Pods-CJPDropDownViewDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -241,9 +233,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 804DB3101BF2E059002E9574 /* Build configuration list for PBXNativeTarget "CJPDropDownViewDemo" */;
 			buildPhases = (
+				A1FD94DCFB8B726D7BA7A6E6 /* Check Pods Manifest.lock */,
 				804DB2E91BF2E059002E9574 /* Sources */,
 				804DB2EA1BF2E059002E9574 /* Frameworks */,
 				804DB2EB1BF2E059002E9574 /* Resources */,
+				5888CA3ADC868F883F9857B3 /* Embed Pods Frameworks */,
+				57FDAFFE4BA169CEDC16359E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -314,9 +309,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				805A17421BF2F7FB00424769 /* RadioButton_DropDown.xib in Resources */,
 				804DB3361BF2E2C4002E9574 /* CombineTestVC.xib in Resources */,
-				805A17401BF2F7FB00424769 /* down_dark.png in Resources */,
 				804DB3381BF2E2C4002E9574 /* IndependentTestVC.xib in Resources */,
 				804DB3401BF2E450002E9574 /* city.plist in Resources */,
 				804DB2FC1BF2E059002E9574 /* Main.storyboard in Resources */,
@@ -335,6 +328,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		57FDAFFE4BA169CEDC16359E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CJPDropDownViewDemo/Pods-CJPDropDownViewDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5888CA3ADC868F883F9857B3 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CJPDropDownViewDemo/Pods-CJPDropDownViewDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1FD94DCFB8B726D7BA7A6E6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		804DB2E91BF2E059002E9574 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -347,9 +388,7 @@
 				804DB2F61BF2E059002E9574 /* AppDelegate.m in Sources */,
 				805A173F1BF2F7FB00424769 /* DropDownRadioButtons.m in Sources */,
 				804DB2F31BF2E059002E9574 /* main.m in Sources */,
-				805A17411BF2F7FB00424769 /* RadioButton.m in Sources */,
 				805A17441BF2F7FB00424769 /* ArrayDictonaryModel.m in Sources */,
-				805A17431BF2F7FB00424769 /* RadioButtons.m in Sources */,
 				805A17461BF2F7FB00424769 /* TableViewsArrayDictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,6 +509,7 @@
 		};
 		804DB3111BF2E059002E9574 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AB060FA626C286B14DBE3C5 /* Pods-CJPDropDownViewDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CJPDropDownViewDemo/Info.plist;
@@ -480,6 +520,7 @@
 		};
 		804DB3121BF2E059002E9574 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AD111FE8F0AC101C91679C7 /* Pods-CJPDropDownViewDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CJPDropDownViewDemo/Info.plist;

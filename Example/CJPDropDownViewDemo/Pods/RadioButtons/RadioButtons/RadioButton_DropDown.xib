@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -12,13 +12,10 @@
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAe-7v-20B">
                     <rect key="frame" x="0.0" y="0.0" width="80" height="44"/>
-                    <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.78017430929999998" green="0.86903425099999998" blue="0.62558724349999995" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <state key="normal" title="Button">
+                    <state key="normal">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <state key="selected">
-                        <color key="titleColor" red="1" green="0.0" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down_dark.png" translatesAutoresizingMaskIntoConstraints="NO" id="RVL-rl-VeM">
@@ -28,14 +25,24 @@
                         <constraint firstAttribute="width" constant="12" id="vem-Tw-cCV"/>
                     </constraints>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4u7-Jb-HgB">
+                    <rect key="frame" x="0.0" y="0.0" width="80" height="44"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="4u7-Jb-HgB" secondAttribute="bottom" id="6d0-IA-pEr"/>
+                <constraint firstItem="4u7-Jb-HgB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="8Fd-BT-dIj"/>
                 <constraint firstItem="tAe-7v-20B" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="93l-Ky-ULI"/>
                 <constraint firstAttribute="trailing" secondItem="RVL-rl-VeM" secondAttribute="trailing" constant="2" id="W0r-GY-VLA"/>
                 <constraint firstAttribute="trailing" secondItem="tAe-7v-20B" secondAttribute="trailing" id="YE4-vY-ahC"/>
                 <constraint firstItem="tAe-7v-20B" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bJi-9m-N4j"/>
+                <constraint firstItem="4u7-Jb-HgB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ccZ-uX-L2H"/>
                 <constraint firstAttribute="centerY" secondItem="RVL-rl-VeM" secondAttribute="centerY" id="edQ-mZ-SaU"/>
+                <constraint firstAttribute="trailing" secondItem="4u7-Jb-HgB" secondAttribute="trailing" id="kmi-Fe-iCe"/>
                 <constraint firstAttribute="bottom" secondItem="tAe-7v-20B" secondAttribute="bottom" id="vKD-Wc-Suc"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
@@ -43,6 +50,7 @@
             <connections>
                 <outlet property="btn" destination="tAe-7v-20B" id="qZf-9D-CiQ"/>
                 <outlet property="imageV" destination="RVL-rl-VeM" id="Cv5-fG-GtB"/>
+                <outlet property="lab" destination="4u7-Jb-HgB" id="3Og-7b-zJ8"/>
             </connections>
             <point key="canvasLocation" x="57" y="323"/>
         </view>
