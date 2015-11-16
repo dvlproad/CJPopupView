@@ -13,7 +13,7 @@
 - (id)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if(self){
-        comRadioButtons = [[RadioButtons_DropDown alloc]initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
+        comRadioButtons = [[RadioButtonsCanDrop alloc]initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
         comRadioButtons.delegate = self;
         [self addSubview:comRadioButtons];
     }
@@ -30,7 +30,7 @@
     [comRadioButtons setTitles:titles_head radioButtonNidName:@"RadioButton_DropDown"];
 }
 
-- (void)radioButtons:(RadioButtons *)radioButtons chooseIndex:(NSInteger)index{
+- (void)radioButtonsCanDrop:(RadioButtonsCanDrop *)radioButtonsCanDrop chooseIndex:(NSInteger)index{
     
     NSArray *chooseArray = [self.datas objectAtIndex:index];
     
@@ -38,11 +38,11 @@
     [customView setFrame:CGRectMake(self.frame.size.width*index/3, 264, self.frame.size.width/3, 200)];
     customView.datas = chooseArray;
     [customView setDelegate:self];
-    [comRadioButtons showDropDownExtendView:customView inView:self.superview complete:nil];
+    [comRadioButtons radioButtonsCanDrop_showDropDownExtendView:customView inView:self.superview complete:nil];
 }
 
 - (void)tv_ArraySingle:(TableViewArraySingle *)tv_ArraySingle didSelectText:(NSString *)text{
-    [comRadioButtons didSelectInExtendView:text];
+    [comRadioButtons radioButtonsCanDrop_didSelectInExtendView:text];
     
     if([self.delegate respondsToSelector:@selector(ddRadioButtons:didSelectText:)]){
         [self.delegate ddRadioButtons:self didSelectText:text];

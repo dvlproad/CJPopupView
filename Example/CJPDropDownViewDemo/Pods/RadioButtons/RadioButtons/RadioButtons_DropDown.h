@@ -8,14 +8,6 @@
 
 #import "RadioButtons.h"
 
-@interface RadioButtons_DropDown : RadioButtons{
-    
-}
-@property (nonatomic, strong) UIView *m_SuperView;
-@property (nonatomic, strong) UIView *tapV;
-@property (nonatomic, strong) UIView *extendView;
-
-- (void)showDropDownExtendView:(UIView *)extendView_m inView:(UIView *)superView complete:(void(^)(void))block;
-- (void)didSelectInExtendView:(NSString *)title;
+@interface RadioButtons_DropDown : RadioButtons
 
 @end

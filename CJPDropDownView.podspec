@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "CJPDropDownView"
-  s.version      = "1.0.2"
+  s.version      = "1.1.0"
   s.summary      = "类似美团的下拉视图"
   s.homepage     = "https://github.com/dvlproad/CJPopup"
   s.license      = "MIT"
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "7.0"
 
-  s.source       = { :git => "https://github.com/dvlproad/CJPopup.git", :tag => "1.0.2" }
+  s.source       = { :git => "https://github.com/dvlproad/CJPopup.git", :tag => "1.1.0" }
   s.source_files  = "CJPDropDownView/**/*.{h,m}"
   # s.resources = "CJPDropDownView/**/*.{png,xib}"
   s.frameworks = 'UIKit'
@@ -21,6 +21,6 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
-  s.dependency 'RadioButtons', '~> 1.0.0'
+  s.dependency 'RadioButtons', '~> 1.2.0'
 
 end

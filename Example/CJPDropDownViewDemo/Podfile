@@ -2,7 +2,7 @@ platform :ios, '7.0'
 #use_frameworks!
 
 target 'CJPDropDownViewDemo' do
-  pod 'RadioButtons', '~> 1.0.0'
+  pod 'RadioButtons', '~> 1.2.0'
 end
 
 target 'CJPDropDownViewDemoTests' do

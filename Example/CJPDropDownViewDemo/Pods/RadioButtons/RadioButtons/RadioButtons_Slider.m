@@ -19,32 +19,10 @@
 
 @implementation RadioButtons_Slider
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
 - (BOOL)shouldUpdateRadioButtonSelected_WhenClickSameRadioButton{   //固定为NO
     return NO;
 }
-
-- (BOOL)shouldDidDelegate_WhenClickSameRadioButton{ //可根据情况为YES或NO
-    return YES;
-}
-
-- (void)doSomethingExtra_WhenClickSameRadioButton:(RadioButton *)radioButton_same{ //重写继承的方法
-    //do nothing...
-}
-
-- (void)doSomethingExtra_WhenClickNewRadioButton:(RadioButton *)radioButton{
-    //do nothing...
-    NSInteger index = radioButton.tag - RadioButton_TAG_BEGIN;
-    [self selectRadioButtonIndex:index];
-}
-
 
 
 - (void)shouldMoveScrollViewToSelectItem:(RadioButton *)item{//滑动scrollView到显示出完整的radioButton
@@ -165,14 +143,14 @@
 
 
 - (void)selectRadioButtonIndex:(NSInteger)index{
-    RadioButton *radioButton_old = (RadioButton *)[self viewWithTag:RadioButton_TAG_BEGIN + currentExtendSection];
+    RadioButton *radioButton_old = (RadioButton *)[self viewWithTag:RadioButton_TAG_BEGIN + self.index_cur];
     radioButton_old.selected = NO;
     
     RadioButton *radioButton_cur = (RadioButton *)[self viewWithTag:RadioButton_TAG_BEGIN + index];
     radioButton_cur.selected = YES;
     [self shouldMoveScrollViewToSelectItem:radioButton_cur];
     
-    currentExtendSection = index;
+    self.index_cur = index;
 }
 
 

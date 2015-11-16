@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <RadioButtons/RadioButtons_DropDown.h>
+#import <RadioButtons/RadioButtonsCanDrop.h>
 #import "TableViewArraySingle.h"
 
 
@@ -19,8 +19,8 @@
 
 
 
-@interface DropDownRadioButtons : UIView<RadioButtonsDelegate, TableViewArraySingleDelegate>{
-    RadioButtons_DropDown *comRadioButtons;
+@interface DropDownRadioButtons : UIView<RadioButtonsCanDropDelegate, TableViewArraySingleDelegate>{
+    RadioButtonsCanDrop *comRadioButtons;
 }
 @property(nonatomic, strong) NSArray *datas;
 @property(nonatomic, strong) id<DropDownRadioButtonsDelegate> delegate;
