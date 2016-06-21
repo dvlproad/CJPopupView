@@ -8,8 +8,12 @@
 
 #import "IndependentTestVC.h"
 
-#define kChooseArrayTitle @"title"
-#define kChooseArrayValue @"value"
+#define kCategoryFirst  @"categoryFirst"    //eg:state  省
+#define kCategorySecond @"categorySecond"   //eg:city   市
+#define kCategoryThird  @"categoryThird"    //eg:area   区
+#define kCategoryFourth @"categoryFourth"   //eg:
+
+#define kCategoryValue  @"categoryValue"
 
 @interface IndependentTestVC ()
 
@@ -24,7 +28,7 @@
     [btn setTitle:@"测试,无下拉"];
     [self.view addSubview:btn];
     
-    CGRect rect_radioButtons111 = CGRectMake(0, 164, self.view.frame.size.width, 40);
+    CGRect rect_radioButtons111 = CGRectMake(0, 164, self.view.bounds.size.width+30, 40);
     commonRadioButtons111 = [[RadioButtonsCanDrop alloc]initWithFrame:rect_radioButtons111];
     [commonRadioButtons111 setTitles:@[@"人物", @"爱好"] radioButtonNidName:@"RadioButton_DropDown"];
     commonRadioButtons111.delegate = self;
@@ -42,64 +46,70 @@
 - (void)radioButtonsCanDrop:(RadioButtonsCanDrop *)radioButtonsCanDrop chooseIndex:(NSInteger)index{
     
     if(index == 0){
-        NSArray *C_0_data =
+        NSArray *component0Datas =
         @[
-          @{kChooseArrayTitle:@"李",
-            kChooseArrayValue:@[
-                    @{kChooseArrayTitle:@"先生", kChooseArrayValue:@[@"李先生1", @"李先生2"]},
-                    @{kChooseArrayTitle:@"女士", kChooseArrayValue:@[@"李女士3", @"李女士4"]}]
+          @{kCategoryFirst:@"福建省",
+            kCategoryValue:@[
+                    @{kCategorySecond:@"福州", kCategoryValue:@[@"鼓楼", @"台江", @"晋安", @"仓山", @"马尾"]},
+                    @{kCategorySecond:@"厦门", kCategoryValue:@[@"思明", @"湖里", @"集美", @"同安", @"海沧", @"翔安"]},
+                    @{kCategorySecond:@"漳州", kCategoryValue:@[@"龙海市", @"南靖县", @"云霄区", @"诏安县", @"华安县"]},
+                    @{kCategorySecond:@"泉州", kCategoryValue:@[@"丰泽", @"鲤城", @"洛江"]}]
             },
-          @{kChooseArrayTitle:@"0",
-            kChooseArrayValue:@[@{kChooseArrayTitle:@"0-0", kChooseArrayValue:@[@"000", @"001", @"002"]},
-                                @{kChooseArrayTitle:@"0-1", kChooseArrayValue:@[]},
-                                @{kChooseArrayTitle:@"0-2", kChooseArrayValue:@[@"020", @"021", @"022"]},
-                                @{kChooseArrayTitle:@"0-3", kChooseArrayValue:@[@"031", @"032", @"033"]}]
+          @{kCategoryFirst:@"四川",
+            kCategoryValue:@[
+                    @{kCategorySecond:@"成都", kCategoryValue:@[@"锦江", @"武侯", @"都江堰", @"青羊"]},
+                    @{kCategorySecond:@"眉山", kCategoryValue:@[@"1区", @"2区", @"3区"]},
+                    @{kCategorySecond:@"乐山", kCategoryValue:@[@"4区", @"5区", @"6区"]},
+                    @{kCategorySecond:@"达州", kCategoryValue:@[@"7区", @"8区", @"9区"]}]
             },
-          @{kChooseArrayTitle:@"1",
-            kChooseArrayValue: @[@{kChooseArrayTitle:@"1-1", kChooseArrayValue:@[@"112", @"113"]},
-                                 @{kChooseArrayTitle:@"1-2", kChooseArrayValue:@[@"122", @"123"]},
-                                 @{kChooseArrayTitle:@"1-3", kChooseArrayValue:@[@"132", @"133"]}]
+          @{kCategoryFirst:@"云南",
+            kCategoryValue: @[
+                    @{kCategorySecond:@"昆明", kCategoryValue:@[@"1区", @"2区", @"3区"]},
+                    @{kCategorySecond:@"丽江", kCategoryValue:@[@"4区", @"5区", @"6区"]},
+                    @{kCategorySecond:@"大理", kCategoryValue:@[@"7区", @"8区", @"9区"]},
+                    @{kCategorySecond:@"西双版纳", kCategoryValue:@[@"10区"]}]
             }];
-        NSArray *dic_chooseArray = @[
-                                     @{kAD_Title: kChooseArrayTitle, kAD_Value: kChooseArrayValue},
-                                     @{kAD_Title: kChooseArrayTitle, kAD_Value: kChooseArrayValue}
-                                     ];
+        NSArray *sortOrders = @[kCategoryFirst, kCategorySecond, kCategoryThird];
+        NSArray *categoryValueKeys = @[kCategoryValue, kCategoryValue, kCategoryValue];
         
-        ArrayDictonaryModel *adModel = [[ArrayDictonaryModel alloc]initWithC_0_data:C_0_data dicArray:dic_chooseArray];
-        [adModel updateSelecteds_index:@[@"0", @"0", @"0"]];
-        //adModel.selecteds_index = @[@"0", @"0", @"0"];
+        CJDataGroupModel *dataGroupModel = [[CJDataGroupModel alloc] initWithComponent0Datas:component0Datas sortByCategoryKeys:sortOrders categoryValueKeys:categoryValueKeys];
+        [dataGroupModel updateSelectedIndexs:@[@"0", @"0", @"0"]];
         
-        TableViewsArrayDictionary *customView = [[TableViewsArrayDictionary alloc]initWithFrame:CGRectZero];
+        
+        CJDataListViewGroup *customView = [[CJDataListViewGroup alloc]initWithFrame:CGRectZero];
         [customView setFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
-        customView.adModel = adModel;
+        customView.dataGroupModel = dataGroupModel;
         [customView setDelegate:self];
         customView.tag = radioButtonsCanDrop.tag;
         [radioButtonsCanDrop radioButtonsCanDrop_showDropDownExtendView:customView inView:self.view complete:nil];
         
     }else if(index == 1){
-        NSArray *C_0_data = @[
-                              @{kChooseArrayTitle:@"娱乐", kChooseArrayValue: @[@"爱旅行", @"爱唱歌", @"爱电影"]},
-                              @{kChooseArrayTitle:@"学习", kChooseArrayValue: @[@"爱读书", @"爱看报", @"爱书法", @"爱其他"]},
-                              @{kChooseArrayTitle:@"0", kChooseArrayValue: @[@"0-0", @"0-1", @"0-2", @"0-3"]},
-                              @{kChooseArrayTitle:@"1", kChooseArrayValue: @[@"1-1", @"1-2", @"1-3"]}
-                              ];
-        NSArray *dic_chooseArray = @[
-                                     @{kAD_Title: kChooseArrayTitle, kAD_Value: kChooseArrayValue}
-                                     ];
+        NSArray *component0Datas = @[
+            @{kCategoryFirst:@"娱乐",
+              kCategoryValue:@[@"爱旅行", @"爱唱歌", @"爱电影"]},
+            @{kCategoryFirst:@"学习",
+              kCategoryValue:@[@"爱读书", @"爱看报", @"爱书法", @"爱其他"]},
+            @{kCategoryFirst:@"0",
+              kCategoryValue:@[@"0-0", @"0-1", @"0-2", @"0-3"]},
+            @{kCategoryFirst:@"1",
+              kCategoryValue:@[@"1-1", @"1-2", @"1-3"]}
+            ];
+        NSArray *sortOrders = @[kCategoryFirst, kCategorySecond];
+        NSArray *categoryValueKeys = @[kCategoryValue, kCategoryValue];
         
-        ArrayDictonaryModel *adModel = [[ArrayDictonaryModel alloc]initWithC_0_data:C_0_data dicArray:dic_chooseArray];
-        [adModel updateSelecteds_index:@[@"0", @"0"]];
+        CJDataGroupModel *dataGroupModel = [[CJDataGroupModel alloc] initWithComponent0Datas:component0Datas sortByCategoryKeys:sortOrders categoryValueKeys:categoryValueKeys];
+        [dataGroupModel updateSelectedIndexs:@[@"0", @"0"]];
         
-        TableViewsArrayDictionary *customView = [[TableViewsArrayDictionary alloc]initWithFrame:CGRectZero];
+        CJDataListViewGroup *customView = [[CJDataListViewGroup alloc]initWithFrame:CGRectZero];
         [customView setFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
-        customView.adModel = adModel;
+        customView.dataGroupModel = dataGroupModel;
         [customView setDelegate:self];
         customView.tag = radioButtonsCanDrop.tag;
         [radioButtonsCanDrop radioButtonsCanDrop_showDropDownExtendView:customView inView:self.view complete:nil];
     }else if(index == 2){
         NSArray *chooseArray = @[@"区域", @"鼓楼", @"台江", @"仓山"];
         
-        TableViewArraySingle *customView = [[TableViewArraySingle alloc]initWithFrame:CGRectZero];
+        CJDataListViewSingle *customView = [[CJDataListViewSingle alloc] initWithFrame:CGRectZero];
         [customView setFrame:CGRectMake(self.view.frame.size.width*2/4, 0, self.view.frame.size.width/4, 200)];
         customView.datas = chooseArray;
         [customView setDelegate:self];
@@ -107,19 +117,22 @@
         [radioButtonsCanDrop radioButtonsCanDrop_showDropDownExtendView:customView inView:self.view complete:nil];
     }else if (index == 3){
         
-        NSArray *C_0_data = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"area.plist" ofType:nil]];
-        NSArray *dicArray = @[@{kAD_Title: @"state", kAD_Value: @"cities"},
-                              @{kAD_Title: @"city",  kAD_Value: @"areas"}];
+        NSArray *component0Datas = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"area.plist" ofType:nil]];
+        NSArray *sortOrders = @[@"state", @"city", @"area"];
+//        NSArray *dicArray = @[@{kAD_Title: @"state", kAD_Value: @"cities"},
+//                              @{kAD_Title: @"city",  kAD_Value: @"areas"}]
         
-        ArrayDictonaryModel *adModel =[[ArrayDictonaryModel alloc]initWithC_0_data:C_0_data dicArray:dicArray];
-        [adModel updateSelecteds_index:@[@"0", @"0", @"0"]];
+        NSArray *categoryValueKeys = @[@"cities", @"areas"];
         
-        NSArray *titles = adModel.selecteds_titles;
+        CJDataGroupModel *dataGroupModel = [[CJDataGroupModel alloc] initWithComponent0Datas:component0Datas sortByCategoryKeys:sortOrders categoryValueKeys:categoryValueKeys];
+        [dataGroupModel updateSelectedIndexs:@[@"0", @"0", @"0"]];
+        
+        NSArray *titles = dataGroupModel.selectedTitles;
         NSLog(@"datas_titles = %@", titles);
         
-        TableViewsArrayDictionary *customView = [[TableViewsArrayDictionary alloc]initWithFrame:CGRectZero];
+        CJDataListViewGroup *customView = [[CJDataListViewGroup alloc]initWithFrame:CGRectZero];
         [customView setFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
-        customView.adModel = adModel;
+        customView.dataGroupModel = dataGroupModel;
         [customView setDelegate:self];
         customView.tag = radioButtonsCanDrop.tag;
         [radioButtonsCanDrop radioButtonsCanDrop_showDropDownExtendView:customView inView:self.view complete:nil];
@@ -127,11 +140,12 @@
 }
 
 
-- (void)tv_ArrayDictionary:(TableViewsArrayDictionary *)tv_ArrayDictionary didSelectText:(NSString *)text{
-    NSLog(@"text1 = %@, %@", text, tv_ArrayDictionary.adModel.selecteds_titles);
+- (void)cj_dataListViewGroup:(CJDataListViewGroup *)dataListViewGroup didSelectText:(NSString *)text
+{
+    NSLog(@"text1 = %@, %@", text, dataListViewGroup.dataGroupModel.selectedTitles);
     
     //通过tag，反取到弹出该视图的RadioButtons
-    NSInteger tag = tv_ArrayDictionary.tag;
+    NSInteger tag = dataListViewGroup.tag;
     RadioButtonsCanDrop *comRadioButtons = nil;
     if (tag == commonRadioButtons111.tag) {
         comRadioButtons = commonRadioButtons111;
@@ -142,11 +156,12 @@
     
 }
 
-- (void)tv_ArraySingle:(TableViewArraySingle *)tv_ArraySingle didSelectText:(NSString *)text{
+- (void)cj_dataListViewSingle:(CJDataListViewSingle *)dataListViewSingle didSelectText:(NSString *)text
+{
     NSLog(@"text2 = %@", text);
     
     //通过tag，反取到弹出该视图的RadioButtons
-    NSInteger tag = tv_ArraySingle.tag;
+    NSInteger tag = dataListViewSingle.tag;
     RadioButtonsCanDrop *comRadioButtons = nil;
     if (tag == commonRadioButtons111.tag) {
         comRadioButtons = commonRadioButtons111;

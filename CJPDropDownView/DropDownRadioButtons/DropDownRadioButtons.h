@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <RadioButtons/RadioButtonsCanDrop.h>
-#import "TableViewArraySingle.h"
+#import "CJDataListViewSingle.h"
 
 
 @class DropDownRadioButtons;
@@ -19,7 +19,7 @@
 
 
 
-@interface DropDownRadioButtons : UIView<RadioButtonsCanDropDelegate, TableViewArraySingleDelegate>{
+@interface DropDownRadioButtons : UIView<RadioButtonsCanDropDelegate, CJDataListViewSingleDelegate>{
     RadioButtonsCanDrop *comRadioButtons;
 }
 @property(nonatomic, strong) NSArray *datas;

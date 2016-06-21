@@ -34,14 +34,15 @@
     
     NSArray *chooseArray = [self.datas objectAtIndex:index];
     
-    TableViewArraySingle *customView = [[TableViewArraySingle alloc]initWithFrame:CGRectZero];
+    CJDataListViewSingle *customView = [[CJDataListViewSingle alloc]initWithFrame:CGRectZero];
     [customView setFrame:CGRectMake(self.frame.size.width*index/3, 264, self.frame.size.width/3, 200)];
     customView.datas = chooseArray;
     [customView setDelegate:self];
     [comRadioButtons radioButtonsCanDrop_showDropDownExtendView:customView inView:self.superview complete:nil];
 }
 
-- (void)tv_ArraySingle:(TableViewArraySingle *)tv_ArraySingle didSelectText:(NSString *)text{
+- (void)cj_dataListViewSingle:(CJDataListViewSingle *)dataListViewSingle didSelectText:(NSString *)text
+{
     [comRadioButtons radioButtonsCanDrop_didSelectInExtendView:text];
     
     if([self.delegate respondsToSelector:@selector(ddRadioButtons:didSelectText:)]){

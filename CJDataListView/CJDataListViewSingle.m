@@ -1,17 +1,17 @@
 //
-//  TableViewArraySingle.m
+//  CJDataListViewSingle.m
 //  CJPDropDownViewDemo
 //
 //  Created by lichq on 9/8/15.
 //  Copyright (c) 2015 ciyouzen. All rights reserved.
 //
 
-#import "TableViewArraySingle.h"
+#import "CJDataListViewSingle.h"
 
-@implementation TableViewArraySingle
+@implementation CJDataListViewSingle
 @synthesize tv;
 
-- (id)initWithFrame:(CGRect)frame{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if(self){
         
@@ -34,6 +34,7 @@
         tv.delegate = self;
         tv.dataSource = self;
         tv.separatorStyle = UITableViewCellSeparatorStyleNone;
+        tv.backgroundColor = [UIColor clearColor];
         [self addSubview:tv];
     }
     
@@ -52,20 +53,11 @@
     
     [tv reloadData];
     [tv selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:YES scrollPosition:UITableViewScrollPositionNone];
-    
 }
 
 
-
-#pragma mark -- UITableView Delegate
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 40;
-}
 
 #pragma mark -- UITableView DataSource
-
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
@@ -82,6 +74,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell.backgroundColor = [UIColor clearColor];
     }
     
     cell.textLabel.font = [UIFont systemFontOfSize:14];
@@ -93,11 +86,17 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+#pragma mark -- UITableView Delegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 40;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
     NSString *object = [self.datas objectAtIndex:indexPath.row];
-    if([self.delegate respondsToSelector:@selector(tv_ArraySingle:didSelectText:)]){
-        [self.delegate tv_ArraySingle:self didSelectText:object];
+    if([self.delegate respondsToSelector:@selector(cj_dataListViewSingle:didSelectText:)]){
+        [self.delegate cj_dataListViewSingle:self didSelectText:object];
     }
 }
 
