@@ -1,5 +1,13 @@
 # CJPopup
-弹出视图(包含类似美图的弹出下拉控件CJPDropDownView)
+弹出视图(包含类似美团的弹出下拉控件CJPDropDownView)
+
+## 目录
+1、 CJPopoverView
+a pop view 一个带箭号的弹出视图
+
+2、CJPDropDownView
+弹出视图(包含类似美团的弹出下拉控件CJPDropDownView)
+
 
 ## Screenshots
 ![Example](./Screenshots/CJPDropDownView1.gif "美团下拉")
@@ -122,6 +130,17 @@
 
 }
 ```
+
+
+### CJPopoverView
+a pop view 一个带箭号的弹出视图
+
+#### Screenshots
+<!--![Example](./Screenshots/Demo.gif "Demo")-->
+![Example](./Screenshots/CJPopoverView/CJPopoverView01.png "Demo")
+
+
+
 
 
 

@@ -25,7 +25,7 @@
 
 
 
-@interface RadioButton : UIView{
+@interface RadioButton : UIView {
     
 }
 @property(nonatomic, strong) IBOutlet UIButton *btn;

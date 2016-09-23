@@ -24,9 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    RadioButton *btn = [[RadioButton alloc]initWithFrame:CGRectMake(60, 84, 200, 40)];
-    [btn setTitle:@"测试,无下拉"];
-    [self.view addSubview:btn];
+    [_radioButton setTitle:@"测试,无下拉"];//TODO
     
     CGRect rect_radioButtons111 = CGRectMake(0, 164, self.view.bounds.size.width+30, 40);
     commonRadioButtons111 = [[RadioButtonsCanDrop alloc]initWithFrame:rect_radioButtons111];

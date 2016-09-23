@@ -16,5 +16,6 @@
     RadioButtonsCanDrop *commonRadioButtons111;
     RadioButtonsCanDrop *commonRadioButtons222;
 }
+@property (nonatomic, strong) IBOutlet RadioButton *radioButton;
 
 @end
