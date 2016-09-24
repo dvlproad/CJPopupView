@@ -8,9 +8,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GroupTableViewController">
             <connections>
                 <outlet property="groupTableView1" destination="FdD-bn-6Ef" id="8dn-TC-hSV"/>
-                <outlet property="groupTableView2" destination="RlE-eJ-ZBm" id="arb-PT-RVb"/>
+                <outlet property="groupTableView3" destination="RlE-eJ-ZBm" id="dgJ-IT-XSP"/>
                 <outlet property="groupTextLabel1" destination="NnU-qa-JeZ" id="ti6-fS-z51"/>
-                <outlet property="groupTextLabel2" destination="1hn-Vy-JYq" id="DJQ-Ak-HFn"/>
+                <outlet property="groupTextLabel3" destination="1hn-Vy-JYq" id="xOL-2H-FaI"/>
                 <outlet property="singleTableView" destination="1AG-QM-9cn" id="ruX-on-l0F"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -28,7 +28,7 @@
                     <rect key="frame" x="8" y="432" width="304" height="128"/>
                     <color key="backgroundColor" red="0.54502182980000002" green="1" blue="0.48569014189999998" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hn-Vy-JYq">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hn-Vy-JYq">
                     <rect key="frame" x="8" y="397" width="304" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

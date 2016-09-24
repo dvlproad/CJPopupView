@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "GroupTableViewController.h"
+#import "GroupTableViewController2.h"
 
 @interface ViewController ()
 
@@ -23,6 +24,11 @@
 
 - (IBAction)goGroupTableViewController:(id)sender {
     GroupTableViewController *viewController = [[GroupTableViewController alloc] initWithNibName:@"GroupTableViewController" bundle:nil];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
+- (IBAction)goGroupTableViewController2:(id)sender {
+    GroupTableViewController2 *viewController = [[GroupTableViewController2 alloc] initWithNibName:@"GroupTableViewController2" bundle:nil];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 

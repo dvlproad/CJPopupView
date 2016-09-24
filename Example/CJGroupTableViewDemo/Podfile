@@ -3,6 +3,7 @@ platform :ios, '7.0'
 
 target 'CJGroupTableViewDemo' do
   pod 'RadioButtons', '~> 2.1.2'
+  pod 'CJPopupView', '~> 1.3.0'
 end
 
 target 'CJGroupTableViewDemoTests' do

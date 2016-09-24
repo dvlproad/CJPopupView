@@ -7,7 +7,6 @@
 //
 
 #import "GroupTableViewController.h"
-#import "GroupDataUtil.h"
 
 @interface GroupTableViewController ()
 
@@ -22,6 +21,7 @@
     [self setupDataListViewSingle];
     
     [self setupGroupTableView1];
+    [self setupGroupTableView2];
     [self setupGroupTableView3];
 }
 
@@ -38,37 +38,44 @@
     return NO;
 }
 
+#pragma mark - 设置数据
 - (void)setupGroupTableView1 {
     CJDataGroupModel *dataGroupModel = [GroupDataUtil groupData1];
     
-    [self.groupTableView1 setDataGroupModel:dataGroupModel];
-    [self.groupTableView1 updateTableViewBackgroundColor:[UIColor greenColor] inComponent:0];
-    [self.groupTableView1 setDelegate:self];
+    [_groupTableView1 setDataGroupModel:dataGroupModel];
+    [_groupTableView1 updateTableViewBackgroundColor:[UIColor greenColor] inComponent:0];
+    [_groupTableView1 updateTableViewBackgroundColor:[UIColor yellowColor] inComponent:1];
+    [_groupTableView1 updateTableViewBackgroundColor:[UIColor greenColor] inComponent:2];
+    [_groupTableView1 setDelegate:self];
 }
 
 - (void)setupGroupTableView2 {
     CJDataGroupModel *dataGroupModel = [GroupDataUtil groupData2];
-
-    [self.groupTableView1 setDataGroupModel:dataGroupModel];
-    [self.groupTableView1 updateTableViewBackgroundColor:[UIColor yellowColor] inComponent:1];
-    [self.groupTableView1 updateTableViewBackgroundColor:[UIColor greenColor] inComponent:2];
-    [self.groupTableView1 setDelegate:self];
+    
+    [_groupTableView2 setDataGroupModel:dataGroupModel];
+    [_groupTableView2 updateTableViewBackgroundColor:[UIColor greenColor] inComponent:0];
+    [_groupTableView2 updateTableViewBackgroundColor:[UIColor yellowColor] inComponent:1];
+    [_groupTableView2 updateTableViewBackgroundColor:[UIColor greenColor] inComponent:2];
+    [_groupTableView2 setDelegate:self];
 }
 
 - (void)setupGroupTableView3 {
     CJDataGroupModel *dataGroupModel = [GroupDataUtil groupData3];
     
-    [self.groupTableView2 setDataGroupModel:dataGroupModel];
-    [self.groupTableView2 updateTableViewBackgroundColor:[UIColor yellowColor] inComponent:1];
-    [self.groupTableView2 updateTableViewBackgroundColor:[UIColor greenColor] inComponent:2];
-    [self.groupTableView2 setDelegate:self];
+    [_groupTableView3 setDataGroupModel:dataGroupModel];
+    [_groupTableView3 updateTableViewBackgroundColor:[UIColor greenColor] inComponent:0];
+    [_groupTableView3 updateTableViewBackgroundColor:[UIColor yellowColor] inComponent:1];
+    [_groupTableView3 updateTableViewBackgroundColor:[UIColor greenColor] inComponent:2];
+    [_groupTableView3 setDelegate:self];
 }
 
 
+#pragma mark - CJSingleTableViewDelegate
 - (void)cj_singleTableView:(CJSingleTableView *)singleTableView didSelectText:(NSString *)text {
     NSLog(@"text2 = %@", text);
 }
 
+#pragma mark - CJGroupTableViewDelegate
 - (void)cj_groupTableView:(CJGroupTableView *)groupTableView didSelectText:(NSString *)text {
     NSArray *selectedTitles = groupTableView.dataGroupModel.selectedTitles;
     NSLog(@"text1 = %@, %@", text, selectedTitles);
@@ -80,11 +87,9 @@
     
     if (groupTableView == self.groupTableView1) {
         self.groupTextLabel1.text = string;
-    } else if (groupTableView == self.groupTableView2) {
-        self.groupTextLabel2.text = string;
+    } else if (groupTableView == self.groupTableView3) {
+        self.groupTextLabel3.text = string;
     }
-    
-    
 }
 
 

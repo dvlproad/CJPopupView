@@ -22,7 +22,7 @@
 @implementation GroupDataUtil
 
 + (CJDataGroupModel *)groupData1 {
-    NSArray *component0Datas = @[@"福建省", @"四川", @"北京", @"云南"];
+    NSArray *component0Datas = @[@"区域", @"鼓楼", @"台江", @"仓山"];
     NSArray *sortOrders = nil;
     NSArray *categoryValueKeys = nil;
     
@@ -47,8 +47,8 @@
       @{kCategoryFirst:@"云南",
         kCategoryValue: @[@"昆明", @"丽江", @"大理", @"西双版纳"]
         }];
-    NSArray *sortOrders = @[kCategoryFirst, kCategorySecond];
-    NSArray *categoryValueKeys = @[kCategoryValue, kCategoryValue];
+    NSArray *sortOrders = @[kCategoryFirst, @""];
+    NSArray *categoryValueKeys = @[kCategoryValue, @""];
     
     CJDataGroupModel *dataGroupModel = [[CJDataGroupModel alloc] initWithSelectedIndexs:@[@"0", @"0"] InComponent0Datas:component0Datas sortByCategoryKeys:sortOrders categoryValueKeys:categoryValueKeys];
 
@@ -86,10 +86,39 @@
                 @{kCategorySecond:@"大理", kCategoryValue:@[@"7区", @"8区", @"9区"]},
                 @{kCategorySecond:@"西双版纳", kCategoryValue:@[@"10区"]}]
         }];
-    NSArray *sortOrders = @[kCategoryFirst, kCategorySecond, kCategoryThird];
-    NSArray *categoryValueKeys = @[kCategoryValue, kCategoryValue, kCategoryValue];
+    NSArray *sortOrders = @[kCategoryFirst, kCategorySecond, @""];
+    NSArray *categoryValueKeys = @[kCategoryValue, kCategoryValue, @""];
     
     CJDataGroupModel *dataGroupModel = [[CJDataGroupModel alloc] initWithSelectedIndexs:@[@"0", @"1", @"0"] InComponent0Datas:component0Datas sortByCategoryKeys:sortOrders categoryValueKeys:categoryValueKeys];
+    
+    return dataGroupModel;
+}
+
++ (CJDataGroupModel *)groupDataYule {
+    NSArray *component0Datas = @[
+                                 @{kCategoryFirst:@"娱乐",
+                                   kCategoryValue:@[@"爱旅行", @"爱唱歌", @"爱电影"]},
+                                 @{kCategoryFirst:@"学习",
+                                   kCategoryValue:@[@"爱读书", @"爱看报", @"爱书法", @"爱其他"]},
+                                 @{kCategoryFirst:@"0",
+                                   kCategoryValue:@[@"0-0", @"0-1", @"0-2", @"0-3"]},
+                                 @{kCategoryFirst:@"1",
+                                   kCategoryValue:@[@"1-1", @"1-2", @"1-3"]}
+                                 ];
+    NSArray *sortOrders = @[kCategoryFirst, @""];
+    NSArray *categoryValueKeys = @[kCategoryValue, @""];
+    
+    CJDataGroupModel *dataGroupModel = [[CJDataGroupModel alloc] initWithSelectedIndexs:@[@"0", @"0"] InComponent0Datas:component0Datas sortByCategoryKeys:sortOrders categoryValueKeys:categoryValueKeys];
+    
+    return dataGroupModel;
+}
+
++ (CJDataGroupModel *)groupDataAllArea {
+    NSArray *component0Datas = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"area.plist" ofType:nil]];
+    NSArray *sortOrders = @[@"state", @"city", @""];
+    NSArray *categoryValueKeys = @[@"cities", @"areas", @""];
+    
+    CJDataGroupModel *dataGroupModel = [[CJDataGroupModel alloc] initWithSelectedIndexs:@[@"0", @"0", @"0"] InComponent0Datas:component0Datas sortByCategoryKeys:sortOrders categoryValueKeys:categoryValueKeys];
     
     return dataGroupModel;
 }

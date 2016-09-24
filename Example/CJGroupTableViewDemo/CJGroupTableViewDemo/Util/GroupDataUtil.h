@@ -17,5 +17,9 @@
 
 + (CJDataGroupModel *)groupData3;
 
++ (CJDataGroupModel *)groupDataYule;
+
++ (CJDataGroupModel *)groupDataAllArea;
+
 
 @end

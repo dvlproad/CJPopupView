@@ -33,6 +33,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRK-8V-e2F">
+                                <rect key="frame" x="67" y="351" width="187" height="30"/>
+                                <state key="normal" title="GroupTableViewController2"/>
+                                <connections>
+                                    <action selector="goGroupTableViewController2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7cD-3e-6vU"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tC-uB-Afs">
                                 <rect key="frame" x="69" y="269" width="183" height="30"/>
                                 <state key="normal" title="GroupTableViewController"/>
