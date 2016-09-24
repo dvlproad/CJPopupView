@@ -47,6 +47,13 @@
                                     <action selector="goGroupTableViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dNB-oj-luS"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UxZ-LS-vIi">
+                                <rect key="frame" x="16" y="422" width="271" height="30"/>
+                                <state key="normal" title="ButtonsSingleTableViewController"/>
+                                <connections>
+                                    <action selector="goButtonsSingleTableViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bJW-C2-7iE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>

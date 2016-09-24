@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "GroupTableViewController.h"
 #import "GroupTableViewController2.h"
+#import "ButtonsSingleTableViewController.h"
 
 @interface ViewController ()
 
@@ -29,6 +30,10 @@
 
 - (IBAction)goGroupTableViewController2:(id)sender {
     GroupTableViewController2 *viewController = [[GroupTableViewController2 alloc] initWithNibName:@"GroupTableViewController2" bundle:nil];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+- (IBAction)goButtonsSingleTableViewController:(id)sender {
+    ButtonsSingleTableViewController *viewController = [[ButtonsSingleTableViewController alloc] initWithNibName:@"ButtonsSingleTableViewController" bundle:nil];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 

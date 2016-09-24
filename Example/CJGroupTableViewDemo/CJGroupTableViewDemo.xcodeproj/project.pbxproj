@@ -19,7 +19,6 @@
 		783AC7C01D968D3D0077067E /* GroupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7BE1D968D3D0077067E /* GroupTableViewController.m */; };
 		783AC7C11D968D3D0077067E /* GroupTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 783AC7BF1D968D3D0077067E /* GroupTableViewController.xib */; };
 		783AC7CC1D968D460077067E /* CJGroupTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7C41D968D460077067E /* CJGroupTableView.m */; };
-		783AC7CD1D968D460077067E /* CJSingleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7C61D968D460077067E /* CJSingleTableView.m */; };
 		783AC7CE1D968D460077067E /* CJComponentModelData.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7C91D968D460077067E /* CJComponentModelData.m */; };
 		783AC7CF1D968D460077067E /* CJDataGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7CB1D968D460077067E /* CJDataGroupModel.m */; };
 		783AC7D31D9690680077067E /* GroupDataUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7D21D9690680077067E /* GroupDataUtil.m */; };
@@ -28,6 +27,10 @@
 		783AC7DB1D96941B0077067E /* RadioButton_Slider.xib in Resources */ = {isa = PBXBuildFile; fileRef = 783AC7DA1D96941B0077067E /* RadioButton_Slider.xib */; };
 		783AC7DF1D969EC90077067E /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 783AC7DD1D969EC90077067E /* area.plist */; };
 		783AC7E01D969EC90077067E /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 783AC7DE1D969EC90077067E /* city.plist */; };
+		783AC7E71D96AE6D0077067E /* ButtonsSingleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7E51D96AE6D0077067E /* ButtonsSingleTableViewController.m */; };
+		783AC7E81D96AE6D0077067E /* ButtonsSingleTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 783AC7E61D96AE6D0077067E /* ButtonsSingleTableViewController.xib */; };
+		783AC7EE1D96B30D0077067E /* CJButtonsSingleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7EB1D96B30D0077067E /* CJButtonsSingleTableView.m */; };
+		783AC7EF1D96B30D0077067E /* CJSingleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7ED1D96B30D0077067E /* CJSingleTableView.m */; };
 		7DB59DC2738A0CE9DC2EBB43 /* libPods-CJGroupTableViewDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B77FC5D8CF35A3BB60FC0C4 /* libPods-CJGroupTableViewDemoTests.a */; };
 /* End PBXBuildFile section */
 
@@ -73,8 +76,6 @@
 		783AC7BF1D968D3D0077067E /* GroupTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupTableViewController.xib; sourceTree = "<group>"; };
 		783AC7C31D968D460077067E /* CJGroupTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJGroupTableView.h; sourceTree = "<group>"; };
 		783AC7C41D968D460077067E /* CJGroupTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJGroupTableView.m; sourceTree = "<group>"; };
-		783AC7C51D968D460077067E /* CJSingleTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSingleTableView.h; sourceTree = "<group>"; };
-		783AC7C61D968D460077067E /* CJSingleTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSingleTableView.m; sourceTree = "<group>"; };
 		783AC7C81D968D460077067E /* CJComponentModelData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJComponentModelData.h; sourceTree = "<group>"; };
 		783AC7C91D968D460077067E /* CJComponentModelData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJComponentModelData.m; sourceTree = "<group>"; };
 		783AC7CA1D968D460077067E /* CJDataGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDataGroupModel.h; sourceTree = "<group>"; };
@@ -87,6 +88,13 @@
 		783AC7DA1D96941B0077067E /* RadioButton_Slider.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RadioButton_Slider.xib; sourceTree = "<group>"; };
 		783AC7DD1D969EC90077067E /* area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = area.plist; sourceTree = "<group>"; };
 		783AC7DE1D969EC90077067E /* city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city.plist; sourceTree = "<group>"; };
+		783AC7E41D96AE6C0077067E /* ButtonsSingleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonsSingleTableViewController.h; sourceTree = "<group>"; };
+		783AC7E51D96AE6D0077067E /* ButtonsSingleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonsSingleTableViewController.m; sourceTree = "<group>"; };
+		783AC7E61D96AE6D0077067E /* ButtonsSingleTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonsSingleTableViewController.xib; sourceTree = "<group>"; };
+		783AC7EA1D96B30D0077067E /* CJButtonsSingleTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJButtonsSingleTableView.h; sourceTree = "<group>"; };
+		783AC7EB1D96B30D0077067E /* CJButtonsSingleTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJButtonsSingleTableView.m; sourceTree = "<group>"; };
+		783AC7EC1D96B30D0077067E /* CJSingleTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSingleTableView.h; sourceTree = "<group>"; };
+		783AC7ED1D96B30D0077067E /* CJSingleTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSingleTableView.m; sourceTree = "<group>"; };
 		A25D9BE426EE2DA7930B4D83 /* Pods-CJGroupTableViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJGroupTableViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CJGroupTableViewDemo/Pods-CJGroupTableViewDemo.release.xcconfig"; sourceTree = "<group>"; };
 		C94AB2966C06477AC7F922E3 /* Pods-CJGroupTableViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJGroupTableViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CJGroupTableViewDemo/Pods-CJGroupTableViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		FEBD8A6746BC917E6FCEF304 /* Pods-CJGroupTableViewDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJGroupTableViewDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CJGroupTableViewDemoTests/Pods-CJGroupTableViewDemoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -159,9 +167,10 @@
 				783AC78D1D968C530077067E /* AppDelegate.m */,
 				783AC78F1D968C530077067E /* ViewController.h */,
 				783AC7901D968C530077067E /* ViewController.m */,
+				783AC7C21D968D460077067E /* CJGroupTableView */,
+				783AC7E91D96B30D0077067E /* CJButtonsSingleTableView */,
 				783AC7DC1D969EC90077067E /* res_plist */,
 				783AC7D01D96901B0077067E /* Util */,
-				783AC7C21D968D460077067E /* CJGroupTableView */,
 				783AC7BC1D968D3D0077067E /* Controllers */,
 				783AC7921D968C530077067E /* Main.storyboard */,
 				783AC7D91D9693F90077067E /* Views */,
@@ -208,6 +217,9 @@
 				783AC7D41D96928A0077067E /* GroupTableViewController2.h */,
 				783AC7D51D96928A0077067E /* GroupTableViewController2.m */,
 				783AC7D61D96928A0077067E /* GroupTableViewController2.xib */,
+				783AC7E41D96AE6C0077067E /* ButtonsSingleTableViewController.h */,
+				783AC7E51D96AE6D0077067E /* ButtonsSingleTableViewController.m */,
+				783AC7E61D96AE6D0077067E /* ButtonsSingleTableViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -217,8 +229,6 @@
 			children = (
 				783AC7C31D968D460077067E /* CJGroupTableView.h */,
 				783AC7C41D968D460077067E /* CJGroupTableView.m */,
-				783AC7C51D968D460077067E /* CJSingleTableView.h */,
-				783AC7C61D968D460077067E /* CJSingleTableView.m */,
 				783AC7C71D968D460077067E /* Model */,
 			);
 			name = CJGroupTableView;
@@ -260,6 +270,17 @@
 				783AC7DE1D969EC90077067E /* city.plist */,
 			);
 			path = res_plist;
+			sourceTree = "<group>";
+		};
+		783AC7E91D96B30D0077067E /* CJButtonsSingleTableView */ = {
+			isa = PBXGroup;
+			children = (
+				783AC7EA1D96B30D0077067E /* CJButtonsSingleTableView.h */,
+				783AC7EB1D96B30D0077067E /* CJButtonsSingleTableView.m */,
+				783AC7EC1D96B30D0077067E /* CJSingleTableView.h */,
+				783AC7ED1D96B30D0077067E /* CJSingleTableView.m */,
+			);
+			path = CJButtonsSingleTableView;
 			sourceTree = "<group>";
 		};
 		C2E0196F9EEF3112724138E9 /* Frameworks */ = {
@@ -385,6 +406,7 @@
 				783AC7991D968C540077067E /* LaunchScreen.storyboard in Resources */,
 				783AC7D81D96928A0077067E /* GroupTableViewController2.xib in Resources */,
 				783AC7DF1D969EC90077067E /* area.plist in Resources */,
+				783AC7E81D96AE6D0077067E /* ButtonsSingleTableViewController.xib in Resources */,
 				783AC7E01D969EC90077067E /* city.plist in Resources */,
 				783AC7961D968C540077067E /* Assets.xcassets in Resources */,
 				783AC7941D968C530077067E /* Main.storyboard in Resources */,
@@ -507,11 +529,13 @@
 			files = (
 				783AC7C01D968D3D0077067E /* GroupTableViewController.m in Sources */,
 				783AC7D31D9690680077067E /* GroupDataUtil.m in Sources */,
+				783AC7EE1D96B30D0077067E /* CJButtonsSingleTableView.m in Sources */,
 				783AC7D71D96928A0077067E /* GroupTableViewController2.m in Sources */,
 				783AC7911D968C530077067E /* ViewController.m in Sources */,
 				783AC7CF1D968D460077067E /* CJDataGroupModel.m in Sources */,
+				783AC7EF1D96B30D0077067E /* CJSingleTableView.m in Sources */,
+				783AC7E71D96AE6D0077067E /* ButtonsSingleTableViewController.m in Sources */,
 				783AC7CE1D968D460077067E /* CJComponentModelData.m in Sources */,
-				783AC7CD1D968D460077067E /* CJSingleTableView.m in Sources */,
 				783AC78E1D968C530077067E /* AppDelegate.m in Sources */,
 				783AC78B1D968C530077067E /* main.m in Sources */,
 				783AC7CC1D968D460077067E /* CJGroupTableView.m in Sources */,
