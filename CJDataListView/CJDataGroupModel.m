@@ -12,8 +12,11 @@
     
 }
 @property(nonatomic, strong) NSArray *component0Datas;
-//@property(nonatomic, strong) NSArray *categoryKeys;
-//@property(nonatomic, strong) NSArray *categoryValueKeys;
+@property(nonatomic, strong) NSArray *categoryKeys;
+@property(nonatomic, strong) NSArray *categoryValueKeys;
+
+//datas根据component中选中的不同row随时在改变
+@property(nonatomic, strong) NSMutableArray<NSArray *> *componentDatasDatas;/**< 所有component选中的componentDatas（datas中的每个componentDatas中的数据除最后一个componentDatas中是<NSString *>,其他的都是<NSDictionary *>） */
 
 @end
 
@@ -22,25 +25,28 @@
 @implementation CJDataGroupModel
 
 /** 完整的描述请参见文件头部 */
-- (id)initWithComponent0Datas:(NSArray<NSDictionary *>*)component0Datas
-           sortByCategoryKeys:(NSArray<NSString *> *)categoryKeys
-            categoryValueKeys:(NSArray<NSString *> *)categoryValueKeys
+- (id)initWithSelectedIndexs:(NSArray *)selectedIndexs
+           InComponent0Datas:(NSArray<NSDictionary *>*)component0Datas
+          sortByCategoryKeys:(NSArray<NSString *> *)categoryKeys
+           categoryValueKeys:(NSArray<NSString *> *)categoryValueKeys
 {
     self = [super init];
     if (self) {
+//        self.selectedIndexs = [[NSMutableArray alloc] init];
+//        for (NSInteger index = 0; index < categoryKeys.count; index++) {
+//            [self.selectedIndexs addObject:@"0"];
+//        }
+        self.selectedIndexs = [NSMutableArray arrayWithArray:selectedIndexs];
+        
         self.component0Datas = component0Datas;
         self.categoryKeys = categoryKeys;
         self.categoryValueKeys = categoryValueKeys;
         
-        NSInteger componentCount = categoryKeys.count;
-        self.componentDatasDatas = [[NSMutableArray alloc] initWithCapacity:componentCount];
+        self.componentDatasDatas = [[NSMutableArray alloc] init];
+        self.componentModelDatasDatas = [[NSMutableArray alloc] init];
         self.selectedTitles = [[NSMutableArray alloc] init];
-        self.selectedIndexs = [[NSMutableArray alloc] init];
         
-        for (int i = 0; i < componentCount; i++) {
-            [self.selectedIndexs addObject:@"0"];
-        }
-        
+        [self updateSelectedIndexs:selectedIndexs];
     }
     return self;
 }
@@ -65,9 +71,18 @@
     //因为第一个component的C_0_data始终是固定的，所以我们要做的只是确定在不同的component中选择不同的selectedIndex，整个datas会变成什么样。
     if (isInitialized) { //如果是第一次初始化，则使用addObject，以后再使用replaceObjectAtIndex
         [self.componentDatasDatas addObject:self.component0Datas];
+        
+        NSMutableArray *componentModelDatas = [self getComponentModelDatasFromComponentDatas:self.component0Datas withComponentIndex:0];
+        [self.componentModelDatasDatas addObject:componentModelDatas];
+        
     }else{
-        [self.componentDatasDatas replaceObjectAtIndex:0 withObject:self.component0Datas]; //可省略
+        [self.componentDatasDatas replaceObjectAtIndex:0 withObject:self.component0Datas];
+        
+        NSMutableArray *componentModelDatas = [self getComponentModelDatasFromComponentDatas:self.component0Datas withComponentIndex:0];
+        [self.componentModelDatasDatas replaceObjectAtIndex:0 withObject:componentModelDatas];
     }
+    
+    
     
     NSInteger componentCount = selectedIndexs.count;  //默认值有几对，则有几组
     for (int componentIndex = 0; componentIndex < componentCount; componentIndex++) {
@@ -107,11 +122,52 @@
         //[datas replaceObjectAtIndex:iii+1 withObject:C_1_data];
         if (isInitialized) { //如果是第一次初始化，则使用addObject，以后再使用replaceObjectAtIndex
             [self.componentDatasDatas addObject:C_1_data];
+            
+            NSMutableArray *componentModelDatas = [self getComponentModelDatasFromComponentDatas:C_1_data withComponentIndex:componentIndex+1];
+            [self.componentModelDatasDatas addObject:componentModelDatas];
         }else{
             [self.componentDatasDatas replaceObjectAtIndex:componentIndex+1 withObject:C_1_data];
+            
+            NSMutableArray *componentModelDatas = [self getComponentModelDatasFromComponentDatas:C_1_data withComponentIndex:componentIndex+1];
+            [self.componentModelDatasDatas replaceObjectAtIndex:componentIndex+1 withObject:componentModelDatas];
         }
+        
     }
     return;
+}
+
+
+- (NSMutableArray *)getComponentModelDatasFromComponentDatas:(NSArray *)componentDatas withComponentIndex:(NSInteger)componentIndex {
+    NSString *categoryKey = [self.categoryKeys objectAtIndex:componentIndex];
+    NSString *categoryValueKey = [self.categoryValueKeys objectAtIndex:componentIndex];
+    BOOL isLastComponent = componentIndex == self.categoryKeys.count-1;
+    
+    NSMutableArray *componentModelDatas = [[NSMutableArray alloc] init];
+    for (NSInteger index = 0; index < componentDatas.count; index++) {
+        if (!isLastComponent) {
+            NSArray *dictionarys = [componentDatas objectAtIndex:index];
+            NSString *category = [dictionarys valueForKey:categoryKey];
+            NSArray *categoryValues = [dictionarys valueForKey:categoryValueKey];
+            
+            CJComponentModelData *componentModelData = [[CJComponentModelData alloc] init];
+            componentModelData.text = category;
+            componentModelData.containValueCount = [categoryValues count];
+            
+            [componentModelDatas addObject:componentModelData];
+        } else {
+            NSString *string = [componentDatas objectAtIndex:index];
+            NSString *category = string;
+            
+            
+            CJComponentModelData *componentModelData = [[CJComponentModelData alloc] init];
+            componentModelData.text = category;
+            componentModelData.containValueCount = 0;
+            
+            [componentModelDatas addObject:componentModelData];
+        }
+        
+    }
+    return componentModelDatas;
 }
 
 

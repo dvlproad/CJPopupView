@@ -14,5 +14,6 @@
 
 @property (nonatomic, weak) IBOutlet CJDataListViewSingle *dataListViewSingle;
 @property (nonatomic, weak) IBOutlet CJDataListViewGroup *dataListViewGroup;
+@property (nonatomic, weak) IBOutlet UILabel *groupLabel;
 
 @end

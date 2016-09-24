@@ -33,7 +33,7 @@
 - (void)setDataGroupModel:(CJDataGroupModel *)dataGroupModel {
     _dataGroupModel = dataGroupModel;
     
-    NSInteger listNum = [dataGroupModel.componentDatasDatas count];
+    NSInteger listNum = [dataGroupModel.componentModelDatasDatas count];
     componentCount = listNum;
 
     
@@ -73,7 +73,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     NSInteger component = tableView.tag - kTableViewTagBegin;
-    NSArray *componentDatas = self.dataGroupModel.componentDatasDatas[component];
+    NSArray *componentDatas = self.dataGroupModel.componentModelDatasDatas[component];
     return [componentDatas count];
 }
 
@@ -88,6 +88,8 @@
     }
     
     NSInteger component = tableView.tag - kTableViewTagBegin;
+    
+    /*
     NSArray *componentDatas = self.dataGroupModel.componentDatasDatas[component];
     if (component != componentCount - 1) {
         NSDictionary *object = [componentDatas objectAtIndex:indexPath.row];
@@ -99,6 +101,8 @@
         NSArray *categoryValues = [object valueForKey:categoryValueKey];
         
         BOOL isHaveNext = [categoryValues count] > 0;
+        
+        
         if(isHaveNext){
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         }else{
@@ -111,7 +115,19 @@
         cell.textLabel.text = object;
         cell.accessoryType = UITableViewCellAccessoryNone;
     }
+    */
+    NSArray *componentModelDatas = self.dataGroupModel.componentModelDatasDatas[component];
+    CJComponentModelData *componentModelData = [componentModelDatas objectAtIndex:indexPath.row];
+    NSString *text = componentModelData.text;
+    BOOL isHaveNext = componentModelData.containValueCount > 0 ? YES : NO;
     
+    cell.textLabel.text = text;
+    if(isHaveNext){
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }else{
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+
     return cell;
 }
 
@@ -125,9 +141,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSInteger component = tableView.tag - kTableViewTagBegin;
-    NSArray *componentDatas = self.dataGroupModel.componentDatasDatas[component];
     
     [self didSelectRow:indexPath.row inComponent:component];
+    
+    /*
+    NSArray *componentDatas = self.dataGroupModel.componentDatasDatas[component];
     
     if (component == componentCount - 1) {
         NSString *object = [componentDatas objectAtIndex:indexPath.row];
@@ -137,23 +155,44 @@
         return;
     }
     
-    
     NSDictionary *object = [componentDatas objectAtIndex:indexPath.row];
     NSString *categoryValueKey =[self.dataGroupModel.categoryValueKeys objectAtIndex:component];
     NSArray *categoryValues = [object valueForKey:categoryValueKey];
     
     BOOL isHaveNext = [categoryValues count] > 0;
-    if(isHaveNext){ //如果有下个操作，则更新后续的列表，之后再继续根据新的点击操作来判断选择出来的是什么值
+    if(isHaveNext){ //如果有下个操作，则更新后续的列表，,如果有没有，也要更新。防止之前的数据残留。
         [self updateTableViewsFromComponentIndex:component+1];
         
     }else{
+        if (component+1 <= componentCount-1) {
+            [self updateTableViewsFromComponentIndex:component+1];
+        }
+        
         NSString *category =[self.dataGroupModel.categoryKeys objectAtIndex:component];
         NSString *title = [object valueForKey:category];
         if([self.delegate respondsToSelector:@selector(cj_dataListViewGroup:didSelectText:)]){
             [self.delegate cj_dataListViewGroup:self didSelectText:title];
         }
     }
+    */
     
+    NSArray *componentModelDatas = self.dataGroupModel.componentModelDatasDatas[component];
+    CJComponentModelData *componentModelData = [componentModelDatas objectAtIndex:indexPath.row];
+    NSString *text = componentModelData.text;
+    BOOL isHaveNext = componentModelData.containValueCount > 0 ? YES : NO;
+    
+    if(isHaveNext){ //如果有下个操作，则更新后续的列表，,如果有没有，也要更新。防止之前的数据残留。
+        [self updateTableViewsFromComponentIndex:component+1];
+        
+    }else{
+        if (component+1 <= componentCount-1) {
+            [self updateTableViewsFromComponentIndex:component+1];
+        }
+        
+        if([self.delegate respondsToSelector:@selector(cj_dataListViewGroup:didSelectText:)]){
+            [self.delegate cj_dataListViewGroup:self didSelectText:text];
+        }
+    }
 }
 
 
@@ -178,11 +217,14 @@
  *
  *  @param component component
  */
-- (void)updateTableViewsFromComponentIndex:(NSInteger)component {
-    for(NSInteger i = component; i < componentCount; i++) {
-        UITableView *tableView = (UITableView *)[self viewWithTag:kTableViewTagBegin+i];
+- (void)updateTableViewsFromComponentIndex:(NSInteger)componentIndexStart {
+    for(NSInteger  component= componentIndexStart; component < componentCount; component++) {
+        UITableView *tableView = (UITableView *)[self viewWithTag:kTableViewTagBegin+component];
         [tableView reloadData];
-        [tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:YES scrollPosition:UITableViewScrollPositionNone];
+        
+        NSString *selectedIndex = [self.dataGroupModel.selectedIndexs objectAtIndex:component];
+        NSIndexPath *selectedIndexPath = [NSIndexPath indexPathForRow:[selectedIndex integerValue] inSection:0];
+        [tableView selectRowAtIndexPath:selectedIndexPath animated:YES scrollPosition:UITableViewScrollPositionNone];
     }
 }
 

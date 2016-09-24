@@ -8,10 +8,14 @@
 
 #import "DataListViewController.h"
 
-#define kCategoryFirst  @"categoryFirst"    //eg:state  省
-#define kCategorySecond @"categorySecond"   //eg:city   市
-#define kCategoryThird  @"categoryThird"    //eg:area   区
-#define kCategoryFourth @"categoryFourth"   //eg:
+#define kCategoryFirst      @"categoryFirst"    //eg:state  省
+#define kCategoryFirstID    @"categoryFirstID"  //eg:state  省ID
+#define kCategorySecond     @"categorySecond"   //eg:city   市
+#define kCategorySecondID   @"categorySecondID" //eg:city   市ID
+#define kCategoryThird      @"categoryThird"    //eg:area   区
+#define kCategoryThirdID    @"categoryThirdID"  //eg:area   区
+#define kCategoryFourth     @"categoryFourth"   //eg:
+#define kCategoryFourthID   @"categoryFourthID" //eg:
 
 #define kCategoryValue  @"categoryValue"
 
@@ -61,10 +65,10 @@
         },
       @{kCategoryFirst:@"北京",
         kCategoryValue:@[
-                @{kCategorySecond:@"北京1", kCategoryValue:@[]},
-                @{kCategorySecond:@"北京", kCategoryValue:@[]},
-                @{kCategorySecond:@"北京3", kCategoryValue:@[@"4区", @"5区", @"6区"]},
-                @{kCategorySecond:@"北京4", kCategoryValue:@[@"7区", @"8区", @"9区"]}]
+                @{kCategorySecond:@"通州", kCategoryValue:@[]},
+                @{kCategorySecond:@"房山", kCategoryValue:@[]},
+                @{kCategorySecond:@"昌平", kCategoryValue:@[@"4区", @"5区", @"6区"]},
+                @{kCategorySecond:@"顺义", kCategoryValue:@[@"7区", @"8区", @"9区"]}]
         },
       @{kCategoryFirst:@"云南",
         kCategoryValue: @[
@@ -76,8 +80,7 @@
     NSArray *sortOrders = @[kCategoryFirst, kCategorySecond, kCategoryThird];
     NSArray *categoryValueKeys = @[kCategoryValue, kCategoryValue, kCategoryValue];
     
-    CJDataGroupModel *dataGroupModel = [[CJDataGroupModel alloc] initWithComponent0Datas:component0Datas sortByCategoryKeys:sortOrders categoryValueKeys:categoryValueKeys];
-    [dataGroupModel updateSelectedIndexs:@[@"0", @"0", @"0"]];
+    CJDataGroupModel *dataGroupModel = [[CJDataGroupModel alloc] initWithSelectedIndexs:@[@"0", @"1", @"0"] InComponent0Datas:component0Datas sortByCategoryKeys:sortOrders categoryValueKeys:categoryValueKeys];
     
     [self.dataListViewGroup setDataGroupModel:dataGroupModel];
     [self.dataListViewGroup updateTableViewBackgroundColor:[UIColor yellowColor] inComponent:1];
@@ -90,7 +93,15 @@
 }
 
 - (void)cj_dataListViewGroup:(CJDataListViewGroup *)dataListViewGroup didSelectText:(NSString *)text {
-    NSLog(@"text1 = %@, %@", text, dataListViewGroup.dataGroupModel.selectedTitles);
+    NSArray *selectedTitles = dataListViewGroup.dataGroupModel.selectedTitles;
+    NSLog(@"text1 = %@, %@", text, selectedTitles);
+    
+    NSString *string = @"";
+    for (NSString *selectedTitle in selectedTitles) {
+        string = [string stringByAppendingString:selectedTitle];
+    }
+    self.groupLabel.text = string;
+    
 }
 
 
