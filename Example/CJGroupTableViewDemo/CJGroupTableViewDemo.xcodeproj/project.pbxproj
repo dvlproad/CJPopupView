@@ -41,7 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		781D57261D155F5D0082D7EF /* DataListViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataListViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		781D57261D155F5D0082D7EF /* CJGroupTableViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CJGroupTableViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		781D572A1D155F5D0082D7EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		781D572C1D155F5D0082D7EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		781D572D1D155F5D0082D7EF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,10 +51,10 @@
 		781D57351D155F5D0082D7EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		781D57381D155F5D0082D7EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		781D573A1D155F5D0082D7EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		781D573F1D155F5D0082D7EF /* DataListViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataListViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		781D573F1D155F5D0082D7EF /* CJGroupTableViewDemo.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CJGroupTableViewDemo.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		781D57431D155F5D0082D7EF /* DataListViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataListViewDemoTests.m; sourceTree = "<group>"; };
 		781D57451D155F5D0082D7EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		781D574A1D155F5D0082D7EF /* DataListViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataListViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		781D574A1D155F5D0082D7EF /* CJGroupTableViewDemo.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CJGroupTableViewDemo.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		781D574E1D155F5D0082D7EF /* DataListViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataListViewDemoUITests.m; sourceTree = "<group>"; };
 		781D57501D155F5D0082D7EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		781D57671D1561720082D7EF /* DataListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataListViewController.h; sourceTree = "<group>"; };
@@ -108,9 +108,9 @@
 		781D57271D155F5D0082D7EF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				781D57261D155F5D0082D7EF /* DataListViewDemo.app */,
-				781D573F1D155F5D0082D7EF /* DataListViewDemoTests.xctest */,
-				781D574A1D155F5D0082D7EF /* DataListViewDemoUITests.xctest */,
+				781D57261D155F5D0082D7EF /* CJGroupTableViewDemo.app */,
+				781D573F1D155F5D0082D7EF /* CJGroupTableViewDemo.xctest */,
+				781D574A1D155F5D0082D7EF /* CJGroupTableViewDemo.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -195,9 +195,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		781D57251D155F5D0082D7EF /* DataListViewDemo */ = {
+		781D57251D155F5D0082D7EF /* CJGroupTableViewDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 781D57531D155F5D0082D7EF /* Build configuration list for PBXNativeTarget "DataListViewDemo" */;
+			buildConfigurationList = 781D57531D155F5D0082D7EF /* Build configuration list for PBXNativeTarget "CJGroupTableViewDemo" */;
 			buildPhases = (
 				781D57221D155F5D0082D7EF /* Sources */,
 				781D57231D155F5D0082D7EF /* Frameworks */,
@@ -207,14 +207,14 @@
 			);
 			dependencies = (
 			);
-			name = DataListViewDemo;
+			name = CJGroupTableViewDemo;
 			productName = DataListViewDemo;
-			productReference = 781D57261D155F5D0082D7EF /* DataListViewDemo.app */;
+			productReference = 781D57261D155F5D0082D7EF /* CJGroupTableViewDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		781D573E1D155F5D0082D7EF /* DataListViewDemoTests */ = {
+		781D573E1D155F5D0082D7EF /* CJGroupTableViewDemoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 781D57561D155F5D0082D7EF /* Build configuration list for PBXNativeTarget "DataListViewDemoTests" */;
+			buildConfigurationList = 781D57561D155F5D0082D7EF /* Build configuration list for PBXNativeTarget "CJGroupTableViewDemoTests" */;
 			buildPhases = (
 				781D573B1D155F5D0082D7EF /* Sources */,
 				781D573C1D155F5D0082D7EF /* Frameworks */,
@@ -225,14 +225,14 @@
 			dependencies = (
 				781D57411D155F5D0082D7EF /* PBXTargetDependency */,
 			);
-			name = DataListViewDemoTests;
+			name = CJGroupTableViewDemoTests;
 			productName = DataListViewDemoTests;
-			productReference = 781D573F1D155F5D0082D7EF /* DataListViewDemoTests.xctest */;
+			productReference = 781D573F1D155F5D0082D7EF /* CJGroupTableViewDemo.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		781D57491D155F5D0082D7EF /* DataListViewDemoUITests */ = {
+		781D57491D155F5D0082D7EF /* CJGroupTableViewDemoUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 781D57591D155F5D0082D7EF /* Build configuration list for PBXNativeTarget "DataListViewDemoUITests" */;
+			buildConfigurationList = 781D57591D155F5D0082D7EF /* Build configuration list for PBXNativeTarget "CJGroupTableViewDemoUITests" */;
 			buildPhases = (
 				781D57461D155F5D0082D7EF /* Sources */,
 				781D57471D155F5D0082D7EF /* Frameworks */,
@@ -243,9 +243,9 @@
 			dependencies = (
 				781D574C1D155F5D0082D7EF /* PBXTargetDependency */,
 			);
-			name = DataListViewDemoUITests;
+			name = CJGroupTableViewDemoUITests;
 			productName = DataListViewDemoUITests;
-			productReference = 781D574A1D155F5D0082D7EF /* DataListViewDemoUITests.xctest */;
+			productReference = 781D574A1D155F5D0082D7EF /* CJGroupTableViewDemo.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -270,7 +270,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 781D57211D155F5D0082D7EF /* Build configuration list for PBXProject "DataListViewDemo" */;
+			buildConfigurationList = 781D57211D155F5D0082D7EF /* Build configuration list for PBXProject "CJGroupTableViewDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -283,9 +283,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				781D57251D155F5D0082D7EF /* DataListViewDemo */,
-				781D573E1D155F5D0082D7EF /* DataListViewDemoTests */,
-				781D57491D155F5D0082D7EF /* DataListViewDemoUITests */,
+				781D57251D155F5D0082D7EF /* CJGroupTableViewDemo */,
+				781D573E1D155F5D0082D7EF /* CJGroupTableViewDemoTests */,
+				781D57491D155F5D0082D7EF /* CJGroupTableViewDemoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -355,12 +355,12 @@
 /* Begin PBXTargetDependency section */
 		781D57411D155F5D0082D7EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 781D57251D155F5D0082D7EF /* DataListViewDemo */;
+			target = 781D57251D155F5D0082D7EF /* CJGroupTableViewDemo */;
 			targetProxy = 781D57401D155F5D0082D7EF /* PBXContainerItemProxy */;
 		};
 		781D574C1D155F5D0082D7EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 781D57251D155F5D0082D7EF /* DataListViewDemo */;
+			target = 781D57251D155F5D0082D7EF /* CJGroupTableViewDemo */;
 			targetProxy = 781D574B1D155F5D0082D7EF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -476,7 +476,7 @@
 				INFOPLIST_FILE = DataListViewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.DataListViewDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CJGroupTableViewDemo;
 			};
 			name = Debug;
 		};
@@ -487,7 +487,7 @@
 				INFOPLIST_FILE = DataListViewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.DataListViewDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CJGroupTableViewDemo;
 			};
 			name = Release;
 		};
@@ -498,8 +498,8 @@
 				INFOPLIST_FILE = DataListViewDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.DataListViewDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DataListViewDemo.app/DataListViewDemo";
+				PRODUCT_NAME = CJGroupTableViewDemo;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CJGroupTableViewDemo.app/CJGroupTableViewDemo";
 			};
 			name = Debug;
 		};
@@ -510,8 +510,8 @@
 				INFOPLIST_FILE = DataListViewDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.DataListViewDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DataListViewDemo.app/DataListViewDemo";
+				PRODUCT_NAME = CJGroupTableViewDemo;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CJGroupTableViewDemo.app/CJGroupTableViewDemo";
 			};
 			name = Release;
 		};
@@ -521,7 +521,7 @@
 				INFOPLIST_FILE = DataListViewDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.DataListViewDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CJGroupTableViewDemo;
 				TEST_TARGET_NAME = DataListViewDemo;
 			};
 			name = Debug;
@@ -532,7 +532,7 @@
 				INFOPLIST_FILE = DataListViewDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.DataListViewDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CJGroupTableViewDemo;
 				TEST_TARGET_NAME = DataListViewDemo;
 			};
 			name = Release;
@@ -540,7 +540,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		781D57211D155F5D0082D7EF /* Build configuration list for PBXProject "DataListViewDemo" */ = {
+		781D57211D155F5D0082D7EF /* Build configuration list for PBXProject "CJGroupTableViewDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				781D57511D155F5D0082D7EF /* Debug */,
@@ -549,7 +549,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		781D57531D155F5D0082D7EF /* Build configuration list for PBXNativeTarget "DataListViewDemo" */ = {
+		781D57531D155F5D0082D7EF /* Build configuration list for PBXNativeTarget "CJGroupTableViewDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				781D57541D155F5D0082D7EF /* Debug */,
@@ -558,7 +558,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		781D57561D155F5D0082D7EF /* Build configuration list for PBXNativeTarget "DataListViewDemoTests" */ = {
+		781D57561D155F5D0082D7EF /* Build configuration list for PBXNativeTarget "CJGroupTableViewDemoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				781D57571D155F5D0082D7EF /* Debug */,
@@ -567,7 +567,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		781D57591D155F5D0082D7EF /* Build configuration list for PBXNativeTarget "DataListViewDemoUITests" */ = {
+		781D57591D155F5D0082D7EF /* Build configuration list for PBXNativeTarget "CJGroupTableViewDemoUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				781D575A1D155F5D0082D7EF /* Debug */,
