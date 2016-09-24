@@ -1,0 +1,12 @@
+PODS:
+  - RadioButtons (2.1.2)
+
+DEPENDENCIES:
+  - RadioButtons (~> 2.1.2)
+
+SPEC CHECKSUMS:
+  RadioButtons: 913e4f2327e77533bb46660bc8733fdef43e2989
+
+PODFILE CHECKSUM: bbfd0619ebbb844c914cd7ab8287bcb8428969d3
+
+COCOAPODS: 1.0.0

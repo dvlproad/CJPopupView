@@ -7,85 +7,98 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		781D572B1D155F5D0082D7EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 781D572A1D155F5D0082D7EF /* main.m */; };
-		781D572E1D155F5D0082D7EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 781D572D1D155F5D0082D7EF /* AppDelegate.m */; };
-		781D57311D155F5D0082D7EF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 781D57301D155F5D0082D7EF /* ViewController.m */; };
-		781D57341D155F5D0082D7EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 781D57321D155F5D0082D7EF /* Main.storyboard */; };
-		781D57361D155F5D0082D7EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 781D57351D155F5D0082D7EF /* Assets.xcassets */; };
-		781D57391D155F5D0082D7EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 781D57371D155F5D0082D7EF /* LaunchScreen.storyboard */; };
-		781D57441D155F5D0082D7EF /* DataListViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 781D57431D155F5D0082D7EF /* DataListViewDemoTests.m */; };
-		781D574F1D155F5D0082D7EF /* DataListViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 781D574E1D155F5D0082D7EF /* DataListViewDemoUITests.m */; };
-		781D576A1D1561720082D7EF /* DataListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 781D57681D1561720082D7EF /* DataListViewController.m */; };
-		781D576B1D1561720082D7EF /* DataListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 781D57691D1561720082D7EF /* DataListViewController.xib */; };
-		783AC7791D9689CB0077067E /* CJGroupTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7711D9689CB0077067E /* CJGroupTableView.m */; };
-		783AC77A1D9689CB0077067E /* CJSingleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7731D9689CB0077067E /* CJSingleTableView.m */; };
-		783AC77B1D9689CB0077067E /* CJComponentModelData.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7761D9689CB0077067E /* CJComponentModelData.m */; };
-		783AC77C1D9689CB0077067E /* CJDataGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7781D9689CB0077067E /* CJDataGroupModel.m */; };
+		6C8E797EF1317610B05543B9 /* libPods-CJGroupTableViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B174A71F90A6E730AEF0D87 /* libPods-CJGroupTableViewDemo.a */; };
+		783AC78B1D968C530077067E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC78A1D968C530077067E /* main.m */; };
+		783AC78E1D968C530077067E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC78D1D968C530077067E /* AppDelegate.m */; };
+		783AC7911D968C530077067E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7901D968C530077067E /* ViewController.m */; };
+		783AC7941D968C530077067E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 783AC7921D968C530077067E /* Main.storyboard */; };
+		783AC7961D968C540077067E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 783AC7951D968C540077067E /* Assets.xcassets */; };
+		783AC7991D968C540077067E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 783AC7971D968C540077067E /* LaunchScreen.storyboard */; };
+		783AC7A41D968C540077067E /* CJGroupTableViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7A31D968C540077067E /* CJGroupTableViewDemoTests.m */; };
+		783AC7AF1D968C540077067E /* CJGroupTableViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7AE1D968C540077067E /* CJGroupTableViewDemoUITests.m */; };
+		783AC7C01D968D3D0077067E /* GroupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7BE1D968D3D0077067E /* GroupTableViewController.m */; };
+		783AC7C11D968D3D0077067E /* GroupTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 783AC7BF1D968D3D0077067E /* GroupTableViewController.xib */; };
+		783AC7CC1D968D460077067E /* CJGroupTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7C41D968D460077067E /* CJGroupTableView.m */; };
+		783AC7CD1D968D460077067E /* CJSingleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7C61D968D460077067E /* CJSingleTableView.m */; };
+		783AC7CE1D968D460077067E /* CJComponentModelData.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7C91D968D460077067E /* CJComponentModelData.m */; };
+		783AC7CF1D968D460077067E /* CJDataGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7CB1D968D460077067E /* CJDataGroupModel.m */; };
+		783AC7D31D9690680077067E /* GroupDataUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7D21D9690680077067E /* GroupDataUtil.m */; };
+		7DB59DC2738A0CE9DC2EBB43 /* libPods-CJGroupTableViewDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B77FC5D8CF35A3BB60FC0C4 /* libPods-CJGroupTableViewDemoTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		781D57401D155F5D0082D7EF /* PBXContainerItemProxy */ = {
+		783AC7A01D968C540077067E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 781D571E1D155F5D0082D7EF /* Project object */;
+			containerPortal = 783AC77E1D968C530077067E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 781D57251D155F5D0082D7EF;
-			remoteInfo = DataListViewDemo;
+			remoteGlobalIDString = 783AC7851D968C530077067E;
+			remoteInfo = CJGroupTableViewDemo;
 		};
-		781D574B1D155F5D0082D7EF /* PBXContainerItemProxy */ = {
+		783AC7AB1D968C540077067E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 781D571E1D155F5D0082D7EF /* Project object */;
+			containerPortal = 783AC77E1D968C530077067E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 781D57251D155F5D0082D7EF;
-			remoteInfo = DataListViewDemo;
+			remoteGlobalIDString = 783AC7851D968C530077067E;
+			remoteInfo = CJGroupTableViewDemo;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		781D57261D155F5D0082D7EF /* CJGroupTableViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CJGroupTableViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		781D572A1D155F5D0082D7EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		781D572C1D155F5D0082D7EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		781D572D1D155F5D0082D7EF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		781D572F1D155F5D0082D7EF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		781D57301D155F5D0082D7EF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		781D57331D155F5D0082D7EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		781D57351D155F5D0082D7EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		781D57381D155F5D0082D7EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		781D573A1D155F5D0082D7EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		781D573F1D155F5D0082D7EF /* CJGroupTableViewDemo.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CJGroupTableViewDemo.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		781D57431D155F5D0082D7EF /* DataListViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataListViewDemoTests.m; sourceTree = "<group>"; };
-		781D57451D155F5D0082D7EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		781D574A1D155F5D0082D7EF /* CJGroupTableViewDemo.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CJGroupTableViewDemo.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		781D574E1D155F5D0082D7EF /* DataListViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataListViewDemoUITests.m; sourceTree = "<group>"; };
-		781D57501D155F5D0082D7EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		781D57671D1561720082D7EF /* DataListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataListViewController.h; sourceTree = "<group>"; };
-		781D57681D1561720082D7EF /* DataListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataListViewController.m; sourceTree = "<group>"; };
-		781D57691D1561720082D7EF /* DataListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DataListViewController.xib; sourceTree = "<group>"; };
-		783AC7701D9689CB0077067E /* CJGroupTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJGroupTableView.h; sourceTree = "<group>"; };
-		783AC7711D9689CB0077067E /* CJGroupTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJGroupTableView.m; sourceTree = "<group>"; };
-		783AC7721D9689CB0077067E /* CJSingleTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSingleTableView.h; sourceTree = "<group>"; };
-		783AC7731D9689CB0077067E /* CJSingleTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSingleTableView.m; sourceTree = "<group>"; };
-		783AC7751D9689CB0077067E /* CJComponentModelData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJComponentModelData.h; sourceTree = "<group>"; };
-		783AC7761D9689CB0077067E /* CJComponentModelData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJComponentModelData.m; sourceTree = "<group>"; };
-		783AC7771D9689CB0077067E /* CJDataGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDataGroupModel.h; sourceTree = "<group>"; };
-		783AC7781D9689CB0077067E /* CJDataGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDataGroupModel.m; sourceTree = "<group>"; };
+		0B174A71F90A6E730AEF0D87 /* libPods-CJGroupTableViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CJGroupTableViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		22D5BF7A8A602725C61F8E51 /* Pods-CJGroupTableViewDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJGroupTableViewDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CJGroupTableViewDemoTests/Pods-CJGroupTableViewDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2B77FC5D8CF35A3BB60FC0C4 /* libPods-CJGroupTableViewDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CJGroupTableViewDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		783AC7861D968C530077067E /* CJGroupTableViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CJGroupTableViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		783AC78A1D968C530077067E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		783AC78C1D968C530077067E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		783AC78D1D968C530077067E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		783AC78F1D968C530077067E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		783AC7901D968C530077067E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		783AC7931D968C530077067E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		783AC7951D968C540077067E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		783AC7981D968C540077067E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		783AC79A1D968C540077067E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		783AC79F1D968C540077067E /* CJGroupTableViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CJGroupTableViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		783AC7A31D968C540077067E /* CJGroupTableViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CJGroupTableViewDemoTests.m; sourceTree = "<group>"; };
+		783AC7A51D968C540077067E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		783AC7AA1D968C540077067E /* CJGroupTableViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CJGroupTableViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		783AC7AE1D968C540077067E /* CJGroupTableViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CJGroupTableViewDemoUITests.m; sourceTree = "<group>"; };
+		783AC7B01D968C540077067E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		783AC7BD1D968D3D0077067E /* GroupTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupTableViewController.h; sourceTree = "<group>"; };
+		783AC7BE1D968D3D0077067E /* GroupTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupTableViewController.m; sourceTree = "<group>"; };
+		783AC7BF1D968D3D0077067E /* GroupTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupTableViewController.xib; sourceTree = "<group>"; };
+		783AC7C31D968D460077067E /* CJGroupTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJGroupTableView.h; sourceTree = "<group>"; };
+		783AC7C41D968D460077067E /* CJGroupTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJGroupTableView.m; sourceTree = "<group>"; };
+		783AC7C51D968D460077067E /* CJSingleTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSingleTableView.h; sourceTree = "<group>"; };
+		783AC7C61D968D460077067E /* CJSingleTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSingleTableView.m; sourceTree = "<group>"; };
+		783AC7C81D968D460077067E /* CJComponentModelData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJComponentModelData.h; sourceTree = "<group>"; };
+		783AC7C91D968D460077067E /* CJComponentModelData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJComponentModelData.m; sourceTree = "<group>"; };
+		783AC7CA1D968D460077067E /* CJDataGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDataGroupModel.h; sourceTree = "<group>"; };
+		783AC7CB1D968D460077067E /* CJDataGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDataGroupModel.m; sourceTree = "<group>"; };
+		783AC7D11D9690680077067E /* GroupDataUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupDataUtil.h; sourceTree = "<group>"; };
+		783AC7D21D9690680077067E /* GroupDataUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupDataUtil.m; sourceTree = "<group>"; };
+		A25D9BE426EE2DA7930B4D83 /* Pods-CJGroupTableViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJGroupTableViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CJGroupTableViewDemo/Pods-CJGroupTableViewDemo.release.xcconfig"; sourceTree = "<group>"; };
+		C94AB2966C06477AC7F922E3 /* Pods-CJGroupTableViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJGroupTableViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CJGroupTableViewDemo/Pods-CJGroupTableViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		FEBD8A6746BC917E6FCEF304 /* Pods-CJGroupTableViewDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJGroupTableViewDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CJGroupTableViewDemoTests/Pods-CJGroupTableViewDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		781D57231D155F5D0082D7EF /* Frameworks */ = {
+		783AC7831D968C530077067E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C8E797EF1317610B05543B9 /* libPods-CJGroupTableViewDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		781D573C1D155F5D0082D7EF /* Frameworks */ = {
+		783AC79C1D968C540077067E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DB59DC2738A0CE9DC2EBB43 /* libPods-CJGroupTableViewDemoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		781D57471D155F5D0082D7EF /* Frameworks */ = {
+		783AC7A71D968C540077067E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -95,182 +108,221 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		781D571D1D155F5D0082D7EF = {
+		077BA07848305BD482D623D2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				781D57281D155F5D0082D7EF /* DataListViewDemo */,
-				781D57421D155F5D0082D7EF /* DataListViewDemoTests */,
-				781D574D1D155F5D0082D7EF /* DataListViewDemoUITests */,
-				781D57271D155F5D0082D7EF /* Products */,
+				C94AB2966C06477AC7F922E3 /* Pods-CJGroupTableViewDemo.debug.xcconfig */,
+				A25D9BE426EE2DA7930B4D83 /* Pods-CJGroupTableViewDemo.release.xcconfig */,
+				22D5BF7A8A602725C61F8E51 /* Pods-CJGroupTableViewDemoTests.debug.xcconfig */,
+				FEBD8A6746BC917E6FCEF304 /* Pods-CJGroupTableViewDemoTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		783AC77D1D968C530077067E = {
+			isa = PBXGroup;
+			children = (
+				783AC7881D968C530077067E /* CJGroupTableViewDemo */,
+				783AC7A21D968C540077067E /* CJGroupTableViewDemoTests */,
+				783AC7AD1D968C540077067E /* CJGroupTableViewDemoUITests */,
+				783AC7871D968C530077067E /* Products */,
+				077BA07848305BD482D623D2 /* Pods */,
+				C2E0196F9EEF3112724138E9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		781D57271D155F5D0082D7EF /* Products */ = {
+		783AC7871D968C530077067E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				781D57261D155F5D0082D7EF /* CJGroupTableViewDemo.app */,
-				781D573F1D155F5D0082D7EF /* CJGroupTableViewDemo.xctest */,
-				781D574A1D155F5D0082D7EF /* CJGroupTableViewDemo.xctest */,
+				783AC7861D968C530077067E /* CJGroupTableViewDemo.app */,
+				783AC79F1D968C540077067E /* CJGroupTableViewDemoTests.xctest */,
+				783AC7AA1D968C540077067E /* CJGroupTableViewDemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		781D57281D155F5D0082D7EF /* DataListViewDemo */ = {
+		783AC7881D968C530077067E /* CJGroupTableViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				781D572C1D155F5D0082D7EF /* AppDelegate.h */,
-				781D572D1D155F5D0082D7EF /* AppDelegate.m */,
-				781D572F1D155F5D0082D7EF /* ViewController.h */,
-				781D57301D155F5D0082D7EF /* ViewController.m */,
-				783AC76F1D9689CB0077067E /* CJGroupTableView */,
-				781D575C1D1560690082D7EF /* Controllers */,
-				781D57321D155F5D0082D7EF /* Main.storyboard */,
-				781D57351D155F5D0082D7EF /* Assets.xcassets */,
-				781D57371D155F5D0082D7EF /* LaunchScreen.storyboard */,
-				781D573A1D155F5D0082D7EF /* Info.plist */,
-				781D57291D155F5D0082D7EF /* Supporting Files */,
+				783AC78C1D968C530077067E /* AppDelegate.h */,
+				783AC78D1D968C530077067E /* AppDelegate.m */,
+				783AC78F1D968C530077067E /* ViewController.h */,
+				783AC7901D968C530077067E /* ViewController.m */,
+				783AC7D01D96901B0077067E /* Util */,
+				783AC7C21D968D460077067E /* CJGroupTableView */,
+				783AC7BC1D968D3D0077067E /* Controllers */,
+				783AC7921D968C530077067E /* Main.storyboard */,
+				783AC7951D968C540077067E /* Assets.xcassets */,
+				783AC7971D968C540077067E /* LaunchScreen.storyboard */,
+				783AC79A1D968C540077067E /* Info.plist */,
+				783AC7891D968C530077067E /* Supporting Files */,
 			);
-			path = DataListViewDemo;
+			path = CJGroupTableViewDemo;
 			sourceTree = "<group>";
 		};
-		781D57291D155F5D0082D7EF /* Supporting Files */ = {
+		783AC7891D968C530077067E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				781D572A1D155F5D0082D7EF /* main.m */,
+				783AC78A1D968C530077067E /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		781D57421D155F5D0082D7EF /* DataListViewDemoTests */ = {
+		783AC7A21D968C540077067E /* CJGroupTableViewDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				781D57431D155F5D0082D7EF /* DataListViewDemoTests.m */,
-				781D57451D155F5D0082D7EF /* Info.plist */,
+				783AC7A31D968C540077067E /* CJGroupTableViewDemoTests.m */,
+				783AC7A51D968C540077067E /* Info.plist */,
 			);
-			path = DataListViewDemoTests;
+			path = CJGroupTableViewDemoTests;
 			sourceTree = "<group>";
 		};
-		781D574D1D155F5D0082D7EF /* DataListViewDemoUITests */ = {
+		783AC7AD1D968C540077067E /* CJGroupTableViewDemoUITests */ = {
 			isa = PBXGroup;
 			children = (
-				781D574E1D155F5D0082D7EF /* DataListViewDemoUITests.m */,
-				781D57501D155F5D0082D7EF /* Info.plist */,
+				783AC7AE1D968C540077067E /* CJGroupTableViewDemoUITests.m */,
+				783AC7B01D968C540077067E /* Info.plist */,
 			);
-			path = DataListViewDemoUITests;
+			path = CJGroupTableViewDemoUITests;
 			sourceTree = "<group>";
 		};
-		781D575C1D1560690082D7EF /* Controllers */ = {
+		783AC7BC1D968D3D0077067E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				781D57671D1561720082D7EF /* DataListViewController.h */,
-				781D57681D1561720082D7EF /* DataListViewController.m */,
-				781D57691D1561720082D7EF /* DataListViewController.xib */,
+				783AC7BD1D968D3D0077067E /* GroupTableViewController.h */,
+				783AC7BE1D968D3D0077067E /* GroupTableViewController.m */,
+				783AC7BF1D968D3D0077067E /* GroupTableViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		783AC76F1D9689CB0077067E /* CJGroupTableView */ = {
+		783AC7C21D968D460077067E /* CJGroupTableView */ = {
 			isa = PBXGroup;
 			children = (
-				783AC7701D9689CB0077067E /* CJGroupTableView.h */,
-				783AC7711D9689CB0077067E /* CJGroupTableView.m */,
-				783AC7721D9689CB0077067E /* CJSingleTableView.h */,
-				783AC7731D9689CB0077067E /* CJSingleTableView.m */,
-				783AC7741D9689CB0077067E /* Model */,
+				783AC7C31D968D460077067E /* CJGroupTableView.h */,
+				783AC7C41D968D460077067E /* CJGroupTableView.m */,
+				783AC7C51D968D460077067E /* CJSingleTableView.h */,
+				783AC7C61D968D460077067E /* CJSingleTableView.m */,
+				783AC7C71D968D460077067E /* Model */,
 			);
-			path = CJGroupTableView;
+			name = CJGroupTableView;
+			path = ../../../CJGroupTableView;
 			sourceTree = "<group>";
 		};
-		783AC7741D9689CB0077067E /* Model */ = {
+		783AC7C71D968D460077067E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				783AC7751D9689CB0077067E /* CJComponentModelData.h */,
-				783AC7761D9689CB0077067E /* CJComponentModelData.m */,
-				783AC7771D9689CB0077067E /* CJDataGroupModel.h */,
-				783AC7781D9689CB0077067E /* CJDataGroupModel.m */,
+				783AC7C81D968D460077067E /* CJComponentModelData.h */,
+				783AC7C91D968D460077067E /* CJComponentModelData.m */,
+				783AC7CA1D968D460077067E /* CJDataGroupModel.h */,
+				783AC7CB1D968D460077067E /* CJDataGroupModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		783AC7D01D96901B0077067E /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				783AC7D11D9690680077067E /* GroupDataUtil.h */,
+				783AC7D21D9690680077067E /* GroupDataUtil.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		C2E0196F9EEF3112724138E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B174A71F90A6E730AEF0D87 /* libPods-CJGroupTableViewDemo.a */,
+				2B77FC5D8CF35A3BB60FC0C4 /* libPods-CJGroupTableViewDemoTests.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		781D57251D155F5D0082D7EF /* CJGroupTableViewDemo */ = {
+		783AC7851D968C530077067E /* CJGroupTableViewDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 781D57531D155F5D0082D7EF /* Build configuration list for PBXNativeTarget "CJGroupTableViewDemo" */;
+			buildConfigurationList = 783AC7B31D968C540077067E /* Build configuration list for PBXNativeTarget "CJGroupTableViewDemo" */;
 			buildPhases = (
-				781D57221D155F5D0082D7EF /* Sources */,
-				781D57231D155F5D0082D7EF /* Frameworks */,
-				781D57241D155F5D0082D7EF /* Resources */,
+				31E66D72AADA51674CE70914 /* 📦 Check Pods Manifest.lock */,
+				783AC7821D968C530077067E /* Sources */,
+				783AC7831D968C530077067E /* Frameworks */,
+				783AC7841D968C530077067E /* Resources */,
+				08CD0F395D07A1EC6B7BB71C /* 📦 Embed Pods Frameworks */,
+				226A14A3524BD572556A10A0 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = CJGroupTableViewDemo;
-			productName = DataListViewDemo;
-			productReference = 781D57261D155F5D0082D7EF /* CJGroupTableViewDemo.app */;
+			productName = CJGroupTableViewDemo;
+			productReference = 783AC7861D968C530077067E /* CJGroupTableViewDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		781D573E1D155F5D0082D7EF /* CJGroupTableViewDemoTests */ = {
+		783AC79E1D968C540077067E /* CJGroupTableViewDemoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 781D57561D155F5D0082D7EF /* Build configuration list for PBXNativeTarget "CJGroupTableViewDemoTests" */;
+			buildConfigurationList = 783AC7B61D968C540077067E /* Build configuration list for PBXNativeTarget "CJGroupTableViewDemoTests" */;
 			buildPhases = (
-				781D573B1D155F5D0082D7EF /* Sources */,
-				781D573C1D155F5D0082D7EF /* Frameworks */,
-				781D573D1D155F5D0082D7EF /* Resources */,
+				C3580A134A5C7E9FEC0D6D5B /* 📦 Check Pods Manifest.lock */,
+				783AC79B1D968C540077067E /* Sources */,
+				783AC79C1D968C540077067E /* Frameworks */,
+				783AC79D1D968C540077067E /* Resources */,
+				8BDA8C36E0E9CEF8AEB59E9B /* 📦 Embed Pods Frameworks */,
+				02DED656EBB2C478AC8C5115 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				781D57411D155F5D0082D7EF /* PBXTargetDependency */,
+				783AC7A11D968C540077067E /* PBXTargetDependency */,
 			);
 			name = CJGroupTableViewDemoTests;
-			productName = DataListViewDemoTests;
-			productReference = 781D573F1D155F5D0082D7EF /* CJGroupTableViewDemo.xctest */;
+			productName = CJGroupTableViewDemoTests;
+			productReference = 783AC79F1D968C540077067E /* CJGroupTableViewDemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		781D57491D155F5D0082D7EF /* CJGroupTableViewDemoUITests */ = {
+		783AC7A91D968C540077067E /* CJGroupTableViewDemoUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 781D57591D155F5D0082D7EF /* Build configuration list for PBXNativeTarget "CJGroupTableViewDemoUITests" */;
+			buildConfigurationList = 783AC7B91D968C540077067E /* Build configuration list for PBXNativeTarget "CJGroupTableViewDemoUITests" */;
 			buildPhases = (
-				781D57461D155F5D0082D7EF /* Sources */,
-				781D57471D155F5D0082D7EF /* Frameworks */,
-				781D57481D155F5D0082D7EF /* Resources */,
+				783AC7A61D968C540077067E /* Sources */,
+				783AC7A71D968C540077067E /* Frameworks */,
+				783AC7A81D968C540077067E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				781D574C1D155F5D0082D7EF /* PBXTargetDependency */,
+				783AC7AC1D968C540077067E /* PBXTargetDependency */,
 			);
 			name = CJGroupTableViewDemoUITests;
-			productName = DataListViewDemoUITests;
-			productReference = 781D574A1D155F5D0082D7EF /* CJGroupTableViewDemo.xctest */;
+			productName = CJGroupTableViewDemoUITests;
+			productReference = 783AC7AA1D968C540077067E /* CJGroupTableViewDemoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		781D571E1D155F5D0082D7EF /* Project object */ = {
+		783AC77E1D968C530077067E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = dvlproad;
 				TargetAttributes = {
-					781D57251D155F5D0082D7EF = {
+					783AC7851D968C530077067E = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
-					781D573E1D155F5D0082D7EF = {
+					783AC79E1D968C540077067E = {
 						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = 781D57251D155F5D0082D7EF;
+						TestTargetID = 783AC7851D968C530077067E;
 					};
-					781D57491D155F5D0082D7EF = {
+					783AC7A91D968C540077067E = {
 						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = 781D57251D155F5D0082D7EF;
+						TestTargetID = 783AC7851D968C530077067E;
 					};
 				};
 			};
-			buildConfigurationList = 781D57211D155F5D0082D7EF /* Build configuration list for PBXProject "CJGroupTableViewDemo" */;
+			buildConfigurationList = 783AC7811D968C530077067E /* Build configuration list for PBXProject "CJGroupTableViewDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -278,38 +330,38 @@
 				en,
 				Base,
 			);
-			mainGroup = 781D571D1D155F5D0082D7EF;
-			productRefGroup = 781D57271D155F5D0082D7EF /* Products */;
+			mainGroup = 783AC77D1D968C530077067E;
+			productRefGroup = 783AC7871D968C530077067E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				781D57251D155F5D0082D7EF /* CJGroupTableViewDemo */,
-				781D573E1D155F5D0082D7EF /* CJGroupTableViewDemoTests */,
-				781D57491D155F5D0082D7EF /* CJGroupTableViewDemoUITests */,
+				783AC7851D968C530077067E /* CJGroupTableViewDemo */,
+				783AC79E1D968C540077067E /* CJGroupTableViewDemoTests */,
+				783AC7A91D968C540077067E /* CJGroupTableViewDemoUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		781D57241D155F5D0082D7EF /* Resources */ = {
+		783AC7841D968C530077067E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				781D576B1D1561720082D7EF /* DataListViewController.xib in Resources */,
-				781D57391D155F5D0082D7EF /* LaunchScreen.storyboard in Resources */,
-				781D57361D155F5D0082D7EF /* Assets.xcassets in Resources */,
-				781D57341D155F5D0082D7EF /* Main.storyboard in Resources */,
+				783AC7C11D968D3D0077067E /* GroupTableViewController.xib in Resources */,
+				783AC7991D968C540077067E /* LaunchScreen.storyboard in Resources */,
+				783AC7961D968C540077067E /* Assets.xcassets in Resources */,
+				783AC7941D968C530077067E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		781D573D1D155F5D0082D7EF /* Resources */ = {
+		783AC79D1D968C540077067E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		781D57481D155F5D0082D7EF /* Resources */ = {
+		783AC7A81D968C540077067E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -318,66 +370,160 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		02DED656EBB2C478AC8C5115 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CJGroupTableViewDemoTests/Pods-CJGroupTableViewDemoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		08CD0F395D07A1EC6B7BB71C /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CJGroupTableViewDemo/Pods-CJGroupTableViewDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		226A14A3524BD572556A10A0 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CJGroupTableViewDemo/Pods-CJGroupTableViewDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31E66D72AADA51674CE70914 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8BDA8C36E0E9CEF8AEB59E9B /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CJGroupTableViewDemoTests/Pods-CJGroupTableViewDemoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3580A134A5C7E9FEC0D6D5B /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		781D57221D155F5D0082D7EF /* Sources */ = {
+		783AC7821D968C530077067E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				781D57311D155F5D0082D7EF /* ViewController.m in Sources */,
-				781D576A1D1561720082D7EF /* DataListViewController.m in Sources */,
-				783AC77C1D9689CB0077067E /* CJDataGroupModel.m in Sources */,
-				783AC77B1D9689CB0077067E /* CJComponentModelData.m in Sources */,
-				783AC77A1D9689CB0077067E /* CJSingleTableView.m in Sources */,
-				781D572E1D155F5D0082D7EF /* AppDelegate.m in Sources */,
-				781D572B1D155F5D0082D7EF /* main.m in Sources */,
-				783AC7791D9689CB0077067E /* CJGroupTableView.m in Sources */,
+				783AC7C01D968D3D0077067E /* GroupTableViewController.m in Sources */,
+				783AC7D31D9690680077067E /* GroupDataUtil.m in Sources */,
+				783AC7911D968C530077067E /* ViewController.m in Sources */,
+				783AC7CF1D968D460077067E /* CJDataGroupModel.m in Sources */,
+				783AC7CE1D968D460077067E /* CJComponentModelData.m in Sources */,
+				783AC7CD1D968D460077067E /* CJSingleTableView.m in Sources */,
+				783AC78E1D968C530077067E /* AppDelegate.m in Sources */,
+				783AC78B1D968C530077067E /* main.m in Sources */,
+				783AC7CC1D968D460077067E /* CJGroupTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		781D573B1D155F5D0082D7EF /* Sources */ = {
+		783AC79B1D968C540077067E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				781D57441D155F5D0082D7EF /* DataListViewDemoTests.m in Sources */,
+				783AC7A41D968C540077067E /* CJGroupTableViewDemoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		781D57461D155F5D0082D7EF /* Sources */ = {
+		783AC7A61D968C540077067E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				781D574F1D155F5D0082D7EF /* DataListViewDemoUITests.m in Sources */,
+				783AC7AF1D968C540077067E /* CJGroupTableViewDemoUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		781D57411D155F5D0082D7EF /* PBXTargetDependency */ = {
+		783AC7A11D968C540077067E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 781D57251D155F5D0082D7EF /* CJGroupTableViewDemo */;
-			targetProxy = 781D57401D155F5D0082D7EF /* PBXContainerItemProxy */;
+			target = 783AC7851D968C530077067E /* CJGroupTableViewDemo */;
+			targetProxy = 783AC7A01D968C540077067E /* PBXContainerItemProxy */;
 		};
-		781D574C1D155F5D0082D7EF /* PBXTargetDependency */ = {
+		783AC7AC1D968C540077067E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 781D57251D155F5D0082D7EF /* CJGroupTableViewDemo */;
-			targetProxy = 781D574B1D155F5D0082D7EF /* PBXContainerItemProxy */;
+			target = 783AC7851D968C530077067E /* CJGroupTableViewDemo */;
+			targetProxy = 783AC7AB1D968C540077067E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		781D57321D155F5D0082D7EF /* Main.storyboard */ = {
+		783AC7921D968C530077067E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				781D57331D155F5D0082D7EF /* Base */,
+				783AC7931D968C530077067E /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		781D57371D155F5D0082D7EF /* LaunchScreen.storyboard */ = {
+		783AC7971D968C540077067E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				781D57381D155F5D0082D7EF /* Base */,
+				783AC7981D968C540077067E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -385,7 +531,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		781D57511D155F5D0082D7EF /* Debug */ = {
+		783AC7B11D968C540077067E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -430,7 +576,7 @@
 			};
 			name = Debug;
 		};
-		781D57521D155F5D0082D7EF /* Release */ = {
+		783AC7B21D968C540077067E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -469,114 +615,118 @@
 			};
 			name = Release;
 		};
-		781D57541D155F5D0082D7EF /* Debug */ = {
+		783AC7B41D968C540077067E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C94AB2966C06477AC7F922E3 /* Pods-CJGroupTableViewDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = DataListViewDemo/Info.plist;
+				INFOPLIST_FILE = CJGroupTableViewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.DataListViewDemo;
-				PRODUCT_NAME = CJGroupTableViewDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.CJGroupTableViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		781D57551D155F5D0082D7EF /* Release */ = {
+		783AC7B51D968C540077067E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A25D9BE426EE2DA7930B4D83 /* Pods-CJGroupTableViewDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = DataListViewDemo/Info.plist;
+				INFOPLIST_FILE = CJGroupTableViewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.DataListViewDemo;
-				PRODUCT_NAME = CJGroupTableViewDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.CJGroupTableViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
-		781D57571D155F5D0082D7EF /* Debug */ = {
+		783AC7B71D968C540077067E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22D5BF7A8A602725C61F8E51 /* Pods-CJGroupTableViewDemoTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = DataListViewDemoTests/Info.plist;
+				INFOPLIST_FILE = CJGroupTableViewDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.DataListViewDemoTests;
-				PRODUCT_NAME = CJGroupTableViewDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.CJGroupTableViewDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CJGroupTableViewDemo.app/CJGroupTableViewDemo";
 			};
 			name = Debug;
 		};
-		781D57581D155F5D0082D7EF /* Release */ = {
+		783AC7B81D968C540077067E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEBD8A6746BC917E6FCEF304 /* Pods-CJGroupTableViewDemoTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = DataListViewDemoTests/Info.plist;
+				INFOPLIST_FILE = CJGroupTableViewDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.DataListViewDemoTests;
-				PRODUCT_NAME = CJGroupTableViewDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.CJGroupTableViewDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CJGroupTableViewDemo.app/CJGroupTableViewDemo";
 			};
 			name = Release;
 		};
-		781D575A1D155F5D0082D7EF /* Debug */ = {
+		783AC7BA1D968C540077067E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = DataListViewDemoUITests/Info.plist;
+				INFOPLIST_FILE = CJGroupTableViewDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.DataListViewDemoUITests;
-				PRODUCT_NAME = CJGroupTableViewDemo;
-				TEST_TARGET_NAME = DataListViewDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.CJGroupTableViewDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CJGroupTableViewDemo;
 			};
 			name = Debug;
 		};
-		781D575B1D155F5D0082D7EF /* Release */ = {
+		783AC7BB1D968C540077067E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = DataListViewDemoUITests/Info.plist;
+				INFOPLIST_FILE = CJGroupTableViewDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.DataListViewDemoUITests;
-				PRODUCT_NAME = CJGroupTableViewDemo;
-				TEST_TARGET_NAME = DataListViewDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.CJGroupTableViewDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CJGroupTableViewDemo;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		781D57211D155F5D0082D7EF /* Build configuration list for PBXProject "CJGroupTableViewDemo" */ = {
+		783AC7811D968C530077067E /* Build configuration list for PBXProject "CJGroupTableViewDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				781D57511D155F5D0082D7EF /* Debug */,
-				781D57521D155F5D0082D7EF /* Release */,
+				783AC7B11D968C540077067E /* Debug */,
+				783AC7B21D968C540077067E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		781D57531D155F5D0082D7EF /* Build configuration list for PBXNativeTarget "CJGroupTableViewDemo" */ = {
+		783AC7B31D968C540077067E /* Build configuration list for PBXNativeTarget "CJGroupTableViewDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				781D57541D155F5D0082D7EF /* Debug */,
-				781D57551D155F5D0082D7EF /* Release */,
+				783AC7B41D968C540077067E /* Debug */,
+				783AC7B51D968C540077067E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		781D57561D155F5D0082D7EF /* Build configuration list for PBXNativeTarget "CJGroupTableViewDemoTests" */ = {
+		783AC7B61D968C540077067E /* Build configuration list for PBXNativeTarget "CJGroupTableViewDemoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				781D57571D155F5D0082D7EF /* Debug */,
-				781D57581D155F5D0082D7EF /* Release */,
+				783AC7B71D968C540077067E /* Debug */,
+				783AC7B81D968C540077067E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		781D57591D155F5D0082D7EF /* Build configuration list for PBXNativeTarget "CJGroupTableViewDemoUITests" */ = {
+		783AC7B91D968C540077067E /* Build configuration list for PBXNativeTarget "CJGroupTableViewDemoUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				781D575A1D155F5D0082D7EF /* Debug */,
-				781D575B1D155F5D0082D7EF /* Release */,
+				783AC7BA1D968C540077067E /* Debug */,
+				783AC7BB1D968C540077067E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 781D571E1D155F5D0082D7EF /* Project object */;
+	rootObject = 783AC77E1D968C530077067E /* Project object */;
 }
