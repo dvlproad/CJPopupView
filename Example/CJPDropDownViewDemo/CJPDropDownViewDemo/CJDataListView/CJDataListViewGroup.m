@@ -12,28 +12,18 @@
 
 @implementation CJDataListViewGroup
 
-- (id)initWithFrame:(CGRect)frame {
+- (id)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
-    if(self) {
-        [self commonInit];
+    if(self){
+        
     }
     return self;
-}
-
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    
-    [self commonInit];
-}
-
-- (void)commonInit {
-    
 }
 
 - (void)setDataGroupModel:(CJDataGroupModel *)dataGroupModel {
     _dataGroupModel = dataGroupModel;
     
-    NSInteger listNum = [dataGroupModel.componentDatasDatas count];
+    NSInteger listNum = [dataGroupModel.sortOrders count];
     componentCount = listNum;
 
     
@@ -45,13 +35,28 @@
     int componentWidth = width/componentCount;
     for(int i = 0; i < componentCount; i++){
         CGRect rect = CGRectMake(componentWidth*i, 0, componentWidth, self.frame.size.height);
-        UITableView *tableView = [[UITableView alloc] initWithFrame:rect style:UITableViewStylePlain];
-        tableView.delegate = self;
-        tableView.dataSource = self;
-        tableView.tag = kTableViewTagBegin+i;
-        tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        [self addSubview:tableView];
+        UITableView *tv = [[UITableView alloc] initWithFrame:rect style:UITableViewStylePlain];
+        tv.delegate = self;
+        tv.dataSource = self;
+        tv.tag = kTableViewTagBegin+i;
+        tv.separatorStyle = UITableViewCellSeparatorStyleNone;
+        [self addSubview:tv];
     }
+    
+//    //动画设置位置
+//    CGFloat height = self.frame.size.height;
+//    if(height <= 0){
+//        NSLog(@"检查下是否忘记设置frame，而导致height为0");
+//    }
+//    [UIView animateWithDuration:0.3 animations:^{
+//        for(int i = 0; i < componentCount; i++){
+//            UITableView *tv = (UITableView *)[self viewWithTag:kTableViewTagBegin+i];
+//            CGRect rect = tv.frame;
+//            rect.size.height = height;
+//            tv.frame = rect;
+//            tv.alpha = 1.0;
+//        }
+//    }];
     
     [self updateTableViewsFromComponentIndex:0];
 }
@@ -73,7 +78,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     NSInteger component = tableView.tag - kTableViewTagBegin;
-    NSArray *componentDatas = self.dataGroupModel.componentDatasDatas[component];
+    NSArray *componentDatas = self.dataGroupModel.datas[component];
     return [componentDatas count];
 }
 
@@ -88,11 +93,11 @@
     }
     
     NSInteger component = tableView.tag - kTableViewTagBegin;
-    NSArray *componentDatas = self.dataGroupModel.componentDatasDatas[component];
+    NSArray *componentDatas = self.dataGroupModel.datas[component];
     if (component != componentCount - 1) {
         NSDictionary *object = [componentDatas objectAtIndex:indexPath.row];
         
-        NSString *categoryKey =[self.dataGroupModel.categoryKeys objectAtIndex:component];
+        NSString *categoryKey =[self.dataGroupModel.sortOrders objectAtIndex:component];
         NSString *categoryValueKey =[self.dataGroupModel.categoryValueKeys objectAtIndex:component];
         
         NSString *category = [object valueForKey:categoryKey];
@@ -125,7 +130,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSInteger component = tableView.tag - kTableViewTagBegin;
-    NSArray *componentDatas = self.dataGroupModel.componentDatasDatas[component];
+    NSArray *componentDatas = self.dataGroupModel.datas[component];
     
     [self didSelectRow:indexPath.row inComponent:component];
     
@@ -147,7 +152,7 @@
         [self updateTableViewsFromComponentIndex:component+1];
         
     }else{
-        NSString *category =[self.dataGroupModel.categoryKeys objectAtIndex:component];
+        NSString *category =[self.dataGroupModel.sortOrders objectAtIndex:component];
         NSString *title = [object valueForKey:category];
         if([self.delegate respondsToSelector:@selector(cj_dataListViewGroup:didSelectText:)]){
             [self.delegate cj_dataListViewGroup:self didSelectText:title];
@@ -180,9 +185,9 @@
  */
 - (void)updateTableViewsFromComponentIndex:(NSInteger)component {
     for(NSInteger i = component; i < componentCount; i++) {
-        UITableView *tableView = (UITableView *)[self viewWithTag:kTableViewTagBegin+i];
-        [tableView reloadData];
-        [tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:YES scrollPosition:UITableViewScrollPositionNone];
+        UITableView *tv = (UITableView *)[self viewWithTag:kTableViewTagBegin+i];
+        [tv reloadData];
+        [tv selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:YES scrollPosition:UITableViewScrollPositionNone];
     }
 }
 

@@ -59,6 +59,13 @@
                 @{kCategorySecond:@"乐山", kCategoryValue:@[@"4区", @"5区", @"6区"]},
                 @{kCategorySecond:@"达州", kCategoryValue:@[@"7区", @"8区", @"9区"]}]
         },
+      @{kCategoryFirst:@"北京",
+        kCategoryValue:@[
+                @{kCategorySecond:@"北京1", kCategoryValue:@[]},
+                @{kCategorySecond:@"北京", kCategoryValue:@[]},
+                @{kCategorySecond:@"北京3", kCategoryValue:@[@"4区", @"5区", @"6区"]},
+                @{kCategorySecond:@"北京4", kCategoryValue:@[@"7区", @"8区", @"9区"]}]
+        },
       @{kCategoryFirst:@"云南",
         kCategoryValue: @[
                 @{kCategorySecond:@"昆明", kCategoryValue:@[@"1区", @"2区", @"3区"]},

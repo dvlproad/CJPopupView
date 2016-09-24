@@ -18,10 +18,9 @@
 
 
 
-@interface CJDataListViewSingle : UIView {
-    
-}
+@interface CJDataListViewSingle : UIView<UITableViewDataSource, UITableViewDelegate>
 
+@property(nonatomic, strong) UITableView *tv;
 @property(nonatomic, strong) NSArray *datas;
 @property(nonatomic, strong) id<CJDataListViewSingleDelegate> delegate;
 

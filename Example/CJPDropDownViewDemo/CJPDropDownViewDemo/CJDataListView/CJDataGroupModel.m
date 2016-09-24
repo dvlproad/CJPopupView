@@ -8,12 +8,11 @@
 
 #import "CJDataGroupModel.h"
 
-@interface CJDataGroupModel () {
-    
-}
+@interface CJDataGroupModel ()
+
 @property(nonatomic, strong) NSArray *component0Datas;
-//@property(nonatomic, strong) NSArray *categoryKeys;
-//@property(nonatomic, strong) NSArray *categoryValueKeys;
+
+@property(nonatomic, strong) NSMutableArray *datas_titles;
 
 @end
 
@@ -22,40 +21,42 @@
 @implementation CJDataGroupModel
 
 /** 完整的描述请参见文件头部 */
-- (id)initWithComponent0Datas:(NSArray<NSDictionary *>*)component0Datas
-           sortByCategoryKeys:(NSArray<NSString *> *)categoryKeys
-            categoryValueKeys:(NSArray<NSString *> *)categoryValueKeys
+- (id)initWithComponent0Datas:(NSArray *)component0Datas
+           sortByCategoryKeys:(NSArray *)categoryKeys
+            categoryValueKeys:(NSArray *)categoryValueKeys
 {
     self = [super init];
     if (self) {
         self.component0Datas = component0Datas;
-        self.categoryKeys = categoryKeys;
+        self.sortOrders = categoryKeys;
         self.categoryValueKeys = categoryValueKeys;
         
         NSInteger componentCount = categoryKeys.count;
-        self.componentDatasDatas = [[NSMutableArray alloc] initWithCapacity:componentCount];
+        self.datas = [[NSMutableArray alloc] initWithCapacity:componentCount];
+        self.datas_titles = [[NSMutableArray alloc] initWithCapacity:componentCount];
         self.selectedTitles = [[NSMutableArray alloc] init];
-        self.selectedIndexs = [[NSMutableArray alloc] init];
         
+        NSMutableArray *selectedIndexs = [[NSMutableArray alloc] init];
         for (int i = 0; i < componentCount; i++) {
-            [self.selectedIndexs addObject:@"0"];
+            [selectedIndexs addObject:@"0"];
         }
+        self.selectedIndexs = selectedIndexs;
         
     }
     return self;
 }
 
 - (void)updateSelectedIndexs:(NSArray *)selectedIndexs {
-    if (self.selectedIndexs.count != self.categoryKeys.count) {
+    if (self.selectedIndexs.count != self.sortOrders.count) {
         NSLog(@"error: 默认值个数设置出错.请检查");
         return;
     }
     
-    self.selectedIndexs = [NSMutableArray arrayWithArray:selectedIndexs];
+    self.selectedIndexs = selectedIndexs;
     self.selectedTitles = [[NSMutableArray alloc] init];//每次更新selectedIndexs的时候，重新初始化selectedTitles，防止切换选项时，当两个选项的下属值个数不一样时出现问题。如：选择"福建"时，有“市”和"县"，而选择"北京"时，只要"区"，即上一选项有三个component可操作，而另一个比如只有两个component可操作的时候，会出现在另一个选项操作的时候，选出来的的第三个值不是空""，而是上一个选项的第三个值
     
     BOOL isInitialized = NO;
-    if (self.componentDatasDatas == nil || self.componentDatasDatas.count == 0) {
+    if (self.datas == nil || self.datas.count == 0) {
         isInitialized = YES;
     }
     
@@ -64,15 +65,15 @@
     
     //因为第一个component的C_0_data始终是固定的，所以我们要做的只是确定在不同的component中选择不同的selectedIndex，整个datas会变成什么样。
     if (isInitialized) { //如果是第一次初始化，则使用addObject，以后再使用replaceObjectAtIndex
-        [self.componentDatasDatas addObject:self.component0Datas];
+        [self.datas addObject:self.component0Datas];
     }else{
-        [self.componentDatasDatas replaceObjectAtIndex:0 withObject:self.component0Datas]; //可省略
+        [self.datas replaceObjectAtIndex:0 withObject:self.component0Datas]; //可省略
     }
     
     NSInteger componentCount = selectedIndexs.count;  //默认值有几对，则有几组
     for (int componentIndex = 0; componentIndex < componentCount; componentIndex++) {
         //获取第component部分的值及该component部分的当前选项索引
-        NSArray *componentDatas = [self.componentDatasDatas objectAtIndex:componentIndex];
+        NSArray *componentDatas = [self.datas objectAtIndex:componentIndex];
         NSInteger selectedIndex = [selectedIndexs[componentIndex] integerValue];
         
         if (componentDatas.count == 0) {
@@ -95,20 +96,34 @@
         NSDictionary *C_0_dicSelected = [componentDatas objectAtIndex:selectedIndex];
         
         //则①第component部分的值为
-        NSString *categoryKey = [self.categoryKeys objectAtIndex:componentIndex];
+        NSString *categoryKey = [self.sortOrders objectAtIndex:componentIndex];
         NSString *C_0_title = [C_0_dicSelected objectForKey:categoryKey];
         
         [self.selectedTitles addObject:C_0_title];
         
+        /*
+         NSMutableArray *C_0_titles = [[NSMutableArray alloc]init];
+         for (NSDictionary *dic in C_0_data) {
+         NSString *C_0_title = [dic objectForKey:C_0_keyTitle];
+         [C_0_titles addObject:C_0_title];
+         }
+         if (isInitialized) {
+         [datas_titles addObject:C_0_title];
+         }else{
+         [datas_titles replaceObjectAtIndex:iii withObject:C_0_title];
+         }
+         */
         //则②第component+1部分即component+1后的部分的值为
+//        NSString *C_0_keyValue = [[self.dicArray objectAtIndex:indexC] objectForKey:@"value"];
+        
         NSString *categoryValueKey =[self.categoryValueKeys objectAtIndex:componentIndex];
         NSArray *C_1_data = [C_0_dicSelected objectForKey:categoryValueKey];
         
         //[datas replaceObjectAtIndex:iii+1 withObject:C_1_data];
         if (isInitialized) { //如果是第一次初始化，则使用addObject，以后再使用replaceObjectAtIndex
-            [self.componentDatasDatas addObject:C_1_data];
+            [self.datas addObject:C_1_data];
         }else{
-            [self.componentDatasDatas replaceObjectAtIndex:componentIndex+1 withObject:C_1_data];
+            [self.datas replaceObjectAtIndex:componentIndex+1 withObject:C_1_data];
         }
     }
     return;

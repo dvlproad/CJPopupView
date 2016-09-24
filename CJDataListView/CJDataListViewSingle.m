@@ -8,51 +8,43 @@
 
 #import "CJDataListViewSingle.h"
 
+@interface CJDataListViewSingle () <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, strong) UITableView *tableView;
+
+@end
+
 @implementation CJDataListViewSingle
-@synthesize tv;
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
-    if(self){
-        
+    if(self) {
+        [self commonInit];
     }
     return self;
 }
 
-- (void)setDatas:(NSArray *)datas{
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+    [self commonInit];
+}
+
+- (void)commonInit {
+    _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    _tableView.backgroundColor = [UIColor clearColor];
+    
+    [self cj_addSubView:self.tableView toSuperView:self withEdgeInsets:UIEdgeInsetsZero];
+}
+
+
+- (void)setDatas:(NSArray *)datas {
     _datas = datas;
     
-    //修改tableview的frame
-    CGFloat width = self.frame.size.width;
-    if(width <= 0){
-        NSLog(@"检查下是否忘记设置frame，而导致width为0");
-    }
-   
-    if (tv == nil) {
-        CGRect rect = CGRectMake(0, 0, width, 0);
-        tv = [[UITableView alloc] initWithFrame:rect style:UITableViewStylePlain];
-        tv.delegate = self;
-        tv.dataSource = self;
-        tv.separatorStyle = UITableViewCellSeparatorStyleNone;
-        tv.backgroundColor = [UIColor clearColor];
-        [self addSubview:tv];
-    }
-    
-    
-    //动画设置位置
-    CGFloat height = self.frame.size.height;
-    if(height <= 0){
-        NSLog(@"检查下是否忘记设置frame，而导致height为0");
-    }
-    [UIView animateWithDuration:0.3 animations:^{
-        CGRect rect = tv.frame;
-        rect.size.height = height;
-        tv.frame = rect;
-        tv.alpha = 1.0;
-    }];
-    
-    [tv reloadData];
-    [tv selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:YES scrollPosition:UITableViewScrollPositionNone];
+    [self.tableView reloadData];
 }
 
 
@@ -98,6 +90,44 @@
     if([self.delegate respondsToSelector:@selector(cj_dataListViewSingle:didSelectText:)]){
         [self.delegate cj_dataListViewSingle:self didSelectText:object];
     }
+}
+
+#pragma mark - addSubView
+- (void)cj_addSubView:(UIView *)subView toSuperView:(UIView *)superView withEdgeInsets:(UIEdgeInsets)edgeInsets {
+    [superView addSubview:subView];
+    subView.translatesAutoresizingMaskIntoConstraints = NO;
+    //left
+    [superView addConstraint:[NSLayoutConstraint constraintWithItem:subView
+                                                          attribute:NSLayoutAttributeLeft
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:superView
+                                                          attribute:NSLayoutAttributeLeft
+                                                         multiplier:1
+                                                           constant:edgeInsets.left]];
+    //right
+    [superView addConstraint:[NSLayoutConstraint constraintWithItem:subView
+                                                          attribute:NSLayoutAttributeRight
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:superView
+                                                          attribute:NSLayoutAttributeRight
+                                                         multiplier:1
+                                                           constant:edgeInsets.right]];
+    //top
+    [superView addConstraint:[NSLayoutConstraint constraintWithItem:subView
+                                                          attribute:NSLayoutAttributeTop
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:superView
+                                                          attribute:NSLayoutAttributeTop
+                                                         multiplier:1
+                                                           constant:edgeInsets.top]];
+    //bottom
+    [superView addConstraint:[NSLayoutConstraint constraintWithItem:subView
+                                                          attribute:NSLayoutAttributeBottom
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:superView
+                                                          attribute:NSLayoutAttributeBottom
+                                                         multiplier:1
+                                                           constant:edgeInsets.bottom]];
 }
 
 /*

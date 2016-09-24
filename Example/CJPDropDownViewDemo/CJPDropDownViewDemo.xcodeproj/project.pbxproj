@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		781D57871D191C820082D7EF /* CJDataGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 781D57821D191C820082D7EF /* CJDataGroupModel.m */; };
-		781D57881D191C820082D7EF /* CJDataListViewGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 781D57841D191C820082D7EF /* CJDataListViewGroup.m */; };
-		781D57891D191C820082D7EF /* CJDataListViewSingle.m in Sources */ = {isa = PBXBuildFile; fileRef = 781D57861D191C820082D7EF /* CJDataListViewSingle.m */; };
+		78F74A601D95B4EB00A88BAF /* CJDataGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F74A5B1D95B4EB00A88BAF /* CJDataGroupModel.m */; };
+		78F74A611D95B4EB00A88BAF /* CJDataListViewGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F74A5D1D95B4EB00A88BAF /* CJDataListViewGroup.m */; };
+		78F74A621D95B4EB00A88BAF /* CJDataListViewSingle.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F74A5F1D95B4EB00A88BAF /* CJDataListViewSingle.m */; };
 		804DB2F31BF2E059002E9574 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 804DB2F21BF2E059002E9574 /* main.m */; };
 		804DB2F61BF2E059002E9574 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 804DB2F51BF2E059002E9574 /* AppDelegate.m */; };
 		804DB2F91BF2E059002E9574 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 804DB2F81BF2E059002E9574 /* ViewController.m */; };
@@ -39,12 +39,12 @@
 
 /* Begin PBXFileReference section */
 		0AD111FE8F0AC101C91679C7 /* Pods-CJPDropDownViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJPDropDownViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CJPDropDownViewDemo/Pods-CJPDropDownViewDemo.release.xcconfig"; sourceTree = "<group>"; };
-		781D57811D191C820082D7EF /* CJDataGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDataGroupModel.h; sourceTree = "<group>"; };
-		781D57821D191C820082D7EF /* CJDataGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDataGroupModel.m; sourceTree = "<group>"; };
-		781D57831D191C820082D7EF /* CJDataListViewGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDataListViewGroup.h; sourceTree = "<group>"; };
-		781D57841D191C820082D7EF /* CJDataListViewGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDataListViewGroup.m; sourceTree = "<group>"; };
-		781D57851D191C820082D7EF /* CJDataListViewSingle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDataListViewSingle.h; sourceTree = "<group>"; };
-		781D57861D191C820082D7EF /* CJDataListViewSingle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDataListViewSingle.m; sourceTree = "<group>"; };
+		78F74A5A1D95B4EB00A88BAF /* CJDataGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDataGroupModel.h; sourceTree = "<group>"; };
+		78F74A5B1D95B4EB00A88BAF /* CJDataGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDataGroupModel.m; sourceTree = "<group>"; };
+		78F74A5C1D95B4EB00A88BAF /* CJDataListViewGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDataListViewGroup.h; sourceTree = "<group>"; };
+		78F74A5D1D95B4EB00A88BAF /* CJDataListViewGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDataListViewGroup.m; sourceTree = "<group>"; };
+		78F74A5E1D95B4EB00A88BAF /* CJDataListViewSingle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDataListViewSingle.h; sourceTree = "<group>"; };
+		78F74A5F1D95B4EB00A88BAF /* CJDataListViewSingle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDataListViewSingle.m; sourceTree = "<group>"; };
 		804DB2ED1BF2E059002E9574 /* CJPDropDownViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CJPDropDownViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		804DB2F11BF2E059002E9574 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		804DB2F21BF2E059002E9574 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -99,18 +99,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		781D57801D191C820082D7EF /* CJDataListView */ = {
+		78F74A591D95B4EB00A88BAF /* CJDataListView */ = {
 			isa = PBXGroup;
 			children = (
-				781D57811D191C820082D7EF /* CJDataGroupModel.h */,
-				781D57821D191C820082D7EF /* CJDataGroupModel.m */,
-				781D57831D191C820082D7EF /* CJDataListViewGroup.h */,
-				781D57841D191C820082D7EF /* CJDataListViewGroup.m */,
-				781D57851D191C820082D7EF /* CJDataListViewSingle.h */,
-				781D57861D191C820082D7EF /* CJDataListViewSingle.m */,
+				78F74A5A1D95B4EB00A88BAF /* CJDataGroupModel.h */,
+				78F74A5B1D95B4EB00A88BAF /* CJDataGroupModel.m */,
+				78F74A5C1D95B4EB00A88BAF /* CJDataListViewGroup.h */,
+				78F74A5D1D95B4EB00A88BAF /* CJDataListViewGroup.m */,
+				78F74A5E1D95B4EB00A88BAF /* CJDataListViewSingle.h */,
+				78F74A5F1D95B4EB00A88BAF /* CJDataListViewSingle.m */,
 			);
-			name = CJDataListView;
-			path = ../../../CJDataListView;
+			path = CJDataListView;
 			sourceTree = "<group>";
 		};
 		804DB2E41BF2E059002E9574 = {
@@ -140,7 +139,7 @@
 				804DB2F51BF2E059002E9574 /* AppDelegate.m */,
 				804DB2F71BF2E059002E9574 /* ViewController.h */,
 				804DB2F81BF2E059002E9574 /* ViewController.m */,
-				781D57801D191C820082D7EF /* CJDataListView */,
+				78F74A591D95B4EB00A88BAF /* CJDataListView */,
 				804DB33C1BF2E450002E9574 /* res_plist */,
 				804DB32E1BF2E2C4002E9574 /* Controller */,
 				805A172C1BF2F7FB00424769 /* CJPDropDownView */,
@@ -382,14 +381,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				781D57881D191C820082D7EF /* CJDataListViewGroup.m in Sources */,
+				78F74A621D95B4EB00A88BAF /* CJDataListViewSingle.m in Sources */,
 				804DB3351BF2E2C4002E9574 /* CombineTestVC.m in Sources */,
 				804DB3371BF2E2C4002E9574 /* IndependentTestVC.m in Sources */,
 				804DB2F91BF2E059002E9574 /* ViewController.m in Sources */,
-				781D57871D191C820082D7EF /* CJDataGroupModel.m in Sources */,
+				78F74A611D95B4EB00A88BAF /* CJDataListViewGroup.m in Sources */,
 				804DB2F61BF2E059002E9574 /* AppDelegate.m in Sources */,
-				781D57891D191C820082D7EF /* CJDataListViewSingle.m in Sources */,
 				805A173F1BF2F7FB00424769 /* DropDownRadioButtons.m in Sources */,
+				78F74A601D95B4EB00A88BAF /* CJDataGroupModel.m in Sources */,
 				804DB2F31BF2E059002E9574 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

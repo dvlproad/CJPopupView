@@ -8,15 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CJDataGroupModel : NSObject
+@interface CJDataGroupModel : NSObject {
 
-@property(nonatomic, strong) NSArray *sortOrders;
+}
+@property(nonatomic, strong) NSArray *categoryKeys;
 @property(nonatomic, strong) NSArray *categoryValueKeys;
 
-@property(nonatomic, strong) NSArray *selectedIndexs;
+//datas根据component中选中的不同row随时在改变
+@property(nonatomic, strong) NSMutableArray<NSArray *> *componentDatasDatas;/**< 所有component选中的componentDatas（datas中的每个componentDatas中的数据除最后一个componentDatas中是<NSString *>,其他的都是<NSDictionary *>） */
 
-@property(nonatomic, strong) NSMutableArray *datas;
-@property(nonatomic, strong) NSMutableArray *selectedTitles;
+@property(nonatomic, strong) NSMutableArray *selectedIndexs;/**< 所有component选中的index */
+@property(nonatomic, strong) NSMutableArray *selectedTitles;/**< 所有component选中的title */
 
 /**
  *  初始化数据
@@ -27,9 +29,9 @@
  *
  *  @return 数据模型
  */
-- (id)initWithComponent0Datas:(NSArray *)component0Datas
-           sortByCategoryKeys:(NSArray *)categoryKeys
-            categoryValueKeys:(NSArray *)categoryValueKeys;
+- (id)initWithComponent0Datas:(NSArray<NSDictionary *> *)component0Datas
+           sortByCategoryKeys:(NSArray<NSString *> *)categoryKeys
+            categoryValueKeys:(NSArray<NSString *> *)categoryValueKeys;
 
 
 - (void)updateSelectedIndexs:(NSArray *)selectedIndexs;
