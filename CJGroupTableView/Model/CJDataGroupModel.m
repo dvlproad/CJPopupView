@@ -52,7 +52,7 @@
 }
 
 - (void)updateSelectedIndexs:(NSArray *)selectedIndexs {
-    if (self.selectedIndexs.count != self.categoryKeys.count) {
+    if (self.categoryKeys!= nil && self.selectedIndexs.count != self.categoryKeys.count) {
         NSLog(@"error: 默认值个数设置出错.请检查");
         return;
     }
@@ -138,6 +138,24 @@
 
 
 - (NSMutableArray *)getComponentModelDatasFromComponentDatas:(NSArray *)componentDatas withComponentIndex:(NSInteger)componentIndex {
+    if (self.selectedIndexs.count == 1) { //最多总共只有一个tableView
+        
+        NSMutableArray *componentModelDatas = [[NSMutableArray alloc] init];
+        for (NSInteger index = 0; index < componentDatas.count; index++) {
+            NSString *string = [componentDatas objectAtIndex:index];
+            NSString *category = string;
+            
+            CJComponentModelData *componentModelData = [[CJComponentModelData alloc] init];
+            componentModelData.text = category;
+            componentModelData.containValueCount = 0;
+            
+            [componentModelDatas addObject:componentModelData];
+        }
+        
+        return componentModelDatas;
+    }
+    
+    
     NSString *categoryKey = [self.categoryKeys objectAtIndex:componentIndex];
     NSString *categoryValueKey = [self.categoryValueKeys objectAtIndex:componentIndex];
     BOOL isLastComponent = componentIndex == self.categoryKeys.count-1;
@@ -165,7 +183,6 @@
             
             [componentModelDatas addObject:componentModelData];
         }
-        
     }
     return componentModelDatas;
 }

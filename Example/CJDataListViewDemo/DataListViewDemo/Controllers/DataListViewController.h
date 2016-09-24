@@ -7,13 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CJDataListViewSingle.h"
-#import "CJDataListViewGroup.h"
+#import "CJSingleTableView.h"
+#import "CJGroupTableView.h"
 
-@interface DataListViewController : UIViewController<CJDataListViewSingleDelegate, CJDataListViewGroupDelegate>
+@interface DataListViewController : UIViewController<CJSingleTableViewDelegate, CJGroupTableViewDelegate>
 
-@property (nonatomic, weak) IBOutlet CJDataListViewSingle *dataListViewSingle;
-@property (nonatomic, weak) IBOutlet CJDataListViewGroup *dataListViewGroup;
-@property (nonatomic, weak) IBOutlet UILabel *groupLabel;
+@property (nonatomic, weak) IBOutlet CJSingleTableView *singleTableView;
+
+@property (nonatomic, weak) IBOutlet CJGroupTableView *groupTableView1;
+@property (nonatomic, weak) IBOutlet UILabel *groupTextLabel1;
+
+@property (nonatomic, weak) IBOutlet CJGroupTableView *groupTableView2;
+@property (nonatomic, weak) IBOutlet UILabel *groupTextLabel2;
 
 @end

@@ -1,16 +1,16 @@
 //
-//  CJDataListViewGroup.m
+//  CJGroupTableView.m
 //  CJPDropDownViewDemo
 //
 //  Created by lichq on 7/9/15.
 //  Copyright (c) 2015 ciyouzen. All rights reserved.
 //
 
-#import "CJDataListViewGroup.h"
+#import "CJGroupTableView.h"
 
 #define kTableViewTagBegin  1010
 
-@implementation CJDataListViewGroup
+@implementation CJGroupTableView
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -189,8 +189,8 @@
             [self updateTableViewsFromComponentIndex:component+1];
         }
         
-        if([self.delegate respondsToSelector:@selector(cj_dataListViewGroup:didSelectText:)]){
-            [self.delegate cj_dataListViewGroup:self didSelectText:text];
+        if([self.delegate respondsToSelector:@selector(cj_groupTableView:didSelectText:)]){
+            [self.delegate cj_groupTableView:self didSelectText:text];
         }
     }
 }

@@ -7,9 +7,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DataListViewController">
             <connections>
-                <outlet property="dataListViewGroup" destination="RlE-eJ-ZBm" id="lAg-a5-3RW"/>
-                <outlet property="dataListViewSingle" destination="1AG-QM-9cn" id="Jaf-wW-vzE"/>
-                <outlet property="groupLabel" destination="1hn-Vy-JYq" id="Sqb-GL-ZqS"/>
+                <outlet property="groupTableView1" destination="FdD-bn-6Ef" id="8dn-TC-hSV"/>
+                <outlet property="groupTableView2" destination="RlE-eJ-ZBm" id="arb-PT-RVb"/>
+                <outlet property="groupTextLabel1" destination="NnU-qa-JeZ" id="ti6-fS-z51"/>
+                <outlet property="groupTextLabel2" destination="1hn-Vy-JYq" id="DJQ-Ak-HFn"/>
+                <outlet property="singleTableView" destination="1AG-QM-9cn" id="ruX-on-l0F"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,22 +20,33 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1AG-QM-9cn" customClass="CJDataListViewSingle">
-                    <rect key="frame" x="8" y="99" width="304" height="128"/>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1AG-QM-9cn" customClass="CJSingleTableView">
+                    <rect key="frame" x="8" y="84" width="304" height="128"/>
                     <color key="backgroundColor" red="0.54502182980000002" green="1" blue="0.48569014189999998" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RlE-eJ-ZBm" customClass="CJDataListViewGroup">
-                    <rect key="frame" x="8" y="314" width="304" height="128"/>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RlE-eJ-ZBm" customClass="CJGroupTableView">
+                    <rect key="frame" x="8" y="432" width="304" height="128"/>
                     <color key="backgroundColor" red="0.54502182980000002" green="1" blue="0.48569014189999998" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hn-Vy-JYq">
-                    <rect key="frame" x="8" y="285" width="304" height="21"/>
+                    <rect key="frame" x="8" y="397" width="304" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FdD-bn-6Ef" customClass="CJGroupTableView">
+                    <rect key="frame" x="8" y="261" width="304" height="128"/>
+                    <color key="backgroundColor" red="0.54502182980000002" green="1" blue="0.48569014189999998" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NnU-qa-JeZ">
+                    <rect key="frame" x="8" y="226" width="304" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <point key="canvasLocation" x="223" y="323"/>
         </view>
     </objects>

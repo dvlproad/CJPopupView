@@ -1,5 +1,5 @@
 //
-//  CJDataListViewGroup.h
+//  CJGroupTableView.h
 //  CJPDropDownViewDemo
 //
 //  Created by lichq on 7/9/15.
@@ -9,21 +9,20 @@
 #import <UIKit/UIKit.h>
 #import "CJDataGroupModel.h"
 
-@class CJDataListViewGroup;
-@protocol CJDataListViewGroupDelegate <NSObject>
+@class CJGroupTableView;
+@protocol CJGroupTableViewDelegate <NSObject>
 
-- (void)cj_dataListViewGroup:(CJDataListViewGroup *)dataListViewGroup didSelectText:(NSString *)text;
+- (void)cj_groupTableView:(CJGroupTableView *)groupTableView didSelectText:(NSString *)text;
 
 @end
 
 
-
     
-@interface CJDataListViewGroup : UIView<UITableViewDataSource, UITableViewDelegate>{
+@interface CJGroupTableView : UIView<UITableViewDataSource, UITableViewDelegate>{
     NSInteger componentCount;
 }
 @property(nonatomic, strong) CJDataGroupModel *dataGroupModel;//含NSMutableArray *datas;和 NSArray *dicArray
-@property(nonatomic, strong) id<CJDataListViewGroupDelegate> delegate;
+@property(nonatomic, strong) id<CJGroupTableViewDelegate> delegate;
 
 /**
  *  更新第component个列表的颜色

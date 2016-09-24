@@ -17,10 +17,10 @@
 		781D574F1D155F5D0082D7EF /* DataListViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 781D574E1D155F5D0082D7EF /* DataListViewDemoUITests.m */; };
 		781D576A1D1561720082D7EF /* DataListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 781D57681D1561720082D7EF /* DataListViewController.m */; };
 		781D576B1D1561720082D7EF /* DataListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 781D57691D1561720082D7EF /* DataListViewController.xib */; };
-		781D577D1D191C500082D7EF /* CJDataGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 781D57781D191C500082D7EF /* CJDataGroupModel.m */; };
-		781D577E1D191C500082D7EF /* CJDataListViewGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 781D577A1D191C500082D7EF /* CJDataListViewGroup.m */; };
-		781D577F1D191C500082D7EF /* CJDataListViewSingle.m in Sources */ = {isa = PBXBuildFile; fileRef = 781D577C1D191C500082D7EF /* CJDataListViewSingle.m */; };
-		783AC76E1D9679430077067E /* CJComponentModelData.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC76D1D9679430077067E /* CJComponentModelData.m */; };
+		783AC7791D9689CB0077067E /* CJGroupTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7711D9689CB0077067E /* CJGroupTableView.m */; };
+		783AC77A1D9689CB0077067E /* CJSingleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7731D9689CB0077067E /* CJSingleTableView.m */; };
+		783AC77B1D9689CB0077067E /* CJComponentModelData.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7761D9689CB0077067E /* CJComponentModelData.m */; };
+		783AC77C1D9689CB0077067E /* CJDataGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7781D9689CB0077067E /* CJDataGroupModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,14 +60,14 @@
 		781D57671D1561720082D7EF /* DataListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataListViewController.h; sourceTree = "<group>"; };
 		781D57681D1561720082D7EF /* DataListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataListViewController.m; sourceTree = "<group>"; };
 		781D57691D1561720082D7EF /* DataListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DataListViewController.xib; sourceTree = "<group>"; };
-		781D57771D191C500082D7EF /* CJDataGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDataGroupModel.h; sourceTree = "<group>"; };
-		781D57781D191C500082D7EF /* CJDataGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDataGroupModel.m; sourceTree = "<group>"; };
-		781D57791D191C500082D7EF /* CJDataListViewGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDataListViewGroup.h; sourceTree = "<group>"; };
-		781D577A1D191C500082D7EF /* CJDataListViewGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDataListViewGroup.m; sourceTree = "<group>"; };
-		781D577B1D191C500082D7EF /* CJDataListViewSingle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDataListViewSingle.h; sourceTree = "<group>"; };
-		781D577C1D191C500082D7EF /* CJDataListViewSingle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDataListViewSingle.m; sourceTree = "<group>"; };
-		783AC76C1D9679430077067E /* CJComponentModelData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJComponentModelData.h; sourceTree = "<group>"; };
-		783AC76D1D9679430077067E /* CJComponentModelData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJComponentModelData.m; sourceTree = "<group>"; };
+		783AC7701D9689CB0077067E /* CJGroupTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJGroupTableView.h; sourceTree = "<group>"; };
+		783AC7711D9689CB0077067E /* CJGroupTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJGroupTableView.m; sourceTree = "<group>"; };
+		783AC7721D9689CB0077067E /* CJSingleTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSingleTableView.h; sourceTree = "<group>"; };
+		783AC7731D9689CB0077067E /* CJSingleTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSingleTableView.m; sourceTree = "<group>"; };
+		783AC7751D9689CB0077067E /* CJComponentModelData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJComponentModelData.h; sourceTree = "<group>"; };
+		783AC7761D9689CB0077067E /* CJComponentModelData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJComponentModelData.m; sourceTree = "<group>"; };
+		783AC7771D9689CB0077067E /* CJDataGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDataGroupModel.h; sourceTree = "<group>"; };
+		783AC7781D9689CB0077067E /* CJDataGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDataGroupModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +122,7 @@
 				781D572D1D155F5D0082D7EF /* AppDelegate.m */,
 				781D572F1D155F5D0082D7EF /* ViewController.h */,
 				781D57301D155F5D0082D7EF /* ViewController.m */,
-				781D57761D191C500082D7EF /* CJDataListView */,
+				783AC76F1D9689CB0077067E /* CJGroupTableView */,
 				781D575C1D1560690082D7EF /* Controllers */,
 				781D57321D155F5D0082D7EF /* Main.storyboard */,
 				781D57351D155F5D0082D7EF /* Assets.xcassets */,
@@ -169,26 +169,25 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		781D57761D191C500082D7EF /* CJDataListView */ = {
+		783AC76F1D9689CB0077067E /* CJGroupTableView */ = {
 			isa = PBXGroup;
 			children = (
-				783AC76B1D9679430077067E /* Model */,
-				781D57771D191C500082D7EF /* CJDataGroupModel.h */,
-				781D57781D191C500082D7EF /* CJDataGroupModel.m */,
-				781D57791D191C500082D7EF /* CJDataListViewGroup.h */,
-				781D577A1D191C500082D7EF /* CJDataListViewGroup.m */,
-				781D577B1D191C500082D7EF /* CJDataListViewSingle.h */,
-				781D577C1D191C500082D7EF /* CJDataListViewSingle.m */,
+				783AC7701D9689CB0077067E /* CJGroupTableView.h */,
+				783AC7711D9689CB0077067E /* CJGroupTableView.m */,
+				783AC7721D9689CB0077067E /* CJSingleTableView.h */,
+				783AC7731D9689CB0077067E /* CJSingleTableView.m */,
+				783AC7741D9689CB0077067E /* Model */,
 			);
-			name = CJDataListView;
-			path = ../../../CJDataListView;
+			path = CJGroupTableView;
 			sourceTree = "<group>";
 		};
-		783AC76B1D9679430077067E /* Model */ = {
+		783AC7741D9689CB0077067E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				783AC76C1D9679430077067E /* CJComponentModelData.h */,
-				783AC76D1D9679430077067E /* CJComponentModelData.m */,
+				783AC7751D9689CB0077067E /* CJComponentModelData.h */,
+				783AC7761D9689CB0077067E /* CJComponentModelData.m */,
+				783AC7771D9689CB0077067E /* CJDataGroupModel.h */,
+				783AC7781D9689CB0077067E /* CJDataGroupModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -325,13 +324,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				781D57311D155F5D0082D7EF /* ViewController.m in Sources */,
-				781D577E1D191C500082D7EF /* CJDataListViewGroup.m in Sources */,
-				781D577D1D191C500082D7EF /* CJDataGroupModel.m in Sources */,
 				781D576A1D1561720082D7EF /* DataListViewController.m in Sources */,
-				783AC76E1D9679430077067E /* CJComponentModelData.m in Sources */,
-				781D577F1D191C500082D7EF /* CJDataListViewSingle.m in Sources */,
+				783AC77C1D9689CB0077067E /* CJDataGroupModel.m in Sources */,
+				783AC77B1D9689CB0077067E /* CJComponentModelData.m in Sources */,
+				783AC77A1D9689CB0077067E /* CJSingleTableView.m in Sources */,
 				781D572E1D155F5D0082D7EF /* AppDelegate.m in Sources */,
 				781D572B1D155F5D0082D7EF /* main.m in Sources */,
+				783AC7791D9689CB0077067E /* CJGroupTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

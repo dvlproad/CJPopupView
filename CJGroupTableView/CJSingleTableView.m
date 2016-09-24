@@ -1,20 +1,20 @@
 //
-//  CJDataListViewSingle.m
+//  CJSingleTableView.m
 //  CJPDropDownViewDemo
 //
 //  Created by lichq on 9/8/15.
 //  Copyright (c) 2015 ciyouzen. All rights reserved.
 //
 
-#import "CJDataListViewSingle.h"
+#import "CJSingleTableView.h"
 
-@interface CJDataListViewSingle () <UITableViewDataSource, UITableViewDelegate>
+@interface CJSingleTableView () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 
 @end
 
-@implementation CJDataListViewSingle
+@implementation CJSingleTableView
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -87,8 +87,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *object = [self.datas objectAtIndex:indexPath.row];
-    if([self.delegate respondsToSelector:@selector(cj_dataListViewSingle:didSelectText:)]){
-        [self.delegate cj_dataListViewSingle:self didSelectText:object];
+    if([self.delegate respondsToSelector:@selector(cj_singleTableView:didSelectText:)]){
+        [self.delegate cj_singleTableView:self didSelectText:object];
     }
 }
 
