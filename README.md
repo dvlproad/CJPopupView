@@ -1,6 +1,9 @@
 # CJPopup
 弹出视图(包含类似美团的弹出下拉控件CJPDropDownView)
 
+## CJMaskGuideView
+新手引导/遮罩层
+
 ## 目录
 1、 CJPopoverView
 a pop view 一个带箭号的弹出视图
