@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
                    36.This is a view which contain UIPickerView/UIDatePicker and UIToolbar as subViews.
                    DESC
 
-  s.homepage     = "https://github.com/dvlproad/CJPopup"
+  s.homepage     = "https://github.com/dvlproad/CJPopupView"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
   s.license      = "MIT"
@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/dvlproad/CJPopup.git", :tag => s.version }
+  s.source       = { :git => "https://github.com/dvlproad/CJPopupView.git", :tag => "CJPicker_1.0.0" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
