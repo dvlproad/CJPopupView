@@ -1,0 +1,1 @@
+../../../TRWebImage/Classes/SDWebImage/UIImage+MultiFormat.h

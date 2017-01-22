@@ -1,0 +1,10 @@
+platform :ios, '7.0'
+#use_frameworks!
+
+target 'CJPickerToolBarViewDemo' do
+    pod 'CJPopupView', '~> 1.3.0'
+end
+
+target 'CJPickerToolBarViewDemoTests' do
+    
+end

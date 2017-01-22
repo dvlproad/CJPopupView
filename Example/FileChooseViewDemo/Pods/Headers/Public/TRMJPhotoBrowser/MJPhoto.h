@@ -1,0 +1,1 @@
+../../../TRMJPhotoBrowser/MJPhotoBrowser/MJPhotoBrowser/MJPhoto.h

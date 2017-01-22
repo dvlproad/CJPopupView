@@ -1,0 +1,15 @@
+platform :ios, '7.0'
+#use_frameworks!
+
+target 'FileChooseViewDemo' do
+    #pod 'Mantle', '~> 2.1.0'
+    pod 'PureLayout', '~> 3.0.2'
+    pod 'AFNetworking', '~> 2.6.3'
+  
+  pod 'TRMJPhotoBrowser', '~> 1.0.6'
+  pod 'JGActionSheet', '~> 1.0.5'
+end
+
+target 'FileChooseViewDemoTests' do
+   
+end

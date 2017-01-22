@@ -1,0 +1,634 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6D4F69ED61CE8322353EE1A3 /* libPods-CJPickerToolBarViewDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0906B6CB8C16C50D9F541E82 /* libPods-CJPickerToolBarViewDemoTests.a */; };
+		786B577E1E347115006AEAF4 /* CJDatePickerToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 786B57731E347115006AEAF4 /* CJDatePickerToolBarView.m */; };
+		786B577F1E347115006AEAF4 /* CJDatePickerToolBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786B57741E347115006AEAF4 /* CJDatePickerToolBarView.xib */; };
+		786B57801E347115006AEAF4 /* CJIndependentPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 786B57761E347115006AEAF4 /* CJIndependentPickerView.m */; };
+		786B57811E347115006AEAF4 /* CJIndependentPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786B57771E347115006AEAF4 /* CJIndependentPickerView.xib */; };
+		786B57821E347115006AEAF4 /* CJRelatedPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 786B57791E347115006AEAF4 /* CJRelatedPickerView.m */; };
+		786B57831E347115006AEAF4 /* CJRelatedPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786B577A1E347115006AEAF4 /* CJRelatedPickerView.xib */; };
+		786B57841E347115006AEAF4 /* line_gray_pickerToolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 786B577C1E347115006AEAF4 /* line_gray_pickerToolbar.png */; };
+		786B57851E347115006AEAF4 /* line_gray_pickerToolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 786B577D1E347115006AEAF4 /* line_gray_pickerToolbar@2x.png */; };
+		80DD45E61B347B3C00D131DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DD45E51B347B3C00D131DB /* main.m */; };
+		80DD45E91B347B3C00D131DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DD45E81B347B3C00D131DB /* AppDelegate.m */; };
+		80DD45EC1B347B3C00D131DB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DD45EB1B347B3C00D131DB /* ViewController.m */; };
+		80DD45EF1B347B3C00D131DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80DD45ED1B347B3C00D131DB /* Main.storyboard */; };
+		80DD45F11B347B3C00D131DB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80DD45F01B347B3C00D131DB /* Images.xcassets */; };
+		80DD45F41B347B3C00D131DB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80DD45F21B347B3C00D131DB /* LaunchScreen.xib */; };
+		80DD46001B347B3C00D131DB /* CJPickerToolBarViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DD45FF1B347B3C00D131DB /* CJPickerToolBarViewDemoTests.m */; };
+		80DD460E1B347B9E00D131DB /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80DD460A1B347B9E00D131DB /* area.plist */; };
+		80DD460F1B347B9E00D131DB /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80DD460B1B347B9E00D131DB /* city.plist */; };
+		9F854999D8BE9277D200115E /* libPods-CJPickerToolBarViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 649CD701536B8879D628DECA /* libPods-CJPickerToolBarViewDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		80DD45FA1B347B3C00D131DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80DD45D81B347B3B00D131DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 80DD45DF1B347B3C00D131DB;
+			remoteInfo = CJPickerToolBarViewDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0906B6CB8C16C50D9F541E82 /* libPods-CJPickerToolBarViewDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CJPickerToolBarViewDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		23DCF983E213540CDAFEB5A0 /* Pods-CJPickerToolBarViewDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJPickerToolBarViewDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CJPickerToolBarViewDemoTests/Pods-CJPickerToolBarViewDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		649CD701536B8879D628DECA /* libPods-CJPickerToolBarViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CJPickerToolBarViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		786B57721E347115006AEAF4 /* CJDatePickerToolBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDatePickerToolBarView.h; sourceTree = "<group>"; };
+		786B57731E347115006AEAF4 /* CJDatePickerToolBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDatePickerToolBarView.m; sourceTree = "<group>"; };
+		786B57741E347115006AEAF4 /* CJDatePickerToolBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJDatePickerToolBarView.xib; sourceTree = "<group>"; };
+		786B57751E347115006AEAF4 /* CJIndependentPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJIndependentPickerView.h; sourceTree = "<group>"; };
+		786B57761E347115006AEAF4 /* CJIndependentPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJIndependentPickerView.m; sourceTree = "<group>"; };
+		786B57771E347115006AEAF4 /* CJIndependentPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJIndependentPickerView.xib; sourceTree = "<group>"; };
+		786B57781E347115006AEAF4 /* CJRelatedPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJRelatedPickerView.h; sourceTree = "<group>"; };
+		786B57791E347115006AEAF4 /* CJRelatedPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJRelatedPickerView.m; sourceTree = "<group>"; };
+		786B577A1E347115006AEAF4 /* CJRelatedPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJRelatedPickerView.xib; sourceTree = "<group>"; };
+		786B577C1E347115006AEAF4 /* line_gray_pickerToolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line_gray_pickerToolbar.png; sourceTree = "<group>"; };
+		786B577D1E347115006AEAF4 /* line_gray_pickerToolbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "line_gray_pickerToolbar@2x.png"; sourceTree = "<group>"; };
+		80DD45E01B347B3C00D131DB /* CJPickerToolBarViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CJPickerToolBarViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		80DD45E41B347B3C00D131DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80DD45E51B347B3C00D131DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		80DD45E71B347B3C00D131DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		80DD45E81B347B3C00D131DB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		80DD45EA1B347B3C00D131DB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		80DD45EB1B347B3C00D131DB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		80DD45EE1B347B3C00D131DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		80DD45F01B347B3C00D131DB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		80DD45F31B347B3C00D131DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		80DD45F91B347B3C00D131DB /* CJPickerToolBarViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CJPickerToolBarViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		80DD45FE1B347B3C00D131DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80DD45FF1B347B3C00D131DB /* CJPickerToolBarViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CJPickerToolBarViewDemoTests.m; sourceTree = "<group>"; };
+		80DD460A1B347B9E00D131DB /* area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = area.plist; sourceTree = "<group>"; };
+		80DD460B1B347B9E00D131DB /* city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city.plist; sourceTree = "<group>"; };
+		936CD3AEC8431C6FC22E036D /* Pods-CJPickerToolBarViewDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJPickerToolBarViewDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CJPickerToolBarViewDemoTests/Pods-CJPickerToolBarViewDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		A2844A5A78CF3801D924BB22 /* Pods-CJPickerToolBarViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJPickerToolBarViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CJPickerToolBarViewDemo/Pods-CJPickerToolBarViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		AE4C40A4FE34F2EE536E3647 /* Pods-CJPickerToolBarViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJPickerToolBarViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CJPickerToolBarViewDemo/Pods-CJPickerToolBarViewDemo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		80DD45DD1B347B3C00D131DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F854999D8BE9277D200115E /* libPods-CJPickerToolBarViewDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80DD45F61B347B3C00D131DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D4F69ED61CE8322353EE1A3 /* libPods-CJPickerToolBarViewDemoTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		276B92C8743824BFADE939F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				649CD701536B8879D628DECA /* libPods-CJPickerToolBarViewDemo.a */,
+				0906B6CB8C16C50D9F541E82 /* libPods-CJPickerToolBarViewDemoTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		786B57711E347115006AEAF4 /* CJPickerToolBarView */ = {
+			isa = PBXGroup;
+			children = (
+				786B57721E347115006AEAF4 /* CJDatePickerToolBarView.h */,
+				786B57731E347115006AEAF4 /* CJDatePickerToolBarView.m */,
+				786B57741E347115006AEAF4 /* CJDatePickerToolBarView.xib */,
+				786B57751E347115006AEAF4 /* CJIndependentPickerView.h */,
+				786B57761E347115006AEAF4 /* CJIndependentPickerView.m */,
+				786B57771E347115006AEAF4 /* CJIndependentPickerView.xib */,
+				786B57781E347115006AEAF4 /* CJRelatedPickerView.h */,
+				786B57791E347115006AEAF4 /* CJRelatedPickerView.m */,
+				786B577A1E347115006AEAF4 /* CJRelatedPickerView.xib */,
+				786B577B1E347115006AEAF4 /* images */,
+			);
+			path = CJPickerToolBarView;
+			sourceTree = "<group>";
+		};
+		786B577B1E347115006AEAF4 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				786B577C1E347115006AEAF4 /* line_gray_pickerToolbar.png */,
+				786B577D1E347115006AEAF4 /* line_gray_pickerToolbar@2x.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		80DD45D71B347B3B00D131DB = {
+			isa = PBXGroup;
+			children = (
+				80DD45E21B347B3C00D131DB /* CJPickerToolBarViewDemo */,
+				80DD45FC1B347B3C00D131DB /* CJPickerToolBarViewDemoTests */,
+				80DD45E11B347B3C00D131DB /* Products */,
+				C7189AA6437A77BF0F712732 /* Pods */,
+				276B92C8743824BFADE939F9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		80DD45E11B347B3C00D131DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				80DD45E01B347B3C00D131DB /* CJPickerToolBarViewDemo.app */,
+				80DD45F91B347B3C00D131DB /* CJPickerToolBarViewDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		80DD45E21B347B3C00D131DB /* CJPickerToolBarViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				80DD45E71B347B3C00D131DB /* AppDelegate.h */,
+				80DD45E81B347B3C00D131DB /* AppDelegate.m */,
+				80DD45EA1B347B3C00D131DB /* ViewController.h */,
+				80DD45EB1B347B3C00D131DB /* ViewController.m */,
+				80DD45ED1B347B3C00D131DB /* Main.storyboard */,
+				80DD45F01B347B3C00D131DB /* Images.xcassets */,
+				80DD45F21B347B3C00D131DB /* LaunchScreen.xib */,
+				786B57711E347115006AEAF4 /* CJPickerToolBarView */,
+				80DD46091B347B9E00D131DB /* res */,
+				80DD45E31B347B3C00D131DB /* Supporting Files */,
+			);
+			path = CJPickerToolBarViewDemo;
+			sourceTree = "<group>";
+		};
+		80DD45E31B347B3C00D131DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				80DD45E41B347B3C00D131DB /* Info.plist */,
+				80DD45E51B347B3C00D131DB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		80DD45FC1B347B3C00D131DB /* CJPickerToolBarViewDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				80DD45FF1B347B3C00D131DB /* CJPickerToolBarViewDemoTests.m */,
+				80DD45FD1B347B3C00D131DB /* Supporting Files */,
+			);
+			path = CJPickerToolBarViewDemoTests;
+			sourceTree = "<group>";
+		};
+		80DD45FD1B347B3C00D131DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				80DD45FE1B347B3C00D131DB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		80DD46091B347B9E00D131DB /* res */ = {
+			isa = PBXGroup;
+			children = (
+				80DD460A1B347B9E00D131DB /* area.plist */,
+				80DD460B1B347B9E00D131DB /* city.plist */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		C7189AA6437A77BF0F712732 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A2844A5A78CF3801D924BB22 /* Pods-CJPickerToolBarViewDemo.debug.xcconfig */,
+				AE4C40A4FE34F2EE536E3647 /* Pods-CJPickerToolBarViewDemo.release.xcconfig */,
+				23DCF983E213540CDAFEB5A0 /* Pods-CJPickerToolBarViewDemoTests.debug.xcconfig */,
+				936CD3AEC8431C6FC22E036D /* Pods-CJPickerToolBarViewDemoTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		80DD45DF1B347B3C00D131DB /* CJPickerToolBarViewDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80DD46031B347B3C00D131DB /* Build configuration list for PBXNativeTarget "CJPickerToolBarViewDemo" */;
+			buildPhases = (
+				472D6F1911E321588E680B63 /* 📦 Check Pods Manifest.lock */,
+				80DD45DC1B347B3C00D131DB /* Sources */,
+				80DD45DD1B347B3C00D131DB /* Frameworks */,
+				80DD45DE1B347B3C00D131DB /* Resources */,
+				8AE9C3D764D76CB69DE3AC51 /* 📦 Embed Pods Frameworks */,
+				25FEA0B32EEB7FFFEDA63892 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CJPickerToolBarViewDemo;
+			productName = CJPickerToolBarViewDemo;
+			productReference = 80DD45E01B347B3C00D131DB /* CJPickerToolBarViewDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		80DD45F81B347B3C00D131DB /* CJPickerToolBarViewDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80DD46061B347B3C00D131DB /* Build configuration list for PBXNativeTarget "CJPickerToolBarViewDemoTests" */;
+			buildPhases = (
+				2DE8EC8600100D7B6F6E3AF4 /* 📦 Check Pods Manifest.lock */,
+				80DD45F51B347B3C00D131DB /* Sources */,
+				80DD45F61B347B3C00D131DB /* Frameworks */,
+				80DD45F71B347B3C00D131DB /* Resources */,
+				D56470E6C73C25AE03B68867 /* 📦 Embed Pods Frameworks */,
+				935C6CB5134B3E6DC3D5B7CF /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				80DD45FB1B347B3C00D131DB /* PBXTargetDependency */,
+			);
+			name = CJPickerToolBarViewDemoTests;
+			productName = CJPickerToolBarViewDemoTests;
+			productReference = 80DD45F91B347B3C00D131DB /* CJPickerToolBarViewDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		80DD45D81B347B3B00D131DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = ciyouzen;
+				TargetAttributes = {
+					80DD45DF1B347B3C00D131DB = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					80DD45F81B347B3C00D131DB = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 80DD45DF1B347B3C00D131DB;
+					};
+				};
+			};
+			buildConfigurationList = 80DD45DB1B347B3B00D131DB /* Build configuration list for PBXProject "CJPickerToolBarViewDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 80DD45D71B347B3B00D131DB;
+			productRefGroup = 80DD45E11B347B3C00D131DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				80DD45DF1B347B3C00D131DB /* CJPickerToolBarViewDemo */,
+				80DD45F81B347B3C00D131DB /* CJPickerToolBarViewDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		80DD45DE1B347B3C00D131DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				786B57841E347115006AEAF4 /* line_gray_pickerToolbar.png in Resources */,
+				80DD45EF1B347B3C00D131DB /* Main.storyboard in Resources */,
+				786B577F1E347115006AEAF4 /* CJDatePickerToolBarView.xib in Resources */,
+				80DD460E1B347B9E00D131DB /* area.plist in Resources */,
+				786B57811E347115006AEAF4 /* CJIndependentPickerView.xib in Resources */,
+				786B57851E347115006AEAF4 /* line_gray_pickerToolbar@2x.png in Resources */,
+				80DD460F1B347B9E00D131DB /* city.plist in Resources */,
+				80DD45F41B347B3C00D131DB /* LaunchScreen.xib in Resources */,
+				80DD45F11B347B3C00D131DB /* Images.xcassets in Resources */,
+				786B57831E347115006AEAF4 /* CJRelatedPickerView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80DD45F71B347B3C00D131DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		25FEA0B32EEB7FFFEDA63892 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CJPickerToolBarViewDemo/Pods-CJPickerToolBarViewDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2DE8EC8600100D7B6F6E3AF4 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		472D6F1911E321588E680B63 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8AE9C3D764D76CB69DE3AC51 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CJPickerToolBarViewDemo/Pods-CJPickerToolBarViewDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		935C6CB5134B3E6DC3D5B7CF /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CJPickerToolBarViewDemoTests/Pods-CJPickerToolBarViewDemoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D56470E6C73C25AE03B68867 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CJPickerToolBarViewDemoTests/Pods-CJPickerToolBarViewDemoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		80DD45DC1B347B3C00D131DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				786B57801E347115006AEAF4 /* CJIndependentPickerView.m in Sources */,
+				80DD45EC1B347B3C00D131DB /* ViewController.m in Sources */,
+				80DD45E91B347B3C00D131DB /* AppDelegate.m in Sources */,
+				786B57821E347115006AEAF4 /* CJRelatedPickerView.m in Sources */,
+				80DD45E61B347B3C00D131DB /* main.m in Sources */,
+				786B577E1E347115006AEAF4 /* CJDatePickerToolBarView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80DD45F51B347B3C00D131DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80DD46001B347B3C00D131DB /* CJPickerToolBarViewDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		80DD45FB1B347B3C00D131DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 80DD45DF1B347B3C00D131DB /* CJPickerToolBarViewDemo */;
+			targetProxy = 80DD45FA1B347B3C00D131DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		80DD45ED1B347B3C00D131DB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80DD45EE1B347B3C00D131DB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		80DD45F21B347B3C00D131DB /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80DD45F31B347B3C00D131DB /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		80DD46011B347B3C00D131DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		80DD46021B347B3C00D131DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		80DD46041B347B3C00D131DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2844A5A78CF3801D924BB22 /* Pods-CJPickerToolBarViewDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CJPickerToolBarViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		80DD46051B347B3C00D131DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE4C40A4FE34F2EE536E3647 /* Pods-CJPickerToolBarViewDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CJPickerToolBarViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		80DD46071B347B3C00D131DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23DCF983E213540CDAFEB5A0 /* Pods-CJPickerToolBarViewDemoTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CJPickerToolBarViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CJPickerToolBarViewDemo.app/CJPickerToolBarViewDemo";
+			};
+			name = Debug;
+		};
+		80DD46081B347B3C00D131DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 936CD3AEC8431C6FC22E036D /* Pods-CJPickerToolBarViewDemoTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CJPickerToolBarViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CJPickerToolBarViewDemo.app/CJPickerToolBarViewDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		80DD45DB1B347B3B00D131DB /* Build configuration list for PBXProject "CJPickerToolBarViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80DD46011B347B3C00D131DB /* Debug */,
+				80DD46021B347B3C00D131DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80DD46031B347B3C00D131DB /* Build configuration list for PBXNativeTarget "CJPickerToolBarViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80DD46041B347B3C00D131DB /* Debug */,
+				80DD46051B347B3C00D131DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80DD46061B347B3C00D131DB /* Build configuration list for PBXNativeTarget "CJPickerToolBarViewDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80DD46071B347B3C00D131DB /* Debug */,
+				80DD46081B347B3C00D131DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 80DD45D81B347B3B00D131DB /* Project object */;
+}

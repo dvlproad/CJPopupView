@@ -1,0 +1,850 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6C8E797EF1317610B05543B9 /* libPods-CJGroupTableViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B174A71F90A6E730AEF0D87 /* libPods-CJGroupTableViewDemo.a */; };
+		783AC78B1D968C530077067E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC78A1D968C530077067E /* main.m */; };
+		783AC78E1D968C530077067E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC78D1D968C530077067E /* AppDelegate.m */; };
+		783AC7911D968C530077067E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7901D968C530077067E /* ViewController.m */; };
+		783AC7941D968C530077067E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 783AC7921D968C530077067E /* Main.storyboard */; };
+		783AC7961D968C540077067E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 783AC7951D968C540077067E /* Assets.xcassets */; };
+		783AC7991D968C540077067E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 783AC7971D968C540077067E /* LaunchScreen.storyboard */; };
+		783AC7A41D968C540077067E /* CJGroupTableViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7A31D968C540077067E /* CJGroupTableViewDemoTests.m */; };
+		783AC7AF1D968C540077067E /* CJGroupTableViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7AE1D968C540077067E /* CJGroupTableViewDemoUITests.m */; };
+		783AC7C01D968D3D0077067E /* GroupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7BE1D968D3D0077067E /* GroupTableViewController.m */; };
+		783AC7C11D968D3D0077067E /* GroupTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 783AC7BF1D968D3D0077067E /* GroupTableViewController.xib */; };
+		783AC7D31D9690680077067E /* GroupDataUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7D21D9690680077067E /* GroupDataUtil.m */; };
+		783AC7D71D96928A0077067E /* GroupTableViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7D51D96928A0077067E /* GroupTableViewController2.m */; };
+		783AC7D81D96928A0077067E /* GroupTableViewController2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 783AC7D61D96928A0077067E /* GroupTableViewController2.xib */; };
+		783AC7DB1D96941B0077067E /* RadioButton_Slider.xib in Resources */ = {isa = PBXBuildFile; fileRef = 783AC7DA1D96941B0077067E /* RadioButton_Slider.xib */; };
+		783AC7E71D96AE6D0077067E /* ButtonsSingleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7E51D96AE6D0077067E /* ButtonsSingleTableViewController.m */; };
+		783AC7E81D96AE6D0077067E /* ButtonsSingleTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 783AC7E61D96AE6D0077067E /* ButtonsSingleTableViewController.xib */; };
+		783AC7EE1D96B30D0077067E /* CJButtonsSingleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7EB1D96B30D0077067E /* CJButtonsSingleTableView.m */; };
+		783AC7EF1D96B30D0077067E /* CJSingleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7ED1D96B30D0077067E /* CJSingleTableView.m */; };
+		786B57F71E347DA5006AEAF4 /* CJComponentModelData.m in Sources */ = {isa = PBXBuildFile; fileRef = 786B57E31E347DA5006AEAF4 /* CJComponentModelData.m */; };
+		786B57F81E347DA5006AEAF4 /* CJDataGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 786B57E51E347DA5006AEAF4 /* CJDataGroupModel.m */; };
+		786B57F91E347DA5006AEAF4 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 786B57E71E347DA5006AEAF4 /* area.plist */; };
+		786B57FA1E347DA5006AEAF4 /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 786B57E81E347DA5006AEAF4 /* city.plist */; };
+		786B57FB1E347DA5006AEAF4 /* line_gray_pickerToolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 786B57E91E347DA5006AEAF4 /* line_gray_pickerToolbar.png */; };
+		786B57FC1E347DA5006AEAF4 /* line_gray_pickerToolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 786B57EA1E347DA5006AEAF4 /* line_gray_pickerToolbar@2x.png */; };
+		786B57FD1E347DA5006AEAF4 /* CJDatePickerToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 786B57ED1E347DA5006AEAF4 /* CJDatePickerToolBarView.m */; };
+		786B57FE1E347DA5006AEAF4 /* CJDatePickerToolBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786B57EE1E347DA5006AEAF4 /* CJDatePickerToolBarView.xib */; };
+		786B57FF1E347DA5006AEAF4 /* CJIndependentPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 786B57F01E347DA5006AEAF4 /* CJIndependentPickerView.m */; };
+		786B58001E347DA5006AEAF4 /* CJIndependentPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786B57F11E347DA5006AEAF4 /* CJIndependentPickerView.xib */; };
+		786B58011E347DA5006AEAF4 /* CJRelatedPickerRichView.m in Sources */ = {isa = PBXBuildFile; fileRef = 786B57F31E347DA5006AEAF4 /* CJRelatedPickerRichView.m */; };
+		786B58021E347DA5006AEAF4 /* CJRelatedPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 786B57F51E347DA5006AEAF4 /* CJRelatedPickerView.m */; };
+		786B58031E347DA5006AEAF4 /* CJRelatedPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786B57F61E347DA5006AEAF4 /* CJRelatedPickerView.xib */; };
+		786B58061E347E66006AEAF4 /* PickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 786B58051E347E66006AEAF4 /* PickerViewController.m */; };
+		786B58081E347EB0006AEAF4 /* PickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786B58071E347EB0006AEAF4 /* PickerViewController.xib */; };
+		7DB59DC2738A0CE9DC2EBB43 /* libPods-CJGroupTableViewDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B77FC5D8CF35A3BB60FC0C4 /* libPods-CJGroupTableViewDemoTests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		783AC7A01D968C540077067E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 783AC77E1D968C530077067E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 783AC7851D968C530077067E;
+			remoteInfo = CJGroupTableViewDemo;
+		};
+		783AC7AB1D968C540077067E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 783AC77E1D968C530077067E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 783AC7851D968C530077067E;
+			remoteInfo = CJGroupTableViewDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0B174A71F90A6E730AEF0D87 /* libPods-CJGroupTableViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CJGroupTableViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		22D5BF7A8A602725C61F8E51 /* Pods-CJGroupTableViewDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJGroupTableViewDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CJGroupTableViewDemoTests/Pods-CJGroupTableViewDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2B77FC5D8CF35A3BB60FC0C4 /* libPods-CJGroupTableViewDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CJGroupTableViewDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		783AC7861D968C530077067E /* CJGroupTableViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CJGroupTableViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		783AC78A1D968C530077067E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		783AC78C1D968C530077067E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		783AC78D1D968C530077067E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		783AC78F1D968C530077067E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		783AC7901D968C530077067E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		783AC7931D968C530077067E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		783AC7951D968C540077067E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		783AC7981D968C540077067E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		783AC79A1D968C540077067E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		783AC79F1D968C540077067E /* CJGroupTableViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CJGroupTableViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		783AC7A31D968C540077067E /* CJGroupTableViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CJGroupTableViewDemoTests.m; sourceTree = "<group>"; };
+		783AC7A51D968C540077067E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		783AC7AA1D968C540077067E /* CJGroupTableViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CJGroupTableViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		783AC7AE1D968C540077067E /* CJGroupTableViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CJGroupTableViewDemoUITests.m; sourceTree = "<group>"; };
+		783AC7B01D968C540077067E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		783AC7BD1D968D3D0077067E /* GroupTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupTableViewController.h; sourceTree = "<group>"; };
+		783AC7BE1D968D3D0077067E /* GroupTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupTableViewController.m; sourceTree = "<group>"; };
+		783AC7BF1D968D3D0077067E /* GroupTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupTableViewController.xib; sourceTree = "<group>"; };
+		783AC7D11D9690680077067E /* GroupDataUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupDataUtil.h; sourceTree = "<group>"; };
+		783AC7D21D9690680077067E /* GroupDataUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupDataUtil.m; sourceTree = "<group>"; };
+		783AC7D41D96928A0077067E /* GroupTableViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupTableViewController2.h; sourceTree = "<group>"; };
+		783AC7D51D96928A0077067E /* GroupTableViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupTableViewController2.m; sourceTree = "<group>"; };
+		783AC7D61D96928A0077067E /* GroupTableViewController2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupTableViewController2.xib; sourceTree = "<group>"; };
+		783AC7DA1D96941B0077067E /* RadioButton_Slider.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RadioButton_Slider.xib; sourceTree = "<group>"; };
+		783AC7E41D96AE6C0077067E /* ButtonsSingleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonsSingleTableViewController.h; sourceTree = "<group>"; };
+		783AC7E51D96AE6D0077067E /* ButtonsSingleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonsSingleTableViewController.m; sourceTree = "<group>"; };
+		783AC7E61D96AE6D0077067E /* ButtonsSingleTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonsSingleTableViewController.xib; sourceTree = "<group>"; };
+		783AC7EA1D96B30D0077067E /* CJButtonsSingleTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJButtonsSingleTableView.h; sourceTree = "<group>"; };
+		783AC7EB1D96B30D0077067E /* CJButtonsSingleTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJButtonsSingleTableView.m; sourceTree = "<group>"; };
+		783AC7EC1D96B30D0077067E /* CJSingleTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSingleTableView.h; sourceTree = "<group>"; };
+		783AC7ED1D96B30D0077067E /* CJSingleTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSingleTableView.m; sourceTree = "<group>"; };
+		786B57E21E347DA5006AEAF4 /* CJComponentModelData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJComponentModelData.h; sourceTree = "<group>"; };
+		786B57E31E347DA5006AEAF4 /* CJComponentModelData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJComponentModelData.m; sourceTree = "<group>"; };
+		786B57E41E347DA5006AEAF4 /* CJDataGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDataGroupModel.h; sourceTree = "<group>"; };
+		786B57E51E347DA5006AEAF4 /* CJDataGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDataGroupModel.m; sourceTree = "<group>"; };
+		786B57E71E347DA5006AEAF4 /* area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = area.plist; sourceTree = "<group>"; };
+		786B57E81E347DA5006AEAF4 /* city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city.plist; sourceTree = "<group>"; };
+		786B57E91E347DA5006AEAF4 /* line_gray_pickerToolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line_gray_pickerToolbar.png; sourceTree = "<group>"; };
+		786B57EA1E347DA5006AEAF4 /* line_gray_pickerToolbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "line_gray_pickerToolbar@2x.png"; sourceTree = "<group>"; };
+		786B57EC1E347DA5006AEAF4 /* CJDatePickerToolBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDatePickerToolBarView.h; sourceTree = "<group>"; };
+		786B57ED1E347DA5006AEAF4 /* CJDatePickerToolBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDatePickerToolBarView.m; sourceTree = "<group>"; };
+		786B57EE1E347DA5006AEAF4 /* CJDatePickerToolBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJDatePickerToolBarView.xib; sourceTree = "<group>"; };
+		786B57EF1E347DA5006AEAF4 /* CJIndependentPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJIndependentPickerView.h; sourceTree = "<group>"; };
+		786B57F01E347DA5006AEAF4 /* CJIndependentPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJIndependentPickerView.m; sourceTree = "<group>"; };
+		786B57F11E347DA5006AEAF4 /* CJIndependentPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJIndependentPickerView.xib; sourceTree = "<group>"; };
+		786B57F21E347DA5006AEAF4 /* CJRelatedPickerRichView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJRelatedPickerRichView.h; sourceTree = "<group>"; };
+		786B57F31E347DA5006AEAF4 /* CJRelatedPickerRichView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJRelatedPickerRichView.m; sourceTree = "<group>"; };
+		786B57F41E347DA5006AEAF4 /* CJRelatedPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJRelatedPickerView.h; sourceTree = "<group>"; };
+		786B57F51E347DA5006AEAF4 /* CJRelatedPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJRelatedPickerView.m; sourceTree = "<group>"; };
+		786B57F61E347DA5006AEAF4 /* CJRelatedPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJRelatedPickerView.xib; sourceTree = "<group>"; };
+		786B58041E347E66006AEAF4 /* PickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerViewController.h; sourceTree = "<group>"; };
+		786B58051E347E66006AEAF4 /* PickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerViewController.m; sourceTree = "<group>"; };
+		786B58071E347EB0006AEAF4 /* PickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PickerViewController.xib; sourceTree = "<group>"; };
+		A25D9BE426EE2DA7930B4D83 /* Pods-CJGroupTableViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJGroupTableViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CJGroupTableViewDemo/Pods-CJGroupTableViewDemo.release.xcconfig"; sourceTree = "<group>"; };
+		C94AB2966C06477AC7F922E3 /* Pods-CJGroupTableViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJGroupTableViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CJGroupTableViewDemo/Pods-CJGroupTableViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		FEBD8A6746BC917E6FCEF304 /* Pods-CJGroupTableViewDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJGroupTableViewDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CJGroupTableViewDemoTests/Pods-CJGroupTableViewDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		783AC7831D968C530077067E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C8E797EF1317610B05543B9 /* libPods-CJGroupTableViewDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		783AC79C1D968C540077067E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DB59DC2738A0CE9DC2EBB43 /* libPods-CJGroupTableViewDemoTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		783AC7A71D968C540077067E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		077BA07848305BD482D623D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C94AB2966C06477AC7F922E3 /* Pods-CJGroupTableViewDemo.debug.xcconfig */,
+				A25D9BE426EE2DA7930B4D83 /* Pods-CJGroupTableViewDemo.release.xcconfig */,
+				22D5BF7A8A602725C61F8E51 /* Pods-CJGroupTableViewDemoTests.debug.xcconfig */,
+				FEBD8A6746BC917E6FCEF304 /* Pods-CJGroupTableViewDemoTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		783AC77D1D968C530077067E = {
+			isa = PBXGroup;
+			children = (
+				783AC7881D968C530077067E /* CJGroupTableViewDemo */,
+				783AC7A21D968C540077067E /* CJGroupTableViewDemoTests */,
+				783AC7AD1D968C540077067E /* CJGroupTableViewDemoUITests */,
+				783AC7871D968C530077067E /* Products */,
+				077BA07848305BD482D623D2 /* Pods */,
+				C2E0196F9EEF3112724138E9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		783AC7871D968C530077067E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				783AC7861D968C530077067E /* CJGroupTableViewDemo.app */,
+				783AC79F1D968C540077067E /* CJGroupTableViewDemoTests.xctest */,
+				783AC7AA1D968C540077067E /* CJGroupTableViewDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		783AC7881D968C530077067E /* CJGroupTableViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				783AC78C1D968C530077067E /* AppDelegate.h */,
+				783AC78D1D968C530077067E /* AppDelegate.m */,
+				783AC78F1D968C530077067E /* ViewController.h */,
+				783AC7901D968C530077067E /* ViewController.m */,
+				786B57E01E347DA5006AEAF4 /* CJPicker */,
+				783AC7E91D96B30D0077067E /* CJButtonsSingleTableView */,
+				783AC7D01D96901B0077067E /* Util */,
+				783AC7BC1D968D3D0077067E /* Controllers */,
+				783AC7921D968C530077067E /* Main.storyboard */,
+				783AC7D91D9693F90077067E /* Views */,
+				783AC7951D968C540077067E /* Assets.xcassets */,
+				783AC7971D968C540077067E /* LaunchScreen.storyboard */,
+				783AC79A1D968C540077067E /* Info.plist */,
+				783AC7891D968C530077067E /* Supporting Files */,
+			);
+			path = CJGroupTableViewDemo;
+			sourceTree = "<group>";
+		};
+		783AC7891D968C530077067E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				783AC78A1D968C530077067E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		783AC7A21D968C540077067E /* CJGroupTableViewDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				783AC7A31D968C540077067E /* CJGroupTableViewDemoTests.m */,
+				783AC7A51D968C540077067E /* Info.plist */,
+			);
+			path = CJGroupTableViewDemoTests;
+			sourceTree = "<group>";
+		};
+		783AC7AD1D968C540077067E /* CJGroupTableViewDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				783AC7AE1D968C540077067E /* CJGroupTableViewDemoUITests.m */,
+				783AC7B01D968C540077067E /* Info.plist */,
+			);
+			path = CJGroupTableViewDemoUITests;
+			sourceTree = "<group>";
+		};
+		783AC7BC1D968D3D0077067E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				786B58041E347E66006AEAF4 /* PickerViewController.h */,
+				786B58051E347E66006AEAF4 /* PickerViewController.m */,
+				786B58071E347EB0006AEAF4 /* PickerViewController.xib */,
+				783AC7BD1D968D3D0077067E /* GroupTableViewController.h */,
+				783AC7BE1D968D3D0077067E /* GroupTableViewController.m */,
+				783AC7BF1D968D3D0077067E /* GroupTableViewController.xib */,
+				783AC7D41D96928A0077067E /* GroupTableViewController2.h */,
+				783AC7D51D96928A0077067E /* GroupTableViewController2.m */,
+				783AC7D61D96928A0077067E /* GroupTableViewController2.xib */,
+				783AC7E41D96AE6C0077067E /* ButtonsSingleTableViewController.h */,
+				783AC7E51D96AE6D0077067E /* ButtonsSingleTableViewController.m */,
+				783AC7E61D96AE6D0077067E /* ButtonsSingleTableViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		783AC7D01D96901B0077067E /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				783AC7D11D9690680077067E /* GroupDataUtil.h */,
+				783AC7D21D9690680077067E /* GroupDataUtil.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		783AC7D91D9693F90077067E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				783AC7DA1D96941B0077067E /* RadioButton_Slider.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		783AC7E91D96B30D0077067E /* CJButtonsSingleTableView */ = {
+			isa = PBXGroup;
+			children = (
+				783AC7EA1D96B30D0077067E /* CJButtonsSingleTableView.h */,
+				783AC7EB1D96B30D0077067E /* CJButtonsSingleTableView.m */,
+				783AC7EC1D96B30D0077067E /* CJSingleTableView.h */,
+				783AC7ED1D96B30D0077067E /* CJSingleTableView.m */,
+			);
+			path = CJButtonsSingleTableView;
+			sourceTree = "<group>";
+		};
+		786B57E01E347DA5006AEAF4 /* CJPicker */ = {
+			isa = PBXGroup;
+			children = (
+				786B57E11E347DA5006AEAF4 /* Models */,
+				786B57E61E347DA5006AEAF4 /* Resources */,
+				786B57EB1E347DA5006AEAF4 /* Views */,
+			);
+			name = CJPicker;
+			path = ../../../CJPicker;
+			sourceTree = "<group>";
+		};
+		786B57E11E347DA5006AEAF4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				786B57E21E347DA5006AEAF4 /* CJComponentModelData.h */,
+				786B57E31E347DA5006AEAF4 /* CJComponentModelData.m */,
+				786B57E41E347DA5006AEAF4 /* CJDataGroupModel.h */,
+				786B57E51E347DA5006AEAF4 /* CJDataGroupModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		786B57E61E347DA5006AEAF4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				786B57E71E347DA5006AEAF4 /* area.plist */,
+				786B57E81E347DA5006AEAF4 /* city.plist */,
+				786B57E91E347DA5006AEAF4 /* line_gray_pickerToolbar.png */,
+				786B57EA1E347DA5006AEAF4 /* line_gray_pickerToolbar@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		786B57EB1E347DA5006AEAF4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				786B57EC1E347DA5006AEAF4 /* CJDatePickerToolBarView.h */,
+				786B57ED1E347DA5006AEAF4 /* CJDatePickerToolBarView.m */,
+				786B57EE1E347DA5006AEAF4 /* CJDatePickerToolBarView.xib */,
+				786B57EF1E347DA5006AEAF4 /* CJIndependentPickerView.h */,
+				786B57F01E347DA5006AEAF4 /* CJIndependentPickerView.m */,
+				786B57F11E347DA5006AEAF4 /* CJIndependentPickerView.xib */,
+				786B57F21E347DA5006AEAF4 /* CJRelatedPickerRichView.h */,
+				786B57F31E347DA5006AEAF4 /* CJRelatedPickerRichView.m */,
+				786B57F41E347DA5006AEAF4 /* CJRelatedPickerView.h */,
+				786B57F51E347DA5006AEAF4 /* CJRelatedPickerView.m */,
+				786B57F61E347DA5006AEAF4 /* CJRelatedPickerView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C2E0196F9EEF3112724138E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B174A71F90A6E730AEF0D87 /* libPods-CJGroupTableViewDemo.a */,
+				2B77FC5D8CF35A3BB60FC0C4 /* libPods-CJGroupTableViewDemoTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		783AC7851D968C530077067E /* CJGroupTableViewDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 783AC7B31D968C540077067E /* Build configuration list for PBXNativeTarget "CJGroupTableViewDemo" */;
+			buildPhases = (
+				31E66D72AADA51674CE70914 /* 📦 Check Pods Manifest.lock */,
+				783AC7821D968C530077067E /* Sources */,
+				783AC7831D968C530077067E /* Frameworks */,
+				783AC7841D968C530077067E /* Resources */,
+				08CD0F395D07A1EC6B7BB71C /* 📦 Embed Pods Frameworks */,
+				226A14A3524BD572556A10A0 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CJGroupTableViewDemo;
+			productName = CJGroupTableViewDemo;
+			productReference = 783AC7861D968C530077067E /* CJGroupTableViewDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		783AC79E1D968C540077067E /* CJGroupTableViewDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 783AC7B61D968C540077067E /* Build configuration list for PBXNativeTarget "CJGroupTableViewDemoTests" */;
+			buildPhases = (
+				C3580A134A5C7E9FEC0D6D5B /* 📦 Check Pods Manifest.lock */,
+				783AC79B1D968C540077067E /* Sources */,
+				783AC79C1D968C540077067E /* Frameworks */,
+				783AC79D1D968C540077067E /* Resources */,
+				8BDA8C36E0E9CEF8AEB59E9B /* 📦 Embed Pods Frameworks */,
+				02DED656EBB2C478AC8C5115 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				783AC7A11D968C540077067E /* PBXTargetDependency */,
+			);
+			name = CJGroupTableViewDemoTests;
+			productName = CJGroupTableViewDemoTests;
+			productReference = 783AC79F1D968C540077067E /* CJGroupTableViewDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		783AC7A91D968C540077067E /* CJGroupTableViewDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 783AC7B91D968C540077067E /* Build configuration list for PBXNativeTarget "CJGroupTableViewDemoUITests" */;
+			buildPhases = (
+				783AC7A61D968C540077067E /* Sources */,
+				783AC7A71D968C540077067E /* Frameworks */,
+				783AC7A81D968C540077067E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				783AC7AC1D968C540077067E /* PBXTargetDependency */,
+			);
+			name = CJGroupTableViewDemoUITests;
+			productName = CJGroupTableViewDemoUITests;
+			productReference = 783AC7AA1D968C540077067E /* CJGroupTableViewDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		783AC77E1D968C530077067E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = dvlproad;
+				TargetAttributes = {
+					783AC7851D968C530077067E = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					783AC79E1D968C540077067E = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 783AC7851D968C530077067E;
+					};
+					783AC7A91D968C540077067E = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 783AC7851D968C530077067E;
+					};
+				};
+			};
+			buildConfigurationList = 783AC7811D968C530077067E /* Build configuration list for PBXProject "CJGroupTableViewDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 783AC77D1D968C530077067E;
+			productRefGroup = 783AC7871D968C530077067E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				783AC7851D968C530077067E /* CJGroupTableViewDemo */,
+				783AC79E1D968C540077067E /* CJGroupTableViewDemoTests */,
+				783AC7A91D968C540077067E /* CJGroupTableViewDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		783AC7841D968C530077067E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				786B57FB1E347DA5006AEAF4 /* line_gray_pickerToolbar.png in Resources */,
+				783AC7DB1D96941B0077067E /* RadioButton_Slider.xib in Resources */,
+				786B57F91E347DA5006AEAF4 /* area.plist in Resources */,
+				783AC7C11D968D3D0077067E /* GroupTableViewController.xib in Resources */,
+				786B58081E347EB0006AEAF4 /* PickerViewController.xib in Resources */,
+				783AC7991D968C540077067E /* LaunchScreen.storyboard in Resources */,
+				783AC7D81D96928A0077067E /* GroupTableViewController2.xib in Resources */,
+				786B57FE1E347DA5006AEAF4 /* CJDatePickerToolBarView.xib in Resources */,
+				783AC7E81D96AE6D0077067E /* ButtonsSingleTableViewController.xib in Resources */,
+				786B57FC1E347DA5006AEAF4 /* line_gray_pickerToolbar@2x.png in Resources */,
+				783AC7961D968C540077067E /* Assets.xcassets in Resources */,
+				783AC7941D968C530077067E /* Main.storyboard in Resources */,
+				786B58001E347DA5006AEAF4 /* CJIndependentPickerView.xib in Resources */,
+				786B57FA1E347DA5006AEAF4 /* city.plist in Resources */,
+				786B58031E347DA5006AEAF4 /* CJRelatedPickerView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		783AC79D1D968C540077067E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		783AC7A81D968C540077067E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02DED656EBB2C478AC8C5115 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CJGroupTableViewDemoTests/Pods-CJGroupTableViewDemoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		08CD0F395D07A1EC6B7BB71C /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CJGroupTableViewDemo/Pods-CJGroupTableViewDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		226A14A3524BD572556A10A0 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CJGroupTableViewDemo/Pods-CJGroupTableViewDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31E66D72AADA51674CE70914 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8BDA8C36E0E9CEF8AEB59E9B /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CJGroupTableViewDemoTests/Pods-CJGroupTableViewDemoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3580A134A5C7E9FEC0D6D5B /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		783AC7821D968C530077067E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				783AC7C01D968D3D0077067E /* GroupTableViewController.m in Sources */,
+				783AC7D31D9690680077067E /* GroupDataUtil.m in Sources */,
+				783AC7EE1D96B30D0077067E /* CJButtonsSingleTableView.m in Sources */,
+				786B57FD1E347DA5006AEAF4 /* CJDatePickerToolBarView.m in Sources */,
+				783AC7D71D96928A0077067E /* GroupTableViewController2.m in Sources */,
+				786B58011E347DA5006AEAF4 /* CJRelatedPickerRichView.m in Sources */,
+				786B57F71E347DA5006AEAF4 /* CJComponentModelData.m in Sources */,
+				783AC7911D968C530077067E /* ViewController.m in Sources */,
+				786B57F81E347DA5006AEAF4 /* CJDataGroupModel.m in Sources */,
+				786B57FF1E347DA5006AEAF4 /* CJIndependentPickerView.m in Sources */,
+				783AC7EF1D96B30D0077067E /* CJSingleTableView.m in Sources */,
+				783AC7E71D96AE6D0077067E /* ButtonsSingleTableViewController.m in Sources */,
+				786B58021E347DA5006AEAF4 /* CJRelatedPickerView.m in Sources */,
+				783AC78E1D968C530077067E /* AppDelegate.m in Sources */,
+				786B58061E347E66006AEAF4 /* PickerViewController.m in Sources */,
+				783AC78B1D968C530077067E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		783AC79B1D968C540077067E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				783AC7A41D968C540077067E /* CJGroupTableViewDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		783AC7A61D968C540077067E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				783AC7AF1D968C540077067E /* CJGroupTableViewDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		783AC7A11D968C540077067E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 783AC7851D968C530077067E /* CJGroupTableViewDemo */;
+			targetProxy = 783AC7A01D968C540077067E /* PBXContainerItemProxy */;
+		};
+		783AC7AC1D968C540077067E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 783AC7851D968C530077067E /* CJGroupTableViewDemo */;
+			targetProxy = 783AC7AB1D968C540077067E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		783AC7921D968C530077067E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				783AC7931D968C530077067E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		783AC7971D968C540077067E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				783AC7981D968C540077067E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		783AC7B11D968C540077067E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		783AC7B21D968C540077067E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		783AC7B41D968C540077067E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C94AB2966C06477AC7F922E3 /* Pods-CJGroupTableViewDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CJGroupTableViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.CJGroupTableViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		783AC7B51D968C540077067E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A25D9BE426EE2DA7930B4D83 /* Pods-CJGroupTableViewDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CJGroupTableViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.CJGroupTableViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		783AC7B71D968C540077067E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22D5BF7A8A602725C61F8E51 /* Pods-CJGroupTableViewDemoTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CJGroupTableViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.CJGroupTableViewDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CJGroupTableViewDemo.app/CJGroupTableViewDemo";
+			};
+			name = Debug;
+		};
+		783AC7B81D968C540077067E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEBD8A6746BC917E6FCEF304 /* Pods-CJGroupTableViewDemoTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CJGroupTableViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.CJGroupTableViewDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CJGroupTableViewDemo.app/CJGroupTableViewDemo";
+			};
+			name = Release;
+		};
+		783AC7BA1D968C540077067E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CJGroupTableViewDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.CJGroupTableViewDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CJGroupTableViewDemo;
+			};
+			name = Debug;
+		};
+		783AC7BB1D968C540077067E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CJGroupTableViewDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.CJGroupTableViewDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CJGroupTableViewDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		783AC7811D968C530077067E /* Build configuration list for PBXProject "CJGroupTableViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				783AC7B11D968C540077067E /* Debug */,
+				783AC7B21D968C540077067E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		783AC7B31D968C540077067E /* Build configuration list for PBXNativeTarget "CJGroupTableViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				783AC7B41D968C540077067E /* Debug */,
+				783AC7B51D968C540077067E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		783AC7B61D968C540077067E /* Build configuration list for PBXNativeTarget "CJGroupTableViewDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				783AC7B71D968C540077067E /* Debug */,
+				783AC7B81D968C540077067E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		783AC7B91D968C540077067E /* Build configuration list for PBXNativeTarget "CJGroupTableViewDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				783AC7BA1D968C540077067E /* Debug */,
+				783AC7BB1D968C540077067E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 783AC77E1D968C530077067E /* Project object */;
+}
