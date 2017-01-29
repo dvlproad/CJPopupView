@@ -61,14 +61,6 @@
 
 - (IBAction)chooseArea:(id)sender{
     if (picker_area == nil) {
-//        picker_area = [[CJRelatedPickerRichView alloc] initWithNibName:@"CJRelatedPickerView" delegate:self];
-//        
-//        NSArray *datasC_0 = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"area.plist" ofType:nil]];
-//        picker_area.dicArray = @[@{@"head": @"state", @"value": @"cities"},
-//                                 @{@"head": @"city",  @"value": @"areas"}];
-//        picker_area.datas = [CJRelatedPickerView getDatasByDatasC_0:datasC_0 dicArray:picker_area.dicArray];
-        
-        
         picker_area = [[CJRelatedPickerRichView alloc] initWithFrame:CGRectMake(0, 0, 400, 162)];
         
         NSMutableArray *componentDataModels = [GroupDataUtil groupDataAllArea];

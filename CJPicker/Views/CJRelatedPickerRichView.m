@@ -157,7 +157,7 @@
 //    NSMutableArray *selectedIndexs = [NSMutableArray arrayWithArray:self.dataGroupModel.selectedIndexs];
     NSMutableArray *selectedIndexs = [[NSMutableArray alloc] init];
     for (CJComponentDataModel *componentDataModel in self.componentDataModels) {
-        NSString *indexString = [NSString stringWithFormat:@"%ld", componentDataModel.selectedIndex];
+        NSString *indexString = [NSString stringWithFormat:@"%zd", componentDataModel.selectedIndex];
         [selectedIndexs addObject:indexString];
     }
     
@@ -181,7 +181,7 @@
         
         NSMutableArray *selectedIndexs = [[NSMutableArray alloc] init];
         for (CJComponentDataModel *componentDataModel in self.componentDataModels) {
-            NSString *indexString = [NSString stringWithFormat:@"%ld", componentDataModel.selectedIndex];
+            NSString *indexString = [NSString stringWithFormat:@"%zd", componentDataModel.selectedIndex];
             [selectedIndexs addObject:indexString];
         }
         NSString *selectedIndex = [selectedIndexs objectAtIndex:component];

@@ -37,8 +37,6 @@
 		786B57FF1E347DA5006AEAF4 /* CJIndependentPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 786B57F01E347DA5006AEAF4 /* CJIndependentPickerView.m */; };
 		786B58001E347DA5006AEAF4 /* CJIndependentPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786B57F11E347DA5006AEAF4 /* CJIndependentPickerView.xib */; };
 		786B58011E347DA5006AEAF4 /* CJRelatedPickerRichView.m in Sources */ = {isa = PBXBuildFile; fileRef = 786B57F31E347DA5006AEAF4 /* CJRelatedPickerRichView.m */; };
-		786B58021E347DA5006AEAF4 /* CJRelatedPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 786B57F51E347DA5006AEAF4 /* CJRelatedPickerView.m */; };
-		786B58031E347DA5006AEAF4 /* CJRelatedPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786B57F61E347DA5006AEAF4 /* CJRelatedPickerView.xib */; };
 		786B58061E347E66006AEAF4 /* PickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 786B58051E347E66006AEAF4 /* PickerViewController.m */; };
 		786B58081E347EB0006AEAF4 /* PickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786B58071E347EB0006AEAF4 /* PickerViewController.xib */; };
 		78DDF7161E3B2CBD00C56D84 /* CJComponentDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DDF7151E3B2CBD00C56D84 /* CJComponentDataModel.m */; };
@@ -115,9 +113,6 @@
 		786B57F11E347DA5006AEAF4 /* CJIndependentPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJIndependentPickerView.xib; sourceTree = "<group>"; };
 		786B57F21E347DA5006AEAF4 /* CJRelatedPickerRichView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJRelatedPickerRichView.h; sourceTree = "<group>"; };
 		786B57F31E347DA5006AEAF4 /* CJRelatedPickerRichView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJRelatedPickerRichView.m; sourceTree = "<group>"; };
-		786B57F41E347DA5006AEAF4 /* CJRelatedPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJRelatedPickerView.h; sourceTree = "<group>"; };
-		786B57F51E347DA5006AEAF4 /* CJRelatedPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJRelatedPickerView.m; sourceTree = "<group>"; };
-		786B57F61E347DA5006AEAF4 /* CJRelatedPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJRelatedPickerView.xib; sourceTree = "<group>"; };
 		786B58041E347E66006AEAF4 /* PickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerViewController.h; sourceTree = "<group>"; };
 		786B58051E347E66006AEAF4 /* PickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerViewController.m; sourceTree = "<group>"; };
 		786B58071E347EB0006AEAF4 /* PickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PickerViewController.xib; sourceTree = "<group>"; };
@@ -332,9 +327,6 @@
 				786B57F11E347DA5006AEAF4 /* CJIndependentPickerView.xib */,
 				786B57F21E347DA5006AEAF4 /* CJRelatedPickerRichView.h */,
 				786B57F31E347DA5006AEAF4 /* CJRelatedPickerRichView.m */,
-				786B57F41E347DA5006AEAF4 /* CJRelatedPickerView.h */,
-				786B57F51E347DA5006AEAF4 /* CJRelatedPickerView.m */,
-				786B57F61E347DA5006AEAF4 /* CJRelatedPickerView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -471,7 +463,6 @@
 				783AC7941D968C530077067E /* Main.storyboard in Resources */,
 				786B58001E347DA5006AEAF4 /* CJIndependentPickerView.xib in Resources */,
 				786B57FA1E347DA5006AEAF4 /* city.plist in Resources */,
-				786B58031E347DA5006AEAF4 /* CJRelatedPickerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,7 +594,6 @@
 				786B57FF1E347DA5006AEAF4 /* CJIndependentPickerView.m in Sources */,
 				783AC7EF1D96B30D0077067E /* CJSingleTableView.m in Sources */,
 				783AC7E71D96AE6D0077067E /* ButtonsSingleTableViewController.m in Sources */,
-				786B58021E347DA5006AEAF4 /* CJRelatedPickerView.m in Sources */,
 				783AC78E1D968C530077067E /* AppDelegate.m in Sources */,
 				786B58061E347E66006AEAF4 /* PickerViewController.m in Sources */,
 				783AC78B1D968C530077067E /* main.m in Sources */,
