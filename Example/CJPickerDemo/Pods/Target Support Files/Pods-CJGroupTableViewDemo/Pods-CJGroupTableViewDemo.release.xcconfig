@@ -1,8 +1,9 @@
+ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/CJPopupView" "${PODS_ROOT}/Headers/Public/RadioButtons"
-LIBRARY_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/CJPopupView" "$PODS_CONFIGURATION_BUILD_DIR/RadioButtons"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/CJPopupView" -isystem "${PODS_ROOT}/Headers/Public/RadioButtons"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"CJPopupView" -l"RadioButtons" -framework "UIKit"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/CJPopupAction" "${PODS_ROOT}/Headers/Public/CJRadio" "${PODS_ROOT}/Headers/Public/JSONModel"
+LIBRARY_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/CJPopupAction" "$PODS_CONFIGURATION_BUILD_DIR/CJRadio" "$PODS_CONFIGURATION_BUILD_DIR/JSONModel"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/CJPopupAction" -isystem "${PODS_ROOT}/Headers/Public/CJRadio" -isystem "${PODS_ROOT}/Headers/Public/JSONModel"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"CJPopupAction" -l"CJRadio" -l"JSONModel" -framework "UIKit"
 PODS_BUILD_DIR = $BUILD_DIR
 PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_ROOT = ${SRCROOT}/Pods

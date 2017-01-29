@@ -21,18 +21,16 @@
 
 @implementation GroupDataUtil
 
-+ (CJDataGroupModel *)groupData1 {
-    NSArray *component0Datas = @[@"区域", @"鼓楼", @"台江", @"仓山"];
-    NSArray *sortOrders = nil;
-    NSArray *categoryValueKeys = nil;
++ (NSMutableArray<CJComponentDataModel *> *)groupData1 {
+    NSArray *titles = @[@"区域", @"鼓楼", @"台江", @"仓山"];
     
-    CJDataGroupModel *dataGroupModel = [[CJDataGroupModel alloc] initWithSelectedIndexs:@[@"0"] InComponent0Datas:component0Datas sortByCategoryKeys:sortOrders categoryValueKeys:categoryValueKeys];
+    NSMutableArray *componentDataModels = [CJComponentDataModelUtil selectedIndexs:@[@"0"] inTitles:titles];
     
-    return dataGroupModel;
+    return componentDataModels;
 }
 
 
-+ (CJDataGroupModel *)groupData2 {
++ (NSMutableArray<CJComponentDataModel *> *)groupData2 {
     NSArray *component0Datas =
     @[
       @{kCategoryFirst:@"福建省",
@@ -50,12 +48,21 @@
     NSArray *sortOrders = @[kCategoryFirst, @""];
     NSArray *categoryValueKeys = @[kCategoryValue, @""];
     
-    CJDataGroupModel *dataGroupModel = [[CJDataGroupModel alloc] initWithSelectedIndexs:@[@"0", @"0"] InComponent0Datas:component0Datas sortByCategoryKeys:sortOrders categoryValueKeys:categoryValueKeys];
-
-    return dataGroupModel;
+    NSMutableArray *componentDataModels = [CJComponentDataModelUtil selectedIndexs:@[@"0", @"0"] inDictionarys:component0Datas sortByCategoryKeys:sortOrders categoryValueKeys:categoryValueKeys];
+    
+    NSArray *array = [StateModel arrayOfModelsFromDictionaries:component0Datas error:nil];
+    NSLog(@"array = %@", array);
+    
+//    for (NSDictionary *dictionary in component0Datas) {
+//        CJDataModelSample2 *dataModelSample = [[CJDataModelSample2 alloc] initWithDictionary:dictionary error:nil];
+//        NSLog(@"dataModelSample = %@", dataModelSample);
+//    }
+    
+    
+    return componentDataModels;
 }
 
-+ (CJDataGroupModel *)groupData3 {
++ (NSMutableArray<CJComponentDataModel *> *)groupData3 {
     NSArray *component0Datas =
     @[
       @{kCategoryFirst:@"福建省",
@@ -89,12 +96,17 @@
     NSArray *sortOrders = @[kCategoryFirst, kCategorySecond, @""];
     NSArray *categoryValueKeys = @[kCategoryValue, kCategoryValue, @""];
     
-    CJDataGroupModel *dataGroupModel = [[CJDataGroupModel alloc] initWithSelectedIndexs:@[@"0", @"1", @"0"] InComponent0Datas:component0Datas sortByCategoryKeys:sortOrders categoryValueKeys:categoryValueKeys];
     
-    return dataGroupModel;
+    NSArray *array = [StateModel arrayOfModelsFromDictionaries:component0Datas error:nil];
+    NSLog(@"array = %@", array);
+    
+    
+    NSMutableArray *componentDataModels = [CJComponentDataModelUtil selectedIndexs:@[@"0", @"1", @"0"] inDictionarys:component0Datas sortByCategoryKeys:sortOrders categoryValueKeys:categoryValueKeys];
+    
+    return componentDataModels;
 }
 
-+ (CJDataGroupModel *)groupDataYule {
++ (NSMutableArray<CJComponentDataModel *> *)groupDataYule {
     NSArray *component0Datas = @[
                                  @{kCategoryFirst:@"娱乐",
                                    kCategoryValue:@[@"爱旅行", @"爱唱歌", @"爱电影"]},
@@ -108,19 +120,32 @@
     NSArray *sortOrders = @[kCategoryFirst, @""];
     NSArray *categoryValueKeys = @[kCategoryValue, @""];
     
-    CJDataGroupModel *dataGroupModel = [[CJDataGroupModel alloc] initWithSelectedIndexs:@[@"0", @"0"] InComponent0Datas:component0Datas sortByCategoryKeys:sortOrders categoryValueKeys:categoryValueKeys];
+    NSMutableArray *componentDataModels = [CJComponentDataModelUtil selectedIndexs:@[@"0", @"0"] inDictionarys:component0Datas sortByCategoryKeys:sortOrders categoryValueKeys:categoryValueKeys];
     
-    return dataGroupModel;
+    return componentDataModels;
 }
 
-+ (CJDataGroupModel *)groupDataAllArea {
++ (NSMutableArray<CJComponentDataModel *> *)groupDataAllArea {
     NSArray *component0Datas = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"area.plist" ofType:nil]];
     NSArray *sortOrders = @[@"state", @"city", @""];
     NSArray *categoryValueKeys = @[@"cities", @"areas", @""];
     
-    CJDataGroupModel *dataGroupModel = [[CJDataGroupModel alloc] initWithSelectedIndexs:@[@"0", @"0", @"0"] InComponent0Datas:component0Datas sortByCategoryKeys:sortOrders categoryValueKeys:categoryValueKeys];
+    NSArray *array = [StateModel arrayOfModelsFromDictionaries:component0Datas error:nil];
+    NSLog(@"array = %@", array);
     
-    return dataGroupModel;
+    NSMutableArray *componentDataModels = [CJComponentDataModelUtil selectedIndexs:@[@"0", @"0", @"0"] inDictionarys:component0Datas sortByCategoryKeys:sortOrders categoryValueKeys:categoryValueKeys];
+    
+    return componentDataModels;
+}
+
+
++ (NSArray<StateModel *> *)groupDataAllArea22 {
+    NSArray *component0Datas = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"area.plist" ofType:nil]];
+
+    NSArray *array = [StateModel arrayOfModelsFromDictionaries:component0Datas error:nil];
+    NSLog(@"array = %@", array);
+    
+    return array;
 }
 
 @end

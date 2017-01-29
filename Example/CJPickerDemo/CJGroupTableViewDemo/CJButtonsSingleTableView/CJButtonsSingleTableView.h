@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <RadioButtons/RadioButtons.h>
-#import <CJPopupView/UIView+CJShowExtendView.h>
+#import <CJRadio/CJRadio.h>
+#import <CJPopupAction/UIView+CJShowExtendView.h>
 #import "CJSingleTableView.h"
 
 

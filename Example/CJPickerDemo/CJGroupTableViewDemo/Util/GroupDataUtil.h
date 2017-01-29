@@ -7,19 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CJDataGroupModel.h"
+#import "CJComponentDataModelUtil.h"
+#import "AreaModel.h"
 
 @interface GroupDataUtil : NSObject
 
-+ (CJDataGroupModel *)groupData1;
++ (NSMutableArray<CJComponentDataModel *> *)groupData1;
 
-+ (CJDataGroupModel *)groupData2;
++ (NSMutableArray<CJComponentDataModel *> *)groupData2;
 
-+ (CJDataGroupModel *)groupData3;
++ (NSMutableArray<CJComponentDataModel *> *)groupData3;
 
-+ (CJDataGroupModel *)groupDataYule;
++ (NSMutableArray<CJComponentDataModel *> *)groupDataYule;
 
-+ (CJDataGroupModel *)groupDataAllArea;
-
++ (NSMutableArray<CJComponentDataModel *> *)groupDataAllArea;
++ (NSArray<StateModel *> *)groupDataAllArea22;
 
 @end

@@ -40,9 +40,9 @@
 
 #pragma mark - 设置数据
 - (void)setupGroupTableView1 {
-    CJDataGroupModel *dataGroupModel = [GroupDataUtil groupData1];
+    NSMutableArray *componentDataModels = [GroupDataUtil groupData1];
     
-    [_groupTableView1 setDataGroupModel:dataGroupModel];
+    [_groupTableView1 setComponentDataModels:componentDataModels];
     [_groupTableView1 updateTableViewBackgroundColor:[UIColor greenColor] inComponent:0];
     [_groupTableView1 updateTableViewBackgroundColor:[UIColor yellowColor] inComponent:1];
     [_groupTableView1 updateTableViewBackgroundColor:[UIColor greenColor] inComponent:2];
@@ -50,9 +50,9 @@
 }
 
 - (void)setupGroupTableView2 {
-    CJDataGroupModel *dataGroupModel = [GroupDataUtil groupData2];
+    NSMutableArray *componentDataModels = [GroupDataUtil groupData2];
     
-    [_groupTableView2 setDataGroupModel:dataGroupModel];
+    [_groupTableView2 setComponentDataModels:componentDataModels];
     [_groupTableView2 updateTableViewBackgroundColor:[UIColor greenColor] inComponent:0];
     [_groupTableView2 updateTableViewBackgroundColor:[UIColor yellowColor] inComponent:1];
     [_groupTableView2 updateTableViewBackgroundColor:[UIColor greenColor] inComponent:2];
@@ -60,9 +60,9 @@
 }
 
 - (void)setupGroupTableView3 {
-    CJDataGroupModel *dataGroupModel = [GroupDataUtil groupData3];
+    NSMutableArray *componentDataModels = [GroupDataUtil groupData3];
     
-    [_groupTableView3 setDataGroupModel:dataGroupModel];
+    [_groupTableView3 setComponentDataModels:componentDataModels];
     [_groupTableView3 updateTableViewBackgroundColor:[UIColor greenColor] inComponent:0];
     [_groupTableView3 updateTableViewBackgroundColor:[UIColor yellowColor] inComponent:1];
     [_groupTableView3 updateTableViewBackgroundColor:[UIColor greenColor] inComponent:2];
@@ -77,7 +77,17 @@
 
 #pragma mark - CJRelatedPickerRichViewDelegate
 - (void)cj_groupTableView:(CJRelatedPickerRichView *)groupTableView didSelectText:(NSString *)text {
-    NSArray *selectedTitles = groupTableView.dataGroupModel.selectedTitles;
+    NSMutableArray *selectedTitles = [[NSMutableArray alloc] init];
+    for (CJComponentDataModel *componentDataModel in groupTableView.componentDataModels) {
+        CJDataModelSample *selectedDataModel = componentDataModel.selectedDataModel;
+        if (selectedDataModel) {
+            [selectedTitles addObject:selectedDataModel.text];
+        } else {
+            [selectedTitles addObject:@""];
+        }
+    }
+    
+    
     NSLog(@"text1 = %@, %@", text, selectedTitles);
     
     NSString *string = @"";

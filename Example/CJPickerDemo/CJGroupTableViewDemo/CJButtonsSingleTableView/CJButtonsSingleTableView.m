@@ -38,7 +38,7 @@
     CGFloat width = CGRectGetWidth(self.frame);
     CGFloat height = CGRectGetHeight(self.frame);
     
-    _radioButtons = [[RadioButtons alloc]initWithFrame:CGRectMake(0, 0, width, height)];
+    _radioButtons = [[RadioButtons alloc] initWithFrame:CGRectMake(0, 0, width, height)];
     _radioButtons.dataSource = self;
     _radioButtons.delegate = self;
     [self addSubview:_radioButtons];
@@ -109,6 +109,9 @@
     NSInteger radioButtonCount = [self.titles count];
     CGFloat singleTableViewWidth = width/radioButtonCount;
     CGFloat singleTableViewX = singleTableViewWidth * index_cur;
+    
+//    RadioButton *radioButton = [radioButtons ]
+    
     CGFloat singleTableViewY = 264;
     CGFloat singleTableViewHeight = 200;
     
@@ -130,8 +133,7 @@
         NSLog(@"显示完成");
     } tapBlankComplete:^() {
         NSLog(@"点击背景完成");
-    } hideComplete:^() {
-        NSLog(@"隐藏完成");
+        [radioButtons cj_hideExtendViewAnimated:YES];
     }];
 
 }

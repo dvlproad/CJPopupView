@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <RadioButtons/RadioButtons.h>
-//#import <CJPopupView/UIView+CJPopupInView.h>
-#import <CJPopupView/UIView+CJShowExtendView.h>
+#import <CJRadio/CJRadio.h>
+#import <CJPopupAction/UIView+CJShowExtendView.h>
 
 #import "CJSingleTableView.h"
 #import "CJRelatedPickerRichView.h"

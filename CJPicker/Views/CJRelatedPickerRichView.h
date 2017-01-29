@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CJDataGroupModel.h"
+#import "CJComponentDataModelUtil.h"
 
 @class CJRelatedPickerRichView;
 @protocol CJRelatedPickerRichViewDelegate <NSObject>
@@ -17,11 +17,15 @@
 @end
 
 
-    
+/**
+ *  用于例如地区"福建-厦门-思明"各部分的关联选择
+ *
+ */
 @interface CJRelatedPickerRichView : UIView<UITableViewDataSource, UITableViewDelegate>{
     NSInteger componentCount;
 }
-@property(nonatomic, strong) CJDataGroupModel *dataGroupModel;//含NSMutableArray *datas;和 NSArray *dicArray
+@property(nonatomic, strong) NSMutableArray<CJComponentDataModel *> *componentDataModels;
+
 @property(nonatomic, strong) id<CJRelatedPickerRichViewDelegate> delegate;
 
 /**

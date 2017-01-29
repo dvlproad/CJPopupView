@@ -1,15 +1,22 @@
 PODS:
-  - CJPopupView (1.3.0)
-  - RadioButtons (2.1.2)
+  - CJPopupAction (1.4.1)
+  - CJRadio (1.0.2):
+    - CJRadio/CJRadioButtons (= 1.0.2)
+    - CJRadio/CJRadioComposeView (= 1.0.2)
+  - CJRadio/CJRadioButtons (1.0.2):
+    - CJPopupAction (~> 1.4.0)
+  - CJRadio/CJRadioComposeView (1.0.2)
+  - JSONModel (1.7.0)
 
 DEPENDENCIES:
-  - CJPopupView (~> 1.3.0)
-  - RadioButtons (~> 2.1.2)
+  - CJRadio (~> 1.0.2)
+  - JSONModel (~> 1.7.0)
 
 SPEC CHECKSUMS:
-  CJPopupView: 1da13b227dc3121302fa1813bc83acf11f96b23e
-  RadioButtons: 913e4f2327e77533bb46660bc8733fdef43e2989
+  CJPopupAction: 3bdd2858890fb72b7409e22cdf929b0fec62c550
+  CJRadio: c5a85ac11c2099bab8cbbb33b70ab64a0fb7c8aa
+  JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
 
-PODFILE CHECKSUM: f00dce6f8e73f76e35f14f1374ca89ae68cf148f
+PODFILE CHECKSUM: 079c3985adc85142cc3b000d7ebfcdd72a79b541
 
-COCOAPODS: 1.0.0
+COCOAPODS: 1.1.0.rc.2

@@ -18,7 +18,10 @@
 @end
 
 
-
+/**
+ *  用于例如体重60.5kg各部分的独立选择
+ *
+ */
 @interface CJIndependentPickerView : UIView<UIPickerViewDataSource, UIPickerViewDelegate, CJIndependentPickerViewDelegate>{
     
 }

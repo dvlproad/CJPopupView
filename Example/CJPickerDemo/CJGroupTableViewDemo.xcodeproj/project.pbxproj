@@ -26,8 +26,8 @@
 		783AC7E81D96AE6D0077067E /* ButtonsSingleTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 783AC7E61D96AE6D0077067E /* ButtonsSingleTableViewController.xib */; };
 		783AC7EE1D96B30D0077067E /* CJButtonsSingleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7EB1D96B30D0077067E /* CJButtonsSingleTableView.m */; };
 		783AC7EF1D96B30D0077067E /* CJSingleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7ED1D96B30D0077067E /* CJSingleTableView.m */; };
-		786B57F71E347DA5006AEAF4 /* CJComponentModelData.m in Sources */ = {isa = PBXBuildFile; fileRef = 786B57E31E347DA5006AEAF4 /* CJComponentModelData.m */; };
-		786B57F81E347DA5006AEAF4 /* CJDataGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 786B57E51E347DA5006AEAF4 /* CJDataGroupModel.m */; };
+		786B57F71E347DA5006AEAF4 /* CJDataModelSample.m in Sources */ = {isa = PBXBuildFile; fileRef = 786B57E31E347DA5006AEAF4 /* CJDataModelSample.m */; };
+		786B57F81E347DA5006AEAF4 /* CJComponentDataModelUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 786B57E51E347DA5006AEAF4 /* CJComponentDataModelUtil.m */; };
 		786B57F91E347DA5006AEAF4 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 786B57E71E347DA5006AEAF4 /* area.plist */; };
 		786B57FA1E347DA5006AEAF4 /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 786B57E81E347DA5006AEAF4 /* city.plist */; };
 		786B57FB1E347DA5006AEAF4 /* line_gray_pickerToolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 786B57E91E347DA5006AEAF4 /* line_gray_pickerToolbar.png */; };
@@ -41,6 +41,8 @@
 		786B58031E347DA5006AEAF4 /* CJRelatedPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786B57F61E347DA5006AEAF4 /* CJRelatedPickerView.xib */; };
 		786B58061E347E66006AEAF4 /* PickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 786B58051E347E66006AEAF4 /* PickerViewController.m */; };
 		786B58081E347EB0006AEAF4 /* PickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786B58071E347EB0006AEAF4 /* PickerViewController.xib */; };
+		78DDF7161E3B2CBD00C56D84 /* CJComponentDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DDF7151E3B2CBD00C56D84 /* CJComponentDataModel.m */; };
+		78F472E01E3E195800EB5A56 /* AreaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F472DF1E3E195800EB5A56 /* AreaModel.m */; };
 		7DB59DC2738A0CE9DC2EBB43 /* libPods-CJGroupTableViewDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B77FC5D8CF35A3BB60FC0C4 /* libPods-CJGroupTableViewDemoTests.a */; };
 /* End PBXBuildFile section */
 
@@ -97,10 +99,10 @@
 		783AC7EB1D96B30D0077067E /* CJButtonsSingleTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJButtonsSingleTableView.m; sourceTree = "<group>"; };
 		783AC7EC1D96B30D0077067E /* CJSingleTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSingleTableView.h; sourceTree = "<group>"; };
 		783AC7ED1D96B30D0077067E /* CJSingleTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSingleTableView.m; sourceTree = "<group>"; };
-		786B57E21E347DA5006AEAF4 /* CJComponentModelData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJComponentModelData.h; sourceTree = "<group>"; };
-		786B57E31E347DA5006AEAF4 /* CJComponentModelData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJComponentModelData.m; sourceTree = "<group>"; };
-		786B57E41E347DA5006AEAF4 /* CJDataGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDataGroupModel.h; sourceTree = "<group>"; };
-		786B57E51E347DA5006AEAF4 /* CJDataGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDataGroupModel.m; sourceTree = "<group>"; };
+		786B57E21E347DA5006AEAF4 /* CJDataModelSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDataModelSample.h; sourceTree = "<group>"; };
+		786B57E31E347DA5006AEAF4 /* CJDataModelSample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDataModelSample.m; sourceTree = "<group>"; };
+		786B57E41E347DA5006AEAF4 /* CJComponentDataModelUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJComponentDataModelUtil.h; sourceTree = "<group>"; };
+		786B57E51E347DA5006AEAF4 /* CJComponentDataModelUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJComponentDataModelUtil.m; sourceTree = "<group>"; };
 		786B57E71E347DA5006AEAF4 /* area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = area.plist; sourceTree = "<group>"; };
 		786B57E81E347DA5006AEAF4 /* city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city.plist; sourceTree = "<group>"; };
 		786B57E91E347DA5006AEAF4 /* line_gray_pickerToolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line_gray_pickerToolbar.png; sourceTree = "<group>"; };
@@ -119,6 +121,10 @@
 		786B58041E347E66006AEAF4 /* PickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerViewController.h; sourceTree = "<group>"; };
 		786B58051E347E66006AEAF4 /* PickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerViewController.m; sourceTree = "<group>"; };
 		786B58071E347EB0006AEAF4 /* PickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PickerViewController.xib; sourceTree = "<group>"; };
+		78DDF7141E3B2CBD00C56D84 /* CJComponentDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJComponentDataModel.h; sourceTree = "<group>"; };
+		78DDF7151E3B2CBD00C56D84 /* CJComponentDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJComponentDataModel.m; sourceTree = "<group>"; };
+		78F472DE1E3E195800EB5A56 /* AreaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AreaModel.h; sourceTree = "<group>"; };
+		78F472DF1E3E195800EB5A56 /* AreaModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AreaModel.m; sourceTree = "<group>"; };
 		A25D9BE426EE2DA7930B4D83 /* Pods-CJGroupTableViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJGroupTableViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CJGroupTableViewDemo/Pods-CJGroupTableViewDemo.release.xcconfig"; sourceTree = "<group>"; };
 		C94AB2966C06477AC7F922E3 /* Pods-CJGroupTableViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJGroupTableViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CJGroupTableViewDemo/Pods-CJGroupTableViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		FEBD8A6746BC917E6FCEF304 /* Pods-CJGroupTableViewDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJGroupTableViewDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CJGroupTableViewDemoTests/Pods-CJGroupTableViewDemoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -255,6 +261,8 @@
 			children = (
 				783AC7D11D9690680077067E /* GroupDataUtil.h */,
 				783AC7D21D9690680077067E /* GroupDataUtil.m */,
+				78F472DE1E3E195800EB5A56 /* AreaModel.h */,
+				78F472DF1E3E195800EB5A56 /* AreaModel.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -292,10 +300,12 @@
 		786B57E11E347DA5006AEAF4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				786B57E21E347DA5006AEAF4 /* CJComponentModelData.h */,
-				786B57E31E347DA5006AEAF4 /* CJComponentModelData.m */,
-				786B57E41E347DA5006AEAF4 /* CJDataGroupModel.h */,
-				786B57E51E347DA5006AEAF4 /* CJDataGroupModel.m */,
+				786B57E21E347DA5006AEAF4 /* CJDataModelSample.h */,
+				786B57E31E347DA5006AEAF4 /* CJDataModelSample.m */,
+				786B57E41E347DA5006AEAF4 /* CJComponentDataModelUtil.h */,
+				786B57E51E347DA5006AEAF4 /* CJComponentDataModelUtil.m */,
+				78DDF7141E3B2CBD00C56D84 /* CJComponentDataModel.h */,
+				78DDF7151E3B2CBD00C56D84 /* CJComponentDataModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -345,12 +355,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 783AC7B31D968C540077067E /* Build configuration list for PBXNativeTarget "CJGroupTableViewDemo" */;
 			buildPhases = (
-				31E66D72AADA51674CE70914 /* 📦 Check Pods Manifest.lock */,
+				31E66D72AADA51674CE70914 /* [CP] Check Pods Manifest.lock */,
 				783AC7821D968C530077067E /* Sources */,
 				783AC7831D968C530077067E /* Frameworks */,
 				783AC7841D968C530077067E /* Resources */,
-				08CD0F395D07A1EC6B7BB71C /* 📦 Embed Pods Frameworks */,
-				226A14A3524BD572556A10A0 /* 📦 Copy Pods Resources */,
+				08CD0F395D07A1EC6B7BB71C /* [CP] Embed Pods Frameworks */,
+				226A14A3524BD572556A10A0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -365,12 +375,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 783AC7B61D968C540077067E /* Build configuration list for PBXNativeTarget "CJGroupTableViewDemoTests" */;
 			buildPhases = (
-				C3580A134A5C7E9FEC0D6D5B /* 📦 Check Pods Manifest.lock */,
+				C3580A134A5C7E9FEC0D6D5B /* [CP] Check Pods Manifest.lock */,
 				783AC79B1D968C540077067E /* Sources */,
 				783AC79C1D968C540077067E /* Frameworks */,
 				783AC79D1D968C540077067E /* Resources */,
-				8BDA8C36E0E9CEF8AEB59E9B /* 📦 Embed Pods Frameworks */,
-				02DED656EBB2C478AC8C5115 /* 📦 Copy Pods Resources */,
+				8BDA8C36E0E9CEF8AEB59E9B /* [CP] Embed Pods Frameworks */,
+				02DED656EBB2C478AC8C5115 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -482,14 +492,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		02DED656EBB2C478AC8C5115 /* 📦 Copy Pods Resources */ = {
+		02DED656EBB2C478AC8C5115 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,14 +507,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CJGroupTableViewDemoTests/Pods-CJGroupTableViewDemoTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		08CD0F395D07A1EC6B7BB71C /* 📦 Embed Pods Frameworks */ = {
+		08CD0F395D07A1EC6B7BB71C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,14 +522,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CJGroupTableViewDemo/Pods-CJGroupTableViewDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		226A14A3524BD572556A10A0 /* 📦 Copy Pods Resources */ = {
+		226A14A3524BD572556A10A0 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -527,29 +537,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CJGroupTableViewDemo/Pods-CJGroupTableViewDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		31E66D72AADA51674CE70914 /* 📦 Check Pods Manifest.lock */ = {
+		31E66D72AADA51674CE70914 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		8BDA8C36E0E9CEF8AEB59E9B /* 📦 Embed Pods Frameworks */ = {
+		8BDA8C36E0E9CEF8AEB59E9B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -557,19 +567,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CJGroupTableViewDemoTests/Pods-CJGroupTableViewDemoTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C3580A134A5C7E9FEC0D6D5B /* 📦 Check Pods Manifest.lock */ = {
+		C3580A134A5C7E9FEC0D6D5B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -584,10 +594,12 @@
 				783AC7EE1D96B30D0077067E /* CJButtonsSingleTableView.m in Sources */,
 				786B57FD1E347DA5006AEAF4 /* CJDatePickerToolBarView.m in Sources */,
 				783AC7D71D96928A0077067E /* GroupTableViewController2.m in Sources */,
+				78DDF7161E3B2CBD00C56D84 /* CJComponentDataModel.m in Sources */,
 				786B58011E347DA5006AEAF4 /* CJRelatedPickerRichView.m in Sources */,
-				786B57F71E347DA5006AEAF4 /* CJComponentModelData.m in Sources */,
+				786B57F71E347DA5006AEAF4 /* CJDataModelSample.m in Sources */,
 				783AC7911D968C530077067E /* ViewController.m in Sources */,
-				786B57F81E347DA5006AEAF4 /* CJDataGroupModel.m in Sources */,
+				786B57F81E347DA5006AEAF4 /* CJComponentDataModelUtil.m in Sources */,
+				78F472E01E3E195800EB5A56 /* AreaModel.m in Sources */,
 				786B57FF1E347DA5006AEAF4 /* CJIndependentPickerView.m in Sources */,
 				783AC7EF1D96B30D0077067E /* CJSingleTableView.m in Sources */,
 				783AC7E71D96AE6D0077067E /* ButtonsSingleTableViewController.m in Sources */,

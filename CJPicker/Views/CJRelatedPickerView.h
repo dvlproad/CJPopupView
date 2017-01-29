@@ -18,7 +18,10 @@
 @end
 
 
-
+/**
+ *  用于例如地区"福建-厦门-思明"各部分的关联选择
+ *
+ */
 @interface CJRelatedPickerView : UIView<UIPickerViewDataSource, UIPickerViewDelegate, CJRelatedPickerViewDelegate>{
     
 }

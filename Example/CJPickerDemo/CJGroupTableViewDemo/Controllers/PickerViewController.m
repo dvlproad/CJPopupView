@@ -9,16 +9,19 @@
 #import "PickerViewController.h"
 #import "CJDatePickerToolBarView.h"
 #import "CJIndependentPickerView.h"
-#import "CJRelatedPickerView.h"
+//#import "CJRelatedPickerView.h"
+#import "CJRelatedPickerRichView.h"
+#import "GroupDataUtil.h"
 
 #import <UIView+CJPopupInView.h>
 
 @interface PickerViewController () <CJDatePickerToolBarViewDelegate,
-                                    CJIndependentPickerViewDelegate, CJRelatedPickerViewDelegate>
+                                    CJIndependentPickerViewDelegate,
+                                    CJRelatedPickerRichViewDelegate>
 {
     CJDatePickerToolBarView *picker_birthday;
     CJIndependentPickerView *picker_weight;
-    CJRelatedPickerView *picker_area;
+    CJRelatedPickerRichView *picker_area;
 }
 
 @end
@@ -50,32 +53,43 @@
         NSLog(@"显示完成");
     } tapBlankComplete:^() {
         NSLog(@"点击背景完成");
+        [picker_birthday cj_hidePopupView];
         
-    } hideComplete:^() {
-        NSLog(@"隐藏完成");
     }];
 }
 
 
 - (IBAction)chooseArea:(id)sender{
     if (picker_area == nil) {
-        picker_area = [[CJRelatedPickerView alloc]initWithNibName:@"CJRelatedPickerView" delegate:self];
+//        picker_area = [[CJRelatedPickerRichView alloc] initWithNibName:@"CJRelatedPickerView" delegate:self];
+//        
+//        NSArray *datasC_0 = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"area.plist" ofType:nil]];
+//        picker_area.dicArray = @[@{@"head": @"state", @"value": @"cities"},
+//                                 @{@"head": @"city",  @"value": @"areas"}];
+//        picker_area.datas = [CJRelatedPickerView getDatasByDatasC_0:datasC_0 dicArray:picker_area.dicArray];
         
-        NSArray *datasC_0 = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"area.plist" ofType:nil]];
-        picker_area.dicArray = @[@{@"head": @"state", @"value": @"cities"},
-                                 @{@"head": @"city",  @"value": @"areas"}];
-        picker_area.datas = [CJRelatedPickerView getDatasByDatasC_0:datasC_0 dicArray:picker_area.dicArray];
+        
+        picker_area = [[CJRelatedPickerRichView alloc] initWithFrame:CGRectMake(0, 0, 400, 162)];
+        
+        NSMutableArray *componentDataModels = [GroupDataUtil groupDataAllArea];
+        
+        [picker_area setComponentDataModels:componentDataModels];
+        [picker_area updateTableViewBackgroundColor:[UIColor greenColor] inComponent:0];
+        [picker_area updateTableViewBackgroundColor:[UIColor yellowColor] inComponent:1];
+        [picker_area updateTableViewBackgroundColor:[UIColor greenColor] inComponent:2];
+        [picker_area setDelegate:self];
     }
     
-    picker_area.selecteds_default = @[@"福建", @"泉州", @"安溪县"];
+//    picker_area.selecteds_default = @[@"福建", @"泉州", @"安溪县"];
+    
+    
+    
     
     [picker_area cj_popupInWindowAtPosition:CJWindowPositionBottom animationType:CJAnimationTypeNormal showComplete:^{
         NSLog(@"显示完成");
     } tapBlankComplete:^() {
         NSLog(@"点击背景完成");
-        
-    } hideComplete:^() {
-        NSLog(@"隐藏完成");
+        [picker_area cj_hidePopupView];
     }];
 }
 
@@ -106,9 +120,7 @@
         NSLog(@"显示完成");
     } tapBlankComplete:^() {
         NSLog(@"点击背景完成");
-        
-    } hideComplete:^() {
-        NSLog(@"隐藏完成");
+        [picker_weight cj_hidePopupView];
     }];
 }
 
@@ -136,23 +148,54 @@
     }
 }
 
-- (void)confirmDelegate_pickerArea:(CJRelatedPickerView *)pickerToolBarView{
-    NSString *integer = @"", *decimal = @"", *unit = @"";
-    
-    for (int indexC = 0; indexC < pickerToolBarView.datas.count; indexC++) {
-        NSString *string = [pickerToolBarView.selecteds objectAtIndex:indexC];
-        if (indexC == 0) {
-            integer = string;
-        }else if (indexC == 1){
-            decimal = string;
-        }else if (indexC == 2){
-            unit = string;
+//- (void)confirmDelegate_pickerArea:(CJRelatedPickerView *)pickerToolBarView{
+//    NSString *integer = @"", *decimal = @"", *unit = @"";
+//    
+//    for (int indexC = 0; indexC < pickerToolBarView.datas.count; indexC++) {
+//        NSString *string = [pickerToolBarView.selecteds objectAtIndex:indexC];
+//        if (indexC == 0) {
+//            integer = string;
+//        }else if (indexC == 1){
+//            decimal = string;
+//        }else if (indexC == 2){
+//            unit = string;
+//        }
+//    }
+//    NSString *value = [NSString stringWithFormat:@"%@.%@.%@", integer, decimal, unit];
+//    [[[UIAlertView alloc]initWithTitle:@"最后的值为" message:value delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
+//    
+//    [pickerToolBarView cj_hidePopupView];
+//}
+
+
+#pragma mark - CJRelatedPickerRichViewDelegate
+- (void)cj_groupTableView:(CJRelatedPickerRichView *)groupTableView didSelectText:(NSString *)text {
+    NSMutableArray *selectedTitles = [[NSMutableArray alloc] init];
+    for (CJComponentDataModel *componentDataModel in groupTableView.componentDataModels) {
+        CJDataModelSample *selectedDataModel = componentDataModel.selectedDataModel;
+        if (selectedDataModel) {
+            [selectedTitles addObject:selectedDataModel.text];
+        } else {
+            [selectedTitles addObject:@"空"];
         }
     }
-    NSString *value = [NSString stringWithFormat:@"%@.%@.%@", integer, decimal, unit];
-    [[[UIAlertView alloc]initWithTitle:@"最后的值为" message:value delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
+    NSLog(@"text1 = %@, %@", text, selectedTitles);
     
-    [pickerToolBarView cj_hidePopupView];
+    NSString *string = @"";
+    for (NSString *selectedTitle in selectedTitles) {
+        string = [string stringByAppendingString:selectedTitle];
+    }
+    
+//    if (groupTableView == self.groupTableView1) {
+//        self.groupTextLabel1.text = string;
+//    } else if (groupTableView == self.groupTableView3) {
+//        self.groupTextLabel3.text = string;
+//    }
+    
+    [[[UIAlertView alloc]initWithTitle:@"最后的值为" message:string delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
+    
+    [picker_area cj_hidePopupView];
+
 }
 
 - (void)confirmDelegate_datePicker:(CJDatePickerToolBarView *)pickerToolBarView{

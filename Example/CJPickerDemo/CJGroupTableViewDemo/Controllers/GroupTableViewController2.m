@@ -62,9 +62,9 @@
     if (index_cur == index_old) {
         return;
     }
-//    if (radioButtons.isCJPopupViewShowing) {
-//        [self.operationRadioButtons cj_hideExtendViewAnimated:YES];
-//    }
+    if (radioButtons.isCJPopupViewShowing) {
+        [self.operationRadioButtons cj_hideExtendViewAnimated:YES];
+    }
     self.operationRadioButtons = radioButtons;
     
     if (index_cur == 0) {
@@ -99,12 +99,11 @@
         }
     }
     
-    [radioButtons cj_showDropDownView:popupView inView:self.view showComplete:^{
+    [radioButtons cj_showExtendView:popupView inView:self.view locationAccordingView:self.view relativePosition:CJPopupViewPositionUnder showComplete:^{
         NSLog(@"显示完成");
     } tapBlankComplete:^() {
         NSLog(@"点击背景完成");
-    } hideComplete:^() {
-        NSLog(@"隐藏完成");
+        [radioButtons cj_hideExtendViewAnimated:YES];
     }];
 }
 
@@ -112,10 +111,10 @@
 #pragma mark - 设置数据
 - (CJRelatedPickerRichView *)groupTableView1 {
     if (_groupTableView1 == nil) {
-        CJDataGroupModel *dataGroupModel = [GroupDataUtil groupData1];
+        NSMutableArray *componentDataModels = [GroupDataUtil groupData1];
         
         _groupTableView1 = [[CJRelatedPickerRichView alloc] initWithFrame:CGRectMake(0, 0, 320, 100)];
-        [_groupTableView1 setDataGroupModel:dataGroupModel];
+        [_groupTableView1 setComponentDataModels:componentDataModels];
         [_groupTableView1 updateTableViewBackgroundColor:[UIColor greenColor] inComponent:0];
         [_groupTableView1 updateTableViewBackgroundColor:[UIColor yellowColor] inComponent:1];
         [_groupTableView1 updateTableViewBackgroundColor:[UIColor greenColor] inComponent:2];
@@ -126,10 +125,10 @@
 
 - (CJRelatedPickerRichView *)groupTableView2 {
     if (_groupTableView2 == nil) {
-        CJDataGroupModel *dataGroupModel = [GroupDataUtil groupData2];
+        NSMutableArray *componentDataModels = [GroupDataUtil groupData2];
         
         _groupTableView2 = [[CJRelatedPickerRichView alloc] initWithFrame:CGRectMake(0, 0, 320, 200)];
-        [_groupTableView2 setDataGroupModel:dataGroupModel];
+        [_groupTableView2 setComponentDataModels:componentDataModels];
         [_groupTableView2 updateTableViewBackgroundColor:[UIColor greenColor] inComponent:0];
         [_groupTableView2 updateTableViewBackgroundColor:[UIColor yellowColor] inComponent:1];
         [_groupTableView2 updateTableViewBackgroundColor:[UIColor greenColor] inComponent:2];
@@ -140,10 +139,10 @@
 
 - (CJRelatedPickerRichView *)groupTableView3 {
     if (_groupTableView3 == nil) {
-        CJDataGroupModel *dataGroupModel = [GroupDataUtil groupDataAllArea];
+        NSMutableArray *componentDataModels = [GroupDataUtil groupDataAllArea];
         
         _groupTableView3 = [[CJRelatedPickerRichView alloc] initWithFrame:CGRectMake(0, 0, 320, 200)];
-        [_groupTableView3 setDataGroupModel:dataGroupModel];
+        [_groupTableView3 setComponentDataModels:componentDataModels];
         [_groupTableView3 updateTableViewBackgroundColor:[UIColor greenColor] inComponent:0];
         [_groupTableView3 updateTableViewBackgroundColor:[UIColor yellowColor] inComponent:1];
         [_groupTableView3 updateTableViewBackgroundColor:[UIColor greenColor] inComponent:2];
@@ -154,10 +153,10 @@
 
 - (CJRelatedPickerRichView *)groupTableView4 {
     if (_groupTableView4 == nil) {
-        CJDataGroupModel *dataGroupModel = [GroupDataUtil groupDataYule];
+        NSMutableArray *componentDataModels = [GroupDataUtil groupDataYule];
         
         _groupTableView4 = [[CJRelatedPickerRichView alloc] initWithFrame:CGRectMake(0, 0, 320, 200)];
-        [_groupTableView4 setDataGroupModel:dataGroupModel];
+        [_groupTableView4 setComponentDataModels:componentDataModels];
         [_groupTableView4 updateTableViewBackgroundColor:[UIColor greenColor] inComponent:0];
         [_groupTableView4 updateTableViewBackgroundColor:[UIColor yellowColor] inComponent:1];
         [_groupTableView4 updateTableViewBackgroundColor:[UIColor greenColor] inComponent:2];
@@ -173,14 +172,21 @@
 
 #pragma mark - CJRelatedPickerRichViewDelegate
 - (void)cj_groupTableView:(CJRelatedPickerRichView *)groupTableView didSelectText:(NSString *)text {
-    NSArray *selectedTitles = groupTableView.dataGroupModel.selectedTitles;
+    NSMutableArray *selectedTitles = [[NSMutableArray alloc] init];
+    for (CJComponentDataModel *componentDataModel in groupTableView.componentDataModels) {
+        CJDataModelSample *selectedDataModel = componentDataModel.selectedDataModel;
+        if (selectedDataModel) {
+            [selectedTitles addObject:selectedDataModel.text];
+        } else {
+            [selectedTitles addObject:@""];
+        }
+    }
     NSLog(@"text1 = %@, %@", text, selectedTitles);
     
     [self.operationRadioButtons cj_hideExtendViewAnimated:YES];
     [self.operationRadioButtons changeCurrentRadioButtonStateAndTitle:text];
     [self.operationRadioButtons setSelectedNone];
 }
-
 
 
 - (void)didReceiveMemoryWarning {
