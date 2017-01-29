@@ -12,7 +12,7 @@
 @class CJRelatedPickerRichView;
 @protocol CJRelatedPickerRichViewDelegate <NSObject>
 
-- (void)cj_groupTableView:(CJRelatedPickerRichView *)groupTableView didSelectText:(NSString *)text;
+- (void)cj_RelatedPickerRichView:(CJRelatedPickerRichView *)relatedPickerRichView didSelectText:(NSString *)text;
 
 @end
 
@@ -24,9 +24,9 @@
 @interface CJRelatedPickerRichView : UIView<UITableViewDataSource, UITableViewDelegate>{
     NSInteger componentCount;
 }
-@property(nonatomic, strong) NSMutableArray<CJComponentDataModel *> *componentDataModels;
-
-@property(nonatomic, strong) id<CJRelatedPickerRichViewDelegate> delegate;
+@property (nonatomic, strong) NSMutableArray<CJComponentDataModel *> *componentDataModels;
+@property (nonatomic, strong) id<CJRelatedPickerRichViewDelegate> delegate;
+@property (nonatomic, strong) UIView *pickActionView;   /**< 执行弹出pickView的视图是哪个 */
 
 /**
  *  更新第component个列表的颜色

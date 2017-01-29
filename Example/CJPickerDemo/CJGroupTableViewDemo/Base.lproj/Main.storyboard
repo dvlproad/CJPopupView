@@ -34,28 +34,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRK-8V-e2F">
-                                <frame key="frameInset" minX="67" minY="351" width="187" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="GroupTableViewController2"/>
-                                <connections>
-                                    <action selector="goGroupTableViewController2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7cD-3e-6vU"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tC-uB-Afs">
-                                <frame key="frameInset" minX="69" minY="269" width="183" height="30"/>
+                                <frame key="frameInset" minX="63" minY="269" width="195" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="GroupTableViewController"/>
+                                <state key="normal" title="RelatedPickerViewController"/>
                                 <connections>
-                                    <action selector="goGroupTableViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dNB-oj-luS"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UxZ-LS-vIi">
-                                <frame key="frameInset" minX="16" minY="422" width="271" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="ButtonsSingleTableViewController"/>
-                                <connections>
-                                    <action selector="goButtonsSingleTableViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bJW-C2-7iE"/>
+                                    <action selector="goRelatedPickerViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rqo-bM-myR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TX1-pf-Ryb">
@@ -64,6 +48,14 @@
                                 <state key="normal" title="PickerViewController"/>
                                 <connections>
                                     <action selector="goPickerViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c7H-NM-LlU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRK-8V-e2F">
+                                <frame key="frameInset" minX="-2" minY="351" width="337" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="RelatedPickerViewController、RadioButtons"/>
+                                <connections>
+                                    <action selector="goRelatedPickerViewController2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Beg-To-SED"/>
                                 </connections>
                             </button>
                         </subviews>

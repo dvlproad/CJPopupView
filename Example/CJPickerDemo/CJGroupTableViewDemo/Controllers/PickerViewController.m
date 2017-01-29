@@ -161,9 +161,9 @@
 
 
 #pragma mark - CJRelatedPickerRichViewDelegate
-- (void)cj_groupTableView:(CJRelatedPickerRichView *)groupTableView didSelectText:(NSString *)text {
+- (void)cj_RelatedPickerRichView:(CJRelatedPickerRichView *)relatedPickerRichView didSelectText:(NSString *)text {
     NSMutableArray *selectedTitles = [[NSMutableArray alloc] init];
-    for (CJComponentDataModel *componentDataModel in groupTableView.componentDataModels) {
+    for (CJComponentDataModel *componentDataModel in relatedPickerRichView.componentDataModels) {
         CJDataModelSample *selectedDataModel = componentDataModel.selectedDataModel;
         if (selectedDataModel) {
             [selectedTitles addObject:selectedDataModel.text];

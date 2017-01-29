@@ -1,5 +1,5 @@
 //
-//  GroupTableViewController.h
+//  RelatedPickerViewController2.h
 //  CJRelatedPickerRichViewDemo
 //
 //  Created by lichq on 9/7/15.
@@ -7,21 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CJSingleTableView.h"
+#import <CJRadio/CJRadio.h>
+#import <CJPopupAction/UIView+CJShowExtendView.h>
+
 #import "CJRelatedPickerRichView.h"
 #import "GroupDataUtil.h"
 
-@interface GroupTableViewController : UIViewController<CJSingleTableViewDelegate, CJRelatedPickerRichViewDelegate>
-
-@property (nonatomic, weak) IBOutlet CJSingleTableView *singleTableView;
+@interface RelatedPickerViewController2 : UIViewController <CJRelatedPickerRichViewDelegate> {
+    
+}
+@property (nonatomic, weak) IBOutlet RadioButtons *radioButtons;
+@property (nonatomic, strong) NSArray *titles;
 
 @property (nonatomic, strong) IBOutlet CJRelatedPickerRichView *groupTableView1;
-@property (nonatomic, weak) IBOutlet UILabel *groupTextLabel1;
-
 @property (nonatomic, strong) IBOutlet CJRelatedPickerRichView *groupTableView2;
-@property (nonatomic, weak) IBOutlet UILabel *groupTextLabel2;
-
 @property (nonatomic, strong) IBOutlet CJRelatedPickerRichView *groupTableView3;
-@property (nonatomic, weak) IBOutlet UILabel *groupTextLabel3;
+@property (nonatomic, strong) IBOutlet CJRelatedPickerRichView *groupTableView4;
 
 @end

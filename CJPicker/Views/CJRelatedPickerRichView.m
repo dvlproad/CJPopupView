@@ -30,6 +30,12 @@
     
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    
+}
+
 - (void)setComponentDataModels:(NSMutableArray<CJComponentDataModel *> *)componentDataModels {
     _componentDataModels = componentDataModels;
     
@@ -43,7 +49,9 @@
         NSLog(@"检查下是否忘记设置frame，而导致width为0");
     }
     int componentWidth = width/componentCount;
-    for(int i = 0; i < componentCount; i++){
+    
+    //UIView *lastView = nil;
+    for(int i = 0; i < componentCount; i++) {
         CGRect rect = CGRectMake(componentWidth*i, 0, componentWidth, self.frame.size.height);
         UITableView *tableView = [[UITableView alloc] initWithFrame:rect style:UITableViewStylePlain];
         tableView.delegate = self;
@@ -51,6 +59,47 @@
         tableView.tag = kTableViewTagBegin+i;
         tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self addSubview:tableView];
+        
+        /*
+        tableView.translatesAutoresizingMaskIntoConstraints = NO;
+        [self addConstraint:
+         [NSLayoutConstraint constraintWithItem:tableView
+                                      attribute:NSLayoutAttributeTop    //top
+                                      relatedBy:NSLayoutRelationEqual
+                                         toItem:self
+                                      attribute:NSLayoutAttributeTop
+                                     multiplier:1
+                                       constant:0]];
+        [self addConstraint:
+         [NSLayoutConstraint constraintWithItem:tableView
+                                      attribute:NSLayoutAttributeBottom //bottom
+                                      relatedBy:NSLayoutRelationEqual
+                                         toItem:self
+                                      attribute:NSLayoutAttributeBottom
+                                     multiplier:1
+                                       constant:0]];
+        
+        if (lastView == nil) {
+            [self addConstraint:
+             [NSLayoutConstraint constraintWithItem:tableView
+                                          attribute:NSLayoutAttributeLeft
+                                          relatedBy:NSLayoutRelationEqual
+                                             toItem:self
+                                          attribute:NSLayoutAttributeLeft   //left
+                                         multiplier:1
+                                           constant:0]];
+        } else {
+            [self addConstraint:
+             [NSLayoutConstraint constraintWithItem:tableView
+                                          attribute:NSLayoutAttributeLeft
+                                          relatedBy:NSLayoutRelationEqual
+                                             toItem:lastView
+                                          attribute:NSLayoutAttributeRight   //left
+                                         multiplier:1
+                                           constant:0]];
+        }
+        */
+        
     }
     
     [self updateTableViewsFromComponentIndex:0];
@@ -140,8 +189,8 @@
             [self updateTableViewsFromComponentIndex:component+1];
         }
         
-        if([self.delegate respondsToSelector:@selector(cj_groupTableView:didSelectText:)]){
-            [self.delegate cj_groupTableView:self didSelectText:text];
+        if([self.delegate respondsToSelector:@selector(cj_RelatedPickerRichView:didSelectText:)]){
+            [self.delegate cj_RelatedPickerRichView:self didSelectText:text];
         }
     }
 }

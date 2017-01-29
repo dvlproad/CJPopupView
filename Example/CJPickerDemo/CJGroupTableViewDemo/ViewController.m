@@ -8,9 +8,8 @@
 
 #import "ViewController.h"
 #import "PickerViewController.h"
-#import "GroupTableViewController.h"
-#import "GroupTableViewController2.h"
-#import "ButtonsSingleTableViewController.h"
+#import "RelatedPickerViewController.h"
+#import "RelatedPickerViewController2.h"
 
 @interface ViewController ()
 
@@ -29,19 +28,16 @@
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
-- (IBAction)goGroupTableViewController:(id)sender {
-    GroupTableViewController *viewController = [[GroupTableViewController alloc] initWithNibName:@"GroupTableViewController" bundle:nil];
+- (IBAction)goRelatedPickerViewController:(id)sender {
+    RelatedPickerViewController *viewController = [[RelatedPickerViewController alloc] initWithNibName:@"RelatedPickerViewController" bundle:nil];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
-- (IBAction)goGroupTableViewController2:(id)sender {
-    GroupTableViewController2 *viewController = [[GroupTableViewController2 alloc] initWithNibName:@"GroupTableViewController2" bundle:nil];
+- (IBAction)goRelatedPickerViewController2:(id)sender {
+    RelatedPickerViewController2 *viewController = [[RelatedPickerViewController2 alloc] initWithNibName:@"RelatedPickerViewController2" bundle:nil];
     [self.navigationController pushViewController:viewController animated:YES];
 }
-- (IBAction)goButtonsSingleTableViewController:(id)sender {
-    ButtonsSingleTableViewController *viewController = [[ButtonsSingleTableViewController alloc] initWithNibName:@"ButtonsSingleTableViewController" bundle:nil];
-    [self.navigationController pushViewController:viewController animated:YES];
-}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
