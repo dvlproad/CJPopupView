@@ -1,34 +1,33 @@
 //
-//  CJRadioButtonsDropDownSample.m
+//  CJRadioButtonsPopupSample.m
 //  CJRadioDemo
 //
 //  Created by lichq on 14-11-5.
 //  Copyright (c) 2014年 lichq. All rights reserved.
 //
 
-#import "CJRadioButtonsDropDownSample.h"
-#import <CJPopupAction/UIView+CJShowExtendView.h>
+#import "CJRadioButtonsPopupSample.h"
 
-@interface CJRadioButtonsDropDownSample () <RadioButtonsDataSource, RadioButtonsDelegate>
+@interface CJRadioButtonsPopupSample () <RadioButtonsDataSource, RadioButtonsDelegate>
 
 @property (nonatomic, strong, readonly) UIImage *dropDownImage;    /**< 箭头图片 */
 @property (nonatomic, strong, readonly) UIView *popupSuperview; /**< 弹出到哪个视图里 */
-@property (nonatomic, assign, readonly) CJRadioButtonsDropDownType dropDownUnderType;
+@property (nonatomic, assign, readonly) CJRadioButtonsPopupType popupType;
 
 @end
 
-@implementation CJRadioButtonsDropDownSample
+@implementation CJRadioButtonsPopupSample
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     
-    [self CJRadioButtonsDropDownSample_commonInit];
+    [self CJRadioButtonsPopupSample_commonInit];
 }
 
 - (instancetype)init {
     self = [super init];
     if (self) {
-        [self CJRadioButtonsDropDownSample_commonInit];
+        [self CJRadioButtonsPopupSample_commonInit];
     }
     return self;
 }
@@ -36,13 +35,13 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        [self CJRadioButtonsDropDownSample_commonInit];
+        [self CJRadioButtonsPopupSample_commonInit];
     }
     return self;
 }
 
 
-- (void)CJRadioButtonsDropDownSample_commonInit {
+- (void)CJRadioButtonsPopupSample_commonInit {
     self.hideSeparateLine = NO;
 }
 
@@ -50,12 +49,12 @@
 - (void)setupWithTitles:(NSArray *)titles
           dropDownImage:(UIImage *)dropDownImage
          popupSuperview:(UIView *)popupSuperview
-      dropDownUnderType:(CJRadioButtonsDropDownType)dropDownUnderType
+              popupType:(CJRadioButtonsPopupType)popupType
 {
     _titles = titles;
     _dropDownImage = dropDownImage;
     _popupSuperview = popupSuperview;
-    _dropDownUnderType = dropDownUnderType;
+    _popupType = popupType;
     self.dataSource = self;
     self.delegate = self;
 }
@@ -125,17 +124,6 @@
         }
         
         
-        UIView *popupView = [self.radioButtonsPopupSampleDataSource cj_RadioButtonsPopupSample:self viewForButtonIndex:index_cur];
-        UIView *popupSuperview = self.popupSuperview;
-        
-        UIView *accordingView = nil;
-        if (self.dropDownUnderType == CJRadioButtonsDropDownTypeUnderCurrent) {
-            accordingView = [radioButtons.radioButtons objectAtIndex:index_cur];
-        } else {
-            accordingView = radioButtons;
-        }
-        
-        
         void(^showComplete)(NSInteger index_cur) = ^(NSInteger index_cur) {
             //NSLog(@"%ld.显示完成", index_cur);
             //[radioButtons setCjPopupViewShowing:YES];
@@ -147,13 +135,50 @@
             [radioButtons setSelectedNone];
         };
         
+        UIView *popupView = [self.radioButtonsPopupSampleDataSource cj_RadioButtonsPopupSample:self viewForButtonIndex:index_cur];
+        popupView.clipsToBounds = YES;
         
-        [radioButtons cj_showExtendView:popupView inView:popupSuperview locationAccordingView:accordingView relativePosition:CJPopupViewPositionUnder showComplete:^{
-            showComplete(index_cur);
-            
-        } tapBlankComplete:^{
-            tapBlankComplete(index_cur);
-        }];
+        
+        switch (self.popupType) {
+            case CJRadioButtonsPopupTypeUnderAll: {
+                UIView *popupSuperview = self.popupSuperview;
+                UIView *accordingView = radioButtons;
+                
+                [radioButtons cj_showExtendView:popupView inView:popupSuperview locationAccordingView:accordingView relativePosition:CJPopupViewPositionUnder showComplete:^{
+                    showComplete(index_cur);
+                    
+                } tapBlankComplete:^{
+                    tapBlankComplete(index_cur);
+                }];
+                
+                break;
+            }
+            case CJRadioButtonsPopupTypeUnderCurrent: {
+                UIView *popupSuperview = self.popupSuperview;
+                UIView *accordingView = [radioButtons.radioButtons objectAtIndex:index_cur];
+                
+                [radioButtons cj_showExtendView:popupView inView:popupSuperview locationAccordingView:accordingView relativePosition:CJPopupViewPositionUnder showComplete:^{
+                    showComplete(index_cur);
+                    
+                } tapBlankComplete:^{
+                    tapBlankComplete(index_cur);
+                }];
+                
+                break;
+            }
+            case CJRadioButtonsPopupTypeWindowBottom: {
+                [popupView cj_popupInWindowAtPosition:CJWindowPositionBottom animationType:CJAnimationTypeNormal showComplete:^{
+                    showComplete(index_cur);
+                } tapBlankComplete:^{
+                    tapBlankComplete(index_cur);
+                    [popupView cj_hidePopupView];
+                }];
+                break;
+            }
+            default:
+                break;
+        }
+        
     }
 }
 

@@ -2,7 +2,7 @@ platform :ios, '7.0'
 #use_frameworks!
 
 target 'CJGroupTableViewDemo' do
-    pod 'CJRadio', '~> 1.0.2' #已包含pod 'CJPopupAction', '~> 1.4.0'
+    pod 'CJRadio', '~> 1.0.3' #已包含pod 'CJPopupAction', '~> 1.4.2'
     pod 'JSONModel', '~> 1.7.0'
 end
 

@@ -15,7 +15,7 @@ UIView的Category，用于弹出自定义的UIView
 ```
 
 ######目前引用到此库的有
-1、RadioButtons的使用中
+1、CJRadio项目中的CJRadioButtonDropDownSample的使用
 2、CJPickerToolBarView的使用中
 
 

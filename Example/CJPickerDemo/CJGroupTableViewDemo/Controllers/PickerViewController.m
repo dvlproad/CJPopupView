@@ -61,7 +61,7 @@
 
 - (IBAction)chooseArea:(id)sender{
     if (picker_area == nil) {
-        picker_area = [[CJRelatedPickerRichView alloc] initWithFrame:CGRectMake(0, 0, 400, 162)];
+        picker_area = [[CJRelatedPickerRichView alloc] initWithFrame:CGRectMake(0, 0, 200, 162)];
         
         NSMutableArray *componentDataModels = [GroupDataUtil groupDataAllArea];
         
@@ -168,7 +168,7 @@
         if (selectedDataModel) {
             [selectedTitles addObject:selectedDataModel.text];
         } else {
-            [selectedTitles addObject:@"空"];
+            [selectedTitles addObject:@""];
         }
     }
     NSLog(@"text1 = %@, %@", text, selectedTitles);

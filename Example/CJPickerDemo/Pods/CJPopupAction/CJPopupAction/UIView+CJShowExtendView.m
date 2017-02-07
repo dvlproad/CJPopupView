@@ -32,7 +32,7 @@ static NSString *cjExtendViewKey = @"cjExtendView";
 #pragma mark - <#Section#>
 /** 完整的描述请参见文件头部 */
 - (void)cj_showExtendView:(UIView *)popupView
-                   inView:(UIView *)popupSuperView
+                   inView:(UIView *)popupSuperview
                atLocation:(CGPoint)popupViewLocation
                  withSize:(CGSize)popupViewSize
              showComplete:(CJShowPopupViewCompleteBlock)showPopupViewCompleteBlock
@@ -40,7 +40,7 @@ static NSString *cjExtendViewKey = @"cjExtendView";
 {
     self.cjExtendView = popupView;
     
-    [popupView cj_popupInView:popupSuperView
+    [popupView cj_popupInView:popupSuperview
                    atLocation:popupViewLocation
                      withSize:popupViewSize
                  showComplete:showPopupViewCompleteBlock
@@ -49,7 +49,7 @@ static NSString *cjExtendViewKey = @"cjExtendView";
 
 /** 完整的描述请参见文件头部 */
 - (void)cj_showExtendView:(UIView *)popupView
-                   inView:(UIView *)popupSuperView
+                   inView:(UIView *)popupSuperview
     locationAccordingView:(UIView *)accordingView
          relativePosition:(CJPopupViewPosition)popupViewPosition
              showComplete:(CJShowPopupViewCompleteBlock)showPopupViewCompleteBlock
@@ -59,14 +59,14 @@ static NSString *cjExtendViewKey = @"cjExtendView";
     
     self.cjExtendView = popupView;
     
-    //accordingView在popupView的superView中对应的y、rect值为：
-    CGRect accordingViewFrameInHisSuperView = [accordingView.superview convertRect:accordingView.frame toView:popupSuperView];
-    //NSLog(@"accordingViewFrameInHisSuperView = %@", NSStringFromCGRect(accordingViewFrameInHisSuperView));
+    //accordingView在popupView的superview中对应的y、rect值为：
+    CGRect accordingViewFrameInHisSuperview = [accordingView.superview convertRect:accordingView.frame toView:popupSuperview];
+    //NSLog(@"accordingViewFrameInHisSuperview = %@", NSStringFromCGRect(accordingViewFrameInHisSuperview));
     CGPoint popupViewLocation = CGPointZero;
     CGSize popupViewSize = CGSizeZero;
     if (popupViewPosition == CJPopupViewPositionUnder) {
-        CGFloat popupViewX = CGRectGetMinX(accordingViewFrameInHisSuperView);
-        CGFloat popupViewY = CGRectGetMinY(accordingViewFrameInHisSuperView) + CGRectGetHeight(accordingView.frame);
+        CGFloat popupViewX = CGRectGetMinX(accordingViewFrameInHisSuperview);
+        CGFloat popupViewY = CGRectGetMinY(accordingViewFrameInHisSuperview) + CGRectGetHeight(accordingView.frame);
         popupViewLocation = CGPointMake(popupViewX, popupViewY);
         
         CGFloat popupViewWidth = CGRectGetWidth(accordingView.frame);
@@ -76,7 +76,7 @@ static NSString *cjExtendViewKey = @"cjExtendView";
         popupViewSize = CGSizeMake(popupViewWidth, popupViewHeight);
     }
     
-    [popupView cj_popupInView:popupSuperView
+    [popupView cj_popupInView:popupSuperview
                    atLocation:popupViewLocation
                      withSize:popupViewSize
                  showComplete:showPopupViewCompleteBlock

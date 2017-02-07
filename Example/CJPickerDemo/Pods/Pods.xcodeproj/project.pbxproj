@@ -7,47 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07751D6855029BD537C6E5F49BC1D8A5 /* RadioComposeView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCAA56A81D57084266F22AFA86120BFC /* RadioComposeView.m */; };
+		0BC7B9FF0FC77C2AF01BEB9AEFDAA4C0 /* CJRadioButtonsSliderSample.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A07315962A43727BF77EE80DC40843 /* CJRadioButtonsSliderSample.m */; };
+		0DC1408BF574FB2B7273B755341FD8E3 /* RadioComposeView.h in Headers */ = {isa = PBXBuildFile; fileRef = D986B4EA26EA3A2B32622CB5C62154A3 /* RadioComposeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0EB75F9E62E446D6A93F3E473BC2E661 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
-		131193B33BBBD0DBDBDB631CAE345A63 /* CJRadioButtonsDropDownSample.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC296F0AE7A80E0688915EC744AE30D /* CJRadioButtonsDropDownSample.m */; };
+		14AC24AEA9A01BAB290ABF347EEFAB47 /* RadioButtons.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F5F7C08D74BD0AE22F207624B3771C1 /* RadioButtons.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15932292069A9222C88128C6F9B3E916 /* CJButtonControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3C9BA9EE799D637EA3D4B8B26C0B4A2 /* CJButtonControllerView.m */; };
 		17558F84F4FA146EE3E47B5BD450ECF7 /* JSONValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DC93CD3B63D1334943AC5720C156B35 /* JSONValueTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1769714E49C7249C817CCBFE6E21AAA7 /* JSONAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = CC00FBBBE681170FA1E18EA99EC25160 /* JSONAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		19E373EB33A9CD67359AB663C6612D1F /* RadioButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 77269EE3FE595279DA8C7CB5C2540BEF /* RadioButtons.m */; };
+		1A8D75E52F96DCAE3D9845ADDFE04E82 /* UIView+CJAddSubVIew.h in Headers */ = {isa = PBXBuildFile; fileRef = CA3213180EFB3E0774908BF0DB57AD7C /* UIView+CJAddSubVIew.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1BAD14E84A2CC07C311149AD03C68047 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
 		1CC0376DB89270D5041806053DEE22C1 /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6AB4E004FBE8DA21919339957F0498 /* JSONModelClassProperty.m */; };
-		2077DC67FD39B7E336F016C85A24ECC0 /* RadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B52A7AD11980934DDD2C527FF1E26D79 /* RadioButton.m */; };
+		2B5A1409D750E00CA329676FF4CB3830 /* UIScrollView+CJAddContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 344EE0DB44AD3574684C413BF6858407 /* UIScrollView+CJAddContentView.m */; };
+		3359033768F1FFACC83DE82FD41A3B6D /* UIView+CJAddSubVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D821DABEBF8D97BEC3A5282C7F6116 /* UIView+CJAddSubVIew.m */; };
+		36B9B10585A7D882C04F9936C44FFFD1 /* CJRadioButtonsSliderSample.h in Headers */ = {isa = PBXBuildFile; fileRef = B92F24D859E2B72E9D54135C4592E05E /* CJRadioButtonsSliderSample.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D04B978FE170B01B86EB16CA5A476CA /* JSONAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E58ECB75BB282F01C0730F55634E26F3 /* JSONAPI.m */; };
+		40F906FF9528ED21D97F48CBA508BD6F /* CJRadioButtonsPopupSample.h in Headers */ = {isa = PBXBuildFile; fileRef = C7DBABA6E6EE7CFDFCFA06C2CE2B3B52 /* CJRadioButtonsPopupSample.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		428425171FFBE300CB3907B32F735857 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */; };
+		485BFEE2C83AE59B6C7D1C5E842EC2B0 /* RadioButton.h in Headers */ = {isa = PBXBuildFile; fileRef = F05E838B5F6CF33B01B1B310B66E7E29 /* RadioButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C4C7C48327D2064FB0E8497A8327DF3 /* JSONModelError.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FC719C656E1057446C446BB4CC17CDF /* JSONModelError.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C9E7E9C1AAF7905500CBEC0716FBC4A /* JSONHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A5C36CA646FC5D139D2041F94DCA5 /* JSONHTTPClient.m */; };
 		50F9FBD12047E7CA6DBD081150BD95AD /* UIView+CJShowExtendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C0E67BD670111C71ABAF789B8FBCD7 /* UIView+CJShowExtendView.m */; };
 		58BBD2F2D9CF6252A6F4BE5308425C16 /* JSONModel+networking.h in Headers */ = {isa = PBXBuildFile; fileRef = B3D3C21EAC04EC44515BB1274F46637C /* JSONModel+networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		58E266B1897E914A92D35A47CE5ED47A /* CJButtonControllerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9855D18F75EAAB7B3EAAC40C49D1B58E /* CJButtonControllerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5B0BCE9F670BAAFC98B356B1FF48490B /* CJRadio-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A28F6D8127A3170F6E03E4144705F05 /* CJRadio-dummy.m */; };
-		5DC925A84A903F2BB583BBE105A5C6C1 /* CJRadioButtonsSliderSample.h in Headers */ = {isa = PBXBuildFile; fileRef = C475B29650CF2F00620BD22B3E36711C /* CJRadioButtonsSliderSample.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		616F46D165EDDBF55A8E5EA289F63A0D /* UIView+CJAddSubVIew.h in Headers */ = {isa = PBXBuildFile; fileRef = CA3213180EFB3E0774908BF0DB57AD7C /* UIView+CJAddSubVIew.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6D81B6558CC1D7938C26D2C66A5BDCA0 /* RadioButtons.h in Headers */ = {isa = PBXBuildFile; fileRef = A2CB07FCA1DB0F2A094E60CB0AB7A292 /* RadioButtons.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E7E10E0587A8F3097CF8A73A4836B42 /* UIScrollView+CJAddContentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 16777113BDE31225FA7387BA8C538830 /* UIScrollView+CJAddContentView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64794FD5475EDCB3A479C328FB2F1277 /* CJRadioButtonsPopupSample.m in Sources */ = {isa = PBXBuildFile; fileRef = 297D388549D5DAA10A7ED302947C2140 /* CJRadioButtonsPopupSample.m */; };
 		6D91206A99344A90F813C17D8FE3C8C2 /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = 91EA80FD744594121A51193EBAECCE9A /* JSONModelError.m */; };
-		6FBCC94BC9019179CD740107E5228813 /* UIScrollView+CJAddContentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 16777113BDE31225FA7387BA8C538830 /* UIScrollView+CJAddContentView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B8BB252D4B1D916F975DFC4FBD1979 /* UIView+CJPopupInView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA22879A9AB0E2FA697D8A9780C913E4 /* UIView+CJPopupInView.m */; };
 		73D1596A999C8E84F79525FA7D176C48 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
 		767B42A0CBE714521951B3FCF0D1DA30 /* JSONModel+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA13967F0BF01ED70294D67A466A455 /* JSONModel+networking.m */; };
 		76CBC4DBC10BC323A35E4C7454D8A279 /* JSONModelClassProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BCC627D01D8871E54DF1E5D603001D1 /* JSONModelClassProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A8F95E63BA19F44D85E5ED65908DFC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
-		8A0A688FE8C6417D5BB6729C1E0581CC /* RadioComposeView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCAA56A81D57084266F22AFA86120BFC /* RadioComposeView.m */; };
-		A86607A479A966D57E00D39DDD8C13C5 /* CJButtonControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3C9BA9EE799D637EA3D4B8B26C0B4A2 /* CJButtonControllerView.m */; };
+		9D14791E6F0A4F56316468F575E9FBFE /* CJRadio.h in Headers */ = {isa = PBXBuildFile; fileRef = EE4AD60D4FD1DF27B850A03A71208955 /* CJRadio.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9176D26FE282983AA616CDF3BE0442B /* JSONKeyMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AF9A6D2021278317EAA85AD94E22AC8 /* JSONKeyMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AAF4D5DB4CC16F458961F01BB04A4C22 /* CJRadioButtonsDropDownSample.h in Headers */ = {isa = PBXBuildFile; fileRef = 397F994847B4DB75AE44900C6E3C3F9F /* CJRadioButtonsDropDownSample.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AD4E70A45DC0469F68274B3E5E8CBA3F /* RadioComposeView.h in Headers */ = {isa = PBXBuildFile; fileRef = D986B4EA26EA3A2B32622CB5C62154A3 /* RadioComposeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AF3959B6495A5AE99F958053AA6D5A77 /* UIScrollView+CJAddContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 344EE0DB44AD3574684C413BF6858407 /* UIScrollView+CJAddContentView.m */; };
 		B0C2AED164C0F7722A5CC4995B57F199 /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A08B01D179DA22E79C934946519080 /* JSONValueTransformer.m */; };
-		B5C94E8F220BD99E100366E15D8445CF /* RadioButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 731F79634FB0086CB82F279C7DE2CF41 /* RadioButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B7E4A427F219BBE56BB6B23B039522FF /* JSONModel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4C060633C62861607AEB397F077E43 /* JSONModel-dummy.m */; };
-		B9AB0AC99FF552700727CBC3E8D04EF4 /* UIView+CJAddSubVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D821DABEBF8D97BEC3A5282C7F6116 /* UIView+CJAddSubVIew.m */; };
-		BCF3412367DA3C2FD58574E80153528E /* CJRadioButtonsSliderSample.m in Sources */ = {isa = PBXBuildFile; fileRef = 57BC0621E92678487D246FE229B1B1F0 /* CJRadioButtonsSliderSample.m */; };
+		BD7294666E5107C71937E5176CA40804 /* RadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F1DB2AA2208C04A61A19FB5345185CE0 /* RadioButton.m */; };
 		BE6427935D332C300C0A21F4C215A3E0 /* UIView+CJPopupInView.h in Headers */ = {isa = PBXBuildFile; fileRef = FF3098E5E0BB16789C9DF69C64B10558 /* UIView+CJPopupInView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BFA8BDB4F675707CC228FD9D5ED5E176 /* CJPopupAction-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C659D0B85A54BABBAB5E68B0D760BD56 /* CJPopupAction-dummy.m */; };
 		C066BD05C135A9A641B712D92E4AD146 /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = F95847C4335A3C8E802A0764B52800FD /* JSONKeyMapper.m */; };
 		C0854DDAF3184B08ABC2DF0AEE54AAB4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */; };
 		C9012B0F07AED82E8628A8B69C801080 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+		D66F19EE163373D53CA379B54F82B1DD /* CJButtonControllerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9855D18F75EAAB7B3EAAC40C49D1B58E /* CJButtonControllerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DB8999CAE436BCEEBB613E466F313DB4 /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E613E0CBFFBCB5FEAEBBC1950BC5F0 /* JSONModel.m */; };
 		DF352FE063E8E7E6B0EA922718F95256 /* JSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 8492E8FBF9876EDF2F62C450007B157C /* JSONModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DFF437C031F6FF0C5294F70F41A0EF29 /* JSONModelLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F616D67DA2F3ABEF3DD8AC29EF1AE5F /* JSONModelLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -55,9 +56,8 @@
 		E867ECA4749C636F873644C124B3D88F /* CJPopupViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = DB4850547D59324C34BCF11065F6DC5E /* CJPopupViewDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E9FFB285A7C028827FA12E9A39B53F1B /* Pods-CJGroupTableViewDemoTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B6FCC8412F6A22A0CCB3B36AB73BA42F /* Pods-CJGroupTableViewDemoTests-dummy.m */; };
 		EBCB0F4FB9935316C8AE23A181A742C3 /* Pods-CJGroupTableViewDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 35692B7758EF89CBD9AEF80BBE749250 /* Pods-CJGroupTableViewDemo-dummy.m */; };
+		F24B00278FD2B6840FC3CF370D6B8602 /* CJRadio-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A28F6D8127A3170F6E03E4144705F05 /* CJRadio-dummy.m */; };
 		F6CB4F6CC704254E54C74BA05F6EC025 /* UIView+CJShowExtendView.h in Headers */ = {isa = PBXBuildFile; fileRef = F19D19B19E7F5AAD1476D1C2A6C882C7 /* UIView+CJShowExtendView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F6EE4A1A386596E3596DC7F7CE248DBE /* CJRadio.h in Headers */ = {isa = PBXBuildFile; fileRef = EE4AD60D4FD1DF27B850A03A71208955 /* CJRadio.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FA80862186AF807EA44D16BFF13AF4C7 /* RadioButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = E05D012FBF1D1768BE2A5C8877FF0FA2 /* RadioButtons.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,34 +94,38 @@
 /* Begin PBXFileReference section */
 		0331997078EAB5BDB5AFCA827D7E01F6 /* CJRadio.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CJRadio.xcconfig; sourceTree = "<group>"; };
 		0B8A5C36CA646FC5D139D2041F94DCA5 /* JSONHTTPClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONHTTPClient.m; path = JSONModel/JSONModelNetworking/JSONHTTPClient.m; sourceTree = "<group>"; };
+		0D8B09BC639BD040355BA2C6A436A2BD /* arrowLeft_gray@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "arrowLeft_gray@2x.png"; path = "CJRadio/CJRadioButtons/images_arrow/arrowLeft_gray@2x.png"; sourceTree = "<group>"; };
 		10E0EE7F9E934E7142DC4D2212692B57 /* libCJPopupAction.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCJPopupAction.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		16777113BDE31225FA7387BA8C538830 /* UIScrollView+CJAddContentView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+CJAddContentView.h"; path = "CJRadio/CJRadioComposeView/UIScrollView+CJAddContentView.h"; sourceTree = "<group>"; };
 		182B9A6B02626D229A40ED4969ED5C82 /* Pods-CJGroupTableViewDemoTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CJGroupTableViewDemoTests-resources.sh"; sourceTree = "<group>"; };
+		1F5F7C08D74BD0AE22F207624B3771C1 /* RadioButtons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RadioButtons.h; path = CJRadio/CJRadioButtons/RadioButtons.h; sourceTree = "<group>"; };
 		232E80BF8F4FA88C589F461C31979C21 /* CJPopupAction.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CJPopupAction.xcconfig; sourceTree = "<group>"; };
+		297D388549D5DAA10A7ED302947C2140 /* CJRadioButtonsPopupSample.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJRadioButtonsPopupSample.m; path = CJRadio/CJRadioButtons/CJRadioButtonsSample/CJRadioButtonsPopupSample.m; sourceTree = "<group>"; };
 		2F616D67DA2F3ABEF3DD8AC29EF1AE5F /* JSONModelLib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModelLib.h; path = JSONModel/JSONModelLib.h; sourceTree = "<group>"; };
 		31C39AD985D4CFADDF57145387AD9A11 /* libCJRadio.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCJRadio.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		344EE0DB44AD3574684C413BF6858407 /* UIScrollView+CJAddContentView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+CJAddContentView.m"; path = "CJRadio/CJRadioComposeView/UIScrollView+CJAddContentView.m"; sourceTree = "<group>"; };
 		35692B7758EF89CBD9AEF80BBE749250 /* Pods-CJGroupTableViewDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CJGroupTableViewDemo-dummy.m"; sourceTree = "<group>"; };
-		397F994847B4DB75AE44900C6E3C3F9F /* CJRadioButtonsDropDownSample.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJRadioButtonsDropDownSample.h; path = CJRadio/CJRadioButtons/CJRadioButtonsSample/CJRadioButtonsDropDownSample.h; sourceTree = "<group>"; };
 		3E4C060633C62861607AEB397F077E43 /* JSONModel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JSONModel-dummy.m"; sourceTree = "<group>"; };
 		3FC719C656E1057446C446BB4CC17CDF /* JSONModelError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModelError.h; path = JSONModel/JSONModel/JSONModelError.h; sourceTree = "<group>"; };
 		43F765182072B67A812B953C67FADEEC /* JSONModel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JSONModel-prefix.pch"; sourceTree = "<group>"; };
 		48A08B01D179DA22E79C934946519080 /* JSONValueTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONValueTransformer.m; path = JSONModel/JSONModelTransformations/JSONValueTransformer.m; sourceTree = "<group>"; };
-		4CD6CB63C7899536469AD43F6F7C612E /* arrowRight_gray@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "arrowRight_gray@2x.png"; path = "CJRadio/CJRadioButtons/images_arrow/arrowRight_gray@2x.png"; sourceTree = "<group>"; };
+		54BFD4871B2942504B5F17F1A20C6750 /* arrowDown_dark.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = arrowDown_dark.png; path = CJRadio/CJRadioButtons/images_arrow/arrowDown_dark.png; sourceTree = "<group>"; };
 		5527A767D2C8C4D140D24550F2E4E983 /* Pods-CJGroupTableViewDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CJGroupTableViewDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		57BC0621E92678487D246FE229B1B1F0 /* CJRadioButtonsSliderSample.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJRadioButtonsSliderSample.m; path = CJRadio/CJRadioButtons/CJRadioButtonsSample/CJRadioButtonsSliderSample.m; sourceTree = "<group>"; };
 		5AF9A6D2021278317EAA85AD94E22AC8 /* JSONKeyMapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONKeyMapper.h; path = JSONModel/JSONModelTransformations/JSONKeyMapper.h; sourceTree = "<group>"; };
+		6210D8E1BCB3A683358B4ADB78A80005 /* arrowLeft_red@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "arrowLeft_red@2x.png"; path = "CJRadio/CJRadioButtons/images_arrow/arrowLeft_red@2x.png"; sourceTree = "<group>"; };
 		66D939BC2527032F90CF4BE4E81E069D /* CJPopupAction-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CJPopupAction-prefix.pch"; sourceTree = "<group>"; };
 		6A28F6D8127A3170F6E03E4144705F05 /* CJRadio-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CJRadio-dummy.m"; sourceTree = "<group>"; };
 		6BEED8444526B0088E35D17172CCD857 /* Pods-CJGroupTableViewDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CJGroupTableViewDemo-frameworks.sh"; sourceTree = "<group>"; };
 		6C66FAD773F36D04766FCCC526EA033E /* Pods-CJGroupTableViewDemoTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CJGroupTableViewDemoTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		7083E7905202C131BBE5C9CC5B6538A7 /* JSONModel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JSONModel.xcconfig; sourceTree = "<group>"; };
-		731F79634FB0086CB82F279C7DE2CF41 /* RadioButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RadioButton.h; path = CJRadio/CJRadioButtons/RadioButton.h; sourceTree = "<group>"; };
 		765A75FA52A3CF3E4A60714DBF00D2CB /* JSONHTTPClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONHTTPClient.h; path = JSONModel/JSONModelNetworking/JSONHTTPClient.h; sourceTree = "<group>"; };
-		7785F770C972A1F11E7EB5519FA6A6AF /* arrowRight_red@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "arrowRight_red@2x.png"; path = "CJRadio/CJRadioButtons/images_arrow/arrowRight_red@2x.png"; sourceTree = "<group>"; };
+		77269EE3FE595279DA8C7CB5C2540BEF /* RadioButtons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RadioButtons.m; path = CJRadio/CJRadioButtons/RadioButtons.m; sourceTree = "<group>"; };
 		77D96DA9DD497D04EAA912EC206603F1 /* Pods-CJGroupTableViewDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CJGroupTableViewDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		792CCD5D3E003929C68313A57A8F1A82 /* arrowUp_white@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "arrowUp_white@2x.png"; path = "CJRadio/CJRadioButtons/images_arrow/arrowUp_white@2x.png"; sourceTree = "<group>"; };
 		7978739B462E6684A78842B65A0E30A9 /* libJSONModel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJSONModel.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BCC627D01D8871E54DF1E5D603001D1 /* JSONModelClassProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModelClassProperty.h; path = JSONModel/JSONModel/JSONModelClassProperty.h; sourceTree = "<group>"; };
+		7D6321E5D25C98E4285902602863B181 /* arrowRight_gray@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "arrowRight_gray@2x.png"; path = "CJRadio/CJRadioButtons/images_arrow/arrowRight_gray@2x.png"; sourceTree = "<group>"; };
+		7DB7512541BE3AEEE9260F764E2365E3 /* arrowRight_red@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "arrowRight_red@2x.png"; path = "CJRadio/CJRadioButtons/images_arrow/arrowRight_red@2x.png"; sourceTree = "<group>"; };
 		8492E8FBF9876EDF2F62C450007B157C /* JSONModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModel.h; path = JSONModel/JSONModel/JSONModel.h; sourceTree = "<group>"; };
 		88C0E67BD670111C71ABAF789B8FBCD7 /* UIView+CJShowExtendView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+CJShowExtendView.m"; path = "CJPopupAction/UIView+CJShowExtendView.m"; sourceTree = "<group>"; };
 		89D821DABEBF8D97BEC3A5282C7F6116 /* UIView+CJAddSubVIew.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+CJAddSubVIew.m"; path = "CJRadio/CJRadioComposeView/UIView+CJAddSubVIew.m"; sourceTree = "<group>"; };
@@ -131,40 +135,36 @@
 		8F416779C3851F97E16DD6E657B9B2A4 /* Pods-CJGroupTableViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CJGroupTableViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		8FAC01449B49B602BC24F9FFE47CF919 /* libPods-CJGroupTableViewDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CJGroupTableViewDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91EA80FD744594121A51193EBAECCE9A /* JSONModelError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONModelError.m; path = JSONModel/JSONModel/JSONModelError.m; sourceTree = "<group>"; };
-		92948F2C19B110814FB0E72C8112DC71 /* arrowLeft_gray@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "arrowLeft_gray@2x.png"; path = "CJRadio/CJRadioButtons/images_arrow/arrowLeft_gray@2x.png"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9855D18F75EAAB7B3EAAC40C49D1B58E /* CJButtonControllerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJButtonControllerView.h; path = CJRadio/CJButtonControllerView.h; sourceTree = "<group>"; };
-		98B57F6E8B294F59163BE64E56009EE5 /* arrowDown_dark.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = arrowDown_dark.png; path = CJRadio/CJRadioButtons/images_arrow/arrowDown_dark.png; sourceTree = "<group>"; };
 		9A66BC4A9B8D48329CA1380760552408 /* Pods-CJGroupTableViewDemoTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CJGroupTableViewDemoTests-frameworks.sh"; sourceTree = "<group>"; };
 		A1F62C449C92C7D41BF2C2CD012DE577 /* CJRadio-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CJRadio-prefix.pch"; sourceTree = "<group>"; };
 		A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		A2CB07FCA1DB0F2A094E60CB0AB7A292 /* RadioButtons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RadioButtons.h; path = CJRadio/CJRadioButtons/RadioButtons.h; sourceTree = "<group>"; };
 		A59A296928672C674DDA8A6118E426AE /* Pods-CJGroupTableViewDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CJGroupTableViewDemo-resources.sh"; sourceTree = "<group>"; };
 		B3D3C21EAC04EC44515BB1274F46637C /* JSONModel+networking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "JSONModel+networking.h"; path = "JSONModel/JSONModelNetworking/JSONModel+networking.h"; sourceTree = "<group>"; };
-		B52A7AD11980934DDD2C527FF1E26D79 /* RadioButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RadioButton.m; path = CJRadio/CJRadioButtons/RadioButton.m; sourceTree = "<group>"; };
 		B6FCC8412F6A22A0CCB3B36AB73BA42F /* Pods-CJGroupTableViewDemoTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CJGroupTableViewDemoTests-dummy.m"; sourceTree = "<group>"; };
 		B8E613E0CBFFBCB5FEAEBBC1950BC5F0 /* JSONModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONModel.m; path = JSONModel/JSONModel/JSONModel.m; sourceTree = "<group>"; };
-		B97B808CB9D03B54184EE2BFA1777524 /* arrowLeft_red@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "arrowLeft_red@2x.png"; path = "CJRadio/CJRadioButtons/images_arrow/arrowLeft_red@2x.png"; sourceTree = "<group>"; };
+		B92F24D859E2B72E9D54135C4592E05E /* CJRadioButtonsSliderSample.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJRadioButtonsSliderSample.h; path = CJRadio/CJRadioButtons/CJRadioButtonsSample/CJRadioButtonsSliderSample.h; sourceTree = "<group>"; };
 		BFF54613F18F413947F449B72CC9A385 /* Pods-CJGroupTableViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CJGroupTableViewDemo.release.xcconfig"; sourceTree = "<group>"; };
-		C475B29650CF2F00620BD22B3E36711C /* CJRadioButtonsSliderSample.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJRadioButtonsSliderSample.h; path = CJRadio/CJRadioButtons/CJRadioButtonsSample/CJRadioButtonsSliderSample.h; sourceTree = "<group>"; };
+		C4A07315962A43727BF77EE80DC40843 /* CJRadioButtonsSliderSample.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJRadioButtonsSliderSample.m; path = CJRadio/CJRadioButtons/CJRadioButtonsSample/CJRadioButtonsSliderSample.m; sourceTree = "<group>"; };
 		C659D0B85A54BABBAB5E68B0D760BD56 /* CJPopupAction-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CJPopupAction-dummy.m"; sourceTree = "<group>"; };
+		C7DBABA6E6EE7CFDFCFA06C2CE2B3B52 /* CJRadioButtonsPopupSample.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJRadioButtonsPopupSample.h; path = CJRadio/CJRadioButtons/CJRadioButtonsSample/CJRadioButtonsPopupSample.h; sourceTree = "<group>"; };
 		C93200341D8AC917B3EA850242F2F684 /* libPods-CJGroupTableViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CJGroupTableViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA3213180EFB3E0774908BF0DB57AD7C /* UIView+CJAddSubVIew.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+CJAddSubVIew.h"; path = "CJRadio/CJRadioComposeView/UIView+CJAddSubVIew.h"; sourceTree = "<group>"; };
 		CC00FBBBE681170FA1E18EA99EC25160 /* JSONAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONAPI.h; path = JSONModel/JSONModelNetworking/JSONAPI.h; sourceTree = "<group>"; };
 		CCA13967F0BF01ED70294D67A466A455 /* JSONModel+networking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "JSONModel+networking.m"; path = "JSONModel/JSONModelNetworking/JSONModel+networking.m"; sourceTree = "<group>"; };
-		CEC296F0AE7A80E0688915EC744AE30D /* CJRadioButtonsDropDownSample.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJRadioButtonsDropDownSample.m; path = CJRadio/CJRadioButtons/CJRadioButtonsSample/CJRadioButtonsDropDownSample.m; sourceTree = "<group>"; };
 		D8CFA015E38540EA070F32B764B77AD1 /* Pods-CJGroupTableViewDemoTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CJGroupTableViewDemoTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D986B4EA26EA3A2B32622CB5C62154A3 /* RadioComposeView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RadioComposeView.h; path = CJRadio/CJRadioComposeView/RadioComposeView.h; sourceTree = "<group>"; };
 		DB4850547D59324C34BCF11065F6DC5E /* CJPopupViewDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJPopupViewDelegate.h; path = CJPopupAction/CJPopupViewDelegate.h; sourceTree = "<group>"; };
 		DCAA56A81D57084266F22AFA86120BFC /* RadioComposeView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RadioComposeView.m; path = CJRadio/CJRadioComposeView/RadioComposeView.m; sourceTree = "<group>"; };
-		E05D012FBF1D1768BE2A5C8877FF0FA2 /* RadioButtons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RadioButtons.m; path = CJRadio/CJRadioButtons/RadioButtons.m; sourceTree = "<group>"; };
 		E3C9BA9EE799D637EA3D4B8B26C0B4A2 /* CJButtonControllerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJButtonControllerView.m; path = CJRadio/CJButtonControllerView.m; sourceTree = "<group>"; };
 		E58ECB75BB282F01C0730F55634E26F3 /* JSONAPI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONAPI.m; path = JSONModel/JSONModelNetworking/JSONAPI.m; sourceTree = "<group>"; };
 		E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		EE4AD60D4FD1DF27B850A03A71208955 /* CJRadio.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJRadio.h; path = CJRadio/CJRadio.h; sourceTree = "<group>"; };
-		EEE9D68A2B84E074EF19A07E582482D1 /* arrowUp_white@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "arrowUp_white@2x.png"; path = "CJRadio/CJRadioButtons/images_arrow/arrowUp_white@2x.png"; sourceTree = "<group>"; };
 		EF6AB4E004FBE8DA21919339957F0498 /* JSONModelClassProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONModelClassProperty.m; path = JSONModel/JSONModel/JSONModelClassProperty.m; sourceTree = "<group>"; };
+		F05E838B5F6CF33B01B1B310B66E7E29 /* RadioButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RadioButton.h; path = CJRadio/CJRadioButtons/RadioButton.h; sourceTree = "<group>"; };
 		F19D19B19E7F5AAD1476D1C2A6C882C7 /* UIView+CJShowExtendView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+CJShowExtendView.h"; path = "CJPopupAction/UIView+CJShowExtendView.h"; sourceTree = "<group>"; };
+		F1DB2AA2208C04A61A19FB5345185CE0 /* RadioButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RadioButton.m; path = CJRadio/CJRadioButtons/RadioButton.m; sourceTree = "<group>"; };
 		F95847C4335A3C8E802A0764B52800FD /* JSONKeyMapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONKeyMapper.m; path = JSONModel/JSONModelTransformations/JSONKeyMapper.m; sourceTree = "<group>"; };
 		FA22879A9AB0E2FA697D8A9780C913E4 /* UIView+CJPopupInView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+CJPopupInView.m"; path = "CJPopupAction/UIView+CJPopupInView.m"; sourceTree = "<group>"; };
 		FF3098E5E0BB16789C9DF69C64B10558 /* UIView+CJPopupInView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+CJPopupInView.h"; path = "CJPopupAction/UIView+CJPopupInView.h"; sourceTree = "<group>"; };
@@ -296,6 +296,22 @@
 			path = JSONModel;
 			sourceTree = "<group>";
 		};
+		50212AB2841487A7C60EE45C2F2ED39D /* CJRadioButtons */ = {
+			isa = PBXGroup;
+			children = (
+				C7DBABA6E6EE7CFDFCFA06C2CE2B3B52 /* CJRadioButtonsPopupSample.h */,
+				297D388549D5DAA10A7ED302947C2140 /* CJRadioButtonsPopupSample.m */,
+				B92F24D859E2B72E9D54135C4592E05E /* CJRadioButtonsSliderSample.h */,
+				C4A07315962A43727BF77EE80DC40843 /* CJRadioButtonsSliderSample.m */,
+				F05E838B5F6CF33B01B1B310B66E7E29 /* RadioButton.h */,
+				F1DB2AA2208C04A61A19FB5345185CE0 /* RadioButton.m */,
+				1F5F7C08D74BD0AE22F207624B3771C1 /* RadioButtons.h */,
+				77269EE3FE595279DA8C7CB5C2540BEF /* RadioButtons.m */,
+				9A865D83BD7B5F1A80EACC0BE926F1AE /* Resources */,
+			);
+			name = CJRadioButtons;
+			sourceTree = "<group>";
+		};
 		6E45B85657A331E897674630E72A0C79 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,19 +322,6 @@
 				8FAC01449B49B602BC24F9FFE47CF919 /* libPods-CJGroupTableViewDemoTests.a */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		7A2312DEDFAE53C424DECFEF7A84B353 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				98B57F6E8B294F59163BE64E56009EE5 /* arrowDown_dark.png */,
-				92948F2C19B110814FB0E72C8112DC71 /* arrowLeft_gray@2x.png */,
-				B97B808CB9D03B54184EE2BFA1777524 /* arrowLeft_red@2x.png */,
-				4CD6CB63C7899536469AD43F6F7C612E /* arrowRight_gray@2x.png */,
-				7785F770C972A1F11E7EB5519FA6A6AF /* arrowRight_red@2x.png */,
-				EEE9D68A2B84E074EF19A07E582482D1 /* arrowUp_white@2x.png */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -362,27 +365,24 @@
 				9855D18F75EAAB7B3EAAC40C49D1B58E /* CJButtonControllerView.h */,
 				E3C9BA9EE799D637EA3D4B8B26C0B4A2 /* CJButtonControllerView.m */,
 				EE4AD60D4FD1DF27B850A03A71208955 /* CJRadio.h */,
-				AEE5EAAF3BA0CEF5BCDC5BBA2A7F053D /* CJRadioButtons */,
+				50212AB2841487A7C60EE45C2F2ED39D /* CJRadioButtons */,
 				7E967142FAEC0400F91F4A6F4D68B635 /* CJRadioComposeView */,
 				D5A4F168E5F58BE29EC0F620ACCC46FF /* Support Files */,
 			);
 			path = CJRadio;
 			sourceTree = "<group>";
 		};
-		AEE5EAAF3BA0CEF5BCDC5BBA2A7F053D /* CJRadioButtons */ = {
+		9A865D83BD7B5F1A80EACC0BE926F1AE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				397F994847B4DB75AE44900C6E3C3F9F /* CJRadioButtonsDropDownSample.h */,
-				CEC296F0AE7A80E0688915EC744AE30D /* CJRadioButtonsDropDownSample.m */,
-				C475B29650CF2F00620BD22B3E36711C /* CJRadioButtonsSliderSample.h */,
-				57BC0621E92678487D246FE229B1B1F0 /* CJRadioButtonsSliderSample.m */,
-				731F79634FB0086CB82F279C7DE2CF41 /* RadioButton.h */,
-				B52A7AD11980934DDD2C527FF1E26D79 /* RadioButton.m */,
-				A2CB07FCA1DB0F2A094E60CB0AB7A292 /* RadioButtons.h */,
-				E05D012FBF1D1768BE2A5C8877FF0FA2 /* RadioButtons.m */,
-				7A2312DEDFAE53C424DECFEF7A84B353 /* Resources */,
+				54BFD4871B2942504B5F17F1A20C6750 /* arrowDown_dark.png */,
+				0D8B09BC639BD040355BA2C6A436A2BD /* arrowLeft_gray@2x.png */,
+				6210D8E1BCB3A683358B4ADB78A80005 /* arrowLeft_red@2x.png */,
+				7D6321E5D25C98E4285902602863B181 /* arrowRight_gray@2x.png */,
+				7DB7512541BE3AEEE9260F764E2365E3 /* arrowRight_red@2x.png */,
+				792CCD5D3E003929C68313A57A8F1A82 /* arrowUp_white@2x.png */,
 			);
-			name = CJRadioButtons;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		D267A7AA38A88B811F5A4286C41E91E1 /* Support Files */ = {
@@ -460,19 +460,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D31ACCA69F1B59F4FA52AE177F983924 /* Headers */ = {
+		C38257DFD4682B46A8BD7A74A548F273 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58E266B1897E914A92D35A47CE5ED47A /* CJButtonControllerView.h in Headers */,
-				F6EE4A1A386596E3596DC7F7CE248DBE /* CJRadio.h in Headers */,
-				AAF4D5DB4CC16F458961F01BB04A4C22 /* CJRadioButtonsDropDownSample.h in Headers */,
-				5DC925A84A903F2BB583BBE105A5C6C1 /* CJRadioButtonsSliderSample.h in Headers */,
-				B5C94E8F220BD99E100366E15D8445CF /* RadioButton.h in Headers */,
-				6D81B6558CC1D7938C26D2C66A5BDCA0 /* RadioButtons.h in Headers */,
-				AD4E70A45DC0469F68274B3E5E8CBA3F /* RadioComposeView.h in Headers */,
-				6FBCC94BC9019179CD740107E5228813 /* UIScrollView+CJAddContentView.h in Headers */,
-				616F46D165EDDBF55A8E5EA289F63A0D /* UIView+CJAddSubVIew.h in Headers */,
+				D66F19EE163373D53CA379B54F82B1DD /* CJButtonControllerView.h in Headers */,
+				9D14791E6F0A4F56316468F575E9FBFE /* CJRadio.h in Headers */,
+				40F906FF9528ED21D97F48CBA508BD6F /* CJRadioButtonsPopupSample.h in Headers */,
+				36B9B10585A7D882C04F9936C44FFFD1 /* CJRadioButtonsSliderSample.h in Headers */,
+				485BFEE2C83AE59B6C7D1C5E842EC2B0 /* RadioButton.h in Headers */,
+				14AC24AEA9A01BAB290ABF347EEFAB47 /* RadioButtons.h in Headers */,
+				0DC1408BF574FB2B7273B755341FD8E3 /* RadioComposeView.h in Headers */,
+				5E7E10E0587A8F3097CF8A73A4836B42 /* UIScrollView+CJAddContentView.h in Headers */,
+				1A8D75E52F96DCAE3D9845ADDFE04E82 /* UIView+CJAddSubVIew.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,9 +535,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E32ABCDC2A7F63C40B3D22FD91E9EA40 /* Build configuration list for PBXNativeTarget "CJRadio" */;
 			buildPhases = (
-				B2114857768EA198D675EEB663B3DBA2 /* Sources */,
+				6F458E1C9AF09A6D5DE883D741D9E16A /* Sources */,
 				F3E84038FCC91C5CF6A3D729E694F748 /* Frameworks */,
-				D31ACCA69F1B59F4FA52AE177F983924 /* Headers */,
+				C38257DFD4682B46A8BD7A74A548F273 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -631,19 +631,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B2114857768EA198D675EEB663B3DBA2 /* Sources */ = {
+		6F458E1C9AF09A6D5DE883D741D9E16A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A86607A479A966D57E00D39DDD8C13C5 /* CJButtonControllerView.m in Sources */,
-				5B0BCE9F670BAAFC98B356B1FF48490B /* CJRadio-dummy.m in Sources */,
-				131193B33BBBD0DBDBDB631CAE345A63 /* CJRadioButtonsDropDownSample.m in Sources */,
-				BCF3412367DA3C2FD58574E80153528E /* CJRadioButtonsSliderSample.m in Sources */,
-				2077DC67FD39B7E336F016C85A24ECC0 /* RadioButton.m in Sources */,
-				FA80862186AF807EA44D16BFF13AF4C7 /* RadioButtons.m in Sources */,
-				8A0A688FE8C6417D5BB6729C1E0581CC /* RadioComposeView.m in Sources */,
-				AF3959B6495A5AE99F958053AA6D5A77 /* UIScrollView+CJAddContentView.m in Sources */,
-				B9AB0AC99FF552700727CBC3E8D04EF4 /* UIView+CJAddSubVIew.m in Sources */,
+				15932292069A9222C88128C6F9B3E916 /* CJButtonControllerView.m in Sources */,
+				F24B00278FD2B6840FC3CF370D6B8602 /* CJRadio-dummy.m in Sources */,
+				64794FD5475EDCB3A479C328FB2F1277 /* CJRadioButtonsPopupSample.m in Sources */,
+				0BC7B9FF0FC77C2AF01BEB9AEFDAA4C0 /* CJRadioButtonsSliderSample.m in Sources */,
+				BD7294666E5107C71937E5176CA40804 /* RadioButton.m in Sources */,
+				19E373EB33A9CD67359AB663C6612D1F /* RadioButtons.m in Sources */,
+				07751D6855029BD537C6E5F49BC1D8A5 /* RadioComposeView.m in Sources */,
+				2B5A1409D750E00CA329676FF4CB3830 /* UIScrollView+CJAddContentView.m in Sources */,
+				3359033768F1FFACC83DE82FD41A3B6D /* UIView+CJAddSubVIew.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
