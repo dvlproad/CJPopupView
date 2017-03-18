@@ -1,13 +1,13 @@
 //
 //  PickerViewController.m
-//  CJPickerToolBarViewDemo
+//  CJPickerDemo
 //
 //  Created by lichq on 6/20/15.
 //  Copyright (c) 2015 ciyouzen. All rights reserved.
 //
 
 #import "PickerViewController.h"
-#import "CJDatePickerToolBarView.h"
+#import "CJDefaultDatePicker.h"
 #import "CJIndependentPickerView.h"
 //#import "CJRelatedPickerView.h"
 #import "CJRelatedPickerRichView.h"
@@ -15,11 +15,11 @@
 
 #import <UIView+CJPopupInView.h>
 
-@interface PickerViewController () <CJDatePickerToolBarViewDelegate,
+@interface PickerViewController () <
                                     CJIndependentPickerViewDelegate,
                                     CJRelatedPickerRichViewDelegate>
 {
-    CJDatePickerToolBarView *picker_birthday;
+    CJDefaultDatePicker *picker_birthday;
     CJIndependentPickerView *picker_weight;
     CJRelatedPickerRichView *picker_area;
 }
@@ -40,7 +40,36 @@
     [dateFormatter setDateFormat:@"yyyy-MM-dd"];
     
     if (picker_birthday == nil) {
-        picker_birthday = [[CJDatePickerToolBarView alloc]initWithNibName:@"CJDatePickerToolBarView" delegate:self];
+        picker_birthday = [[CJDefaultDatePicker alloc] init];
+        [picker_birthday setValueChangedHandel:^(UIDatePicker *datePicker) {
+            UIDatePicker *m_datePicker = datePicker;
+            
+            NSDate *date = m_datePicker.date;
+            NSDate *maximumDate = m_datePicker.maximumDate;
+            NSDate *minimumDate = m_datePicker.minimumDate;
+            
+            NSTimeZone *zone =[NSTimeZone systemTimeZone];
+            NSInteger interval = [zone secondsFromGMTForDate: date];
+            NSDate *localDate =[date dateByAddingTimeInterval: interval];
+            
+            NSLog(@"1当前选择:%@",localDate);
+            
+            if ([date compare:minimumDate] == NSOrderedAscending) {
+                NSLog(@"当前选择日期太小");
+            }else if ([date compare:maximumDate] == NSOrderedDescending) {
+                NSLog(@"当前选择日期太大");
+            }
+        }];
+        
+        __weak typeof(picker_birthday)weakpicker_birthday = picker_birthday;
+        [picker_birthday.toolbar setConfirmHandle:^{
+            NSDate *selDate = weakpicker_birthday.datePicker.date;
+            NSString *value = [NSString stringWithFormat:@"%@", selDate];
+            [[[UIAlertView alloc]initWithTitle:@"所选日期为" message:value delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
+            
+            [weakpicker_birthday cj_hidePopupView];
+        }];
+        
         picker_birthday.datePicker.datePickerMode = UIDatePickerModeDate;
         picker_birthday.datePicker.maximumDate = [NSDate date];
         picker_birthday.datePicker.minimumDate = [dateFormatter dateFromString:@"1900-01-01"];;
@@ -56,6 +85,7 @@
         [picker_birthday cj_hidePopupView];
         
     }];
+    
 }
 
 
@@ -190,38 +220,9 @@
 
 }
 
-- (void)confirmDelegate_datePicker:(CJDatePickerToolBarView *)pickerToolBarView{
-    NSDate *selDate = pickerToolBarView.datePicker.date;
-    NSString *value = [NSString stringWithFormat:@"%@", selDate];
-    [[[UIAlertView alloc]initWithTitle:@"所选日期为" message:value delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
-    
-    [pickerToolBarView cj_hidePopupView];
-}
-
-#pragma mark - ValueChange
-- (void)valueChangeDelegate_datePicker:(CJDatePickerToolBarView *)pickerToolBarView{
-    UIDatePicker *m_datePicker = pickerToolBarView.datePicker;
-    
-    NSDate *date = m_datePicker.date;
-    NSDate *maximumDate = m_datePicker.maximumDate;
-    NSDate *minimumDate = m_datePicker.minimumDate;
-    
-    NSTimeZone *zone =[NSTimeZone systemTimeZone];
-    NSInteger interval = [zone secondsFromGMTForDate: date];
-    NSDate *localDate =[date dateByAddingTimeInterval: interval];
-    
-    NSLog(@"1当前选择:%@",localDate);
-    
-    if ([date compare:minimumDate] == NSOrderedAscending) {
-        NSLog(@"当前选择日期太小");
-    }else if ([date compare:maximumDate] == NSOrderedDescending) {
-        NSLog(@"当前选择日期太大");
-    }
-}
 
 - (void)dealloc{
     [picker_birthday cj_hidePopupView];
-    picker_birthday.delegate = nil;
     picker_birthday = nil;
     
     [picker_weight cj_hidePopupView];

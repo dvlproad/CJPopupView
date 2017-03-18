@@ -22,14 +22,14 @@
 		783AC7D71D96928A0077067E /* RelatedPickerViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 783AC7D51D96928A0077067E /* RelatedPickerViewController2.m */; };
 		783AC7D81D96928A0077067E /* RelatedPickerViewController2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 783AC7D61D96928A0077067E /* RelatedPickerViewController2.xib */; };
 		783AC7DB1D96941B0077067E /* RadioButton_Slider.xib in Resources */ = {isa = PBXBuildFile; fileRef = 783AC7DA1D96941B0077067E /* RadioButton_Slider.xib */; };
+		78553FBF1E7DB9C100F320E6 /* CJDefaultToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 78553FBE1E7DB9C100F320E6 /* CJDefaultToolbar.m */; };
 		786B57F71E347DA5006AEAF4 /* CJDataModelSample.m in Sources */ = {isa = PBXBuildFile; fileRef = 786B57E31E347DA5006AEAF4 /* CJDataModelSample.m */; };
 		786B57F81E347DA5006AEAF4 /* CJComponentDataModelUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 786B57E51E347DA5006AEAF4 /* CJComponentDataModelUtil.m */; };
 		786B57F91E347DA5006AEAF4 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 786B57E71E347DA5006AEAF4 /* area.plist */; };
 		786B57FA1E347DA5006AEAF4 /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 786B57E81E347DA5006AEAF4 /* city.plist */; };
 		786B57FB1E347DA5006AEAF4 /* line_gray_pickerToolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 786B57E91E347DA5006AEAF4 /* line_gray_pickerToolbar.png */; };
 		786B57FC1E347DA5006AEAF4 /* line_gray_pickerToolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 786B57EA1E347DA5006AEAF4 /* line_gray_pickerToolbar@2x.png */; };
-		786B57FD1E347DA5006AEAF4 /* CJDatePickerToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 786B57ED1E347DA5006AEAF4 /* CJDatePickerToolBarView.m */; };
-		786B57FE1E347DA5006AEAF4 /* CJDatePickerToolBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786B57EE1E347DA5006AEAF4 /* CJDatePickerToolBarView.xib */; };
+		786B57FD1E347DA5006AEAF4 /* CJDefaultDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 786B57ED1E347DA5006AEAF4 /* CJDefaultDatePicker.m */; };
 		786B57FF1E347DA5006AEAF4 /* CJIndependentPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 786B57F01E347DA5006AEAF4 /* CJIndependentPickerView.m */; };
 		786B58001E347DA5006AEAF4 /* CJIndependentPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786B57F11E347DA5006AEAF4 /* CJIndependentPickerView.xib */; };
 		786B58011E347DA5006AEAF4 /* CJRelatedPickerRichView.m in Sources */ = {isa = PBXBuildFile; fileRef = 786B57F31E347DA5006AEAF4 /* CJRelatedPickerRichView.m */; };
@@ -86,6 +86,8 @@
 		783AC7D51D96928A0077067E /* RelatedPickerViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelatedPickerViewController2.m; sourceTree = "<group>"; };
 		783AC7D61D96928A0077067E /* RelatedPickerViewController2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RelatedPickerViewController2.xib; sourceTree = "<group>"; };
 		783AC7DA1D96941B0077067E /* RadioButton_Slider.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RadioButton_Slider.xib; sourceTree = "<group>"; };
+		78553FBD1E7DB9C100F320E6 /* CJDefaultToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDefaultToolbar.h; sourceTree = "<group>"; };
+		78553FBE1E7DB9C100F320E6 /* CJDefaultToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDefaultToolbar.m; sourceTree = "<group>"; };
 		786B57E21E347DA5006AEAF4 /* CJDataModelSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDataModelSample.h; sourceTree = "<group>"; };
 		786B57E31E347DA5006AEAF4 /* CJDataModelSample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDataModelSample.m; sourceTree = "<group>"; };
 		786B57E41E347DA5006AEAF4 /* CJComponentDataModelUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJComponentDataModelUtil.h; sourceTree = "<group>"; };
@@ -94,9 +96,8 @@
 		786B57E81E347DA5006AEAF4 /* city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city.plist; sourceTree = "<group>"; };
 		786B57E91E347DA5006AEAF4 /* line_gray_pickerToolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line_gray_pickerToolbar.png; sourceTree = "<group>"; };
 		786B57EA1E347DA5006AEAF4 /* line_gray_pickerToolbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "line_gray_pickerToolbar@2x.png"; sourceTree = "<group>"; };
-		786B57EC1E347DA5006AEAF4 /* CJDatePickerToolBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDatePickerToolBarView.h; sourceTree = "<group>"; };
-		786B57ED1E347DA5006AEAF4 /* CJDatePickerToolBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDatePickerToolBarView.m; sourceTree = "<group>"; };
-		786B57EE1E347DA5006AEAF4 /* CJDatePickerToolBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJDatePickerToolBarView.xib; sourceTree = "<group>"; };
+		786B57EC1E347DA5006AEAF4 /* CJDefaultDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDefaultDatePicker.h; sourceTree = "<group>"; };
+		786B57ED1E347DA5006AEAF4 /* CJDefaultDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDefaultDatePicker.m; sourceTree = "<group>"; };
 		786B57EF1E347DA5006AEAF4 /* CJIndependentPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJIndependentPickerView.h; sourceTree = "<group>"; };
 		786B57F01E347DA5006AEAF4 /* CJIndependentPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJIndependentPickerView.m; sourceTree = "<group>"; };
 		786B57F11E347DA5006AEAF4 /* CJIndependentPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJIndependentPickerView.xib; sourceTree = "<group>"; };
@@ -293,14 +294,15 @@
 		786B57EB1E347DA5006AEAF4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				786B57EC1E347DA5006AEAF4 /* CJDatePickerToolBarView.h */,
-				786B57ED1E347DA5006AEAF4 /* CJDatePickerToolBarView.m */,
-				786B57EE1E347DA5006AEAF4 /* CJDatePickerToolBarView.xib */,
+				786B57EC1E347DA5006AEAF4 /* CJDefaultDatePicker.h */,
+				786B57ED1E347DA5006AEAF4 /* CJDefaultDatePicker.m */,
 				786B57EF1E347DA5006AEAF4 /* CJIndependentPickerView.h */,
 				786B57F01E347DA5006AEAF4 /* CJIndependentPickerView.m */,
 				786B57F11E347DA5006AEAF4 /* CJIndependentPickerView.xib */,
 				786B57F21E347DA5006AEAF4 /* CJRelatedPickerRichView.h */,
 				786B57F31E347DA5006AEAF4 /* CJRelatedPickerRichView.m */,
+				78553FBD1E7DB9C100F320E6 /* CJDefaultToolbar.h */,
+				78553FBE1E7DB9C100F320E6 /* CJDefaultToolbar.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -430,7 +432,6 @@
 				786B58081E347EB0006AEAF4 /* PickerViewController.xib in Resources */,
 				783AC7991D968C540077067E /* LaunchScreen.storyboard in Resources */,
 				783AC7D81D96928A0077067E /* RelatedPickerViewController2.xib in Resources */,
-				786B57FE1E347DA5006AEAF4 /* CJDatePickerToolBarView.xib in Resources */,
 				786B57FC1E347DA5006AEAF4 /* line_gray_pickerToolbar@2x.png in Resources */,
 				783AC7961D968C540077067E /* Assets.xcassets in Resources */,
 				783AC7941D968C530077067E /* Main.storyboard in Resources */,
@@ -553,9 +554,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78553FBF1E7DB9C100F320E6 /* CJDefaultToolbar.m in Sources */,
 				783AC7C01D968D3D0077067E /* RelatedPickerViewController.m in Sources */,
 				783AC7D31D9690680077067E /* GroupDataUtil.m in Sources */,
-				786B57FD1E347DA5006AEAF4 /* CJDatePickerToolBarView.m in Sources */,
+				786B57FD1E347DA5006AEAF4 /* CJDefaultDatePicker.m in Sources */,
 				783AC7D71D96928A0077067E /* RelatedPickerViewController2.m in Sources */,
 				78DDF7161E3B2CBD00C56D84 /* CJComponentDataModel.m in Sources */,
 				786B58011E347DA5006AEAF4 /* CJRelatedPickerRichView.m in Sources */,
