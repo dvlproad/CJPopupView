@@ -1,6 +1,6 @@
 //
 //  ViewController.m
-//  CJRelatedPickerRichViewDemo
+//  CJPickerDemo
 //
 //  Created by lichq on 9/7/15.
 //  Copyright (c) 2015 ciyouzen. All rights reserved.
@@ -43,5 +43,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 @end

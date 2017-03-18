@@ -1,6 +1,6 @@
 //
-//  CJRelatedPickerRichViewDemoTests.m
-//  CJRelatedPickerRichViewDemoTests
+//  CJPickerDemoTests.m
+//  CJPickerDemoTests
 //
 //  Created by lichq on 9/7/15.
 //  Copyright (c) 2015 ciyouzen. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface CJRelatedPickerRichViewDemoTests : XCTestCase
+@interface CJPickerDemoTests : XCTestCase
 
 @end
 
-@implementation CJRelatedPickerRichViewDemoTests
+@implementation CJPickerDemoTests
 
 - (void)setUp {
     [super setUp];

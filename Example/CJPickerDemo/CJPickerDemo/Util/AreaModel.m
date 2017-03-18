@@ -1,6 +1,6 @@
 //
 //  AreaModel.m
-//  CJGroupTableViewDemo
+//  CJPickerDemo
 //
 //  Created by 李超前 on 2017/1/29.
 //  Copyright © 2017年 dvlproad. All rights reserved.
