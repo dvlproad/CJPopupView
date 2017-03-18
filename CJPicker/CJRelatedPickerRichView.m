@@ -12,18 +12,27 @@
 
 @implementation CJRelatedPickerRichView
 
-- (id)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
-    if(self) {
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    
+    [self commonInit];
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    if (self = [super initWithCoder:aDecoder]) {
         [self commonInit];
     }
     return self;
 }
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    
-    [self commonInit];
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    if (self = [super initWithFrame:frame]) {
+        [self commonInit];
+    }
+    return self;
 }
 
 - (void)commonInit {
@@ -221,7 +230,7 @@
 /**
  *  更新从第component个开始的每个列表tableView
  *
- *  @param component component
+ *  @param componentIndexStart componentIndexStart
  */
 - (void)updateTableViewsFromComponentIndex:(NSInteger)componentIndexStart {
     for(NSInteger  component= componentIndexStart; component < componentCount; component++) {

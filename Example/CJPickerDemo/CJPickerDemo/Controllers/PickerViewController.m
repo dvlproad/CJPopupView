@@ -15,9 +15,7 @@
 
 #import <UIView+CJPopupInView.h>
 
-@interface PickerViewController () <
-                                    CJIndependentPickerViewDelegate,
-                                    CJRelatedPickerRichViewDelegate>
+@interface PickerViewController () <CJRelatedPickerRichViewDelegate>
 {
     CJDefaultDatePicker *picker_birthday;
     CJIndependentPickerView *picker_weight;
@@ -118,7 +116,27 @@
 
 - (IBAction)chooseWeight:(id)sender{
     if (picker_weight == nil) {
-        picker_weight = [[CJIndependentPickerView alloc]initWithNibName:@"CJIndependentPickerView" delegate:self];
+        picker_weight = [[CJIndependentPickerView alloc] init];
+        
+        __weak typeof(picker_weight)weakpicker_weight = picker_weight;
+        [picker_weight.toolbar setConfirmHandle:^{
+            NSString *integer = @"", *decimal = @"", *unit = @"";
+            
+            for (int indexC = 0; indexC < weakpicker_weight.datas.count; indexC++) {
+                NSString *string = [weakpicker_weight.selecteds objectAtIndex:indexC];
+                if (indexC == 0) {
+                    integer = string;
+                }else if (indexC == 1){
+                    decimal = string;
+                }else if (indexC == 2){
+                    unit = string;
+                }
+            }
+            NSString *value = [NSString stringWithFormat:@"%@.%@.%@", integer, decimal, unit];
+            [[[UIAlertView alloc]initWithTitle:@"最后的值为" message:value delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
+            
+            [weakpicker_weight cj_hidePopupView];
+        }];
         NSMutableArray *integers = [[NSMutableArray alloc]init];
         for (int i = 40; i < 100; i++) {
             [integers addObject:[NSString stringWithFormat:@"%d", i]];
@@ -144,30 +162,6 @@
         NSLog(@"点击背景完成");
         [picker_weight cj_hidePopupView];
     }];
-}
-
-
-
-#pragma mark - ValueConfirm
-- (void)confirmDelegate_pickerView:(CJIndependentPickerView *)pickerToolBarView{
-    if (pickerToolBarView.tag == 1000) {
-        NSString *integer = @"", *decimal = @"", *unit = @"";
-        
-        for (int indexC = 0; indexC < pickerToolBarView.datas.count; indexC++) {
-            NSString *string = [pickerToolBarView.selecteds objectAtIndex:indexC];
-            if (indexC == 0) {
-                integer = string;
-            }else if (indexC == 1){
-                decimal = string;
-            }else if (indexC == 2){
-                unit = string;
-            }
-        }
-        NSString *value = [NSString stringWithFormat:@"%@.%@.%@", integer, decimal, unit];
-        [[[UIAlertView alloc]initWithTitle:@"最后的值为" message:value delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
-        
-        [pickerToolBarView cj_hidePopupView];
-    }
 }
 
 //- (void)confirmDelegate_pickerArea:(CJRelatedPickerView *)pickerToolBarView{
@@ -226,7 +220,6 @@
     picker_birthday = nil;
     
     [picker_weight cj_hidePopupView];
-    picker_weight.delegate = nil;
     picker_weight = nil;
     
     [picker_area cj_hidePopupView];

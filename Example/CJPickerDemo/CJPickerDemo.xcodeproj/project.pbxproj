@@ -25,18 +25,17 @@
 		785540AD1E7DC5F800F320E6 /* AreaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 785540A21E7DC5F800F320E6 /* AreaModel.m */; };
 		785540AE1E7DC5F800F320E6 /* GroupDataUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 785540A41E7DC5F800F320E6 /* GroupDataUtil.m */; };
 		785540AF1E7DC5F800F320E6 /* RadioButton_Slider.xib in Resources */ = {isa = PBXBuildFile; fileRef = 785540A61E7DC5F800F320E6 /* RadioButton_Slider.xib */; };
-		785540C71E7DC64600F320E6 /* CJComponentDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 785540B31E7DC64600F320E6 /* CJComponentDataModel.m */; };
-		785540C81E7DC64600F320E6 /* CJComponentDataModelUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 785540B51E7DC64600F320E6 /* CJComponentDataModelUtil.m */; };
-		785540C91E7DC64600F320E6 /* CJDataModelSample.m in Sources */ = {isa = PBXBuildFile; fileRef = 785540B71E7DC64600F320E6 /* CJDataModelSample.m */; };
-		785540CA1E7DC64600F320E6 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 785540B91E7DC64600F320E6 /* area.plist */; };
-		785540CB1E7DC64600F320E6 /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 785540BA1E7DC64600F320E6 /* city.plist */; };
-		785540CC1E7DC64600F320E6 /* line_gray_pickerToolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 785540BB1E7DC64600F320E6 /* line_gray_pickerToolbar.png */; };
-		785540CD1E7DC64600F320E6 /* line_gray_pickerToolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 785540BC1E7DC64600F320E6 /* line_gray_pickerToolbar@2x.png */; };
-		785540CE1E7DC64600F320E6 /* CJDefaultDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 785540BF1E7DC64600F320E6 /* CJDefaultDatePicker.m */; };
-		785540CF1E7DC64600F320E6 /* CJDefaultToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 785540C11E7DC64600F320E6 /* CJDefaultToolbar.m */; };
-		785540D01E7DC64600F320E6 /* CJIndependentPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 785540C31E7DC64600F320E6 /* CJIndependentPickerView.m */; };
-		785540D11E7DC64600F320E6 /* CJIndependentPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 785540C41E7DC64600F320E6 /* CJIndependentPickerView.xib */; };
-		785540D21E7DC64600F320E6 /* CJRelatedPickerRichView.m in Sources */ = {isa = PBXBuildFile; fileRef = 785540C61E7DC64600F320E6 /* CJRelatedPickerRichView.m */; };
+		785540ED1E7DCA9900F320E6 /* CJDefaultDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 785540D91E7DCA9900F320E6 /* CJDefaultDatePicker.m */; };
+		785540EE1E7DCA9900F320E6 /* CJIndependentPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 785540DB1E7DCA9900F320E6 /* CJIndependentPickerView.m */; };
+		785540EF1E7DCA9900F320E6 /* CJRelatedPickerRichView.m in Sources */ = {isa = PBXBuildFile; fileRef = 785540DD1E7DCA9900F320E6 /* CJRelatedPickerRichView.m */; };
+		785540F01E7DCA9900F320E6 /* CJDefaultToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 785540E01E7DCA9900F320E6 /* CJDefaultToolbar.m */; };
+		785540F11E7DCA9900F320E6 /* CJComponentDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 785540E31E7DCA9900F320E6 /* CJComponentDataModel.m */; };
+		785540F21E7DCA9900F320E6 /* CJComponentDataModelUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 785540E51E7DCA9900F320E6 /* CJComponentDataModelUtil.m */; };
+		785540F31E7DCA9900F320E6 /* CJDataModelSample.m in Sources */ = {isa = PBXBuildFile; fileRef = 785540E71E7DCA9900F320E6 /* CJDataModelSample.m */; };
+		785540F41E7DCA9900F320E6 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 785540E91E7DCA9900F320E6 /* area.plist */; };
+		785540F51E7DCA9900F320E6 /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 785540EA1E7DCA9900F320E6 /* city.plist */; };
+		785540F61E7DCA9900F320E6 /* line_gray_pickerToolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 785540EB1E7DCA9900F320E6 /* line_gray_pickerToolbar.png */; };
+		785540F71E7DCA9900F320E6 /* line_gray_pickerToolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 785540EC1E7DCA9900F320E6 /* line_gray_pickerToolbar@2x.png */; };
 		E8004FC4B40B74AFE807D847 /* libPods-CJPickerDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48A6484B73B7E20372FD66E9 /* libPods-CJPickerDemoTests.a */; };
 /* End PBXBuildFile section */
 
@@ -91,25 +90,24 @@
 		785540A31E7DC5F800F320E6 /* GroupDataUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupDataUtil.h; sourceTree = "<group>"; };
 		785540A41E7DC5F800F320E6 /* GroupDataUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupDataUtil.m; sourceTree = "<group>"; };
 		785540A61E7DC5F800F320E6 /* RadioButton_Slider.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RadioButton_Slider.xib; sourceTree = "<group>"; };
-		785540B21E7DC64600F320E6 /* CJComponentDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJComponentDataModel.h; sourceTree = "<group>"; };
-		785540B31E7DC64600F320E6 /* CJComponentDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJComponentDataModel.m; sourceTree = "<group>"; };
-		785540B41E7DC64600F320E6 /* CJComponentDataModelUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJComponentDataModelUtil.h; sourceTree = "<group>"; };
-		785540B51E7DC64600F320E6 /* CJComponentDataModelUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJComponentDataModelUtil.m; sourceTree = "<group>"; };
-		785540B61E7DC64600F320E6 /* CJDataModelSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDataModelSample.h; sourceTree = "<group>"; };
-		785540B71E7DC64600F320E6 /* CJDataModelSample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDataModelSample.m; sourceTree = "<group>"; };
-		785540B91E7DC64600F320E6 /* area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = area.plist; sourceTree = "<group>"; };
-		785540BA1E7DC64600F320E6 /* city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city.plist; sourceTree = "<group>"; };
-		785540BB1E7DC64600F320E6 /* line_gray_pickerToolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line_gray_pickerToolbar.png; sourceTree = "<group>"; };
-		785540BC1E7DC64600F320E6 /* line_gray_pickerToolbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "line_gray_pickerToolbar@2x.png"; sourceTree = "<group>"; };
-		785540BE1E7DC64600F320E6 /* CJDefaultDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDefaultDatePicker.h; sourceTree = "<group>"; };
-		785540BF1E7DC64600F320E6 /* CJDefaultDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDefaultDatePicker.m; sourceTree = "<group>"; };
-		785540C01E7DC64600F320E6 /* CJDefaultToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDefaultToolbar.h; sourceTree = "<group>"; };
-		785540C11E7DC64600F320E6 /* CJDefaultToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDefaultToolbar.m; sourceTree = "<group>"; };
-		785540C21E7DC64600F320E6 /* CJIndependentPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJIndependentPickerView.h; sourceTree = "<group>"; };
-		785540C31E7DC64600F320E6 /* CJIndependentPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJIndependentPickerView.m; sourceTree = "<group>"; };
-		785540C41E7DC64600F320E6 /* CJIndependentPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJIndependentPickerView.xib; sourceTree = "<group>"; };
-		785540C51E7DC64600F320E6 /* CJRelatedPickerRichView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJRelatedPickerRichView.h; sourceTree = "<group>"; };
-		785540C61E7DC64600F320E6 /* CJRelatedPickerRichView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJRelatedPickerRichView.m; sourceTree = "<group>"; };
+		785540D81E7DCA9900F320E6 /* CJDefaultDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDefaultDatePicker.h; sourceTree = "<group>"; };
+		785540D91E7DCA9900F320E6 /* CJDefaultDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDefaultDatePicker.m; sourceTree = "<group>"; };
+		785540DA1E7DCA9900F320E6 /* CJIndependentPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJIndependentPickerView.h; sourceTree = "<group>"; };
+		785540DB1E7DCA9900F320E6 /* CJIndependentPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJIndependentPickerView.m; sourceTree = "<group>"; };
+		785540DC1E7DCA9900F320E6 /* CJRelatedPickerRichView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJRelatedPickerRichView.h; sourceTree = "<group>"; };
+		785540DD1E7DCA9900F320E6 /* CJRelatedPickerRichView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJRelatedPickerRichView.m; sourceTree = "<group>"; };
+		785540DF1E7DCA9900F320E6 /* CJDefaultToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDefaultToolbar.h; sourceTree = "<group>"; };
+		785540E01E7DCA9900F320E6 /* CJDefaultToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDefaultToolbar.m; sourceTree = "<group>"; };
+		785540E21E7DCA9900F320E6 /* CJComponentDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJComponentDataModel.h; sourceTree = "<group>"; };
+		785540E31E7DCA9900F320E6 /* CJComponentDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJComponentDataModel.m; sourceTree = "<group>"; };
+		785540E41E7DCA9900F320E6 /* CJComponentDataModelUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJComponentDataModelUtil.h; sourceTree = "<group>"; };
+		785540E51E7DCA9900F320E6 /* CJComponentDataModelUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJComponentDataModelUtil.m; sourceTree = "<group>"; };
+		785540E61E7DCA9900F320E6 /* CJDataModelSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDataModelSample.h; sourceTree = "<group>"; };
+		785540E71E7DCA9900F320E6 /* CJDataModelSample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDataModelSample.m; sourceTree = "<group>"; };
+		785540E91E7DCA9900F320E6 /* area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = area.plist; sourceTree = "<group>"; };
+		785540EA1E7DCA9900F320E6 /* city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city.plist; sourceTree = "<group>"; };
+		785540EB1E7DCA9900F320E6 /* line_gray_pickerToolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line_gray_pickerToolbar.png; sourceTree = "<group>"; };
+		785540EC1E7DCA9900F320E6 /* line_gray_pickerToolbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "line_gray_pickerToolbar@2x.png"; sourceTree = "<group>"; };
 		7CFC980D5F47A54820A32812 /* libPods-CJPickerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CJPickerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1F60C217BF39A336659F486 /* Pods-CJPickerDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJPickerDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CJPickerDemoTests/Pods-CJPickerDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		FFF7E9411648FED90F9269C4 /* Pods-CJPickerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJPickerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CJPickerDemo/Pods-CJPickerDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -182,7 +180,7 @@
 				785540671E7DC53F00F320E6 /* AppDelegate.m */,
 				785540691E7DC53F00F320E6 /* ViewController.h */,
 				7855406A1E7DC53F00F320E6 /* ViewController.m */,
-				785540B01E7DC64600F320E6 /* CJPicker */,
+				785540D71E7DCA9900F320E6 /* CJPicker */,
 				785540961E7DC5F800F320E6 /* Controllers */,
 				785540A01E7DC5F800F320E6 /* Util */,
 				785540A51E7DC5F800F320E6 /* Views */,
@@ -256,55 +254,54 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		785540B01E7DC64600F320E6 /* CJPicker */ = {
+		785540D71E7DCA9900F320E6 /* CJPicker */ = {
 			isa = PBXGroup;
 			children = (
-				785540B11E7DC64600F320E6 /* Models */,
-				785540B81E7DC64600F320E6 /* Resources */,
-				785540BD1E7DC64600F320E6 /* Views */,
+				785540D81E7DCA9900F320E6 /* CJDefaultDatePicker.h */,
+				785540D91E7DCA9900F320E6 /* CJDefaultDatePicker.m */,
+				785540DA1E7DCA9900F320E6 /* CJIndependentPickerView.h */,
+				785540DB1E7DCA9900F320E6 /* CJIndependentPickerView.m */,
+				785540DC1E7DCA9900F320E6 /* CJRelatedPickerRichView.h */,
+				785540DD1E7DCA9900F320E6 /* CJRelatedPickerRichView.m */,
+				785540DE1E7DCA9900F320E6 /* CJToolbar */,
+				785540E11E7DCA9900F320E6 /* Models */,
+				785540E81E7DCA9900F320E6 /* Resources */,
 			);
 			name = CJPicker;
 			path = ../../../CJPicker;
 			sourceTree = "<group>";
 		};
-		785540B11E7DC64600F320E6 /* Models */ = {
+		785540DE1E7DCA9900F320E6 /* CJToolbar */ = {
 			isa = PBXGroup;
 			children = (
-				785540B21E7DC64600F320E6 /* CJComponentDataModel.h */,
-				785540B31E7DC64600F320E6 /* CJComponentDataModel.m */,
-				785540B41E7DC64600F320E6 /* CJComponentDataModelUtil.h */,
-				785540B51E7DC64600F320E6 /* CJComponentDataModelUtil.m */,
-				785540B61E7DC64600F320E6 /* CJDataModelSample.h */,
-				785540B71E7DC64600F320E6 /* CJDataModelSample.m */,
+				785540DF1E7DCA9900F320E6 /* CJDefaultToolbar.h */,
+				785540E01E7DCA9900F320E6 /* CJDefaultToolbar.m */,
+			);
+			path = CJToolbar;
+			sourceTree = "<group>";
+		};
+		785540E11E7DCA9900F320E6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				785540E21E7DCA9900F320E6 /* CJComponentDataModel.h */,
+				785540E31E7DCA9900F320E6 /* CJComponentDataModel.m */,
+				785540E41E7DCA9900F320E6 /* CJComponentDataModelUtil.h */,
+				785540E51E7DCA9900F320E6 /* CJComponentDataModelUtil.m */,
+				785540E61E7DCA9900F320E6 /* CJDataModelSample.h */,
+				785540E71E7DCA9900F320E6 /* CJDataModelSample.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		785540B81E7DC64600F320E6 /* Resources */ = {
+		785540E81E7DCA9900F320E6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				785540B91E7DC64600F320E6 /* area.plist */,
-				785540BA1E7DC64600F320E6 /* city.plist */,
-				785540BB1E7DC64600F320E6 /* line_gray_pickerToolbar.png */,
-				785540BC1E7DC64600F320E6 /* line_gray_pickerToolbar@2x.png */,
+				785540E91E7DCA9900F320E6 /* area.plist */,
+				785540EA1E7DCA9900F320E6 /* city.plist */,
+				785540EB1E7DCA9900F320E6 /* line_gray_pickerToolbar.png */,
+				785540EC1E7DCA9900F320E6 /* line_gray_pickerToolbar@2x.png */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		785540BD1E7DC64600F320E6 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				785540BE1E7DC64600F320E6 /* CJDefaultDatePicker.h */,
-				785540BF1E7DC64600F320E6 /* CJDefaultDatePicker.m */,
-				785540C01E7DC64600F320E6 /* CJDefaultToolbar.h */,
-				785540C11E7DC64600F320E6 /* CJDefaultToolbar.m */,
-				785540C21E7DC64600F320E6 /* CJIndependentPickerView.h */,
-				785540C31E7DC64600F320E6 /* CJIndependentPickerView.m */,
-				785540C41E7DC64600F320E6 /* CJIndependentPickerView.xib */,
-				785540C51E7DC64600F320E6 /* CJRelatedPickerRichView.h */,
-				785540C61E7DC64600F320E6 /* CJRelatedPickerRichView.m */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		89C091EA116A1744804C2005 /* Frameworks */ = {
@@ -431,15 +428,14 @@
 				785540731E7DC53F00F320E6 /* LaunchScreen.storyboard in Resources */,
 				785540AF1E7DC5F800F320E6 /* RadioButton_Slider.xib in Resources */,
 				785540AA1E7DC5F800F320E6 /* RelatedPickerViewController.xib in Resources */,
-				785540CB1E7DC64600F320E6 /* city.plist in Resources */,
-				785540D11E7DC64600F320E6 /* CJIndependentPickerView.xib in Resources */,
-				785540CC1E7DC64600F320E6 /* line_gray_pickerToolbar.png in Resources */,
+				785540F51E7DCA9900F320E6 /* city.plist in Resources */,
+				785540F61E7DCA9900F320E6 /* line_gray_pickerToolbar.png in Resources */,
 				785540AC1E7DC5F800F320E6 /* RelatedPickerViewController2.xib in Resources */,
 				785540701E7DC53F00F320E6 /* Assets.xcassets in Resources */,
-				785540CA1E7DC64600F320E6 /* area.plist in Resources */,
+				785540F41E7DCA9900F320E6 /* area.plist in Resources */,
 				785540A81E7DC5F800F320E6 /* PickerViewController.xib in Resources */,
 				7855406E1E7DC53F00F320E6 /* Main.storyboard in Resources */,
-				785540CD1E7DC64600F320E6 /* line_gray_pickerToolbar@2x.png in Resources */,
+				785540F71E7DCA9900F320E6 /* line_gray_pickerToolbar@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,21 +553,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				785540C81E7DC64600F320E6 /* CJComponentDataModelUtil.m in Sources */,
+				785540EE1E7DCA9900F320E6 /* CJIndependentPickerView.m in Sources */,
 				7855406B1E7DC53F00F320E6 /* ViewController.m in Sources */,
-				785540D01E7DC64600F320E6 /* CJIndependentPickerView.m in Sources */,
 				785540681E7DC53F00F320E6 /* AppDelegate.m in Sources */,
+				785540EF1E7DCA9900F320E6 /* CJRelatedPickerRichView.m in Sources */,
 				785540AD1E7DC5F800F320E6 /* AreaModel.m in Sources */,
 				785540A91E7DC5F800F320E6 /* RelatedPickerViewController.m in Sources */,
+				785540F01E7DCA9900F320E6 /* CJDefaultToolbar.m in Sources */,
+				785540ED1E7DCA9900F320E6 /* CJDefaultDatePicker.m in Sources */,
 				785540A71E7DC5F800F320E6 /* PickerViewController.m in Sources */,
-				785540D21E7DC64600F320E6 /* CJRelatedPickerRichView.m in Sources */,
 				785540651E7DC53F00F320E6 /* main.m in Sources */,
-				785540CF1E7DC64600F320E6 /* CJDefaultToolbar.m in Sources */,
+				785540F21E7DCA9900F320E6 /* CJComponentDataModelUtil.m in Sources */,
 				785540AB1E7DC5F800F320E6 /* RelatedPickerViewController2.m in Sources */,
 				785540AE1E7DC5F800F320E6 /* GroupDataUtil.m in Sources */,
-				785540C71E7DC64600F320E6 /* CJComponentDataModel.m in Sources */,
-				785540CE1E7DC64600F320E6 /* CJDefaultDatePicker.m in Sources */,
-				785540C91E7DC64600F320E6 /* CJDataModelSample.m in Sources */,
+				785540F31E7DCA9900F320E6 /* CJDataModelSample.m in Sources */,
+				785540F11E7DCA9900F320E6 /* CJComponentDataModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
