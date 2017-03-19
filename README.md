@@ -309,6 +309,9 @@ a pop view 一个带箭号的弹出视图
 ![Example](./Screenshots/CJPopoverView/CJPopoverView01.png "Demo")
 
 
+## 修改记录
+CJPopupView 在2.0.0之前实际上是现在CJPopupAction.
+
 
 
 
