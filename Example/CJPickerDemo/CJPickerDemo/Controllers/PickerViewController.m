@@ -39,6 +39,9 @@
     
     if (picker_birthday == nil) {
         picker_birthday = [[CJDefaultDatePicker alloc] init];
+        picker_birthday.toolbar.option = CJDefaultToolbarOptionConfirm | CJDefaultToolbarOptionValue | CJDefaultToolbarOptionCancel;
+        
+        __weak typeof(picker_birthday)weakpicker_birthday = picker_birthday;
         [picker_birthday setValueChangedHandel:^(UIDatePicker *datePicker) {
             UIDatePicker *m_datePicker = datePicker;
             
@@ -57,9 +60,17 @@
             }else if ([date compare:maximumDate] == NSOrderedDescending) {
                 NSLog(@"当前选择日期太大");
             }
+            
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+            dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+            NSString *dateString = [dateFormatter stringFromDate:localDate];
+            [weakpicker_birthday.toolbar updateShowingValue:dateString];
         }];
         
-        __weak typeof(picker_birthday)weakpicker_birthday = picker_birthday;
+        [picker_birthday.toolbar setCancelHandle:^{
+            [weakpicker_birthday cj_hidePopupView];
+        }];
+        
         [picker_birthday.toolbar setConfirmHandle:^{
             NSDate *selDate = weakpicker_birthday.datePicker.date;
             NSString *value = [NSString stringWithFormat:@"%@", selDate];
