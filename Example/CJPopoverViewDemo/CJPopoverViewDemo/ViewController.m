@@ -37,7 +37,7 @@
     NSArray *images = @[@"image1.png", @"image1.png", @"image1.png", @"image1.png"];
     CJPopoverView *pop = [[CJPopoverView alloc] initWithPoint:point titles:titles images:images];
     pop.selectRowAtIndex = ^(NSInteger index){
-        NSLog(@"select index:%d", index);
+        NSLog(@"select index:%ld", index);
         [btn setTitle:titles[index] forState:UIControlStateNormal];
     };
     [pop showPopoverView];
@@ -50,7 +50,7 @@
     NSArray *titles = @[@"pop_item1", @"pop_item2", @"pop_item3"];
     CJPopoverView *pop = [[CJPopoverView alloc] initWithPoint:point titles:titles images:nil];
     pop.selectRowAtIndex = ^(NSInteger index){
-        NSLog(@"select index:%d", index);
+        NSLog(@"select index:%ld", index);
         [btn setTitle:titles[index] forState:UIControlStateNormal];
     };
     [pop showPopoverView];
