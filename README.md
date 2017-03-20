@@ -1,6 +1,19 @@
 # CJPopup
 弹出视图(包含类似美团的弹出下拉控件CJPDropDownView)
 
+## 目录
+包含
+
+1. CJPicker
+
+	又包含
+	①、CJIndependentPickerView
+	
+	②、CJRelatedPickerView
+	
+2. CJPopoverView 带箭头的弹出视图
+3. CJDragView 可悬浮拖动的视图
+
 # CJPicker
 包含：CJPickerView（**CJIndependentPickerView** 和 **CJRelatedPickerView**） 和 CJDatePicker
 This is a view which contain UIPickerView/UIDatePicker and UIToolbar as subViews.
@@ -303,6 +316,22 @@ a pop view 一个带箭号的弹出视图
 
 ### CJPopoverView
 a pop view 一个带箭号的弹出视图
+
+
+## CJDragView
+可悬浮拖动的视图
+
+#### 用法
+
+1、把需要拖曳view的父类从原本继承UIView，改成继承CJDragView就OK了。
+
+2、通过dragEnable可设置是否允许拖曳动作；isKeepBounds是不是又自动黏贴边界效果(YES时自动黏贴边界，而且是最近的边界。NO时不会黏贴在边界，它是自由状态，跟随手指到任意位置，但是也不可以拖出规定的范围)；freeRect可以任意设置活动范围，默认为活动范围为父视图大小frame，
+
+3、拖动过程的回调block
+
+* 	开始拖动的回调	dragBeginBlock
+* 	拖动中回调		dragDuringBlock
+* 	结束拖动的回调 	dragEndBlock
 
 #### Screenshots
 <!--![Example](./Screenshots/Demo.gif "Demo")-->

@@ -16,10 +16,14 @@
 		784B7DA81E7FB03300299457 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 784B7DA61E7FB03300299457 /* LaunchScreen.storyboard */; };
 		784B7DB31E7FB03400299457 /* CJPopupViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B7DB21E7FB03400299457 /* CJPopupViewDemoTests.m */; };
 		784B7DBE1E7FB03400299457 /* CJPopupViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B7DBD1E7FB03400299457 /* CJPopupViewDemoUITests.m */; };
-		784B7DCD1E7FB19700299457 /* image1.png in Resources */ = {isa = PBXBuildFile; fileRef = 784B7DCC1E7FB19700299457 /* image1.png */; };
 		784B7DD11E7FB1B700299457 /* PopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B7DCF1E7FB1B700299457 /* PopoverViewController.m */; };
 		784B7DD21E7FB1B700299457 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 784B7DD01E7FB1B700299457 /* PopoverViewController.xib */; };
 		784B7DD61E7FB2C300299457 /* CJPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B7DD51E7FB2C300299457 /* CJPopoverView.m */; };
+		784B7DDA1E7FB4FF00299457 /* CJDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B7DD91E7FB4FF00299457 /* CJDragView.m */; };
+		784B7DDF1E7FB53200299457 /* DragViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B7DDD1E7FB53200299457 /* DragViewController.m */; };
+		784B7DE01E7FB53200299457 /* DragViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 784B7DDE1E7FB53200299457 /* DragViewController.xib */; };
+		784B7DE31E7FB8CA00299457 /* MyDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B7DE21E7FB8CA00299457 /* MyDragView.m */; };
+		784B7DE61E7FBAAE00299457 /* image1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 784B7DE51E7FBAAE00299457 /* image1@2x.png */; };
 		B8EA667DE102E685F4011547 /* libPods-CJPopupViewDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E5C687844C70BED0EA66D19 /* libPods-CJPopupViewDemoTests.a */; };
 /* End PBXBuildFile section */
 
@@ -61,12 +65,19 @@
 		784B7DB91E7FB03400299457 /* CJPopupViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CJPopupViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		784B7DBD1E7FB03400299457 /* CJPopupViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CJPopupViewDemoUITests.m; sourceTree = "<group>"; };
 		784B7DBF1E7FB03400299457 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		784B7DCC1E7FB19700299457 /* image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image1.png; sourceTree = "<group>"; };
 		784B7DCE1E7FB1B700299457 /* PopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverViewController.h; sourceTree = "<group>"; };
 		784B7DCF1E7FB1B700299457 /* PopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverViewController.m; sourceTree = "<group>"; };
 		784B7DD01E7FB1B700299457 /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
 		784B7DD41E7FB2C300299457 /* CJPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJPopoverView.h; sourceTree = "<group>"; };
 		784B7DD51E7FB2C300299457 /* CJPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJPopoverView.m; sourceTree = "<group>"; };
+		784B7DD81E7FB4FF00299457 /* CJDragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDragView.h; sourceTree = "<group>"; };
+		784B7DD91E7FB4FF00299457 /* CJDragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDragView.m; sourceTree = "<group>"; };
+		784B7DDC1E7FB53200299457 /* DragViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragViewController.h; sourceTree = "<group>"; };
+		784B7DDD1E7FB53200299457 /* DragViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragViewController.m; sourceTree = "<group>"; };
+		784B7DDE1E7FB53200299457 /* DragViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DragViewController.xib; sourceTree = "<group>"; };
+		784B7DE11E7FB8CA00299457 /* MyDragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDragView.h; sourceTree = "<group>"; };
+		784B7DE21E7FB8CA00299457 /* MyDragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDragView.m; sourceTree = "<group>"; };
+		784B7DE51E7FBAAE00299457 /* image1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image1@2x.png"; sourceTree = "<group>"; };
 		DC7CE3859CA1D59F0CE601CB /* Pods-CJPopupViewDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJPopupViewDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CJPopupViewDemoTests/Pods-CJPopupViewDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF3DD8F62A5654C1523C6708 /* Pods-CJPopupViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJPopupViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CJPopupViewDemo/Pods-CJPopupViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,11 +138,14 @@
 				784B7D9C1E7FB03300299457 /* AppDelegate.m */,
 				784B7D9E1E7FB03300299457 /* ViewController.h */,
 				784B7D9F1E7FB03300299457 /* ViewController.m */,
+				784B7DD71E7FB4FF00299457 /* CJDragView */,
 				784B7DD31E7FB2C300299457 /* CJPopoverView */,
 				784B7DCB1E7FB19700299457 /* CJPopoverViewDemo */,
 				784B7DA11E7FB03300299457 /* Main.storyboard */,
+				784B7DDB1E7FB52000299457 /* CJDragViewDemo */,
 				784B7DA41E7FB03300299457 /* Assets.xcassets */,
 				784B7DA61E7FB03300299457 /* LaunchScreen.storyboard */,
+				784B7DE41E7FBAAE00299457 /* Resources */,
 				784B7DA91E7FB03300299457 /* Info.plist */,
 				784B7D981E7FB03300299457 /* Supporting Files */,
 			);
@@ -167,7 +181,6 @@
 		784B7DCB1E7FB19700299457 /* CJPopoverViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				784B7DCC1E7FB19700299457 /* image1.png */,
 				784B7DCE1E7FB1B700299457 /* PopoverViewController.h */,
 				784B7DCF1E7FB1B700299457 /* PopoverViewController.m */,
 				784B7DD01E7FB1B700299457 /* PopoverViewController.xib */,
@@ -183,6 +196,36 @@
 			);
 			name = CJPopoverView;
 			path = ../../../CJPopoverView;
+			sourceTree = "<group>";
+		};
+		784B7DD71E7FB4FF00299457 /* CJDragView */ = {
+			isa = PBXGroup;
+			children = (
+				784B7DD81E7FB4FF00299457 /* CJDragView.h */,
+				784B7DD91E7FB4FF00299457 /* CJDragView.m */,
+			);
+			name = CJDragView;
+			path = ../../../CJDragView;
+			sourceTree = "<group>";
+		};
+		784B7DDB1E7FB52000299457 /* CJDragViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				784B7DDC1E7FB53200299457 /* DragViewController.h */,
+				784B7DDD1E7FB53200299457 /* DragViewController.m */,
+				784B7DDE1E7FB53200299457 /* DragViewController.xib */,
+				784B7DE11E7FB8CA00299457 /* MyDragView.h */,
+				784B7DE21E7FB8CA00299457 /* MyDragView.m */,
+			);
+			path = CJDragViewDemo;
+			sourceTree = "<group>";
+		};
+		784B7DE41E7FBAAE00299457 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				784B7DE51E7FBAAE00299457 /* image1@2x.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		A0566F94618EB16F74D99675 /* Pods */ = {
@@ -318,9 +361,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				784B7DA81E7FB03300299457 /* LaunchScreen.storyboard in Resources */,
-				784B7DCD1E7FB19700299457 /* image1.png in Resources */,
 				784B7DA51E7FB03300299457 /* Assets.xcassets in Resources */,
 				784B7DA31E7FB03300299457 /* Main.storyboard in Resources */,
+				784B7DE61E7FBAAE00299457 /* image1@2x.png in Resources */,
+				784B7DE01E7FB53200299457 /* DragViewController.xib in Resources */,
 				784B7DD21E7FB1B700299457 /* PopoverViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,7 +487,10 @@
 				784B7DA01E7FB03300299457 /* ViewController.m in Sources */,
 				784B7D9D1E7FB03300299457 /* AppDelegate.m in Sources */,
 				784B7DD61E7FB2C300299457 /* CJPopoverView.m in Sources */,
+				784B7DDA1E7FB4FF00299457 /* CJDragView.m in Sources */,
 				784B7D9A1E7FB03300299457 /* main.m in Sources */,
+				784B7DE31E7FB8CA00299457 /* MyDragView.m in Sources */,
+				784B7DDF1E7FB53200299457 /* DragViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,6 +641,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CJPopupViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.CJPopupViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -606,6 +654,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CJPopupViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.CJPopupViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

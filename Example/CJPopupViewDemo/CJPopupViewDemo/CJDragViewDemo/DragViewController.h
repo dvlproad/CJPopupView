@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  DragViewController.h
 //  CJPopupViewDemo
 //
-//  Created by dvlproad on 2016/3/20.
+//  Created by dvlproad on 2016/11/05.
 //  Copyright © 2016年 dvlproad. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface DragViewController : UIViewController
 
 @end
-

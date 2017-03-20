@@ -2,8 +2,8 @@
 //  CJPopupViewDemoTests.m
 //  CJPopupViewDemoTests
 //
-//  Created by 李超前 on 2017/3/20.
-//  Copyright © 2017年 dvlproad. All rights reserved.
+//  Created by dvlproad on 2016/3/20.
+//  Copyright © 2016年 dvlproad. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>

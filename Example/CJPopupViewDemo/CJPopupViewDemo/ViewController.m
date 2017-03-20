@@ -2,12 +2,13 @@
 //  ViewController.m
 //  CJPopupViewDemo
 //
-//  Created by 李超前 on 2017/3/20.
-//  Copyright © 2017年 dvlproad. All rights reserved.
+//  Created by dvlproad on 2016/3/20.
+//  Copyright © 2016年 dvlproad. All rights reserved.
 //
 
 #import "ViewController.h"
 #import "PopoverViewController.h"
+#import "DragViewController.h"
 
 @interface ViewController ()
 
@@ -26,6 +27,10 @@
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
+- (IBAction)goDragViewController:(id)sender {
+    DragViewController *viewController = [[DragViewController alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
