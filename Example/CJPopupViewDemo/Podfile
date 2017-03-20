@@ -1,0 +1,10 @@
+platform :ios, '7.0'
+#use_frameworks!
+
+target 'CJPopupViewDemo' do
+    
+end
+
+target 'CJPopupViewDemoTests' do
+   
+end
