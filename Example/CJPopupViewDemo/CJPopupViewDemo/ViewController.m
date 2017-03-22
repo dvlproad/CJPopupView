@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "PopoverViewController.h"
 #import "DragViewController.h"
+#import "MaskGuideHUDViewController.h"
 
 @interface ViewController ()
 
@@ -29,6 +30,11 @@
 
 - (IBAction)goDragViewController:(id)sender {
     DragViewController *viewController = [[DragViewController alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
+- (IBAction)goMaskGuideHUDViewController:(id)sender {
+    MaskGuideHUDViewController *viewController = [[MaskGuideHUDViewController alloc] initWithNibName:@"MaskGuideHUDViewController" bundle:nil];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 

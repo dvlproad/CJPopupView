@@ -13,6 +13,8 @@
 	
 2. CJPopoverView 带箭头的弹出视图
 3. CJDragView 可悬浮拖动的视图
+4. CJMaskGuideHUD 镂空的引导视图
+5. CJMaskGuideView 镂空的引导视图2
 
 # CJPicker
 包含：CJPickerView（**CJIndependentPickerView** 和 **CJRelatedPickerView**） 和 CJDatePicker

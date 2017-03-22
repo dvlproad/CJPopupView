@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ofX-te-LZO" customClass="SubGuideView">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="122"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iq7-I9-MZ5" userLabel="line">
+                    <rect key="frame" x="329" y="8" width="1" height="106"/>
+                    <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="fda-1v-lqw"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zru-98-6VO">
+                    <rect key="frame" x="338" y="0.0" width="44" height="122"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="N4A-J6-yUY"/>
+                    </constraints>
+                    <state key="normal" title="OK">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="confirm:" destination="ofX-te-LZO" eventType="touchUpInside" id="ru5-8D-msf"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Everyone gets a uniqune icon for every conversation" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJy-Y8-uvR">
+                    <rect key="frame" x="12" y="41" width="309" height="41"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="FJy-Y8-uvR" firstAttribute="leading" secondItem="ofX-te-LZO" secondAttribute="leading" constant="12" id="0Md-4c-n2R"/>
+                <constraint firstAttribute="bottom" secondItem="FJy-Y8-uvR" secondAttribute="bottom" constant="8" id="5mt-ds-ZjO"/>
+                <constraint firstItem="iq7-I9-MZ5" firstAttribute="top" secondItem="ofX-te-LZO" secondAttribute="top" constant="8" id="85p-BD-iCY"/>
+                <constraint firstAttribute="bottom" secondItem="iq7-I9-MZ5" secondAttribute="bottom" constant="8" id="8qA-aw-Nlc"/>
+                <constraint firstItem="zru-98-6VO" firstAttribute="leading" secondItem="iq7-I9-MZ5" secondAttribute="trailing" constant="8" id="IUb-C3-UdE"/>
+                <constraint firstItem="FJy-Y8-uvR" firstAttribute="centerY" secondItem="ofX-te-LZO" secondAttribute="centerY" id="PYV-6X-wHx"/>
+                <constraint firstAttribute="bottom" secondItem="zru-98-6VO" secondAttribute="bottom" id="QEg-IB-ybL"/>
+                <constraint firstItem="iq7-I9-MZ5" firstAttribute="leading" secondItem="FJy-Y8-uvR" secondAttribute="trailing" constant="8" id="UzL-YO-nME"/>
+                <constraint firstItem="FJy-Y8-uvR" firstAttribute="centerY" secondItem="ofX-te-LZO" secondAttribute="centerY" id="oJi-0j-gNp"/>
+                <constraint firstItem="zru-98-6VO" firstAttribute="top" secondItem="ofX-te-LZO" secondAttribute="top" id="omi-Vj-Edh"/>
+                <constraint firstAttribute="trailing" secondItem="zru-98-6VO" secondAttribute="trailing" constant="8" id="uSr-wm-bxL"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="5mt-ds-ZjO"/>
+                    <exclude reference="PYV-6X-wHx"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="confirmBtn" destination="zru-98-6VO" id="3wF-hO-PNz"/>
+                <outlet property="title" destination="FJy-Y8-uvR" id="AUV-FS-FIJ"/>
+            </connections>
+            <point key="canvasLocation" x="-64" y="35"/>
+        </view>
+    </objects>
+</document>

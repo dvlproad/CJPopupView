@@ -53,6 +53,14 @@
                                     <action selector="goDragViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q7u-r5-oZm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUp-5F-Rmu">
+                                <rect key="frame" x="35" y="293" width="285" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="MaskGuideHUDViewController"/>
+                                <connections>
+                                    <action selector="goMaskGuideHUDViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cJa-TN-IIq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
