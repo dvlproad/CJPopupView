@@ -157,14 +157,11 @@
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    if ([self.delegate respondsToSelector:@selector(cjMaskGuideHUD_TouchesBegan:withEvent:)]) { //告诉代理
-        [self.delegate cjMaskGuideHUD_TouchesBegan:touches withEvent:event];
-    }
-    
-    if (self.clickBlock) { //执行block
-        self.clickBlock();
+    if (self.touchBackgroundHandle) {
+        self.touchBackgroundHandle();
     }
 }
+
 #pragma mark - Other
 - (void)changeVisibleViewFrame
 {

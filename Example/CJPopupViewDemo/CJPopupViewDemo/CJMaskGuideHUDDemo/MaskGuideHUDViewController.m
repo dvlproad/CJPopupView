@@ -40,20 +40,29 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    CJMaskGuideHUD *hud = [CJMaskGuideHUD showHUDAddedTo:self.navigationController.view visibleView:self.middle2 animated:NO];
-    hud.edgeInsets = UIEdgeInsetsMake(5, 5, 5, 5);
-    hud.margin = 0;
-    hud.delegate = self;
-    hud.style = CJMaskGuideHUDBackgroundStyleSolidColor;
+    self.view.backgroundColor = [UIColor blackColor];
     
-    self.hud = hud;
-    self.hud.alpha = 1;
-    self.hud.userInteractionEnabled = YES;
+    [self addStepGuide];
 }
 
-#pragma makr - CJMaskGuideHUDDeledate
-- (void)cjMaskGuideHUD_TouchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
+/** 增加引导步骤 */
+- (void)addStepGuide {
+    CJMaskGuideHUD *hud = [CJMaskGuideHUD showHUDAddedTo:self.navigationController.view visibleView:self.middle2 animated:NO];
+    hud.style = CJMaskGuideHUDBackgroundStyleSolidColor;
+    hud.edgeInsets = UIEdgeInsetsMake(5, 5, 5, 5);
+    hud.margin = 0;
+    hud.alpha = 1;
+    hud.userInteractionEnabled = YES;
+    __weak typeof(self)weakSelf = self;
+    [hud setTouchBackgroundHandle:^{
+        [weakSelf stepGuideAction];
+    }];
+    
+    self.hud = hud;
+}
+
+/** 引导步骤的执行 */
+- (void)stepGuideAction {
     self.currentStep++;
     
     if (self.currentStep > self.totalStep) {

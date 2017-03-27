@@ -27,6 +27,10 @@
     hud.cornerRadius = visibleView.frame.size.width / 2.0;
     hud.alpha = 0.9;
     hud.blurColor = [UIColor colorWithWhite:0.5 alpha:0.5];
+    __weak typeof(hud)weakHud = hud;
+    [hud setTouchBackgroundHandle:^{
+        [weakHud hideAnimated:YES afterDelay:0];
+    }];
     
     CGFloat hudSubviewWidth = CGRectGetWidth(hud.frame);
     CGRect rect = [text boundingRectWithSize:CGSizeMake(hudSubviewWidth - 80, MAXFLOAT)
@@ -36,16 +40,26 @@
     CGFloat hudSubviewHeight = rect.size.height ;
     hudSubviewHeight = hudSubviewHeight > 44 ? hudSubviewHeight + 16 : 60;
     
-    SubGuideView *hudSubview = [[NSBundle mainBundle] loadNibNamed:@"SubGuideView" owner:nil options:nil].firstObject;
-    __weak typeof(hud) weakHud = hud;
+//    SubGuideView *hudSubview = [[NSBundle mainBundle] loadNibNamed:@"SubGuideView" owner:nil options:nil].firstObject;
+//    __weak typeof(hud) weakHud = hud;
+//    [hudSubview setText:text];
+//    hudSubview.confirmBlock = ^{
+//        [weakHud hide:YES];
+//    };
+    
+    UILabel *hudSubview = [[UILabel alloc] initWithFrame:CGRectZero];
+    [hudSubview setTextColor:[UIColor whiteColor]];
     [hudSubview setText:text];
-    hudSubview.confirmBlock = ^{
-        [weakHud hide:YES];
-    };
-    [hud addHUDSubview:hudSubview withHudSubviewHeight:hudSubviewHeight];
+    
+//    [hud addHUDSubview:hudSubview withHudSubviewHeight:hudSubviewHeight];
+    UIImage *image = [UIImage imageNamed:@"cjMaskGuideArrowDownWhite"];
+    image = [image resizableImageWithCapInsets:UIEdgeInsetsMake(0, image.size.width-1, 0, image.size.width) resizingMode:UIImageResizingModeStretch]; //拉伸模式
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
+    imageView.image = image;
+    [hud addHUDSubview:hudSubview withHeight:hudSubviewHeight andSubViewIndicator:imageView withWidth:29 position:CJMaskGuideIndicatorPositonStartInCenter];
     
     return hud;
 }
-
 
 @end

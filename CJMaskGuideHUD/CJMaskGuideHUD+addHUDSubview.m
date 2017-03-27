@@ -82,4 +82,60 @@
     [hud addSubview:hudSubview];
 }
 
+/** 完整的描述请参见文件头部 */
+- (void)addHUDSubview:(UIView *)hudSubview withHeight:(CGFloat)hudSubviewHeight andSubViewIndicator:(UIView *)indicator withWidth:(CGFloat)indicatorWidth position:(CJMaskGuideIndicatorPositon)indicatorPosition
+{
+    CJMaskGuideHUD *hud = self;
+    
+    /* 1、获取indicateFrame，随后再在indicateFrame中画指示标志，如箭号等 */
+    CGFloat indicateWidth = CGRectGetWidth(hud.lightFrame) + 2 * IndicateLeftMarginToLightFrame;
+    CGFloat indicateHeight = IndicateHeight;
+    CGFloat indicateMinX = CGRectGetMinX(hud.lightFrame) - IndicateLeftMarginToLightFrame;
+    CGFloat indicateMinY = 0;
+    
+    CGFloat centerY = CGRectGetMidY(hud.lightFrame);
+    if (centerY > hud.bounds.size.height / 2) { //上面
+        indicateMinY = CGRectGetMinY(hud.lightFrame) - indicateHeight;
+        
+    } else { //下面
+        indicateMinY = CGRectGetMaxY(hud.lightFrame);
+    }
+    
+    CGFloat indicatorOriginX = 0;
+    switch (indicatorPosition) {
+        case CJMaskGuideIndicatorPositonStartInLeft:
+        {
+            indicatorOriginX = indicateMinX;
+            break;
+        }
+        case CJMaskGuideIndicatorPositonStartInCenter:
+        {
+            indicatorOriginX = indicateMinX + indicateWidth/2;
+            break;
+        }
+        default:    //CJMaskGuideIndicatorPositonEndInRight
+        {
+            indicatorOriginX = indicateMinX + indicateWidth - indicatorWidth;
+            break;
+        }
+    }
+    CGRect indicateFrame = CGRectMake(indicatorOriginX, indicateMinY, indicatorWidth, indicateHeight);
+    [indicator setFrame:indicateFrame];
+    [self addSubview:indicator];
+    
+    /* 2、获取hudSubviewFrame，随后再在hudSubviewFrame中添加hudSubview等指示说明 */
+    CGFloat hudSubviewMinX = HUDSubviewFrameLeftMarginToHUD;
+    CGFloat hudSubviewWidth = CGRectGetWidth(hud.frame) - 2 * HUDSubviewFrameLeftMarginToHUD;
+    CGFloat hudSubviewMinY = 0;
+    if (centerY > hud.bounds.size.height / 2) { //上面
+        hudSubviewMinY = CGRectGetMinY(indicateFrame) - hudSubviewHeight;
+        
+    } else { //下面
+        hudSubviewMinY = CGRectGetMaxY(indicateFrame);
+    }
+    CGRect hudSubviewFrame = CGRectMake(hudSubviewMinX, hudSubviewMinY, hudSubviewWidth, hudSubviewHeight);
+    hudSubview.frame = hudSubviewFrame;
+    [hud addSubview:hudSubview];
+}
+
 @end

@@ -18,9 +18,6 @@ typedef NS_ENUM(NSInteger, CJMaskGuideHUDBlurStyle) {
     CJMaskGuideHUDBlurStyleDark     /**< 黑色 */
 };
 
-typedef void (^CJMaskGuideHUDClickBlock)();
-
-
 
 @protocol CJMaskGuideHUDDeledate <NSObject>
 
@@ -35,30 +32,39 @@ typedef void (^CJMaskGuideHUDClickBlock)();
 
 ///需要高亮的控件
 @property (nonatomic, weak) UIView *visibleView;
+
 ///高亮区域的偏移量
 @property (nonatomic, assign) UIEdgeInsets edgeInsets;
+
 ///高亮区域相对于原控件大多少（默认5）
 @property (nonatomic, assign) CGFloat margin;
+
 ///高亮区域是否是椭圆 （默认为 圆角为10 的矩形）
 @property (nonatomic, assign, getter=isOval) BOOL oval;
+
 ///背景样式
 @property (nonatomic, assign) CJMaskGuideHUDBackgroundStyle style;
-///代理
-@property (nonatomic, weak) id<CJMaskGuideHUDDeledate> delegate;
-///点击的操作
-@property (nonatomic, copy) CJMaskGuideHUDClickBlock clickBlock;
+
+@property (nonatomic, copy) void (^touchBackgroundHandle)(void);    ///点击的操作
+
 ///圆角 (默认10)
 @property (nonatomic, assign) CGFloat cornerRadius;
+
 ///线宽 (默认 5)
 @property (nonatomic, assign) CGFloat lineWidth;
+
 ///线的颜色（白色）
 @property (nonatomic, strong) UIColor *lineColor;
+
 ///毛玻璃样式
 @property (nonatomic, assign) CJMaskGuideHUDBlurStyle blurStyle;
+
 ///自定义毛玻璃颜色，使用blurColor,blurStyle失效(ios 8+)
 @property (nonatomic, strong) UIColor *blurColor;
+
 ///透明度
 @property (nonatomic, assign) CGFloat alpha;
+
 ///高亮区域的frame
 @property (nonatomic, assign, readonly) CGRect lightFrame;
 
