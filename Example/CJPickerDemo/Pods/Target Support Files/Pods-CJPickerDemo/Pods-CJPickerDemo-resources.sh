@@ -80,20 +80,26 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "CJFMDBFileManager/CJFMDBFileManager/demofmdb.db"
   install_resource "CJRadio/CJRadio/CJRadioButtons/images_arrow/arrowDown_dark.png"
   install_resource "CJRadio/CJRadio/CJRadioButtons/images_arrow/arrowLeft_gray@2x.png"
   install_resource "CJRadio/CJRadio/CJRadioButtons/images_arrow/arrowLeft_red@2x.png"
   install_resource "CJRadio/CJRadio/CJRadioButtons/images_arrow/arrowRight_gray@2x.png"
   install_resource "CJRadio/CJRadio/CJRadioButtons/images_arrow/arrowRight_red@2x.png"
   install_resource "CJRadio/CJRadio/CJRadioButtons/images_arrow/arrowUp_white@2x.png"
+  install_resource "DateTools/DateTools/DateTools/DateTools.bundle"
+  install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "CJFMDBFileManager/CJFMDBFileManager/demofmdb.db"
   install_resource "CJRadio/CJRadio/CJRadioButtons/images_arrow/arrowDown_dark.png"
   install_resource "CJRadio/CJRadio/CJRadioButtons/images_arrow/arrowLeft_gray@2x.png"
   install_resource "CJRadio/CJRadio/CJRadioButtons/images_arrow/arrowLeft_red@2x.png"
   install_resource "CJRadio/CJRadio/CJRadioButtons/images_arrow/arrowRight_gray@2x.png"
   install_resource "CJRadio/CJRadio/CJRadioButtons/images_arrow/arrowRight_red@2x.png"
   install_resource "CJRadio/CJRadio/CJRadioButtons/images_arrow/arrowUp_white@2x.png"
+  install_resource "DateTools/DateTools/DateTools/DateTools.bundle"
+  install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

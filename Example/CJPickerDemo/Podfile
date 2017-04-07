@@ -1,9 +1,28 @@
-platform :ios, '7.0'
+platform :ios, '8.0'
 #use_frameworks!
 
 target 'CJPickerDemo' do
     pod 'CJRadio', '~> 1.0.3' #已包含pod 'CJPopupAction', '~> 1.4.2'
     pod 'JSONModel', '~> 1.7.0'
+    
+    pod 'JGActionSheet', '~> 1.0.5'
+#    pod 'TRMJPhotoBrowser', '~> 1.0.6'
+    pod 'Masonry', '~> 1.0.2'
+    pod 'Mantle', '~> 2.1.0'
+    pod 'SDWebImage', '~> 4.0.0'
+    pod 'MBProgressHUD', '~> 1.0.0'
+    pod 'DateTools', '~> 2.0.0'
+    
+    pod 'CJBaseUIKit/UIColor+CJCategory', '~> 0.0.7'
+    pod 'CJBaseUIKit/UIImage+CJCategory', '~> 0.0.9'
+
+    pod 'CJFMDBFileManager', '~> 0.0.9'
+    pod 'PureLayout', '~> 3.0.2'
+    pod 'CJNetwork/AFHTTPSessionManager+CJCacheRequest', '~> 0.0.6' #用于登录
+    pod 'CJNetwork/AFHTTPSessionManager+CJUploadFile', '~> 0.0.6' #需要8.0以上
+    pod 'OpenUDID', '~> 1.0.0'
+
+    pod 'CJBaseScrollView/CJBaseCollectionViewCell', '~> 0.0.1' #需要8.0以上
 end
 
 target 'CJPickerDemoTests' do
