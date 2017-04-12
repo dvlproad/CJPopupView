@@ -10,6 +10,8 @@
 #import "PopoverViewController.h"
 #import "DragViewController.h"
 #import "MaskGuideHUDViewController.h"
+#import "AlertViewController.h"
+#import "SheetViewController.h"
 
 @interface ViewController ()
 
@@ -21,6 +23,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.title = NSLocalizedString(@"首页", nil);
+}
+
+- (IBAction)goAlertViewController:(id)sender {
+    AlertViewController *viewController = [[AlertViewController alloc]initWithNibName:@"AlertViewController" bundle:nil];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
+- (IBAction)goSheetViewController:(id)sender {
+    SheetViewController *viewController = [[SheetViewController alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 - (IBAction)goPopoverViewController:(id)sender {

@@ -1,15 +1,21 @@
 //
-//  CJBaseChooseCollectionView.h
-//  AllScrollViewDemo
+//  CJBaseCollectionView.h
+//  CJPickerDemo
 //
-//  Created by lichq on 2016/06/07.
-//  Copyright © 2016年 dvlproad. All rights reserved.
+//  Created by 李超前 on 2017/4/8.
+//  Copyright © 2017年 dvlproad. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "CJBaseCollectionView.h"
 
-@interface CJBaseChooseCollectionView : UICollectionView {
+typedef UICollectionViewCell* (^CJCollectionViewConfigureDataCellBlock)(UICollectionView *collectionView, NSIndexPath *indexPath);
+typedef UICollectionViewCell* (^CJCollectionViewConfigureExtraCellBlock)(UICollectionView *collectionView, NSIndexPath *indexPath);
+typedef void (^CJCollectionViewDidSelectDataItemBlock)(UICollectionView *collectionView, NSIndexPath *indexPath);
+typedef void (^CJCollectionViewDidSelectExtraItemBlock)(UICollectionView *collectionView, NSIndexPath *indexPath);
+
+@interface CJBaseCollectionView : UICollectionView
+
+{
     
 }
 @property (nonatomic, strong) NSMutableArray *dataModels;
@@ -26,8 +32,8 @@
 
 - (void)setupConfigureDataCellBlock:(CJCollectionViewConfigureDataCellBlock)configureDataCellBlock
             configureExtraCellBlock:(CJCollectionViewConfigureExtraCellBlock)configureExtraCellBlock
-         didSelectDataItemBlock:(CJCollectionViewDidSelectDataItemBlock)didSelectDataItemBlock
-        didSelectExtraItemBlock:(CJCollectionViewDidSelectExtraItemBlock)didSelectExtraItemBlock;
+             didSelectDataItemBlock:(CJCollectionViewDidSelectDataItemBlock)didSelectDataItemBlock
+            didSelectExtraItemBlock:(CJCollectionViewDidSelectExtraItemBlock)didSelectExtraItemBlock;
 
 + (CGFloat)heightForItem:(NSArray *)dataModels
    byCollectionViewWidth:(CGFloat)collectionViewWidth

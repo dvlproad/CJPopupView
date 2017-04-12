@@ -49,7 +49,7 @@ static NSString *CJUploadCollectionViewCellAddID = @"CJUploadCollectionViewCellA
     
     
     __weak typeof(self)weakSelf = self;
-    [self setupConfigureDataCellBlock:^UICollectionViewCell *(CJBaseChooseCollectionView *collectionView, NSIndexPath *indexPath) {
+    [self setupConfigureDataCellBlock:^UICollectionViewCell *(UICollectionView *collectionView, NSIndexPath *indexPath) {
         CJUploadCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CJUploadCollectionViewCellID forIndexPath:indexPath];
         CJImageUploadItem *baseUploadItem = [weakSelf.dataModels objectAtIndex:indexPath.row];
         baseUploadItem.indexPath = indexPath;
@@ -81,13 +81,13 @@ static NSString *CJUploadCollectionViewCellAddID = @"CJUploadCollectionViewCellA
         
         return cell;
         
-    } configureExtraCellBlock:^UICollectionViewCell *(CJBaseChooseCollectionView *collectionView, NSIndexPath *indexPath) {
+    } configureExtraCellBlock:^UICollectionViewCell *(UICollectionView *collectionView, NSIndexPath *indexPath) {
         CJUploadCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CJUploadCollectionViewCellAddID forIndexPath:indexPath];
         [cell.cjDeleteButton setImage:nil forState:UIControlStateNormal];
         
         return cell;
         
-    } didSelectDataItemBlock:^(CJBaseChooseCollectionView *collectionView, NSIndexPath *indexPath) {
+    } didSelectDataItemBlock:^(UICollectionView *collectionView, NSIndexPath *indexPath) {
         CJBaseUploadItem *baseUploadItem = [self.dataModels objectAtIndex:indexPath.row];
         if (baseUploadItem.uploadState == CJUploadStateFailure) {
             return;
@@ -97,7 +97,7 @@ static NSString *CJUploadCollectionViewCellAddID = @"CJUploadCollectionViewCellA
         
         [weakSelf didSelectMediaUploadItemAtIndexPath:indexPath];
         
-    } didSelectExtraItemBlock:^(CJBaseChooseCollectionView *collectionView, NSIndexPath *indexPath) {
+    } didSelectExtraItemBlock:^(UICollectionView *collectionView, NSIndexPath *indexPath) {
         
         [weakSelf addMediaUploadItemAction];
     }];

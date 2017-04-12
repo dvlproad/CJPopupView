@@ -16,6 +16,20 @@
 
 @implementation CJBaseCollectionViewCell
 
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+    [self commonInit];
+}
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        [self commonInit];
+    }
+    return self;
+}
+
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
@@ -27,7 +41,8 @@
 
 
 - (void)commonInit {
-    
+    [self addCJTextLabelWithPosition:CJTextLabelPositionBottom];
+    [self addCJImageViewWithEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
 }
 
 /**
@@ -77,8 +92,6 @@
                                   attribute:NSLayoutAttributeBottom
                                  multiplier:1
                                    constant:edgeInsets.bottom]];
-    
-    self.cjImageView.image = [UIImage imageNamed:@"cjCollectionViewCellAdd"];
 }
 
 /**
@@ -94,6 +107,7 @@
     self.cjTextLabel.layer.borderColor = [UIColor lightGrayColor].CGColor;
     self.cjTextLabel.layer.borderWidth = 1;
     self.cjTextLabel.layer.masksToBounds = YES;
+    self.cjTextLabel.textAlignment = NSTextAlignmentCenter;
     [parentView addSubview:self.cjTextLabel];
     self.cjTextLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [parentView addConstraint:
@@ -111,7 +125,7 @@
                                      toItem:parentView
                                   attribute:NSLayoutAttributeRight
                                  multiplier:1
-                                   constant:10]];
+                                   constant:-10]];
     
     switch (textLabelPosition) {
         case CJTextLabelPositionCenter:

@@ -40,7 +40,6 @@
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
-
 - (IBAction)goImagePickerViewController:(id)sender {
     ImagePickerViewController *viewController = [[ImagePickerViewController alloc] initWithNibName:@"ImagePickerViewController" bundle:nil];
     [self.navigationController pushViewController:viewController animated:YES];

@@ -36,6 +36,7 @@
 		784C15E51E8E722D0019D652 /* UIImage+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 784C15E41E8E722D0019D652 /* UIImage+Helper.m */; };
 		784C15E81E8E72B00019D652 /* HPUIKits.m in Sources */ = {isa = PBXBuildFile; fileRef = 784C15E71E8E72B00019D652 /* HPUIKits.m */; };
 		784C16251E8E75BB0019D652 /* CJFileChooseToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 784C16121E8E75BB0019D652 /* CJFileChooseToolBar.m */; };
+		784F41B41E9B274E000DEEBE /* CJBaseCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 784F41B31E9B274E000DEEBE /* CJBaseCollectionView.m */; };
 		785540651E7DC53F00F320E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 785540641E7DC53F00F320E6 /* main.m */; };
 		785540681E7DC53F00F320E6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 785540671E7DC53F00F320E6 /* AppDelegate.m */; };
 		7855406B1E7DC53F00F320E6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7855406A1E7DC53F00F320E6 /* ViewController.m */; };
@@ -157,6 +158,8 @@
 		784C15E71E8E72B00019D652 /* HPUIKits.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPUIKits.m; sourceTree = "<group>"; };
 		784C16111E8E75BB0019D652 /* CJFileChooseToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJFileChooseToolBar.h; sourceTree = "<group>"; };
 		784C16121E8E75BB0019D652 /* CJFileChooseToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJFileChooseToolBar.m; sourceTree = "<group>"; };
+		784F41B21E9B274E000DEEBE /* CJBaseCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJBaseCollectionView.h; sourceTree = "<group>"; };
+		784F41B31E9B274E000DEEBE /* CJBaseCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJBaseCollectionView.m; sourceTree = "<group>"; };
 		785540601E7DC53F00F320E6 /* CJPickerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CJPickerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		785540641E7DC53F00F320E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		785540661E7DC53F00F320E6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -382,6 +385,8 @@
 		784C15E91E8E75BB0019D652 /* CJFileChooseView */ = {
 			isa = PBXGroup;
 			children = (
+				784F41B21E9B274E000DEEBE /* CJBaseCollectionView.h */,
+				784F41B31E9B274E000DEEBE /* CJBaseCollectionView.m */,
 				78F3AA361E963BE0005D3DA4 /* CJBaseChooseCollectionView */,
 				784C16111E8E75BB0019D652 /* CJFileChooseToolBar.h */,
 				784C16121E8E75BB0019D652 /* CJFileChooseToolBar.m */,
@@ -611,10 +616,10 @@
 			isa = PBXGroup;
 			children = (
 				78F3AA371E963BE0005D3DA4 /* CJBaseChooseCollectionView.h */,
-				78F3AA3C1E963BE0005D3DA4 /* CJUploadImageCollectionView.h */,
 				78F3AA381E963BE0005D3DA4 /* CJBaseChooseCollectionView.m */,
-				78F3AA3D1E963BE0005D3DA4 /* CJUploadImageCollectionView.m */,
 				78F3AA391E963BE0005D3DA4 /* CJUploadCollectionViewCell */,
+				78F3AA3C1E963BE0005D3DA4 /* CJUploadImageCollectionView.h */,
+				78F3AA3D1E963BE0005D3DA4 /* CJUploadImageCollectionView.m */,
 				78F3AA3E1E963BE0005D3DA4 /* Resources */,
 			);
 			path = CJBaseChooseCollectionView;
@@ -941,6 +946,7 @@
 				784C15A31E8E49620019D652 /* MJPhotoBrowser.m in Sources */,
 				78F3A9E91E962035005D3DA4 /* IjinbuNetworkClient+Login.m in Sources */,
 				784C15E81E8E72B00019D652 /* HPUIKits.m in Sources */,
+				784F41B41E9B274E000DEEBE /* CJBaseCollectionView.m in Sources */,
 				785540F31E7DCA9900F320E6 /* CJDataModelSample.m in Sources */,
 				78F3A9F81E9620F4005D3DA4 /* CJResponseModel.m in Sources */,
 				784C15DB1E8E67150019D652 /* UIGlobal.m in Sources */,

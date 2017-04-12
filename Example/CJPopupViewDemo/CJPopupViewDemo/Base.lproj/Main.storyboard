@@ -38,7 +38,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYL-I0-BUu">
-                                <rect key="frame" x="92" y="156" width="170" height="30"/>
+                                <rect key="frame" x="92" y="242" width="170" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="PopoverViewController"/>
                                 <connections>
@@ -46,7 +46,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Xg-AY-1Wy">
-                                <rect key="frame" x="76" y="220" width="202" height="30"/>
+                                <rect key="frame" x="86" y="280" width="202" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="DragViewController"/>
                                 <connections>
@@ -54,11 +54,27 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUp-5F-Rmu">
-                                <rect key="frame" x="35" y="293" width="285" height="30"/>
+                                <rect key="frame" x="45" y="318" width="285" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="MaskGuideHUDViewController"/>
                                 <connections>
                                     <action selector="goMaskGuideHUDViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cJa-TN-IIq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TG2-8d-scb">
+                                <rect key="frame" x="35" y="118" width="285" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="AlertViewController"/>
+                                <connections>
+                                    <action selector="goAlertViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JSz-GG-Cib"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWv-lY-X0G">
+                                <rect key="frame" x="107" y="156" width="141" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="SheetViewController"/>
+                                <connections>
+                                    <action selector="goSheetViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sBp-NF-PdY"/>
                                 </connections>
                             </button>
                         </subviews>
