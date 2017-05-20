@@ -7,11 +7,14 @@
 //
 
 #import "ViewController.h"
-#import "PopoverViewController.h"
 
-#import "MaskGuideHUDViewController.h"
 #import "AlertViewController.h"
 #import "SheetViewController.h"
+
+#import "PopoverViewController.h"
+
+#import "NewerGuideViewController.h"
+#import "MaskGuideHUDViewController.h"
 
 @interface ViewController ()
 
@@ -37,6 +40,11 @@
 
 - (IBAction)goPopoverViewController:(id)sender {
     PopoverViewController *viewController = [[PopoverViewController alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
+- (IBAction)goNewerGuideViewController:(id)sender {
+    NewerGuideViewController *viewController = [[NewerGuideViewController alloc] initWithNibName:@"NewerGuideViewController" bundle:nil];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 

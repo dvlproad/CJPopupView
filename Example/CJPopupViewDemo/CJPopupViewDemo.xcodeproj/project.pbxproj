@@ -21,6 +21,9 @@
 		783659261ED066C600AF7591 /* CJMaskGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 783659161ED066C600AF7591 /* CJMaskGuideView.m */; };
 		783659271ED066C600AF7591 /* UIImage+Mask.m in Sources */ = {isa = PBXBuildFile; fileRef = 783659181ED066C600AF7591 /* UIImage+Mask.m */; };
 		783659281ED066C600AF7591 /* CJPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7836591B1ED066C600AF7591 /* CJPopoverView.m */; };
+		783659401ED06AD900AF7591 /* IMMaskButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7836593F1ED06AD900AF7591 /* IMMaskButton@2x.png */; };
+		783659451ED06AE200AF7591 /* NewerGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 783659431ED06AE200AF7591 /* NewerGuideViewController.m */; };
+		783659461ED06AE200AF7591 /* NewerGuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 783659441ED06AE200AF7591 /* NewerGuideViewController.xib */; };
 		784B7D9A1E7FB03300299457 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B7D991E7FB03300299457 /* main.m */; };
 		784B7D9D1E7FB03300299457 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B7D9C1E7FB03300299457 /* AppDelegate.m */; };
 		784B7DA01E7FB03300299457 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B7D9F1E7FB03300299457 /* ViewController.m */; };
@@ -90,6 +93,10 @@
 		783659181ED066C600AF7591 /* UIImage+Mask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Mask.m"; sourceTree = "<group>"; };
 		7836591A1ED066C600AF7591 /* CJPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJPopoverView.h; sourceTree = "<group>"; };
 		7836591B1ED066C600AF7591 /* CJPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJPopoverView.m; sourceTree = "<group>"; };
+		7836593F1ED06AD900AF7591 /* IMMaskButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IMMaskButton@2x.png"; sourceTree = "<group>"; };
+		783659421ED06AE200AF7591 /* NewerGuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewerGuideViewController.h; sourceTree = "<group>"; };
+		783659431ED06AE200AF7591 /* NewerGuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewerGuideViewController.m; sourceTree = "<group>"; };
+		783659441ED06AE200AF7591 /* NewerGuideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewerGuideViewController.xib; sourceTree = "<group>"; };
 		784B7D951E7FB03300299457 /* CJPopupViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CJPopupViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		784B7D991E7FB03300299457 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		784B7D9B1E7FB03300299457 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -227,6 +234,16 @@
 			path = CJPopoverView;
 			sourceTree = "<group>";
 		};
+		783659411ED06AE200AF7591 /* CJMaskGuideViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				783659421ED06AE200AF7591 /* NewerGuideViewController.h */,
+				783659431ED06AE200AF7591 /* NewerGuideViewController.m */,
+				783659441ED06AE200AF7591 /* NewerGuideViewController.xib */,
+			);
+			path = CJMaskGuideViewDemo;
+			sourceTree = "<group>";
+		};
 		784B7D8C1E7FB03300299457 = {
 			isa = PBXGroup;
 			children = (
@@ -297,6 +314,7 @@
 		784B7DE41E7FBAAE00299457 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7836593F1ED06AD900AF7591 /* IMMaskButton@2x.png */,
 				784B7DE51E7FBAAE00299457 /* image1@2x.png */,
 				784B7E0A1E8191C700299457 /* op1.jpg */,
 				784B7E0B1E8191C700299457 /* op2.jpg */,
@@ -311,6 +329,7 @@
 		78E57EEF1E9DD1E6002CDB9F /* Demos */ = {
 			isa = PBXGroup;
 			children = (
+				783659411ED06AE200AF7591 /* CJMaskGuideViewDemo */,
 				78E57F131E9DD4E4002CDB9F /* SheetDemo */,
 				78E57F0D1E9DD236002CDB9F /* AlertDemo */,
 				78E57EF61E9DD1E6002CDB9F /* CJMaskGuideHUDDemo */,
@@ -499,9 +518,11 @@
 				783659201ED066C600AF7591 /* CJMaskGuide_ArrowUp2@2x.png in Resources */,
 				7836591E1ED066C600AF7591 /* cjMaskGuideArrowDownWhite@2x.png in Resources */,
 				784B7E101E8191C700299457 /* op1.jpg in Resources */,
+				783659461ED06AE200AF7591 /* NewerGuideViewController.xib in Resources */,
 				78E57F081E9DD1E6002CDB9F /* MaskGuideHUDViewController.xib in Resources */,
 				784B7E121E8191C700299457 /* op3.jpg in Resources */,
 				784B7DA81E7FB03300299457 /* LaunchScreen.storyboard in Resources */,
+				783659401ED06AD900AF7591 /* IMMaskButton@2x.png in Resources */,
 				784B7E111E8191C700299457 /* op2.jpg in Resources */,
 				784B7DA51E7FB03300299457 /* Assets.xcassets in Resources */,
 				783659241ED066C600AF7591 /* CJMaskGuide_ButtonOK@2x.png in Resources */,
@@ -648,6 +669,7 @@
 				7836591D1ED066C600AF7591 /* CJMaskGuideHUD.m in Sources */,
 				784B7D9A1E7FB03300299457 /* main.m in Sources */,
 				78E57F061E9DD1E6002CDB9F /* CustomMaskGuideHUD.m in Sources */,
+				783659451ED06AE200AF7591 /* NewerGuideViewController.m in Sources */,
 				783659261ED066C600AF7591 /* CJMaskGuideView.m in Sources */,
 				78E57F111E9DD319002CDB9F /* AlertViewController.m in Sources */,
 			);

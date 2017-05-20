@@ -69,6 +69,14 @@
                                     <action selector="goSheetViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sBp-NF-PdY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDR-ql-bKs">
+                                <rect key="frame" x="39" y="280" width="291" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="goNewerGuideViewController"/>
+                                <connections>
+                                    <action selector="goNewerGuideViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7y6-xh-ATW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
