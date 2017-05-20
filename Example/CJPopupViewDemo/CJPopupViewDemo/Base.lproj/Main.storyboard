@@ -45,14 +45,6 @@
                                     <action selector="goPopoverViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QiV-Eg-4wT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Xg-AY-1Wy">
-                                <rect key="frame" x="86" y="280" width="202" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="DragViewController"/>
-                                <connections>
-                                    <action selector="goDragViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q7u-r5-oZm"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUp-5F-Rmu">
                                 <rect key="frame" x="45" y="318" width="285" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

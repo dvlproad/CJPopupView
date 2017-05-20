@@ -8,7 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		3E0C8BBB4FE893BBDAD3E989 /* libPods-CJPopupViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A56CCC1C1850BEC4C894854 /* libPods-CJPopupViewDemo.a */; };
-		782962EC1E88BA1100A61542 /* cjMaskGuideArrowDownWhite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 782962EB1E88BA1100A61542 /* cjMaskGuideArrowDownWhite@2x.png */; };
+		7836591C1ED066C600AF7591 /* CJMaskGuideHUD+addHUDSubview.m in Sources */ = {isa = PBXBuildFile; fileRef = 783659071ED066C600AF7591 /* CJMaskGuideHUD+addHUDSubview.m */; };
+		7836591D1ED066C600AF7591 /* CJMaskGuideHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 783659091ED066C600AF7591 /* CJMaskGuideHUD.m */; };
+		7836591E1ED066C600AF7591 /* cjMaskGuideArrowDownWhite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7836590B1ED066C600AF7591 /* cjMaskGuideArrowDownWhite@2x.png */; };
+		7836591F1ED066C600AF7591 /* CJMaskGuide_ArrowDown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7836590E1ED066C600AF7591 /* CJMaskGuide_ArrowDown@2x.png */; };
+		783659201ED066C600AF7591 /* CJMaskGuide_ArrowUp2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7836590F1ED066C600AF7591 /* CJMaskGuide_ArrowUp2@2x.png */; };
+		783659211ED066C600AF7591 /* CJMaskGuide_ArrowUp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 783659101ED066C600AF7591 /* CJMaskGuide_ArrowUp@2x.png */; };
+		783659221ED066C600AF7591 /* CJMaskGuide_ButtonMask_black@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 783659111ED066C600AF7591 /* CJMaskGuide_ButtonMask_black@2x.png */; };
+		783659231ED066C600AF7591 /* CJMaskGuide_ButtonMask_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 783659121ED066C600AF7591 /* CJMaskGuide_ButtonMask_white@2x.png */; };
+		783659241ED066C600AF7591 /* CJMaskGuide_ButtonOK@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 783659131ED066C600AF7591 /* CJMaskGuide_ButtonOK@2x.png */; };
+		783659251ED066C600AF7591 /* CJMaskGuide_ButtonOKBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 783659141ED066C600AF7591 /* CJMaskGuide_ButtonOKBG@2x.png */; };
+		783659261ED066C600AF7591 /* CJMaskGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 783659161ED066C600AF7591 /* CJMaskGuideView.m */; };
+		783659271ED066C600AF7591 /* UIImage+Mask.m in Sources */ = {isa = PBXBuildFile; fileRef = 783659181ED066C600AF7591 /* UIImage+Mask.m */; };
+		783659281ED066C600AF7591 /* CJPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7836591B1ED066C600AF7591 /* CJPopoverView.m */; };
 		784B7D9A1E7FB03300299457 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B7D991E7FB03300299457 /* main.m */; };
 		784B7D9D1E7FB03300299457 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B7D9C1E7FB03300299457 /* AppDelegate.m */; };
 		784B7DA01E7FB03300299457 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B7D9F1E7FB03300299457 /* ViewController.m */; };
@@ -17,20 +29,13 @@
 		784B7DA81E7FB03300299457 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 784B7DA61E7FB03300299457 /* LaunchScreen.storyboard */; };
 		784B7DB31E7FB03400299457 /* CJPopupViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B7DB21E7FB03400299457 /* CJPopupViewDemoTests.m */; };
 		784B7DBE1E7FB03400299457 /* CJPopupViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B7DBD1E7FB03400299457 /* CJPopupViewDemoUITests.m */; };
-		784B7DD61E7FB2C300299457 /* CJPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B7DD51E7FB2C300299457 /* CJPopoverView.m */; };
-		784B7DDA1E7FB4FF00299457 /* CJDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B7DD91E7FB4FF00299457 /* CJDragView.m */; };
 		784B7DE61E7FBAAE00299457 /* image1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 784B7DE51E7FBAAE00299457 /* image1@2x.png */; };
-		784B7E061E8182A200299457 /* CJMaskGuideHUD+addHUDSubview.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B7E031E8182A200299457 /* CJMaskGuideHUD+addHUDSubview.m */; };
-		784B7E071E8182A200299457 /* CJMaskGuideHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B7E051E8182A200299457 /* CJMaskGuideHUD.m */; };
 		784B7E101E8191C700299457 /* op1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 784B7E0A1E8191C700299457 /* op1.jpg */; };
 		784B7E111E8191C700299457 /* op2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 784B7E0B1E8191C700299457 /* op2.jpg */; };
 		784B7E121E8191C700299457 /* op3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 784B7E0C1E8191C700299457 /* op3.jpg */; };
 		784B7E131E8191C700299457 /* op4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 784B7E0D1E8191C700299457 /* op4.jpg */; };
 		784B7E141E8191C700299457 /* op5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 784B7E0E1E8191C700299457 /* op5.jpg */; };
 		784B7E151E8191C700299457 /* op6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 784B7E0F1E8191C700299457 /* op6.jpg */; };
-		78E57F031E9DD1E6002CDB9F /* DragViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E57EF21E9DD1E6002CDB9F /* DragViewController.m */; };
-		78E57F041E9DD1E6002CDB9F /* DragViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78E57EF31E9DD1E6002CDB9F /* DragViewController.xib */; };
-		78E57F051E9DD1E6002CDB9F /* MyDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E57EF51E9DD1E6002CDB9F /* MyDragView.m */; };
 		78E57F061E9DD1E6002CDB9F /* CustomMaskGuideHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E57EF81E9DD1E6002CDB9F /* CustomMaskGuideHUD.m */; };
 		78E57F071E9DD1E6002CDB9F /* MaskGuideHUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E57EFA1E9DD1E6002CDB9F /* MaskGuideHUDViewController.m */; };
 		78E57F081E9DD1E6002CDB9F /* MaskGuideHUDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78E57EFB1E9DD1E6002CDB9F /* MaskGuideHUDViewController.xib */; };
@@ -67,7 +72,24 @@
 		2E5C687844C70BED0EA66D19 /* libPods-CJPopupViewDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CJPopupViewDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		473BD9FC3E5E15C5EF042AE2 /* Pods-CJPopupViewDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJPopupViewDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CJPopupViewDemoTests/Pods-CJPopupViewDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		53278C475033A6887EA344B5 /* Pods-CJPopupViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJPopupViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CJPopupViewDemo/Pods-CJPopupViewDemo.release.xcconfig"; sourceTree = "<group>"; };
-		782962EB1E88BA1100A61542 /* cjMaskGuideArrowDownWhite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cjMaskGuideArrowDownWhite@2x.png"; sourceTree = "<group>"; };
+		783659061ED066C600AF7591 /* CJMaskGuideHUD+addHUDSubview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CJMaskGuideHUD+addHUDSubview.h"; sourceTree = "<group>"; };
+		783659071ED066C600AF7591 /* CJMaskGuideHUD+addHUDSubview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CJMaskGuideHUD+addHUDSubview.m"; sourceTree = "<group>"; };
+		783659081ED066C600AF7591 /* CJMaskGuideHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJMaskGuideHUD.h; sourceTree = "<group>"; };
+		783659091ED066C600AF7591 /* CJMaskGuideHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJMaskGuideHUD.m; sourceTree = "<group>"; };
+		7836590B1ED066C600AF7591 /* cjMaskGuideArrowDownWhite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cjMaskGuideArrowDownWhite@2x.png"; sourceTree = "<group>"; };
+		7836590E1ED066C600AF7591 /* CJMaskGuide_ArrowDown@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CJMaskGuide_ArrowDown@2x.png"; sourceTree = "<group>"; };
+		7836590F1ED066C600AF7591 /* CJMaskGuide_ArrowUp2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CJMaskGuide_ArrowUp2@2x.png"; sourceTree = "<group>"; };
+		783659101ED066C600AF7591 /* CJMaskGuide_ArrowUp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CJMaskGuide_ArrowUp@2x.png"; sourceTree = "<group>"; };
+		783659111ED066C600AF7591 /* CJMaskGuide_ButtonMask_black@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CJMaskGuide_ButtonMask_black@2x.png"; sourceTree = "<group>"; };
+		783659121ED066C600AF7591 /* CJMaskGuide_ButtonMask_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CJMaskGuide_ButtonMask_white@2x.png"; sourceTree = "<group>"; };
+		783659131ED066C600AF7591 /* CJMaskGuide_ButtonOK@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CJMaskGuide_ButtonOK@2x.png"; sourceTree = "<group>"; };
+		783659141ED066C600AF7591 /* CJMaskGuide_ButtonOKBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CJMaskGuide_ButtonOKBG@2x.png"; sourceTree = "<group>"; };
+		783659151ED066C600AF7591 /* CJMaskGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJMaskGuideView.h; sourceTree = "<group>"; };
+		783659161ED066C600AF7591 /* CJMaskGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJMaskGuideView.m; sourceTree = "<group>"; };
+		783659171ED066C600AF7591 /* UIImage+Mask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Mask.h"; sourceTree = "<group>"; };
+		783659181ED066C600AF7591 /* UIImage+Mask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Mask.m"; sourceTree = "<group>"; };
+		7836591A1ED066C600AF7591 /* CJPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJPopoverView.h; sourceTree = "<group>"; };
+		7836591B1ED066C600AF7591 /* CJPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJPopoverView.m; sourceTree = "<group>"; };
 		784B7D951E7FB03300299457 /* CJPopupViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CJPopupViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		784B7D991E7FB03300299457 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		784B7D9B1E7FB03300299457 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -84,26 +106,13 @@
 		784B7DB91E7FB03400299457 /* CJPopupViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CJPopupViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		784B7DBD1E7FB03400299457 /* CJPopupViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CJPopupViewDemoUITests.m; sourceTree = "<group>"; };
 		784B7DBF1E7FB03400299457 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		784B7DD41E7FB2C300299457 /* CJPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJPopoverView.h; sourceTree = "<group>"; };
-		784B7DD51E7FB2C300299457 /* CJPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJPopoverView.m; sourceTree = "<group>"; };
-		784B7DD81E7FB4FF00299457 /* CJDragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDragView.h; sourceTree = "<group>"; };
-		784B7DD91E7FB4FF00299457 /* CJDragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDragView.m; sourceTree = "<group>"; };
 		784B7DE51E7FBAAE00299457 /* image1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image1@2x.png"; sourceTree = "<group>"; };
-		784B7E021E8182A200299457 /* CJMaskGuideHUD+addHUDSubview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CJMaskGuideHUD+addHUDSubview.h"; sourceTree = "<group>"; };
-		784B7E031E8182A200299457 /* CJMaskGuideHUD+addHUDSubview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CJMaskGuideHUD+addHUDSubview.m"; sourceTree = "<group>"; };
-		784B7E041E8182A200299457 /* CJMaskGuideHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJMaskGuideHUD.h; sourceTree = "<group>"; };
-		784B7E051E8182A200299457 /* CJMaskGuideHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJMaskGuideHUD.m; sourceTree = "<group>"; };
 		784B7E0A1E8191C700299457 /* op1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = op1.jpg; sourceTree = "<group>"; };
 		784B7E0B1E8191C700299457 /* op2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = op2.jpg; sourceTree = "<group>"; };
 		784B7E0C1E8191C700299457 /* op3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = op3.jpg; sourceTree = "<group>"; };
 		784B7E0D1E8191C700299457 /* op4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = op4.jpg; sourceTree = "<group>"; };
 		784B7E0E1E8191C700299457 /* op5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = op5.jpg; sourceTree = "<group>"; };
 		784B7E0F1E8191C700299457 /* op6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = op6.jpg; sourceTree = "<group>"; };
-		78E57EF11E9DD1E6002CDB9F /* DragViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragViewController.h; sourceTree = "<group>"; };
-		78E57EF21E9DD1E6002CDB9F /* DragViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragViewController.m; sourceTree = "<group>"; };
-		78E57EF31E9DD1E6002CDB9F /* DragViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DragViewController.xib; sourceTree = "<group>"; };
-		78E57EF41E9DD1E6002CDB9F /* MyDragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDragView.h; sourceTree = "<group>"; };
-		78E57EF51E9DD1E6002CDB9F /* MyDragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDragView.m; sourceTree = "<group>"; };
 		78E57EF71E9DD1E6002CDB9F /* CustomMaskGuideHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomMaskGuideHUD.h; sourceTree = "<group>"; };
 		78E57EF81E9DD1E6002CDB9F /* CustomMaskGuideHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomMaskGuideHUD.m; sourceTree = "<group>"; };
 		78E57EF91E9DD1E6002CDB9F /* MaskGuideHUDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskGuideHUDViewController.h; sourceTree = "<group>"; };
@@ -152,12 +161,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		782962EA1E88BA1100A61542 /* Resources */ = {
+		783659041ED066C600AF7591 /* CJPopupView */ = {
 			isa = PBXGroup;
 			children = (
-				782962EB1E88BA1100A61542 /* cjMaskGuideArrowDownWhite@2x.png */,
+				783659051ED066C600AF7591 /* CJMaskGuideHUD */,
+				7836590C1ED066C600AF7591 /* CJMaskGuideView */,
+				783659191ED066C600AF7591 /* CJPopoverView */,
+			);
+			name = CJPopupView;
+			path = ../../../CJPopupView;
+			sourceTree = "<group>";
+		};
+		783659051ED066C600AF7591 /* CJMaskGuideHUD */ = {
+			isa = PBXGroup;
+			children = (
+				783659061ED066C600AF7591 /* CJMaskGuideHUD+addHUDSubview.h */,
+				783659071ED066C600AF7591 /* CJMaskGuideHUD+addHUDSubview.m */,
+				783659081ED066C600AF7591 /* CJMaskGuideHUD.h */,
+				783659091ED066C600AF7591 /* CJMaskGuideHUD.m */,
+				7836590A1ED066C600AF7591 /* Resources */,
+			);
+			path = CJMaskGuideHUD;
+			sourceTree = "<group>";
+		};
+		7836590A1ED066C600AF7591 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7836590B1ED066C600AF7591 /* cjMaskGuideArrowDownWhite@2x.png */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		7836590C1ED066C600AF7591 /* CJMaskGuideView */ = {
+			isa = PBXGroup;
+			children = (
+				7836590D1ED066C600AF7591 /* CJMaskGuideResources */,
+				783659151ED066C600AF7591 /* CJMaskGuideView.h */,
+				783659161ED066C600AF7591 /* CJMaskGuideView.m */,
+				783659171ED066C600AF7591 /* UIImage+Mask.h */,
+				783659181ED066C600AF7591 /* UIImage+Mask.m */,
+			);
+			path = CJMaskGuideView;
+			sourceTree = "<group>";
+		};
+		7836590D1ED066C600AF7591 /* CJMaskGuideResources */ = {
+			isa = PBXGroup;
+			children = (
+				7836590E1ED066C600AF7591 /* CJMaskGuide_ArrowDown@2x.png */,
+				7836590F1ED066C600AF7591 /* CJMaskGuide_ArrowUp2@2x.png */,
+				783659101ED066C600AF7591 /* CJMaskGuide_ArrowUp@2x.png */,
+				783659111ED066C600AF7591 /* CJMaskGuide_ButtonMask_black@2x.png */,
+				783659121ED066C600AF7591 /* CJMaskGuide_ButtonMask_white@2x.png */,
+				783659131ED066C600AF7591 /* CJMaskGuide_ButtonOK@2x.png */,
+				783659141ED066C600AF7591 /* CJMaskGuide_ButtonOKBG@2x.png */,
+			);
+			path = CJMaskGuideResources;
+			sourceTree = "<group>";
+		};
+		783659191ED066C600AF7591 /* CJPopoverView */ = {
+			isa = PBXGroup;
+			children = (
+				7836591A1ED066C600AF7591 /* CJPopoverView.h */,
+				7836591B1ED066C600AF7591 /* CJPopoverView.m */,
+			);
+			path = CJPopoverView;
 			sourceTree = "<group>";
 		};
 		784B7D8C1E7FB03300299457 = {
@@ -189,10 +256,8 @@
 				784B7D9C1E7FB03300299457 /* AppDelegate.m */,
 				784B7D9E1E7FB03300299457 /* ViewController.h */,
 				784B7D9F1E7FB03300299457 /* ViewController.m */,
-				784B7E011E8182A200299457 /* CJMaskGuideHUD */,
-				784B7DD71E7FB4FF00299457 /* CJDragView */,
-				784B7DD31E7FB2C300299457 /* CJPopoverView */,
 				784B7DA11E7FB03300299457 /* Main.storyboard */,
+				783659041ED066C600AF7591 /* CJPopupView */,
 				784B7DA41E7FB03300299457 /* Assets.xcassets */,
 				784B7DA61E7FB03300299457 /* LaunchScreen.storyboard */,
 				78E57EEF1E9DD1E6002CDB9F /* Demos */,
@@ -229,26 +294,6 @@
 			path = CJPopupViewDemoUITests;
 			sourceTree = "<group>";
 		};
-		784B7DD31E7FB2C300299457 /* CJPopoverView */ = {
-			isa = PBXGroup;
-			children = (
-				784B7DD41E7FB2C300299457 /* CJPopoverView.h */,
-				784B7DD51E7FB2C300299457 /* CJPopoverView.m */,
-			);
-			name = CJPopoverView;
-			path = ../../../CJPopoverView;
-			sourceTree = "<group>";
-		};
-		784B7DD71E7FB4FF00299457 /* CJDragView */ = {
-			isa = PBXGroup;
-			children = (
-				784B7DD81E7FB4FF00299457 /* CJDragView.h */,
-				784B7DD91E7FB4FF00299457 /* CJDragView.m */,
-			);
-			name = CJDragView;
-			path = ../../../CJDragView;
-			sourceTree = "<group>";
-		};
 		784B7DE41E7FBAAE00299457 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,41 +308,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		784B7E011E8182A200299457 /* CJMaskGuideHUD */ = {
-			isa = PBXGroup;
-			children = (
-				784B7E041E8182A200299457 /* CJMaskGuideHUD.h */,
-				784B7E051E8182A200299457 /* CJMaskGuideHUD.m */,
-				784B7E021E8182A200299457 /* CJMaskGuideHUD+addHUDSubview.h */,
-				784B7E031E8182A200299457 /* CJMaskGuideHUD+addHUDSubview.m */,
-				782962EA1E88BA1100A61542 /* Resources */,
-			);
-			name = CJMaskGuideHUD;
-			path = ../../../CJMaskGuideHUD;
-			sourceTree = "<group>";
-		};
 		78E57EEF1E9DD1E6002CDB9F /* Demos */ = {
 			isa = PBXGroup;
 			children = (
 				78E57F131E9DD4E4002CDB9F /* SheetDemo */,
 				78E57F0D1E9DD236002CDB9F /* AlertDemo */,
-				78E57EF01E9DD1E6002CDB9F /* CJDragViewDemo */,
 				78E57EF61E9DD1E6002CDB9F /* CJMaskGuideHUDDemo */,
 				78E57EFF1E9DD1E6002CDB9F /* CJPopoverViewDemo */,
 			);
 			path = Demos;
-			sourceTree = "<group>";
-		};
-		78E57EF01E9DD1E6002CDB9F /* CJDragViewDemo */ = {
-			isa = PBXGroup;
-			children = (
-				78E57EF11E9DD1E6002CDB9F /* DragViewController.h */,
-				78E57EF21E9DD1E6002CDB9F /* DragViewController.m */,
-				78E57EF31E9DD1E6002CDB9F /* DragViewController.xib */,
-				78E57EF41E9DD1E6002CDB9F /* MyDragView.h */,
-				78E57EF51E9DD1E6002CDB9F /* MyDragView.m */,
-			);
-			path = CJDragViewDemo;
 			sourceTree = "<group>";
 		};
 		78E57EF61E9DD1E6002CDB9F /* CJMaskGuideHUDDemo */ = {
@@ -477,22 +496,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				783659201ED066C600AF7591 /* CJMaskGuide_ArrowUp2@2x.png in Resources */,
+				7836591E1ED066C600AF7591 /* cjMaskGuideArrowDownWhite@2x.png in Resources */,
 				784B7E101E8191C700299457 /* op1.jpg in Resources */,
 				78E57F081E9DD1E6002CDB9F /* MaskGuideHUDViewController.xib in Resources */,
 				784B7E121E8191C700299457 /* op3.jpg in Resources */,
 				784B7DA81E7FB03300299457 /* LaunchScreen.storyboard in Resources */,
-				782962EC1E88BA1100A61542 /* cjMaskGuideArrowDownWhite@2x.png in Resources */,
-				78E57F041E9DD1E6002CDB9F /* DragViewController.xib in Resources */,
 				784B7E111E8191C700299457 /* op2.jpg in Resources */,
 				784B7DA51E7FB03300299457 /* Assets.xcassets in Resources */,
+				783659241ED066C600AF7591 /* CJMaskGuide_ButtonOK@2x.png in Resources */,
+				783659251ED066C600AF7591 /* CJMaskGuide_ButtonOKBG@2x.png in Resources */,
 				78E57F181E9DD509002CDB9F /* SheetViewController.xib in Resources */,
 				784B7E151E8191C700299457 /* op6.jpg in Resources */,
+				783659231ED066C600AF7591 /* CJMaskGuide_ButtonMask_white@2x.png in Resources */,
+				783659221ED066C600AF7591 /* CJMaskGuide_ButtonMask_black@2x.png in Resources */,
 				784B7DA31E7FB03300299457 /* Main.storyboard in Resources */,
 				784B7E141E8191C700299457 /* op5.jpg in Resources */,
 				784B7DE61E7FBAAE00299457 /* image1@2x.png in Resources */,
 				78E57F0A1E9DD1E6002CDB9F /* SubGuideView.xib in Resources */,
 				78E57F121E9DD319002CDB9F /* AlertViewController.xib in Resources */,
+				783659211ED066C600AF7591 /* CJMaskGuide_ArrowUp@2x.png in Resources */,
 				784B7E131E8191C700299457 /* op4.jpg in Resources */,
+				7836591F1ED066C600AF7591 /* CJMaskGuide_ArrowDown@2x.png in Resources */,
 				78E57F0C1E9DD1E6002CDB9F /* PopoverViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -611,20 +636,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				783659271ED066C600AF7591 /* UIImage+Mask.m in Sources */,
 				78E57F171E9DD509002CDB9F /* SheetViewController.m in Sources */,
 				784B7DA01E7FB03300299457 /* ViewController.m in Sources */,
 				784B7D9D1E7FB03300299457 /* AppDelegate.m in Sources */,
 				78E57F071E9DD1E6002CDB9F /* MaskGuideHUDViewController.m in Sources */,
-				784B7E061E8182A200299457 /* CJMaskGuideHUD+addHUDSubview.m in Sources */,
-				784B7DD61E7FB2C300299457 /* CJPopoverView.m in Sources */,
-				78E57F031E9DD1E6002CDB9F /* DragViewController.m in Sources */,
-				784B7DDA1E7FB4FF00299457 /* CJDragView.m in Sources */,
-				78E57F051E9DD1E6002CDB9F /* MyDragView.m in Sources */,
+				783659281ED066C600AF7591 /* CJPopoverView.m in Sources */,
 				78E57F091E9DD1E6002CDB9F /* SubGuideView.m in Sources */,
-				784B7E071E8182A200299457 /* CJMaskGuideHUD.m in Sources */,
+				7836591C1ED066C600AF7591 /* CJMaskGuideHUD+addHUDSubview.m in Sources */,
 				78E57F0B1E9DD1E6002CDB9F /* PopoverViewController.m in Sources */,
+				7836591D1ED066C600AF7591 /* CJMaskGuideHUD.m in Sources */,
 				784B7D9A1E7FB03300299457 /* main.m in Sources */,
 				78E57F061E9DD1E6002CDB9F /* CustomMaskGuideHUD.m in Sources */,
+				783659261ED066C600AF7591 /* CJMaskGuideView.m in Sources */,
 				78E57F111E9DD319002CDB9F /* AlertViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

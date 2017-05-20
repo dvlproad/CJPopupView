@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "PopoverViewController.h"
-#import "DragViewController.h"
+
 #import "MaskGuideHUDViewController.h"
 #import "AlertViewController.h"
 #import "SheetViewController.h"
@@ -37,11 +37,6 @@
 
 - (IBAction)goPopoverViewController:(id)sender {
     PopoverViewController *viewController = [[PopoverViewController alloc] init];
-    [self.navigationController pushViewController:viewController animated:YES];
-}
-
-- (IBAction)goDragViewController:(id)sender {
-    DragViewController *viewController = [[DragViewController alloc] init];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 

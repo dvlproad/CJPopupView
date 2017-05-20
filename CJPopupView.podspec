@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CJPopupView"
-  s.version      = "2.0.3"
+  s.version      = "2.0.4"
   s.summary      = "自定义的几乎所有弹出视图"
   s.homepage     = "https://github.com/dvlproad/CJPopupView"
 
@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "7.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/CJPopupView.git", :tag => "CJMaskGuideHUD_2.0.3" }
+  s.source       = { :git => "https://github.com/dvlproad/CJPopupView.git", :tag => "CJPopupView_2.0.4" }
   # s.source_files  = "CJPopupView/*.{h,m}"
 
   s.frameworks = "UIKit"
@@ -43,23 +43,18 @@ Pod::Spec.new do |s|
   # s.dependency "JSONKit", "~> 1.4"
 
   s.subspec 'CJPopoverView' do |ss|
-    ss.source_files = "CJPopoverView/**/*.{h,m}"
-    # ss.resources = "CJPopoverView/**/*.{png,xib}"
-  end
-
-  s.subspec 'CJDragView' do |ss|
-    ss.source_files = "CJDragView/**/*.{h,m}"
-    # ss.resources = "CJDragView/**/*.{png,xib}"
+    ss.source_files = "CJPopupView/CJPopoverView/**/*.{h,m}"
+    # ss.resources = "CJPopupView/CJPopoverView/**/*.{png,xib}"
   end
 
   s.subspec 'CJMaskGuideHUD' do |ss|
-    ss.source_files = "CJMaskGuideHUD/**/*.{h,m}"
-    ss.resources = "CJMaskGuideHUD/**/*.{png,xib}"
+    ss.source_files = "CJPopupView/CJMaskGuideHUD/**/*.{h,m}"
+    ss.resources = "CJPopupView/CJMaskGuideHUD/**/*.{png,xib}"
   end
 
   s.subspec 'CJMaskGuideView' do |ss|
-    ss.source_files = "CJMaskGuideView/**/*.{h,m}"
-    ss.resources = "CJMaskGuideView/**/*.{png,xib}"
+    ss.source_files = "CJPopupView/CJMaskGuideView/**/*.{h,m}"
+    ss.resources = "CJPopupView/CJMaskGuideView/**/*.{png,xib}"
   end
 
 end
