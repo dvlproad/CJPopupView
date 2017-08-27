@@ -9,12 +9,13 @@
 #import "CJUploadCollectionViewCell+configureForSpecificUploadItem.h"
 //#import "NetworkClient+CJUploadFile.h"
 #import "IjinbuNetworkClient+UploadFile.h"
+#import "IjinbuHTTPSessionManager.h"
 
 @implementation CJUploadCollectionViewCell (configureForSpecificUploadItem)
 
 - (void)configureForImageUploadItem:(CJImageUploadItem *)imageUploadItem
                    andUploadToWhere:(NSInteger)toWhere
-                       requestBlock:(void(^)(CJImageUploadItem *item))requestBlock
+                       requestBlock:(void(^)(CJBaseUploadItem *item))requestBlock
 {
     NSURLSessionDataTask *operation = imageUploadItem.operation;
     if (operation == nil) {
@@ -31,21 +32,22 @@
     //cjReUploadHandle
     __weak typeof(self)weakSelf = self;
     __weak typeof(imageUploadItem)weakItem = imageUploadItem;
-    [self setCjReUploadHandle:^(CJUploadCollectionViewCell *cell) {
+    [self.uploadProgressView setCjReUploadHandle:^(UIView *uploadProgressView) {
         __strong __typeof(weakItem)strongItem = weakItem;
         
         [strongItem.operation cancel];
         
         NSURLSessionDataTask *newOperation = [weakSelf uploadItems:imageUploadItem.uploadItems
-                                                             toWhere:toWhere
-                                                  andSetResultToItem:imageUploadItem
-                                                        requestBlock:requestBlock];
+                                                           toWhere:toWhere
+                                                andSetResultToItem:imageUploadItem
+                                                      requestBlock:requestBlock];
         
         strongItem.operation = newOperation;
     }];
     
     
-    [self updateProgressText:imageUploadItem.uploadStatePromptText progressVaule:imageUploadItem.progressValue];//调用此方法避免reload时候显示错误
+    CJUploadInfo *uploadInfo = imageUploadItem.uploadInfo;
+    [self.uploadProgressView updateProgressText:uploadInfo.uploadStatePromptText progressVaule:uploadInfo.progressValue];//调用此方法避免reload时候显示错误
     
     if (imageUploadItem.image) {
         self.cjImageView.image  = imageUploadItem.image;
@@ -59,51 +61,34 @@
     }
 }
 
+
+
 /**< 上传图片到服务器 */
 - (NSURLSessionDataTask *)uploadItems:(NSArray<CJUploadItemModel *> *)uploadModels
                                 toWhere:(NSInteger)toWhere
                      andSetResultToItem:(CJImageUploadItem *)imageItem
-                           requestBlock:(void(^)(CJImageUploadItem *item))requestBlock
+                           requestBlock:(void(^)(CJBaseUploadItem *item))requestBlock
 {
-    __weak typeof(self)weakSelf = self;
-    __weak typeof(imageItem)weakItem = imageItem;
+    AFHTTPSessionManager *manager = [IjinbuHTTPSessionManager sharedInstance];
     
-    NSURLSessionDataTask *operation =
-    [[IjinbuNetworkClient sharedInstance] requestUploadItems:uploadModels toWhere:toWhere progress:^(NSProgress *progress) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            __strong __typeof(weakSelf)strongSelf = weakSelf;
-            __strong __typeof(weakItem)strongItem = weakItem;
-            
-            CGFloat progressValue = progress.fractionCompleted * 100;
-            
-            strongItem.uploadState = CJUploadStateUploading;
-            strongItem.uploadStatePromptText = [NSString stringWithFormat:@"%.0lf%%", progressValue];;
-            strongItem.progressValue = progressValue;
-            
-            if (requestBlock) {
-                requestBlock(strongItem);
-            }
-        });
+    NSString *Url = API_BASE_Url_ijinbu(@"ijinbu/app/public/batchUpload");
+    NSDictionary *parameters = @{@"uploadType": @(toWhere)};
+    NSArray<CJUploadItemModel *> *uploadItems = uploadModels;
+    NSLog(@"Url = %@", Url);
+    NSLog(@"params = %@", parameters);
+    
+    return [IjinbuNetworkClient cj_UseManager:manager postUploadUrl:Url parameters:parameters uploadItems:uploadItems andSaveUploadInfoToItem:imageItem requestChangeBlock:requestBlock dealResopnseForUploadInfoBlock:^CJUploadInfo *(id responseObject) {
         
-    } success:^(IjinbuResponseModel *responseModel) {
-        __strong __typeof(weakItem)strongItem = weakItem;
+        IjinbuResponseModel *responseModel = [MTLJSONAdapter modelOfClass:[IjinbuResponseModel class] fromJSONDictionary:responseObject error:nil];
         
-        strongItem.responseModel = responseModel;
-        
+        CJUploadInfo *uploadInfo = [[CJUploadInfo alloc] init];
+        uploadInfo.responseModel = responseModel;
         if ([responseModel.status integerValue] == 1) {
             NSArray *operationUploadResult = [MTLJSONAdapter modelsOfClass:[IjinbuUploadItemResult class] fromJSONArray:responseModel.result error:nil];
             
             if (operationUploadResult == nil || operationUploadResult.count == 0) {
-                strongItem.uploadState = CJUploadStateFailure;
-                
-                NSString *promptText = [NSString stringWithFormat:@"点击重传"];
-                strongItem.uploadStatePromptText = promptText;
-                
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    if (requestBlock) {
-                        requestBlock(strongItem);
-                    }
-                });
+                uploadInfo.uploadState = CJUploadStateFailure;
+                uploadInfo.uploadStatePromptText = @"点击重传";
                 
             } else {
                 BOOL findFailure = NO;
@@ -117,83 +102,41 @@
                 }
                 
                 if (findFailure) {
-                    strongItem.uploadState = CJUploadStateFailure;
+                    uploadInfo.uploadState = CJUploadStateFailure;
+                    uploadInfo.uploadStatePromptText = @"点击重传";
                     
-                    NSString *promptText = [NSString stringWithFormat:@"点击重传"];
-                    strongItem.uploadStatePromptText = promptText;
-                    
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        if (requestBlock) {
-                            requestBlock(strongItem);
-                        }
-                    });
                 } else {
-                    strongItem.uploadState = CJUploadStateSuccess;
-                    
-                    NSString *promptText = [NSString stringWithFormat:@"上传成功"];
-                    strongItem.uploadStatePromptText = promptText;
-                    
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        if (requestBlock) {
-                            requestBlock(strongItem);
-                        }
-                    });
+                    uploadInfo.uploadState = CJUploadStateSuccess;
+                    uploadInfo.uploadStatePromptText = @"上传成功";
                 }
             }
             
         } else if ([responseModel.status integerValue] == 2) {
-            strongItem.uploadState = CJUploadStateFailure;
-            
-            NSString *failureMessage = responseModel.message;
-            NSString *promptText = [NSString stringWithFormat:@"%@", failureMessage];
-            strongItem.uploadStatePromptText = promptText;
-            
-            dispatch_async(dispatch_get_main_queue(), ^{
-                if (requestBlock) {
-                    requestBlock(strongItem);
-                }
-            });
-            
-            return;
+            uploadInfo.uploadState = CJUploadStateFailure;
+            uploadInfo.uploadStatePromptText = responseModel.message;
             
         } else {
-            strongItem.uploadState = CJUploadStateFailure;
-            
-            //NSString *failureMessage = responseModel.msg;
-            NSString *promptText = [NSString stringWithFormat:@"点击重传"];
-            strongItem.uploadStatePromptText = promptText;
-            
-            dispatch_async(dispatch_get_main_queue(), ^{
-                if (requestBlock) {
-                    requestBlock(strongItem);
-                }
-            });
-            
-            return;
+            uploadInfo.uploadState = CJUploadStateFailure;
+            uploadInfo.uploadStatePromptText = @"点击重传";
         }
         
-        
-    } failure:^(NSError *error) {
-        __strong __typeof(weakItem)strongItem = weakItem;
-        
-        strongItem.uploadState = CJUploadStateFailure;
-        
-        NSString *promptText = [NSString stringWithFormat:@"点击重传"];
-        strongItem.uploadStatePromptText = promptText;
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            if (requestBlock) {
-                requestBlock(strongItem);
-            }
-        });
-        
-        NSLog(@"error: %@", [error localizedDescription]);
+        return uploadInfo;
         
     }];
-    
-    return operation;
-    //*/
-    return nil;
 }
+
+//- (CJUploadInfo *)createFailureUploadInfo {
+//    CJUploadInfo *uploadInfo = [[CJUploadInfo alloc] init];
+//    if (uploadSuccess) {
+//        uploadInfo.uploadState = CJUploadStateSuccess;
+//        uploadInfo.responseModel = 
+//    } else {
+//        uploadInfo.uploadState = CJUploadStateFailure;
+//    }
+//    ;
+//    uploadSuccess
+//    
+//    return uploadInfo;
+//}
 
 @end

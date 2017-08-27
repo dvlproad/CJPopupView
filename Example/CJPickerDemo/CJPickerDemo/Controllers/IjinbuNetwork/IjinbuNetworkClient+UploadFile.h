@@ -40,4 +40,13 @@
                                     success:(HPSuccess)success
                                     failure:(HPFailure)failure;
 
+
+
++ (NSURLSessionDataTask *)cj_UseManager:(AFHTTPSessionManager *)manager
+                          postUploadUrl:(NSString *)Url
+                             parameters:(id)parameters
+                            uploadItems:(NSArray<CJUploadItemModel *> *)uploadItems
+                andSaveUploadInfoToItem:(CJBaseUploadItem *)item
+                     requestChangeBlock:(void(^)(CJBaseUploadItem *itemThatSaveResopnse))requestChangeBlock
+         dealResopnseForUploadInfoBlock:(CJUploadInfo * (^)(id responseObject))dealResopnseForUploadInfoBlock;
 @end

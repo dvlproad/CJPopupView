@@ -12,7 +12,7 @@
 
 //等同于 HPUploadFileEntity
 //@interface IjinbuUploadItemResult : HPEntity
-@interface IjinbuUploadItemResult : MTLModel
+@interface IjinbuUploadItemResult : MTLModel <MTLJSONSerializing>
 
 @property (nonatomic, copy) NSString *networkId;    //网络Id:f1f425e7b43645e29f0b2696a120b463,
 @property (nonatomic, copy) NSString *networkUrl;   //网络路径：upload/homework/image/20160612/20160612144549-2506939.jpg

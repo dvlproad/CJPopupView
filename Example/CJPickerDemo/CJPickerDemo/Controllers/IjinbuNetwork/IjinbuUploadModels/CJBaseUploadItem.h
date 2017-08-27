@@ -13,9 +13,7 @@
 
 //#import "UIImage+Helper.h"
 
-#import "CJResponseModel.h"
-#import "CJUploadResponseModel.h"
-
+#import "CJUploadInfo.h"
 
 @interface CJBaseUploadItem : NSObject
 
@@ -26,12 +24,6 @@
 
 @property (nonatomic, strong) NSURLSessionDataTask *operation;
 
-//过程中参数
-@property (nonatomic, assign) NSInteger progressValue;  /**< 当前加载进度[0,100] */
-
-//返回结果
-@property (nonatomic, strong) CJResponseModel *responseModel;  /**< 上传成功后后台返回的结果 */
-@property (nonatomic, assign) CJUploadState uploadState;
-@property (nonatomic, copy) NSString *uploadStatePromptText;
+@property (nonatomic, strong) CJUploadInfo *uploadInfo; /**< 上传的信息(包括进度以及上传结果) */
 
 @end

@@ -40,10 +40,10 @@
         //[weakSelf.uploadImageCollectionView reloadData];
     }];
     
-    [[IjinbuNetworkClient sharedInstance] requestijinbuLogin_name:@"18020721201" pasd:@"123456" success:^(IjinbuResponseModel *responseModel) {
-        
+    [[IjinbuNetworkClient sharedInstance] requestijinbuLogin_name:@"15800000001" pasd:@"123456" success:^(IjinbuResponseModel *responseModel) {
+        NSLog(@"登录成功");
     } failure:^(NSError *error) {
-        
+        NSLog(@"登录失败");
     }];
 }
 
@@ -82,36 +82,9 @@
     
     UIImagePickerController *imagePickerController =
     [imagePickerControllerUtil createWithSourceType:sourceType isVideo:NO pickImageFinishBlock:^(UIImage *image) {
-         NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
-         
-         //文件名
-         NSString *identifier = [[NSProcessInfo processInfo] globallyUniqueString];
-         NSString *imageName = [identifier stringByAppendingPathExtension:@"jpg"];
-         
-         NSString *imageRelativePath = [CJFileManager saveFileData:imageData
-                                                      withFileName:imageName
-                                                inSubDirectoryPath:@"UploadImage"
-                                               searchPathDirectory:NSCachesDirectory];
-         
-         
-         NSMutableArray<CJUploadItemModel *> *uploadItems = [[NSMutableArray alloc] init];
-         //NSString *identifier = [[NSProcessInfo processInfo] globallyUniqueString];
-         //图片
-         //NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
-         //NSString *imageName = [identifier stringByAppendingPathExtension:@"jpg"];
-         CJUploadItemModel *imageUploadItem = [[CJUploadItemModel alloc] init];
-         imageUploadItem.uploadItemType = CJUploadItemTypeImage;
-         imageUploadItem.uploadItemData = imageData;
-         imageUploadItem.uploadItemName = imageName;
-         [uploadItems addObject:imageUploadItem];
-         
-         CJImageUploadItem *imageItem =
-         [[CJImageUploadItem alloc] initWithShowImage:image
-                               imageLocalRelativePath:imageRelativePath
-                                          uploadItems:uploadItems];
-//         [self.dataModels addObject:imageItem];
-//         
-//         [self reloadData];
+        
+        [self finishChooseImage:image];
+        
     } pickVideoFinishBlock:^(UIImage *firstImage) {
         
     } pickCancelBlock:^{
@@ -124,6 +97,24 @@
     
 }
 
+///通过 "拍照" 和 "从手机相册选择" 两种方式选择到图片后
+- (void)finishChooseImage:(UIImage *)image {
+    NSMutableArray<CJUploadItemModel *> *uploadModels = [[NSMutableArray alloc] init];
+    CJUploadItemModel *imageUploadModel = [self saveImageToLocal:image];
+    [uploadModels addObject:imageUploadModel];
+    
+//    CJImageUploadItem *imageItem =
+//    [[CJImageUploadItem alloc] initWithShowImage:image
+//                          imageLocalRelativePath:imageRelativePath
+//                                     uploadItems:uploadModels];
+    
+    //         [self.dataModels addObject:imageItem];
+    //
+    //         [self reloadData];
+    //         if (self.pickImageCompleteBlock) {
+    //             self.pickImageCompleteBlock();
+    //         }
+}
 
 /**< 从相册中选择照片 */
 - (void)choosePhoto {
@@ -138,30 +129,7 @@
     UIImagePickerController *imagePickerController =
     [imagePickerControllerUtil createWithSourceType:sourceType isVideo:NO pickImageFinishBlock:^(UIImage *image)
      {
-         NSString *imageRelativePath = [self saveImageToLocal:image];
-         
-         NSMutableArray<CJUploadItemModel *> *uploadModels = [[NSMutableArray alloc] init];
-         NSString *identifier = [[NSProcessInfo processInfo] globallyUniqueString];
-         //图片
-         NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
-         NSString *imageName = [identifier stringByAppendingPathExtension:@"jpg"];
-         CJUploadItemModel *imageUploadModel = [[CJUploadItemModel alloc] init];
-         imageUploadModel.uploadItemType = CJUploadItemTypeImage;
-         imageUploadModel.uploadItemData = imageData;
-         imageUploadModel.uploadItemName = imageName;
-         [uploadModels addObject:imageUploadModel];
-         
-         CJImageUploadItem *imageItem =
-         [[CJImageUploadItem alloc] initWithShowImage:image
-                               imageLocalRelativePath:imageRelativePath
-                                          uploadItems:uploadModels];
-         
-//         [self.dataModels addObject:imageItem];
-//         
-//         [self reloadData];
-//         if (self.pickImageCompleteBlock) {
-//             self.pickImageCompleteBlock();
-//         }
+         [self finishChooseImage:image];
          
      } pickVideoFinishBlock:nil pickCancelBlock:^{
          
@@ -173,19 +141,24 @@
 
 
 /**< 保存图片到本地 */
-- (NSString *)saveImageToLocal:(UIImage *)image {
+- (CJUploadItemModel *)saveImageToLocal:(UIImage *)image {
     NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
     
     //文件名
     NSString *identifier = [[NSProcessInfo processInfo] globallyUniqueString];
-    NSString *fileName = [identifier stringByAppendingPathExtension:@"jpg"];
+    NSString *imageName = [identifier stringByAppendingPathExtension:@"jpg"];
     
-    NSString *fileRelativePath = [CJFileManager saveFileData:imageData
-                                                withFileName:fileName
+    NSString *imageRelativePath = [CJFileManager saveFileData:imageData
+                                                withFileName:imageName
                                           inSubDirectoryPath:@"UploadImage"
                                          searchPathDirectory:NSCachesDirectory];
     
-    return fileRelativePath;
+    CJUploadItemModel *imageUploadModel = [[CJUploadItemModel alloc] init];
+    imageUploadModel.uploadItemType = CJUploadItemTypeImage;
+    imageUploadModel.uploadItemData = imageData;
+    imageUploadModel.uploadItemName = imageName;
+    
+    return imageUploadModel;
 }
 
 

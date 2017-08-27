@@ -13,6 +13,6 @@
 
 - (void)configureForImageUploadItem:(CJImageUploadItem *)imageUploadItem
                    andUploadToWhere:(NSInteger)toWhere
-                       requestBlock:(void(^)(CJImageUploadItem *item))requestBlock;
+                       requestBlock:(void(^)(CJBaseUploadItem *item))requestBlock;
 
 @end

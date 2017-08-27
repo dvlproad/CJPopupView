@@ -28,4 +28,8 @@ typedef NS_ENUM(NSUInteger, CJTextLabelPosition) {
 - (void)addCJTextLabelWithPosition:(CJTextLabelPosition)textLabelPosition;
 - (void)addCJDeleteButton;
 
+
+#pragma mark - addSubView
+- (void)cj_makeView:(UIView *)superView addSubView:(UIView *)subView withEdgeInsets:(UIEdgeInsets)edgeInsets;
+
 @end

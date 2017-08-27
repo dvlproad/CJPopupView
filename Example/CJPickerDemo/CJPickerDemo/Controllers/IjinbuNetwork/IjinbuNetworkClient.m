@@ -41,7 +41,8 @@
     [manager cj_postRequestUrl:Url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nullable task, id  _Nullable responseObject) {
         NSLog(@"请求ijinbu成功");
         NSLog(@"responseObject = %@", responseObject);
-        IjinbuResponseModel *responseModel = [[IjinbuResponseModel alloc] initWithDictionary:responseObject error:nil];
+        IjinbuResponseModel *responseModel = [MTLJSONAdapter modelOfClass:[IjinbuResponseModel class] fromJSONDictionary:responseObject error:nil];
+//        IjinbuResponseModel *responseModel = [[IjinbuResponseModel alloc] initWithDictionary:responseObject error:nil];
         if ([responseModel.status integerValue] == 1) {
             if (success) {
                 success(responseModel);

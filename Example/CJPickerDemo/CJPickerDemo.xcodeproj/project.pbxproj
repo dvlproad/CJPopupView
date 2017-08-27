@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3C1A425876ED31624B179E13 /* libPods-CJPickerDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFC980D5F47A54820A32812 /* libPods-CJPickerDemo.a */; };
+		784615DA1F51A2070053AC03 /* CJUploadCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 784615D71F51A2070053AC03 /* CJUploadCollectionViewCell.m */; };
+		784615DB1F51A2070053AC03 /* CJUploadProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 784615D91F51A2070053AC03 /* CJUploadProgressView.m */; };
+		784615DE1F51B06A0053AC03 /* UIView+CJUpload.m in Sources */ = {isa = PBXBuildFile; fileRef = 784615DD1F51B06A0053AC03 /* UIView+CJUpload.m */; };
+		784615E11F51C25A0053AC03 /* CJUploadInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 784615E01F51C25A0053AC03 /* CJUploadInfo.m */; };
 		784752281E8FA2A400B24507 /* nav_back_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 784752271E8FA2A400B24507 /* nav_back_blue@2x.png */; };
 		784BCFBD1E92977D00D07192 /* cjAlbumCheckedNormal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 784BCFBB1E92977D00D07192 /* cjAlbumCheckedNormal@2x.png */; };
 		784BCFBE1E92977D00D07192 /* cjAlbumCheckedSelect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 784BCFBC1E92977D00D07192 /* cjAlbumCheckedSelect@2x.png */; };
@@ -108,6 +112,14 @@
 		286C0122CD0F1AF78A79BF2E /* Pods-CJPickerDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJPickerDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CJPickerDemoTests/Pods-CJPickerDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		396C552B187BFD49AA5B0CE1 /* Pods-CJPickerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJPickerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CJPickerDemo/Pods-CJPickerDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		48A6484B73B7E20372FD66E9 /* libPods-CJPickerDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CJPickerDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		784615D61F51A2070053AC03 /* CJUploadCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJUploadCollectionViewCell.h; sourceTree = "<group>"; };
+		784615D71F51A2070053AC03 /* CJUploadCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJUploadCollectionViewCell.m; sourceTree = "<group>"; };
+		784615D81F51A2070053AC03 /* CJUploadProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJUploadProgressView.h; sourceTree = "<group>"; };
+		784615D91F51A2070053AC03 /* CJUploadProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJUploadProgressView.m; sourceTree = "<group>"; };
+		784615DC1F51B06A0053AC03 /* UIView+CJUpload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CJUpload.h"; sourceTree = "<group>"; };
+		784615DD1F51B06A0053AC03 /* UIView+CJUpload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CJUpload.m"; sourceTree = "<group>"; };
+		784615DF1F51C25A0053AC03 /* CJUploadInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJUploadInfo.h; sourceTree = "<group>"; };
+		784615E01F51C25A0053AC03 /* CJUploadInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJUploadInfo.m; sourceTree = "<group>"; };
 		784752271E8FA2A400B24507 /* nav_back_blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_back_blue@2x.png"; sourceTree = "<group>"; };
 		784BCFBB1E92977D00D07192 /* cjAlbumCheckedNormal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cjAlbumCheckedNormal@2x.png"; sourceTree = "<group>"; };
 		784BCFBC1E92977D00D07192 /* cjAlbumCheckedSelect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cjAlbumCheckedSelect@2x.png"; sourceTree = "<group>"; };
@@ -578,6 +590,8 @@
 			children = (
 				78F3A9D91E962035005D3DA4 /* CJBaseUploadItem.h */,
 				78F3A9DA1E962035005D3DA4 /* CJBaseUploadItem.m */,
+				784615DF1F51C25A0053AC03 /* CJUploadInfo.h */,
+				784615E01F51C25A0053AC03 /* CJUploadInfo.m */,
 				78F3A9DB1E962035005D3DA4 /* CJImageUploadItem.h */,
 				78F3A9DC1E962035005D3DA4 /* CJImageUploadItem.m */,
 				78F3A9DF1E962035005D3DA4 /* CJUploadVideoItem.h */,
@@ -630,6 +644,12 @@
 			children = (
 				78F3AA3A1E963BE0005D3DA4 /* CJUploadCollectionViewCell+configureForSpecificUploadItem.h */,
 				78F3AA3B1E963BE0005D3DA4 /* CJUploadCollectionViewCell+configureForSpecificUploadItem.m */,
+				784615DC1F51B06A0053AC03 /* UIView+CJUpload.h */,
+				784615DD1F51B06A0053AC03 /* UIView+CJUpload.m */,
+				784615D61F51A2070053AC03 /* CJUploadCollectionViewCell.h */,
+				784615D71F51A2070053AC03 /* CJUploadCollectionViewCell.m */,
+				784615D81F51A2070053AC03 /* CJUploadProgressView.h */,
+				784615D91F51A2070053AC03 /* CJUploadProgressView.m */,
 			);
 			path = CJUploadCollectionViewCell;
 			sourceTree = "<group>";
@@ -919,6 +939,7 @@
 				78F3A9F11E962035005D3DA4 /* IjinbuSession.m in Sources */,
 				78F3A9ED1E962035005D3DA4 /* CJImageUploadItem.m in Sources */,
 				78F3A9EA1E962035005D3DA4 /* IjinbuNetworkClient+UploadFile.m in Sources */,
+				784615E11F51C25A0053AC03 /* CJUploadInfo.m in Sources */,
 				785540A91E7DC5F800F320E6 /* RelatedPickerViewController.m in Sources */,
 				784C15741E8E44850019D652 /* ImagePickerViewController.m in Sources */,
 				785540F01E7DCA9900F320E6 /* CJDefaultToolbar.m in Sources */,
@@ -930,8 +951,10 @@
 				784C159D1E8E49620019D652 /* HCTableView.m in Sources */,
 				78F3A9F01E962035005D3DA4 /* IjinbuUploadItemRequest.m in Sources */,
 				78F3A9F91E9620F4005D3DA4 /* IjinbuResponseModel.m in Sources */,
+				784615DB1F51A2070053AC03 /* CJUploadProgressView.m in Sources */,
 				78F3AA431E963BE0005D3DA4 /* CJUploadImageCollectionView.m in Sources */,
 				784C15701E8E43FC0019D652 /* UIImagePickerControllerUtil.m in Sources */,
+				784615DA1F51A2070053AC03 /* CJUploadCollectionViewCell.m in Sources */,
 				784C15A01E8E49620019D652 /* MJImagePickerVC.m in Sources */,
 				785540651E7DC53F00F320E6 /* main.m in Sources */,
 				784C15A41E8E49620019D652 /* MJPhotoLoadingView.m in Sources */,
@@ -950,6 +973,7 @@
 				785540F31E7DCA9900F320E6 /* CJDataModelSample.m in Sources */,
 				78F3A9F81E9620F4005D3DA4 /* CJResponseModel.m in Sources */,
 				784C15DB1E8E67150019D652 /* UIGlobal.m in Sources */,
+				784615DE1F51B06A0053AC03 /* UIView+CJUpload.m in Sources */,
 				784C15A71E8E49620019D652 /* MJPhotoToolbar.m in Sources */,
 				785540F11E7DCA9900F320E6 /* CJComponentDataModel.m in Sources */,
 				78F3A9E81E962035005D3DA4 /* IjinbuHTTPSessionManager.m in Sources */,

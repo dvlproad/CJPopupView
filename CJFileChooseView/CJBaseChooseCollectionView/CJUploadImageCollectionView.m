@@ -54,9 +54,11 @@ static NSString *CJUploadCollectionViewCellAddID = @"CJUploadCollectionViewCellA
         CJImageUploadItem *baseUploadItem = [weakSelf.dataModels objectAtIndex:indexPath.row];
         baseUploadItem.indexPath = indexPath;
         
-        [cell configureForImageUploadItem:baseUploadItem andUploadToWhere:weakSelf.useToUploadItemToWhere requestBlock:^(CJImageUploadItem *item) {
-            CJUploadCollectionViewCell *myCell = (CJUploadCollectionViewCell *)[weakSelf cellForItemAtIndexPath:item.indexPath];
-            [myCell updateProgressText:item.uploadStatePromptText progressVaule:item.progressValue];
+        [cell configureForImageUploadItem:baseUploadItem andUploadToWhere:weakSelf.useToUploadItemToWhere requestBlock:^(CJBaseUploadItem *item) {
+            CJImageUploadItem *imageItem = (CJImageUploadItem *)item;
+            CJUploadCollectionViewCell *myCell = (CJUploadCollectionViewCell *)[weakSelf cellForItemAtIndexPath:imageItem.indexPath];
+            CJUploadInfo *uploadInfo = item.uploadInfo;
+            [myCell.uploadProgressView updateProgressText:uploadInfo.uploadStatePromptText progressVaule:uploadInfo.progressValue];
         }];
 
         
@@ -89,7 +91,9 @@ static NSString *CJUploadCollectionViewCellAddID = @"CJUploadCollectionViewCellA
         
     } didSelectDataItemBlock:^(UICollectionView *collectionView, NSIndexPath *indexPath) {
         CJBaseUploadItem *baseUploadItem = [self.dataModels objectAtIndex:indexPath.row];
-        if (baseUploadItem.uploadState == CJUploadStateFailure) {
+        
+        CJUploadInfo *uploadInfo = baseUploadItem.uploadInfo;
+        if (uploadInfo.uploadState == CJUploadStateFailure) {
             return;
         }
         
@@ -350,7 +354,8 @@ static NSString *CJUploadCollectionViewCellAddID = @"CJUploadCollectionViewCellA
 
 - (BOOL)isAllUploadFinish {
     for (CJBaseUploadItem *uploadItem in self.dataModels) {
-        if (uploadItem.uploadState == CJUploadStateFailure) {
+        CJUploadInfo *uploadInfo = uploadItem.uploadInfo;
+        if (uploadInfo.uploadState == CJUploadStateFailure) {
             NSLog(@"Failure:请等待所有附件上传完成");
             return NO;
         }

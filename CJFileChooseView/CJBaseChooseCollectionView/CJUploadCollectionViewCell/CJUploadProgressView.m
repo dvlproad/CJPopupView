@@ -1,41 +1,58 @@
 //
-//  CJUploadCollectionViewCell.m
-//  AllScrollViewDemo
+//  CJUploadProgressView.m
+//  Pods
 //
-//  Created by lichq on 2016/06/07.
-//  Copyright © 2016年 dvlproad. All rights reserved.
+//  Created by 李超前 on 2017/8/26.
+//
 //
 
-#import "CJUploadCollectionViewCell.h"
+#import "CJUploadProgressView.h"
 
-@interface CJUploadCollectionViewCell () {
+@interface CJUploadProgressView () {
     
 }
-@property (nonatomic, strong) UILabel *progressLabel;
-@property (nonatomic, strong) UIView *progressMaskView; /**< 标记剩下多少没处理(即没上传) */
-@property (nonatomic, strong) NSLayoutConstraint *progressMaskViewHeightConstraint;
+@property (nonatomic, strong) UILabel *cjUploadProgressLabel;
+@property (nonatomic, strong) UIView *cjUploadProgressMaskView; /**< 标记剩下多少没处理(即没上传) */
+@property (nonatomic, strong) NSLayoutConstraint *cjUploadProgressMaskViewHeightConstraint;
 
 @end
 
-@implementation CJUploadCollectionViewCell
+@implementation CJUploadProgressView
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+    [self commonInit];
+}
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        [self commonInit];
+    }
+    return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self commonInit];
+        
+    }
+    return self;
+}
 
 - (void)commonInit {
-    [super commonInit];
+    UIView *parentView = self;
     
-    UIView *parentView = self.contentView;
+    self.cjUploadProgressMaskView = [[UIView alloc] initWithFrame:CGRectZero];
+    //self.cjUploadProgressMaskView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.3];
+    self.cjUploadProgressMaskView.backgroundColor = [UIColor redColor];
+    [parentView addSubview:self.cjUploadProgressMaskView];
     
-    [self addCJImageViewWithEdgeInsets:UIEdgeInsetsZero];
-    self.cjImageView.image = [UIImage imageNamed:@"cjCollectionViewCellAdd"];
-    [self addCJDeleteButton];
-    
-    self.progressMaskView = [[UIView alloc] initWithFrame:CGRectZero];
-//    self.progressMaskView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.3];
-    self.progressMaskView.backgroundColor = [UIColor redColor];
-    [parentView addSubview:self.progressMaskView];
-    
-    _progressMaskView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.cjUploadProgressMaskView.translatesAutoresizingMaskIntoConstraints = NO;
     [parentView addConstraint:
-     [NSLayoutConstraint constraintWithItem:_progressMaskView
+     [NSLayoutConstraint constraintWithItem:self.cjUploadProgressMaskView
                                   attribute:NSLayoutAttributeLeft   //left
                                   relatedBy:NSLayoutRelationEqual
                                      toItem:parentView
@@ -43,7 +60,7 @@
                                  multiplier:1
                                    constant:0]];
     [parentView addConstraint:
-     [NSLayoutConstraint constraintWithItem:_progressMaskView
+     [NSLayoutConstraint constraintWithItem:self.cjUploadProgressMaskView
                                   attribute:NSLayoutAttributeRight  //right
                                   relatedBy:NSLayoutRelationEqual
                                      toItem:parentView
@@ -52,7 +69,7 @@
                                    constant:0]];
     
     [parentView addConstraint:
-     [NSLayoutConstraint constraintWithItem:_progressMaskView
+     [NSLayoutConstraint constraintWithItem:self.cjUploadProgressMaskView
                                   attribute:NSLayoutAttributeBottom //bottom
                                   relatedBy:NSLayoutRelationEqual
                                      toItem:parentView
@@ -60,33 +77,33 @@
                                  multiplier:1
                                    constant:0]];
     
-    self.progressMaskViewHeightConstraint =
-     [NSLayoutConstraint constraintWithItem:_progressMaskView
-                                  attribute:NSLayoutAttributeHeight   //height
-                                  relatedBy:NSLayoutRelationEqual
-                                     toItem:parentView
-                                  attribute:NSLayoutAttributeHeight
-                                 multiplier:0
-                                   constant:0];
-    [parentView addConstraint:self.progressMaskViewHeightConstraint];
+    self.cjUploadProgressMaskViewHeightConstraint =
+    [NSLayoutConstraint constraintWithItem:self.cjUploadProgressMaskView
+                                 attribute:NSLayoutAttributeHeight   //height
+                                 relatedBy:NSLayoutRelationEqual
+                                    toItem:parentView
+                                 attribute:NSLayoutAttributeHeight
+                                multiplier:0
+                                  constant:0];
+    [parentView addConstraint:self.cjUploadProgressMaskViewHeightConstraint];
     
     
-    self.progressLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-    //self.progressLabel.backgroundColor = [UIColor cyanColor];
-    //self.progressLabel.text = [NSString stringWithFormat:@"0%%"];
-    self.progressLabel.numberOfLines = 0;
-    self.progressLabel.textColor = [UIColor whiteColor];
-    self.progressLabel.textAlignment = NSTextAlignmentCenter;
-    self.progressLabel.font = [UIFont systemFontOfSize:15];
-    [self cj_makeView:parentView addSubView:self.progressLabel withEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+    self.cjUploadProgressLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    //self.cjUploadProgressLabel.backgroundColor = [UIColor cyanColor];
+    //self.cjUploadProgressLabel.text = [NSString stringWithFormat:@"0%%"];
+    self.cjUploadProgressLabel.numberOfLines = 0;
+    self.cjUploadProgressLabel.textColor = [UIColor whiteColor];
+    self.cjUploadProgressLabel.textAlignment = NSTextAlignmentCenter;
+    self.cjUploadProgressLabel.font = [UIFont systemFontOfSize:15];
+    [self cj_makeView:parentView addSubView:self.cjUploadProgressLabel withEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
     
-    [self.contentView bringSubviewToFront:self.cjDeleteButton]; //把cjDeleteButton移动最前
+    //    [parentView bringSubviewToFront:self.cjDeleteButton]; //把cjDeleteButton移动最前
 }
 
 /** 完整的描述请参见文件头部 */
 - (void)updateProgressText:(NSString *)progressText progressVaule:(CGFloat)progressValue {
-    self.progressLabel.text = progressText;
-    [self updateProgressMaskViewWithProgressVaule:progressValue];
+    self.cjUploadProgressLabel.text = progressText;
+    [self updateUploadProgressMaskViewWithProgressVaule:progressValue];
 }
 
 /**
@@ -94,27 +111,27 @@
  *
  *  @param progressValue    该上传状态的进度值[0-100]
  */
-- (void)updateProgressMaskViewWithProgressVaule:(CGFloat)progressValue {
+- (void)updateUploadProgressMaskViewWithProgressVaule:(CGFloat)progressValue {
     //progressValue等于100不代表成功
     CGFloat remainProgressValue = (100.0-progressValue)/100.0;
     
     if (progressValue == 0) {
         UITapGestureRecognizer *tapGR = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(reUpload:)];
-        [self.progressMaskView addGestureRecognizer:tapGR];
+        [self.cjUploadProgressMaskView addGestureRecognizer:tapGR];
     }
     
-    UIView *parentView = self.contentView;
+    UIView *parentView = self;
     
-    [parentView removeConstraint:self.progressMaskViewHeightConstraint];
-    self.progressMaskViewHeightConstraint =
-    [NSLayoutConstraint constraintWithItem:_progressMaskView
+    [parentView removeConstraint:self.cjUploadProgressMaskViewHeightConstraint];
+    self.cjUploadProgressMaskViewHeightConstraint =
+    [NSLayoutConstraint constraintWithItem:self.cjUploadProgressMaskView
                                  attribute:NSLayoutAttributeHeight   //height
                                  relatedBy:NSLayoutRelationEqual
                                     toItem:parentView
                                  attribute:NSLayoutAttributeHeight
                                 multiplier:remainProgressValue
                                   constant:0];
-    [parentView addConstraint:self.progressMaskViewHeightConstraint];
+    [parentView addConstraint:self.cjUploadProgressMaskViewHeightConstraint];
     
     [UIView animateWithDuration:0.09f animations:^{
         [self setNeedsLayout];
@@ -124,9 +141,9 @@
 
 /** 重新上传 */
 - (void)reUpload:(UITapGestureRecognizer *)tapGR {
-    self.progressMaskView.hidden = NO;
-    self.progressLabel.hidden = NO;
-    [self.progressMaskView removeGestureRecognizer:tapGR];
+    self.cjUploadProgressMaskView.hidden = NO;
+    self.cjUploadProgressLabel.hidden = NO;
+    [self.cjUploadProgressMaskView removeGestureRecognizer:tapGR];
     if (self.cjReUploadHandle) {
         self.cjReUploadHandle(self);
     }
@@ -174,5 +191,6 @@
                                  multiplier:1
                                    constant:edgeInsets.bottom]];
 }
+
 
 @end
