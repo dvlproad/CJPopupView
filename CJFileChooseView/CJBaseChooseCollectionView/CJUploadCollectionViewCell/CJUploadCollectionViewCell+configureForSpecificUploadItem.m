@@ -11,43 +11,22 @@
 #import "IjinbuNetworkClient+UploadFile.h"
 #import "IjinbuHTTPSessionManager.h"
 
+#import "IjinbuUploadItemResult.h"
+
 @implementation CJUploadCollectionViewCell (configureForSpecificUploadItem)
 
 - (void)configureForImageUploadItem:(CJImageUploadItem *)imageUploadItem
                    andUploadToWhere:(NSInteger)toWhere
                        requestBlock:(void(^)(CJBaseUploadItem *item))requestBlock
 {
-    NSURLSessionDataTask *operation = imageUploadItem.operation;
-    if (operation == nil) {
-        NSArray<CJUploadItemModel *> *uploadItemModels = imageUploadItem.uploadItems;
-        operation = [self uploadItems:uploadItemModels
-                              toWhere:toWhere
-                   andSetResultToItem:imageUploadItem
-                         requestBlock:requestBlock];
-        
-        imageUploadItem.operation = operation;
-    }
+//    NSURLSessionDataTask * (^createUploadRequest)(AFHTTPSessionManager *manager, NSString *UploadUrl, NSDictionary *parameters, NSArray<CJUploadItemModel *> *uploadItems, CJBaseUploadItem *saveUploadInfoToItem, void(^)(CJBaseUploadItem *itemThatSaveResopnse)requestChangeBlock, CJUploadInfo * (^)(id responseObject)dealResopnseForUploadInfoBlock)
     
-    
-    //cjReUploadHandle
-    __weak typeof(self)weakSelf = self;
-    __weak typeof(imageUploadItem)weakItem = imageUploadItem;
-    [self.uploadProgressView setCjReUploadHandle:^(UIView *uploadProgressView) {
-        __strong __typeof(weakItem)strongItem = weakItem;
-        
-        [strongItem.operation cancel];
-        
-        NSURLSessionDataTask *newOperation = [weakSelf uploadItems:imageUploadItem.uploadItems
-                                                           toWhere:toWhere
-                                                andSetResultToItem:imageUploadItem
-                                                      requestBlock:requestBlock];
-        
-        strongItem.operation = newOperation;
-    }];
-    
-    
-    CJUploadInfo *uploadInfo = imageUploadItem.uploadInfo;
-    [self.uploadProgressView updateProgressText:uploadInfo.uploadStatePromptText progressVaule:uploadInfo.progressValue];//调用此方法避免reload时候显示错误
+
+    NSArray<CJUploadItemModel *> *uploadItemModels = imageUploadItem.uploadItems;
+    [self uploadItems:uploadItemModels
+              toWhere:toWhere
+   uploadInfoSaveInItem:imageUploadItem
+         uploadInfoChangeBlock:requestBlock];
     
     if (imageUploadItem.image) {
         self.cjImageView.image  = imageUploadItem.image;
@@ -63,11 +42,13 @@
 
 
 
+
+
 /**< 上传图片到服务器 */
-- (NSURLSessionDataTask *)uploadItems:(NSArray<CJUploadItemModel *> *)uploadModels
+- (void)uploadItems:(NSArray<CJUploadItemModel *> *)uploadModels
                                 toWhere:(NSInteger)toWhere
-                     andSetResultToItem:(CJImageUploadItem *)imageItem
-                           requestBlock:(void(^)(CJBaseUploadItem *item))requestBlock
+                    uploadInfoSaveInItem:(CJImageUploadItem *)imageItem
+                    uploadInfoChangeBlock:(void(^)(CJBaseUploadItem *item))uploadInfoChangeBlock
 {
     AFHTTPSessionManager *manager = [IjinbuHTTPSessionManager sharedInstance];
     
@@ -77,7 +58,7 @@
     NSLog(@"Url = %@", Url);
     NSLog(@"params = %@", parameters);
     
-    return [IjinbuNetworkClient cj_UseManager:manager postUploadUrl:Url parameters:parameters uploadItems:uploadItems andSaveUploadInfoToItem:imageItem requestChangeBlock:requestBlock dealResopnseForUploadInfoBlock:^CJUploadInfo *(id responseObject) {
+    [self cj_UseManager:manager postUploadUrl:Url parameters:parameters uploadItems:uploadItems uploadInfoSaveInItem:imageItem uploadInfoChangeBlock:uploadInfoChangeBlock dealResopnseForUploadInfoBlock:^CJUploadInfo *(id responseObject) {
         
         IjinbuResponseModel *responseModel = [MTLJSONAdapter modelOfClass:[IjinbuResponseModel class] fromJSONDictionary:responseObject error:nil];
         
@@ -123,6 +104,52 @@
         return uploadInfo;
         
     }];
+}
+
+
+/**
+ *  视图的上传文件操作（uploadInfo：上传请求的各个时刻信息）
+ *
+ *  @param manager      manager
+ *  @param Url          Url
+ *  @param parameters   parameters
+ *  @param uploadItems  要上传的数据组uploadItems
+ *  @param saveUploadInfoToItem     上传请求的各个时刻信息(正在上传、上传完成)的保存位置
+ *  @param uploadInfoChangeBlock    上传请求的时刻信息变化后(正在上传、上传完成都会导致其变化)要执行的操作
+ *  @param dealResopnseForUploadInfoBlock   上传结束后从response中获取上传请求的该时刻信息(正在上传的时刻系统可自动获取)
+ */
+- (void)cj_UseManager:(AFHTTPSessionManager *)manager
+        postUploadUrl:(NSString *)Url
+           parameters:(id)parameters
+          uploadItems:(NSArray<CJUploadItemModel *> *)uploadItems
+ uploadInfoSaveInItem:(CJBaseUploadItem *)saveUploadInfoToItem
+uploadInfoChangeBlock:(void(^)(CJBaseUploadItem *saveUploadInfoToItem))uploadInfoChangeBlock
+dealResopnseForUploadInfoBlock:(CJUploadInfo * (^)(id responseObject))dealResopnseForUploadInfoBlock
+{
+    
+    NSURLSessionDataTask *operation = saveUploadInfoToItem.operation;
+    if (operation == nil) {
+        operation = [IjinbuNetworkClient cj_UseManager:manager postUploadUrl:Url parameters:parameters uploadItems:uploadItems uploadInfoSaveInItem:saveUploadInfoToItem uploadInfoChangeBlock:uploadInfoChangeBlock dealResopnseForUploadInfoBlock:dealResopnseForUploadInfoBlock];
+        
+        saveUploadInfoToItem.operation = operation;
+    }
+    
+    
+    //cjReUploadHandle
+    __weak typeof(saveUploadInfoToItem)weakItem = saveUploadInfoToItem;
+    [self.uploadProgressView setCjReUploadHandle:^(UIView *uploadProgressView) {
+        __strong __typeof(weakItem)strongItem = weakItem;
+        
+        [strongItem.operation cancel];
+        
+        NSURLSessionDataTask *newOperation = [IjinbuNetworkClient cj_UseManager:manager postUploadUrl:Url parameters:parameters uploadItems:uploadItems uploadInfoSaveInItem:saveUploadInfoToItem uploadInfoChangeBlock:uploadInfoChangeBlock dealResopnseForUploadInfoBlock:dealResopnseForUploadInfoBlock];
+        
+        strongItem.operation = newOperation;
+    }];
+    
+    
+    CJUploadInfo *uploadInfo = saveUploadInfoToItem.uploadInfo;
+    [self.uploadProgressView updateProgressText:uploadInfo.uploadStatePromptText progressVaule:uploadInfo.progressValue];//调用此方法避免reload时候显示错误
 }
 
 //- (CJUploadInfo *)createFailureUploadInfo {

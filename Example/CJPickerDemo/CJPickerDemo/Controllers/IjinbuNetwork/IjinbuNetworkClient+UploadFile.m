@@ -111,15 +111,16 @@
 }
 
 
+/* 完整的描述请参见文件头部 */
 + (NSURLSessionDataTask *)cj_UseManager:(AFHTTPSessionManager *)manager
                           postUploadUrl:(NSString *)Url
                              parameters:(id)parameters
                             uploadItems:(NSArray<CJUploadItemModel *> *)uploadItems
-                andSaveUploadInfoToItem:(CJBaseUploadItem *)item
-                     requestChangeBlock:(void(^)(CJBaseUploadItem *itemThatSaveResopnse))requestChangeBlock
+                   uploadInfoSaveInItem:(CJBaseUploadItem *)saveUploadInfoToItem
+                  uploadInfoChangeBlock:(void(^)(CJBaseUploadItem *saveUploadInfoToItem))uploadInfoChangeBlock
          dealResopnseForUploadInfoBlock:(CJUploadInfo * (^)(id responseObject))dealResopnseForUploadInfoBlock
 {
-    __weak typeof(item)weakItem = item;
+    __weak typeof(saveUploadInfoToItem)weakItem = saveUploadInfoToItem;
     
     
     
@@ -136,8 +137,8 @@
             
             strongItem.uploadInfo = uploadInfo;
             
-            if (requestChangeBlock) {
-                requestChangeBlock(strongItem);
+            if (uploadInfoChangeBlock) {
+                uploadInfoChangeBlock(strongItem);
             }
         });
     };
@@ -148,8 +149,8 @@
         strongItem.uploadInfo = uploadInfo;
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            if (requestChangeBlock) {
-                requestChangeBlock(strongItem);
+            if (uploadInfoChangeBlock) {
+                uploadInfoChangeBlock(strongItem);
             }
         });
     };

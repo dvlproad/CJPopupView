@@ -8,11 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <AFNetworking/AFNetworking.h>
-#import "IjinbuUploadItemResult.h"
+
 #import "CJUploadItemModel.h"
-
-//#import "UIImage+Helper.h"
-
 #import "CJUploadInfo.h"
 
 @interface CJBaseUploadItem : NSObject
