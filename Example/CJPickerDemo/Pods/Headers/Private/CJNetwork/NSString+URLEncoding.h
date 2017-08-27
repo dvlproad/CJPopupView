@@ -1,1 +1,1 @@
-../../../CJNetwork/CJNetwork/AFHTTPSessionManager+CJCacheRequest/CJNetworkBase/CJJSONResponseSerializer/NSString+URLEncoding.h
+../../../CJNetwork/CJNetwork/AFNetworkingBaseComponent/AFNetworkBase/CJJSONResponseSerializer/NSString+URLEncoding.h

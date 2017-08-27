@@ -1,1 +1,1 @@
-../../../CJNetwork/CJCacheManager/CJCacheDataModel.h
+../../../CJNetwork/CJCacheManager/Model/CJCacheDataModel.h

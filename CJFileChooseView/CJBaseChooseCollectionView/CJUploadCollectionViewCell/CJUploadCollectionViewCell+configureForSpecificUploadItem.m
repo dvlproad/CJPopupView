@@ -7,7 +7,8 @@
 //
 
 #import "CJUploadCollectionViewCell+configureForSpecificUploadItem.h"
-//#import "NetworkClient+CJUploadFile.h"
+#import <CJNetwork/UIView+AFNetworkingUpload.h>
+
 #import "IjinbuNetworkClient+UploadFile.h"
 #import "IjinbuHTTPSessionManager.h"
 
@@ -19,14 +20,8 @@
                    andUploadToWhere:(NSInteger)toWhere
                        requestBlock:(void(^)(CJBaseUploadItem *item))requestBlock
 {
-//    NSURLSessionDataTask * (^createUploadRequest)(AFHTTPSessionManager *manager, NSString *UploadUrl, NSDictionary *parameters, NSArray<CJUploadItemModel *> *uploadItems, CJBaseUploadItem *saveUploadInfoToItem, void(^)(CJBaseUploadItem *itemThatSaveResopnse)requestChangeBlock, CJUploadInfo * (^)(id responseObject)dealResopnseForUploadInfoBlock)
-    
-
     NSArray<CJUploadItemModel *> *uploadItemModels = imageUploadItem.uploadItems;
-    [self uploadItems:uploadItemModels
-              toWhere:toWhere
-   uploadInfoSaveInItem:imageUploadItem
-         uploadInfoChangeBlock:requestBlock];
+    [self uploadItems:uploadItemModels toWhere:toWhere uploadInfoSaveInItem:imageUploadItem uploadInfoChangeBlock:requestBlock];
     
     if (imageUploadItem.image) {
         self.cjImageView.image  = imageUploadItem.image;
@@ -58,8 +53,9 @@
     NSLog(@"Url = %@", Url);
     NSLog(@"params = %@", parameters);
     
-    [self cj_UseManager:manager postUploadUrl:Url parameters:parameters uploadItems:uploadItems uploadInfoSaveInItem:imageItem uploadInfoChangeBlock:uploadInfoChangeBlock dealResopnseForUploadInfoBlock:^CJUploadInfo *(id responseObject) {
-        
+    
+    [self configureUploadRequestForItem:imageItem andUseUploadInfoConfigureView:self.uploadProgressView uploadRequestConfigureByManager:manager Url:Url parameters:parameters uploadItems:uploadItems uploadInfoChangeBlock:uploadInfoChangeBlock dealResopnseForUploadInfoBlock:^CJUploadInfo *(id responseObject)
+    {
         IjinbuResponseModel *responseModel = [MTLJSONAdapter modelOfClass:[IjinbuResponseModel class] fromJSONDictionary:responseObject error:nil];
         
         CJUploadInfo *uploadInfo = [[CJUploadInfo alloc] init];
@@ -105,65 +101,5 @@
         
     }];
 }
-
-
-/**
- *  视图的上传文件操作（uploadInfo：上传请求的各个时刻信息）
- *
- *  @param manager      manager
- *  @param Url          Url
- *  @param parameters   parameters
- *  @param uploadItems  要上传的数据组uploadItems
- *  @param saveUploadInfoToItem     上传请求的各个时刻信息(正在上传、上传完成)的保存位置
- *  @param uploadInfoChangeBlock    上传请求的时刻信息变化后(正在上传、上传完成都会导致其变化)要执行的操作
- *  @param dealResopnseForUploadInfoBlock   上传结束后从response中获取上传请求的该时刻信息(正在上传的时刻系统可自动获取)
- */
-- (void)cj_UseManager:(AFHTTPSessionManager *)manager
-        postUploadUrl:(NSString *)Url
-           parameters:(id)parameters
-          uploadItems:(NSArray<CJUploadItemModel *> *)uploadItems
- uploadInfoSaveInItem:(CJBaseUploadItem *)saveUploadInfoToItem
-uploadInfoChangeBlock:(void(^)(CJBaseUploadItem *saveUploadInfoToItem))uploadInfoChangeBlock
-dealResopnseForUploadInfoBlock:(CJUploadInfo * (^)(id responseObject))dealResopnseForUploadInfoBlock
-{
-    
-    NSURLSessionDataTask *operation = saveUploadInfoToItem.operation;
-    if (operation == nil) {
-        operation = [IjinbuNetworkClient cj_UseManager:manager postUploadUrl:Url parameters:parameters uploadItems:uploadItems uploadInfoSaveInItem:saveUploadInfoToItem uploadInfoChangeBlock:uploadInfoChangeBlock dealResopnseForUploadInfoBlock:dealResopnseForUploadInfoBlock];
-        
-        saveUploadInfoToItem.operation = operation;
-    }
-    
-    
-    //cjReUploadHandle
-    __weak typeof(saveUploadInfoToItem)weakItem = saveUploadInfoToItem;
-    [self.uploadProgressView setCjReUploadHandle:^(UIView *uploadProgressView) {
-        __strong __typeof(weakItem)strongItem = weakItem;
-        
-        [strongItem.operation cancel];
-        
-        NSURLSessionDataTask *newOperation = [IjinbuNetworkClient cj_UseManager:manager postUploadUrl:Url parameters:parameters uploadItems:uploadItems uploadInfoSaveInItem:saveUploadInfoToItem uploadInfoChangeBlock:uploadInfoChangeBlock dealResopnseForUploadInfoBlock:dealResopnseForUploadInfoBlock];
-        
-        strongItem.operation = newOperation;
-    }];
-    
-    
-    CJUploadInfo *uploadInfo = saveUploadInfoToItem.uploadInfo;
-    [self.uploadProgressView updateProgressText:uploadInfo.uploadStatePromptText progressVaule:uploadInfo.progressValue];//调用此方法避免reload时候显示错误
-}
-
-//- (CJUploadInfo *)createFailureUploadInfo {
-//    CJUploadInfo *uploadInfo = [[CJUploadInfo alloc] init];
-//    if (uploadSuccess) {
-//        uploadInfo.uploadState = CJUploadStateSuccess;
-//        uploadInfo.responseModel = 
-//    } else {
-//        uploadInfo.uploadState = CJUploadStateFailure;
-//    }
-//    ;
-//    uploadSuccess
-//    
-//    return uploadInfo;
-//}
 
 @end

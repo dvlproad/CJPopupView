@@ -1,1 +1,0 @@
-../../../CJBaseScrollView/AllScrollViewControls/CJBaseCollectionViewCell/CJUploadCollectionViewCell/CJUploadCollectionViewCell.h

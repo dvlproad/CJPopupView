@@ -1,1 +1,1 @@
-../../../CJNetwork/CJNetwork/AFHTTPSessionManager+CJCacheRequest/AFHTTPSessionManager+CJCacheRequest.h
+../../../CJNetwork/CJNetwork/AFNetworkingBaseComponent/AFHTTPSessionManager+CJCacheRequest.h

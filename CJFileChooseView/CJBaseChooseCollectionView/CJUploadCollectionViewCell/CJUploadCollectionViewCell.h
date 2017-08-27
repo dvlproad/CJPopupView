@@ -7,7 +7,7 @@
 //
 
 #import "CJBaseCollectionViewCell.h"
-#import "CJUploadProgressView.h"
+#import <CJNetwork/CJUploadProgressView.h>
 
 @interface CJUploadCollectionViewCell : CJBaseCollectionViewCell {
     

@@ -1,1 +1,1 @@
-../../../CJNetwork/CJNetwork/AFHTTPSessionManager+CJCacheRequest/CJNetworkBase/NSURLSessionTask+CJErrorMessage.h
+../../../CJNetwork/CJNetwork/AFNetworkingBaseComponent/AFNetworkBase/NSURLSessionTask+CJErrorMessage.h
