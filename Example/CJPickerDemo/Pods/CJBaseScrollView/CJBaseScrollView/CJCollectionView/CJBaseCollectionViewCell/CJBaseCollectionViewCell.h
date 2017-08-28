@@ -2,7 +2,7 @@
 //  CJBaseCollectionViewCell.h
 //  AllScrollViewDemo
 //
-//  Created by lichq on 2016/06/07.
+//  Created by ciyouzen on 2016/06/07.
 //  Copyright © 2016年 dvlproad. All rights reserved.
 //
 
@@ -23,13 +23,15 @@ typedef NS_ENUM(NSUInteger, CJTextLabelPosition) {
 @property (nonatomic, strong) UIImageView *cjImageView;
 @property (nonatomic, strong) UIButton *cjDeleteButton;
 
-- (void)commonInit;
+/**
+ *  在子类中对init做具体实现
+ *
+ */
+- (void)cjBaseCollectionViewCell_commonInit;
+
+//提供给init的方法
 - (void)addCJImageViewWithEdgeInsets:(UIEdgeInsets)edgeInsets;
 - (void)addCJTextLabelWithPosition:(CJTextLabelPosition)textLabelPosition;
 - (void)addCJDeleteButton;
-
-
-#pragma mark - addSubView
-- (void)cj_makeView:(UIView *)superView addSubView:(UIView *)subView withEdgeInsets:(UIEdgeInsets)edgeInsets;
 
 @end

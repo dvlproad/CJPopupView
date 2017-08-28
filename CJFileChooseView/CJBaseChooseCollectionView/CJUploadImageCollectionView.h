@@ -6,7 +6,7 @@
 //  Copyright © 2017年 dvlproad. All rights reserved.
 //
 
-#import "CJBaseChooseCollectionView.h"
+#import <CJBaseScrollView/MyEqualCellSizeCollectionView.h>
 #import "CJImageUploadItem.h"
 #import "CJUploadVideoItem.h"
 
@@ -15,9 +15,14 @@ typedef NS_ENUM(NSUInteger, CJMediaType) {
     CJMediaTypeVideo
 };
 
-@interface CJUploadImageCollectionView : CJBaseChooseCollectionView <UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
+///TODO:将FileChooseView从CJPickerDemo中整理到MainViewControllerDemo
+@interface CJUploadImageCollectionView : MyEqualCellSizeCollectionView <UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
     
 }
+
+
+
+
 //可选
 @property (nonatomic, assign) NSInteger useToUploadItemToWhere; /** 可选：上传到哪里(一个项目中可能有好几个地方都要上传) */
 
@@ -37,5 +42,8 @@ typedef NS_ENUM(NSUInteger, CJMediaType) {
  *  return 是否上传完成
  */
 - (BOOL)isAllUploadFinish;
+
+
+
 
 @end

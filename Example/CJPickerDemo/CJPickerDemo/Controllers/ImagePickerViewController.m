@@ -33,7 +33,7 @@
     self.uploadImageCollectionView.belongToViewController = self;
     self.uploadImageCollectionView.useToUploadItemToWhere = 0;
     self.uploadImageCollectionView.mediaType = CJMediaTypeImage;
-    self.uploadImageCollectionView.maxDataModelShowCount = 5;
+    self.uploadImageCollectionView.maxDataModelCount = 5;
     
 //    __weak typeof(self)weakSelf = self;
     [self.uploadImageCollectionView setPickImageCompleteBlock:^{
@@ -161,6 +161,10 @@
     return imageUploadModel;
 }
 
+
+- (IBAction)reloadCollectionView:(id)sender {
+    [self.uploadImageCollectionView reloadData];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

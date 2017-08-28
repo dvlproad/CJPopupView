@@ -6,10 +6,11 @@
 //  Copyright © 2016年 dvlproad. All rights reserved.
 //
 
-#import "CJBaseCollectionViewCell.h"
+//#import "CJBaseCollectionViewCell.h"
+#import "CJFullBottomCollectionViewCell.h"
 #import <CJNetwork/CJUploadProgressView.h>
 
-@interface CJUploadCollectionViewCell : CJBaseCollectionViewCell {
+@interface CJUploadCollectionViewCell : CJFullBottomCollectionViewCell {
     
 }
 @property (nonatomic, strong) CJUploadProgressView *uploadProgressView;

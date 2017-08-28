@@ -42,7 +42,6 @@
         NSLog(@"请求ijinbu成功");
         NSLog(@"responseObject = %@", responseObject);
         IjinbuResponseModel *responseModel = [MTLJSONAdapter modelOfClass:[IjinbuResponseModel class] fromJSONDictionary:responseObject error:nil];
-//        IjinbuResponseModel *responseModel = [[IjinbuResponseModel alloc] initWithDictionary:responseObject error:nil];
         if ([responseModel.status integerValue] == 1) {
             if (success) {
                 success(responseModel);

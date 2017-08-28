@@ -80,7 +80,6 @@
 		78F3A9F81E9620F4005D3DA4 /* CJResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F3A9F51E9620F4005D3DA4 /* CJResponseModel.m */; };
 		78F3A9F91E9620F4005D3DA4 /* IjinbuResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F3A9F71E9620F4005D3DA4 /* IjinbuResponseModel.m */; };
 		78F3AA031E96322E005D3DA4 /* UIImage+fixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F3AA021E96322E005D3DA4 /* UIImage+fixOrientation.m */; };
-		78F3AA411E963BE0005D3DA4 /* CJBaseChooseCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F3AA381E963BE0005D3DA4 /* CJBaseChooseCollectionView.m */; };
 		78F3AA421E963BE0005D3DA4 /* CJUploadCollectionViewCell+configureForSpecificUploadItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F3AA3B1E963BE0005D3DA4 /* CJUploadCollectionViewCell+configureForSpecificUploadItem.m */; };
 		78F3AA431E963BE0005D3DA4 /* CJUploadImageCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F3AA3D1E963BE0005D3DA4 /* CJUploadImageCollectionView.m */; };
 		78F3AA441E963BE0005D3DA4 /* cjCollectionViewCellAdd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 78F3AA3F1E963BE0005D3DA4 /* cjCollectionViewCellAdd@2x.png */; };
@@ -239,8 +238,6 @@
 		78F3A9F71E9620F4005D3DA4 /* IjinbuResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IjinbuResponseModel.m; sourceTree = "<group>"; };
 		78F3AA011E96322E005D3DA4 /* UIImage+fixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+fixOrientation.h"; sourceTree = "<group>"; };
 		78F3AA021E96322E005D3DA4 /* UIImage+fixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+fixOrientation.m"; sourceTree = "<group>"; };
-		78F3AA371E963BE0005D3DA4 /* CJBaseChooseCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJBaseChooseCollectionView.h; sourceTree = "<group>"; };
-		78F3AA381E963BE0005D3DA4 /* CJBaseChooseCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJBaseChooseCollectionView.m; sourceTree = "<group>"; };
 		78F3AA3A1E963BE0005D3DA4 /* CJUploadCollectionViewCell+configureForSpecificUploadItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CJUploadCollectionViewCell+configureForSpecificUploadItem.h"; sourceTree = "<group>"; };
 		78F3AA3B1E963BE0005D3DA4 /* CJUploadCollectionViewCell+configureForSpecificUploadItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CJUploadCollectionViewCell+configureForSpecificUploadItem.m"; sourceTree = "<group>"; };
 		78F3AA3C1E963BE0005D3DA4 /* CJUploadImageCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJUploadImageCollectionView.h; sourceTree = "<group>"; };
@@ -618,8 +615,6 @@
 		78F3AA361E963BE0005D3DA4 /* CJBaseChooseCollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				78F3AA371E963BE0005D3DA4 /* CJBaseChooseCollectionView.h */,
-				78F3AA381E963BE0005D3DA4 /* CJBaseChooseCollectionView.m */,
 				78F3AA391E963BE0005D3DA4 /* CJUploadCollectionViewCell */,
 				78F3AA3C1E963BE0005D3DA4 /* CJUploadImageCollectionView.h */,
 				78F3AA3D1E963BE0005D3DA4 /* CJUploadImageCollectionView.m */,
@@ -916,7 +911,6 @@
 				78F3A9EB1E962035005D3DA4 /* IjinbuNetworkClient.m in Sources */,
 				785540EF1E7DCA9900F320E6 /* CJRelatedPickerRichView.m in Sources */,
 				785540AD1E7DC5F800F320E6 /* AreaModel.m in Sources */,
-				78F3AA411E963BE0005D3DA4 /* CJBaseChooseCollectionView.m in Sources */,
 				78F3A9F21E962035005D3DA4 /* IjinbuUser.m in Sources */,
 				78F3AA421E963BE0005D3DA4 /* CJUploadCollectionViewCell+configureForSpecificUploadItem.m in Sources */,
 				784C15DF1E8E6A080019D652 /* NSObject+Extension.m in Sources */,

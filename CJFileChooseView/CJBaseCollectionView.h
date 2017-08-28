@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MyEqualCellSizeCollectionView.h"
 
 typedef UICollectionViewCell* (^CJCollectionViewConfigureDataCellBlock)(UICollectionView *collectionView, NSIndexPath *indexPath);
 typedef UICollectionViewCell* (^CJCollectionViewConfigureExtraCellBlock)(UICollectionView *collectionView, NSIndexPath *indexPath);

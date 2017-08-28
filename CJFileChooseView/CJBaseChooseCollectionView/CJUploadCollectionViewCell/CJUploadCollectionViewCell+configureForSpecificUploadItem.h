@@ -11,8 +11,15 @@
 
 @interface CJUploadCollectionViewCell (configureForSpecificUploadItem)
 
+//TODO:待删除
 - (void)configureForImageUploadItem:(CJImageUploadItem *)imageUploadItem
                    andUploadToWhere:(NSInteger)toWhere
                        requestBlock:(void(^)(CJBaseUploadItem *item))requestBlock;
+
+/**< 上传图片到服务器 */
+- (void)uploadItems:(NSArray<CJUploadItemModel *> *)uploadModels
+            toWhere:(NSInteger)toWhere
+uploadInfoSaveInItem:(CJImageUploadItem *)imageItem
+uploadInfoChangeBlock:(void(^)(CJBaseUploadItem *item))uploadInfoChangeBlock;
 
 @end
