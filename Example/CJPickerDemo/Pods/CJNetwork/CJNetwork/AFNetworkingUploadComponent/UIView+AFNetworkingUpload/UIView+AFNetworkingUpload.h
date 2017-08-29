@@ -10,6 +10,14 @@
 #import "AFNetworkingUploadUtil.h"
 #import "CJUploadProgressView.h"
 
+//typedef int (^Sum) (int,  int);
+
+///创建包含会将上传过程中的各个时刻信息返回给制定item的请求
+typedef NSURLSessionDataTask * (^CJDetailedUploadRequestBlock) (AFHTTPSessionManager *manager, NSString *postUploadUrl, id parameters, NSArray<CJUploadItemModel *> *uploadItems, CJBaseUploadItem *uploadInfoSaveInItem, void(^uploadInfoChangeBlock)(CJBaseUploadItem *saveUploadInfoToItem), CJUploadInfo * (^dealResopnseForUploadInfoBlock)(id responseObject));
+
+///从请求结果response中获取uploadInfo的代码块
+typedef CJUploadInfo * (^CJDealResopnseForUploadInfoBlock)(id responseObject);
+
 @interface UIView (AFNetworkingUpload)
 
 #pragma mark - TODO:有上传操作的那个视图要重写的方法

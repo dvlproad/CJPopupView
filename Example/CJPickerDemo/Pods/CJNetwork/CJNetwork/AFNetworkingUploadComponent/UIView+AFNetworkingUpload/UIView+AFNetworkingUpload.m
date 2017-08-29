@@ -20,10 +20,10 @@
                 uploadInfoChangeBlock:(void(^)(CJBaseUploadItem *saveUploadInfoToItem))uploadInfoChangeBlock
        dealResopnseForUploadInfoBlock:(CJUploadInfo * (^)(id responseObject))dealResopnseForUploadInfoBlock
 {
-    
-    NSURLSessionDataTask *operation = saveUploadInfoToItem.operation;
-    if (operation == nil) {
-        operation =
+//    CJDetailedUploadRequestBlock createDetailedUploadRequestBlock = ^(AFHTTPSessionManager *manager, NSString *postUploadUrl, id parameters, NSArray<CJUploadItemModel *> *uploadItems, CJBaseUploadItem *uploadInfoSaveInItem, void(^uploadInfoChangeBlock)(CJBaseUploadItem *saveUploadInfoToItem), CJUploadInfo * (^dealResopnseForUploadInfoBlock)(id responseObject))
+    NSURLSessionDataTask *(^createDetailedUploadRequestBlock)(void) = ^(void) //TOContinue:
+    {
+        NSURLSessionDataTask *operation =
         [AFNetworkingUploadUtil cj_UseManager:manager
                                 postUploadUrl:Url
                                    parameters:parameters
@@ -31,6 +31,19 @@
                          uploadInfoSaveInItem:saveUploadInfoToItem
                         uploadInfoChangeBlock:uploadInfoChangeBlock
                dealResopnseForUploadInfoBlock:dealResopnseForUploadInfoBlock];
+        
+        return operation;
+    };
+    
+    NSURLSessionDataTask *operation = saveUploadInfoToItem.operation;
+    if (operation == nil) {
+        operation = createDetailedUploadRequestBlock(manager,
+                                                     Url,
+                                                     parameters,
+                                                     uploadItems,
+                                                     saveUploadInfoToItem,
+                                                     uploadInfoChangeBlock,
+                                                     dealResopnseForUploadInfoBlock);
         
         saveUploadInfoToItem.operation = operation;
     }
@@ -43,14 +56,14 @@
         
         [strongItem.operation cancel];
         
-        NSURLSessionDataTask *newOperation =
-        [AFNetworkingUploadUtil cj_UseManager:manager
-                                postUploadUrl:Url
-                                   parameters:parameters
-                                  uploadItems:uploadItems
-                         uploadInfoSaveInItem:saveUploadInfoToItem
-                        uploadInfoChangeBlock:uploadInfoChangeBlock
-               dealResopnseForUploadInfoBlock:dealResopnseForUploadInfoBlock];
+        NSURLSessionDataTask *newOperation = nil;
+        newOperation = createDetailedUploadRequestBlock(manager,
+                                                        Url,
+                                                        parameters,
+                                                        uploadItems,
+                                                        saveUploadInfoToItem,
+                                                        uploadInfoChangeBlock,
+                                                        dealResopnseForUploadInfoBlock);
         
         strongItem.operation = newOperation;
     }];
@@ -59,5 +72,6 @@
     CJUploadInfo *uploadInfo = saveUploadInfoToItem.uploadInfo;
     [uploadProgressView updateProgressText:uploadInfo.uploadStatePromptText progressVaule:uploadInfo.progressValue];//调用此方法避免reload时候显示错误
 }
+
 
 @end
