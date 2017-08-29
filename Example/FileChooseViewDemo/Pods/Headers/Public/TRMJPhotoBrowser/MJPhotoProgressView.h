@@ -1,1 +1,0 @@
-../../../TRMJPhotoBrowser/MJPhotoBrowser/MJPhotoBrowser/MJPhotoProgressView.h

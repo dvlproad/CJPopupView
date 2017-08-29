@@ -1,1 +1,0 @@
-../../../TRWebImage/Classes/SDWebImage/SDWebImageManager.h

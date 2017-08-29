@@ -1,9 +1,0 @@
-ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO
-GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/JGActionSheet" "${PODS_ROOT}/Headers/Public/MBProgressHUD" "${PODS_ROOT}/Headers/Public/PureLayout" "${PODS_ROOT}/Headers/Public/TRCache" "${PODS_ROOT}/Headers/Public/TRMJPhotoBrowser" "${PODS_ROOT}/Headers/Public/TRWebImage"
-LIBRARY_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/AFNetworking" "$PODS_CONFIGURATION_BUILD_DIR/JGActionSheet" "$PODS_CONFIGURATION_BUILD_DIR/MBProgressHUD" "$PODS_CONFIGURATION_BUILD_DIR/PureLayout" "$PODS_CONFIGURATION_BUILD_DIR/TRCache" "$PODS_CONFIGURATION_BUILD_DIR/TRMJPhotoBrowser" "$PODS_CONFIGURATION_BUILD_DIR/TRWebImage"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AFNetworking" -isystem "${PODS_ROOT}/Headers/Public/JGActionSheet" -isystem "${PODS_ROOT}/Headers/Public/MBProgressHUD" -isystem "${PODS_ROOT}/Headers/Public/PureLayout" -isystem "${PODS_ROOT}/Headers/Public/TRCache" -isystem "${PODS_ROOT}/Headers/Public/TRMJPhotoBrowser" -isystem "${PODS_ROOT}/Headers/Public/TRWebImage"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"AFNetworking" -l"JGActionSheet" -l"MBProgressHUD" -l"PureLayout" -l"TRCache" -l"TRMJPhotoBrowser" -l"TRWebImage" -framework "CoreGraphics" -framework "Foundation" -framework "MapKit" -framework "MobileCoreServices" -framework "QuartzCore" -framework "Security" -framework "SystemConfiguration" -framework "UIKit"
-PODS_BUILD_DIR = $BUILD_DIR
-PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
-PODS_ROOT = ${SRCROOT}/Pods
