@@ -7,26 +7,19 @@
 //
 
 #import "CJUploadImageCollectionView.h"
-#import "CJUploadCollectionViewCell+configureForSpecificUploadItem.h"
-
-#import <JGActionSheet/JGActionSheet.h>
-
-//#import <TRMJPhotoBrowser/MJPhotoBrowser.h>
-//#import <TRMJPhotoBrowser/MJPhoto.h>
-#import "MJPhotoBrowser.h"
-#import "MJPhoto.h"
-
-#import <MediaPlayer/MediaPlayer.h>
+#import "CJUploadCollectionViewCell.h"
 
 #import "UIImage+Helper.h"
 
 //#import "NetworkClient+CJUploadFile.h"
 
-#import "UIImagePickerControllerUtil.h"
 
-#import <AVFoundation/AVFoundation.h>
-#import <CJFMDBFileManager/CJFileManager.h>
 #import <CJBaseUIKit/UIColor+CJHex.h>
+
+#import "IjinbuNetworkClient+UploadFile.h"
+
+#import "CJUploadImageCollectionView+Tap.h"
+
 
 
 static NSString *CJUploadCollectionViewCellID = @"CJUploadCollectionViewCell";
@@ -147,7 +140,7 @@ static NSString *CJUploadCollectionViewCellAddID = @"CJUploadCollectionViewCellA
     } didTapExtraItemBlock:^(UICollectionView *collectionView, NSIndexPath *indexPath) {
         NSLog(@"点击额外的item");
         
-        [weakSelf addMediaUploadItemAction];
+        [weakSelf didTapToAddMediaUploadItemAction];
     }];
 }
 
@@ -175,19 +168,53 @@ static NSString *CJUploadCollectionViewCellAddID = @"CJUploadCollectionViewCellA
     }
 }
 
+
 ///完善cell这个view的上传请求
 - (void)uploadCell:(CJUploadCollectionViewCell *)cell withDataModelIndexPath:(NSIndexPath *)indexPath {
+    
     __weak typeof(self)weakSelf = self;
+    void (^uploadInfoChangeBlock)(CJBaseUploadItem *itemThatSaveUploadInfo) = ^(CJBaseUploadItem *itemThatSaveUploadInfo) {
+        CJImageUploadItem *imageItem = (CJImageUploadItem *)itemThatSaveUploadInfo;
+        CJUploadCollectionViewCell *myCell = (CJUploadCollectionViewCell *)[weakSelf cellForItemAtIndexPath:imageItem.indexPath];
+        CJUploadInfo *uploadInfo = itemThatSaveUploadInfo.uploadInfo;
+        [myCell.uploadProgressView updateProgressText:uploadInfo.uploadStatePromptText progressVaule:uploadInfo.progressValue];
+    };
     
     CJImageUploadItem *baseUploadItem = [self getDataModelAtIndexPath:indexPath];
+    NSArray<CJUploadItemModel *> *uploadModels = baseUploadItem.uploadItems;
+    NSInteger toWhere = self.useToUploadItemToWhere;
     
-    NSArray<CJUploadItemModel *> *uploadItemModels = baseUploadItem.uploadItems;
-    [cell uploadItems:uploadItemModels toWhere:weakSelf.useToUploadItemToWhere uploadInfoSaveInItem:baseUploadItem uploadInfoChangeBlock:^(CJBaseUploadItem *item) {
-        CJImageUploadItem *imageItem = (CJImageUploadItem *)item;
-        CJUploadCollectionViewCell *myCell = (CJUploadCollectionViewCell *)[weakSelf cellForItemAtIndexPath:imageItem.indexPath];
-        CJUploadInfo *uploadInfo = item.uploadInfo;
-        [myCell.uploadProgressView updateProgressText:uploadInfo.uploadStatePromptText progressVaule:uploadInfo.progressValue];
+    /*
+    [cell uploadItems:uploadModels toWhere:toWhere uploadInfoSaveInItem:baseUploadItem uploadInfoChangeBlock:uploadInfoChangeBlock];
+    */
+    
+    CJBaseUploadItem *saveUploadInfoToItem = baseUploadItem;
+    
+    NSURLSessionDataTask *(^createDetailedUploadRequestBlock)(void) = [IjinbuNetworkClient createDetailedUploadRequestBlockByRequestUploadItems:uploadModels toWhere:toWhere andsaveUploadInfoToItem:saveUploadInfoToItem uploadInfoChangeBlock:uploadInfoChangeBlock];
+    NSURLSessionDataTask *operation = saveUploadInfoToItem.operation;
+    if (operation == nil) {
+        operation = createDetailedUploadRequestBlock();
+        
+        saveUploadInfoToItem.operation = operation;
+    }
+    
+    
+    //cjReUploadHandle
+    __weak typeof(saveUploadInfoToItem)weakItem = saveUploadInfoToItem;
+    [cell.uploadProgressView setCjReUploadHandle:^(UIView *uploadProgressView) {
+        __strong __typeof(weakItem)strongItem = weakItem;
+        
+        [strongItem.operation cancel];
+        
+        NSURLSessionDataTask *newOperation = nil;
+        newOperation = createDetailedUploadRequestBlock();
+        
+        strongItem.operation = newOperation;
     }];
+    
+    
+    CJUploadInfo *uploadInfo = saveUploadInfoToItem.uploadInfo;
+    [cell.uploadProgressView updateProgressText:uploadInfo.uploadStatePromptText progressVaule:uploadInfo.progressValue];//调用此方法避免reload时候显示错误
 }
 
 ///完善cell的deleteButton的操作
@@ -214,240 +241,7 @@ static NSString *CJUploadCollectionViewCellAddID = @"CJUploadCollectionViewCellA
     }];
 }
 
-- (void)didSelectMediaUploadItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"didSelectMediaUploadItemAtIndexPath");
-    
-    if (self.mediaType == CJMediaTypeVideo) {
-        CJImageUploadItem *imageUploadItem = [self.dataModels objectAtIndex:indexPath.row];
-        NSString *localPath = [NSHomeDirectory() stringByAppendingPathComponent:imageUploadItem.localRelativePath];
-        NSURL *videoURL = [NSURL fileURLWithPath:localPath];
-        MPMoviePlayerViewController *moviePlayerController = [[MPMoviePlayerViewController alloc] initWithContentURL:videoURL];
-        [moviePlayerController.moviePlayer prepareToPlay];
-        moviePlayerController.moviePlayer.movieSourceType = MPMovieSourceTypeFile;
-        [self.belongToViewController presentMoviePlayerViewControllerAnimated:moviePlayerController];
-        
-    } else {
-        for (CJImageUploadItem *imageUploadItem in self.dataModels) {
-            UIImage *image = imageUploadItem.image;
-            if (image == nil) {
-                image = nil;    //试着从本地种查找
-            }
-            
-        }
-    }
-}
 
-- (void)addMediaUploadItemAction {
-    NSAssert(self.belongToViewController != nil, @"未设置CJUploadCollectionView的belongToViewController");
-    
-    if (self.dataModels.count >= self.maxDataModelShowCount) {
-        //[UIGlobal showMessage:@"图片数量已达上限"];
-        NSLog(@"所选媒体数量已达上限");
-        return;
-    }
-    
-    [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
-    
-    if (self.mediaType == CJMediaTypeVideo) {
-        [self addVideoUploadItemAction];
-        
-    } else {
-        [self addImageUploadItemAction];
-    }
-}
-
-#pragma mark - 视频选择
-- (void)addVideoUploadItemAction {
-    if (self.pickVideoHandle) {
-        self.pickVideoHandle();
-    } else {
-        NSLog(@"未操作视频选择");
-    }
-}
-
-
-
-#pragma mark - 图片选择
-- (void)addImageUploadItemAction {
-    JGActionSheetSection *section1 = [JGActionSheetSection sectionWithTitle:nil message:nil buttonTitles:@[@"拍照", @"从手机相册选择"] buttonStyle:JGActionSheetButtonStyleDefault];
-    JGActionSheetSection *cancelSection = [JGActionSheetSection sectionWithTitle:nil message:nil buttonTitles:@[@"取消"] buttonStyle:JGActionSheetButtonStyleCancel];
-    NSArray *sections = @[section1, cancelSection];
-    
-    __weak typeof(self)weakSelf = self;
-    JGActionSheet *sheet = [JGActionSheet actionSheetWithSections:sections];
-    [sheet setButtonPressedBlock:^(JGActionSheet *sheet, NSIndexPath *indexPath) {
-        if (indexPath.section == 0)
-        {
-            if (indexPath.row == 0) {   //拍照
-                [weakSelf takePhoto];
-                
-            } else {
-                [weakSelf choosePhoto];
-            }
-        }
-        [sheet dismissAnimated:YES];
-    }];
-    [sheet setOutsidePressBlock:^(JGActionSheet *sheet){
-        [sheet dismissAnimated:YES];
-    }];
-    
-    NSAssert(self.belongToViewController != nil, @"所属控制器不能为空，请先设置");
-    [sheet showInView:self.belongToViewController.view animated:YES];
-}
-
-/**< 拍照 */
-- (void)takePhoto {
-    UIImagePickerControllerSourceType sourceType = UIImagePickerControllerSourceTypeCamera;
-    //NSArray<NSString *> *mediaTypes = @[(NSString *)kUTTypeImage,(NSString *)kUTTypeMovie];
-    
-    UIImagePickerControllerUtil *imagePickerControllerUtil = [UIImagePickerControllerUtil sharedInstance];
-    imagePickerControllerUtil.saveLocation = CJSaveLocationNone;
-    
-    UIImagePickerController *imagePickerController =
-    [imagePickerControllerUtil createWithSourceType:sourceType isVideo:NO pickImageFinishBlock:^(UIImage *image)
-     {
-         NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
-         
-         //文件名
-         NSString *identifier = [[NSProcessInfo processInfo] globallyUniqueString];
-         NSString *imageName = [identifier stringByAppendingPathExtension:@"jpg"];
-         
-         NSString *imageRelativePath = [CJFileManager saveFileData:imageData
-                                                     withFileName:imageName
-                                               inSubDirectoryPath:@"UploadImage"
-                                              searchPathDirectory:NSCachesDirectory];
-         
-         
-         NSMutableArray<CJUploadItemModel *> *uploadItems = [[NSMutableArray alloc] init];
-         //NSString *identifier = [[NSProcessInfo processInfo] globallyUniqueString];
-         //图片
-         //NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
-         //NSString *imageName = [identifier stringByAppendingPathExtension:@"jpg"];
-         CJUploadItemModel *imageUploadItem = [[CJUploadItemModel alloc] init];
-         imageUploadItem.uploadItemType = CJUploadItemTypeImage;
-         imageUploadItem.uploadItemData = imageData;
-         imageUploadItem.uploadItemName = imageName;
-         [uploadItems addObject:imageUploadItem];
-         
-         CJImageUploadItem *imageItem =
-                [[CJImageUploadItem alloc] initWithShowImage:image
-                                      imageLocalRelativePath:imageRelativePath
-                                                 uploadItems:uploadItems];
-         [self.dataModels addObject:imageItem];
-         
-         [self reloadData];
-         
-     } pickVideoFinishBlock:nil pickCancelBlock:^{
-         
-     }];
-    
-    if (imagePickerController) {
-        [self.belongToViewController presentViewController:imagePickerController animated:YES completion:nil];
-    }
-    
-}
-
-
-/**< 从相册中选择照片 */
-- (void)choosePhoto {
-    /*
-    UIImagePickerControllerSourceType sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    //NSArray<NSString *> *mediaTypes = @[(NSString *)kUTTypeImage];
-    
-    UIImagePickerControllerUtil *imagePickerControllerUtil = [UIImagePickerControllerUtil sharedInstance];
-    imagePickerControllerUtil.saveLocation = CJSaveLocationNone;
-    [imagePickerControllerUtil openImagePickerControllerWithSourceType:sourceType isVideo:NO inViewController:self.belongToViewController pickImageFinishBlock:^(UIImage *image)
-     {
-         NSString *imageRelativePath = [self saveImageToLocal:image];
-         
-         NSMutableArray<CJUploadItemModel *> *uploadModels = [[NSMutableArray alloc] init];
-         NSString *identifier = [[NSProcessInfo processInfo] globallyUniqueString];
-         //图片
-         NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
-         NSString *imageName = [identifier stringByAppendingPathExtension:@"jpg"];
-         CJUploadItemModel *imageUploadModel = [[CJUploadItemModel alloc] init];
-         imageUploadModel.uploadItemType = CJUploadItemTypeImage;
-         imageUploadModel.uploadItemData = imageData;
-         imageUploadModel.uploadItemName = imageName;
-         [uploadModels addObject:imageUploadModel];
-         
-         CJImageUploadItem *imageItem =
-         [[CJImageUploadItem alloc] initWithShowImage:image
-                               imageLocalRelativePath:imageRelativePath
-                                          uploadItems:uploadModels];
-         
-         [self.dataModels addObject:imageItem];
-         
-         [self reloadData];
-         if (self.pickImageCompleteBlock) {
-             self.pickImageCompleteBlock();
-         }
-         
-     } pickVideoFinishBlock:nil pickCancelBlock:^{
-         
-     }];
-    return;
-    */
-    
-    MJImagePickerVC * vc = [[MJImagePickerVC alloc] init];
-    vc.maxCount = self.maxDataModelShowCount - self.dataModels.count;
-    vc.callback = ^(NSArray * array){
-        for (NSInteger i = 0; i < array.count; i++) {
-            MJImageItem *item = array[i];
-            UIImage *image = item.image;
-            
-            NSString *imageRelativePath = [self saveImageToLocal:image];
-            
-            NSMutableArray<CJUploadItemModel *> *uploadModels = [[NSMutableArray alloc] init];
-            NSString *identifier = [[NSProcessInfo processInfo] globallyUniqueString];
-            //图片
-            NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
-            NSString *imageName = [identifier stringByAppendingPathExtension:@"jpg"];
-            CJUploadItemModel *imageUploadModel = [[CJUploadItemModel alloc] init];
-            imageUploadModel.uploadItemType = CJUploadItemTypeImage;
-            imageUploadModel.uploadItemData = imageData;
-            imageUploadModel.uploadItemName = imageName;
-            [uploadModels addObject:imageUploadModel];
-            
-            CJImageUploadItem *imageItem =
-                    [[CJImageUploadItem alloc] initWithShowImage:image
-                                          imageLocalRelativePath:imageRelativePath
-                                                     uploadItems:uploadModels];
-            [self.dataModels addObject:imageItem];
-        }
-        
-        [self reloadData];
-        if (self.pickImageCompleteBlock) {
-            self.pickImageCompleteBlock();
-        }
-    };
-    
-    UIColor *blueTextColor = [UIColor cjColorWithHexString:@"#68c2f4"];
-    
-    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
-    nav.navigationBar.barTintColor = [UIColor whiteColor];
-    [nav.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:19],NSForegroundColorAttributeName:blueTextColor}];
-    nav.navigationBar.tintColor = blueTextColor;
-    
-    [self.belongToViewController presentViewController:nav animated:YES completion:NULL];
-}
-
-
-/**< 保存图片到本地 */
-- (NSString *)saveImageToLocal:(UIImage *)image {
-    NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
-    
-    //文件名
-    NSString *identifier = [[NSProcessInfo processInfo] globallyUniqueString];
-    NSString *fileName = [identifier stringByAppendingPathExtension:@"jpg"];
-    
-    NSString *fileRelativePath = [CJFileManager saveFileData:imageData
-                                                withFileName:fileName
-                                          inSubDirectoryPath:@"UploadImage"
-                                         searchPathDirectory:NSCachesDirectory];
-    
-    return fileRelativePath;
-}
 
 - (void)deletePhoto:(NSInteger)index
 {
