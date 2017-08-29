@@ -61,7 +61,7 @@
 
 - (void)commonInit {
     self.extralItemSetting = CJExtralItemSettingNone;
-    self.maxDataModelCount = NSIntegerMax;
+    self.maxDataModelShowCount = NSIntegerMax;
     //NSLog(@"maxDataModelShowCount = %ld", self.maxDataModelShowCount);
     
 //    self.allowsMultipleSelection = YES;
@@ -166,10 +166,10 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
         case CJExtralItemSettingLeading:
         case CJExtralItemSettingTailing:
         {
-            if (self.currentDataModelCount < self.maxDataModelCount) {
-                return self.currentDataModelCount + 1;
+            if (self.dataModels.count < self.maxDataModelShowCount) {
+                return self.dataModels.count + 1;
             } else {
-                return self.currentDataModelCount;
+                return self.dataModels.count;
             }
             
             break;
@@ -177,7 +177,7 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
         case CJExtralItemSettingNone:
         default:
         {
-            return self.currentDataModelCount;
+            return self.dataModels.count;
             break;
         }
     }
@@ -198,7 +198,7 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
         }
         case CJExtralItemSettingTailing:
         {
-            if (indexPath.row < self.currentDataModelCount) {
+            if (indexPath.row < self.dataModels.count) {
                 return [self collectionView:collectionView cellForDataItemAtIndexPath:indexPath];
             } else {
                 return [self collectionView:collectionView cellForExtraItemAtIndexPath:indexPath];
@@ -256,7 +256,7 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
         }
         case CJExtralItemSettingTailing:
         {
-            if (indexPath.row < self.currentDataModelCount) {
+            if (indexPath.row < self.dataModels.count) {
                 [self collectionView:collectionView didTapDataItemAtIndexPath:indexPath];
             } else {
                 [self collectionView:collectionView didTapExtraItemAtIndexPath:indexPath];
@@ -271,6 +271,27 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
             break;
         }
     }
+}
+
+/* 完整的描述请参见文件头部 */
+- (id)getDataModelAtIndexPath:(NSIndexPath *)indexPath {
+    id dataModle = nil;
+    switch (self.extralItemSetting) {
+        case CJExtralItemSettingLeading:
+        {
+            dataModle = [self.dataModels objectAtIndex:indexPath.item-1];
+            break;
+        }
+        case CJExtralItemSettingTailing:
+        case CJExtralItemSettingNone:
+        default:
+        {
+            dataModle = [self.dataModels objectAtIndex:indexPath.item];
+            break;
+        }
+    }
+    
+    return dataModle;
 }
 
 ///点击数据Item会执行的操作
@@ -347,4 +368,5 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
     
     return height;
 }
+
 @end

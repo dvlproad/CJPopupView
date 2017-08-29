@@ -16,29 +16,6 @@
 
 @implementation CJUploadCollectionViewCell (configureForSpecificUploadItem)
 
-- (void)configureForImageUploadItem:(CJImageUploadItem *)imageUploadItem
-                   andUploadToWhere:(NSInteger)toWhere
-                       requestBlock:(void(^)(CJBaseUploadItem *item))requestBlock
-{
-    NSArray<CJUploadItemModel *> *uploadItemModels = imageUploadItem.uploadItems;
-    [self uploadItems:uploadItemModels toWhere:toWhere uploadInfoSaveInItem:imageUploadItem uploadInfoChangeBlock:requestBlock];
-    
-    if (imageUploadItem.image) {
-        self.cjImageView.image  = imageUploadItem.image;
-    }else{
-//        HPResponseEntity *responseModel = imageUploadItem.responseModel;
-//        NSArray<IjinbuUploadItemResult *> *result = [MTLJSONAdapter modelsOfClass:[IjinbuUploadItemResult class] fromJSONArray:responseModel.result error:nil];
-//        
-//        IjinbuUploadItemResult *imageUploadResult = [result firstObject];
-//        NSURL *imageURL = [NSURL URLWithString:imageUploadResult.networkUrl];
-//        [self.cjImageView sd_setImageWithURL:imageURL];
-    }
-}
-
-
-
-
-
 /**< 上传图片到服务器 */
 - (void)uploadItems:(NSArray<CJUploadItemModel *> *)uploadModels
                                 toWhere:(NSInteger)toWhere

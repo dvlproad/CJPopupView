@@ -23,7 +23,9 @@ typedef NS_ENUM(NSUInteger, CJExtralItemSetting) {
     
 }
 //必须设置的值
-@property (nonatomic, assign) NSUInteger currentDataModelCount; /**< 数据源的个数 */
+@property (nonatomic, strong) NSMutableArray *dataModels;       /**< 数据源 */
+//@property (nonatomic, assign) NSUInteger currentDataModelCount; /**< 数据源的个数 */
+//重要：如果使用currentDataModelCount来控制collectionView的显示个数，而不是使用dataModels来控制，则易出现崩溃的问题。因为[collectionView reloadData];之前必须先修改currentDataModelCount的值使其与dataModel的个数一样，而这个很容易被我们忽略掉
 
 //以下值必须二选一设置（默认cellWidthFromFixedWidth设置后，另外一个自动失效）
 @property (nonatomic, assign) NSInteger cellWidthFromPerRowMaxShowCount; /**< 通过每行可显示的最多个数来设置每个cell的宽度*/
@@ -33,7 +35,7 @@ typedef NS_ENUM(NSUInteger, CJExtralItemSetting) {
 //可选设置的值，若不设置的话，以下值将采用默认值
 @property (nonatomic, assign) CGFloat collectionViewCellHeight; /**< cell高,没设置的话等于其宽 */
 @property (nonatomic, assign) CJExtralItemSetting extralItemSetting;/**< 额外cell的样式，(默认不添加） */
-@property (nonatomic, assign) NSUInteger maxDataModelCount; /**< 默认NSIntegerMax即无限制 */ //maxDataModelShowCount
+@property (nonatomic, assign) NSUInteger maxDataModelShowCount; /**< 集合视图最大显示的dataModel数目(默认NSIntegerMax即无限制) */
 
 
 //单选和reloadData这两种情况下需要使用的变量
@@ -50,6 +52,17 @@ typedef NS_ENUM(NSUInteger, CJExtralItemSetting) {
  */
 - (void)configureDataCellBlock:(CJConfigureCollectionViewCellBlock)configureDataCellBlock
        configureExtraCellBlock:(CJConfigureCollectionViewCellBlock)configureExtraCellBlock;
+
+
+/**
+ *  获取indexPath位置的dataModel(从数据源中获取每个indexPath要用什么dataModel来赋值)
+ *
+ *  @param indexPath indexPath
+ *
+ *  @return indexPath位置的dataModel
+ */
+- (id)getDataModelAtIndexPath:(NSIndexPath *)indexPath;
+
 
 /**
  *  设置点击Item要执行的方法

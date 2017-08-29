@@ -33,14 +33,14 @@
     self.uploadImageCollectionView.belongToViewController = self;
     self.uploadImageCollectionView.useToUploadItemToWhere = 0;
     self.uploadImageCollectionView.mediaType = CJMediaTypeImage;
-    self.uploadImageCollectionView.maxDataModelCount = 5;
+    self.uploadImageCollectionView.maxDataModelShowCount = 5;
     
 //    __weak typeof(self)weakSelf = self;
     [self.uploadImageCollectionView setPickImageCompleteBlock:^{
         //[weakSelf.uploadImageCollectionView reloadData];
     }];
     
-    [[IjinbuNetworkClient sharedInstance] requestijinbuLogin_name:@"15800000001" pasd:@"123456" success:^(IjinbuResponseModel *responseModel) {
+    [[IjinbuNetworkClient sharedInstance] requestijinbuLogin_name:@"15800000008" pasd:@"123456" success:^(IjinbuResponseModel *responseModel) {
         NSLog(@"登录成功");
     } failure:^(NSError *error) {
         NSLog(@"登录失败");

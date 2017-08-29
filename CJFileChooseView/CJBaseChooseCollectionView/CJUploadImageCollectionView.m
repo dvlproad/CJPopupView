@@ -35,7 +35,6 @@ static NSString *CJUploadCollectionViewCellAddID = @"CJUploadCollectionViewCellA
 @interface CJUploadImageCollectionView () {
     
 }
-@property (nonatomic, strong) NSMutableArray *dataModels;
 
 @end
 
@@ -54,9 +53,6 @@ static NSString *CJUploadCollectionViewCellAddID = @"CJUploadCollectionViewCellA
     }
     */
     self.extralItemSetting = CJExtralItemSettingTailing;
-                                                       
-                                                       
-    self.currentDataModelCount = [self.dataModels count];
     
     //以下值必须二选一设置（默认cellWidthFromFixedWidth设置后，另外一个自动失效）
     self.cellWidthFromPerRowMaxShowCount = 4;
@@ -64,8 +60,8 @@ static NSString *CJUploadCollectionViewCellAddID = @"CJUploadCollectionViewCellA
     
     //以下值，可选设置
     //self.collectionViewCellHeight = 30;
-    //self.maxDataModelCount = 5;
-    self.maxDataModelCount = 5; //MAXFLOAT
+    //self.maxDataModelShowCount = 5;
+    self.maxDataModelShowCount = 5; //MAXFLOAT
     
     self.allowsMultipleSelection = YES; //是否打开多选
     
@@ -92,7 +88,14 @@ static NSString *CJUploadCollectionViewCellAddID = @"CJUploadCollectionViewCellA
         CJUploadCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CJUploadCollectionViewCellID forIndexPath:indexPath];
         [self operateCell:cell withDataModelIndexPath:indexPath isSettingOperate:YES];
         
-        [self uploadCell:cell inCollectionView:collectionView withDataModelIndexPath:indexPath]; //上传操作
+        BOOL shouldUploadDirectly = YES; //TODO:是否直接上传
+        if (shouldUploadDirectly) { //cell显示的时候就开始直接上传
+            [self uploadCell:cell withDataModelIndexPath:indexPath]; //上传操作
+        } else { //不直接上传：则我们一般会有一个统一“上传”的按钮，来让这些上传
+            
+        }
+        [self deleteCell:cell inCollectionView:collectionView withDataModelIndexPath:indexPath];
+        
         
         return cell;
         
@@ -148,35 +151,6 @@ static NSString *CJUploadCollectionViewCellAddID = @"CJUploadCollectionViewCellA
     }];
 }
 
-
-- (id)getDataModelAtIndexPath:(NSIndexPath *)indexPath {
-    /* 从数据源中获取每个indexPath要用什么dataModel来赋值 */
-    id dataModle = nil;
-    switch (self.extralItemSetting) {
-            case CJExtralItemSettingLeading:
-        {
-            dataModle = [self.dataModels objectAtIndex:indexPath.item-1];
-            break;
-        }
-            case CJExtralItemSettingTailing:
-            case CJExtralItemSettingNone:
-        default:
-        {
-            dataModle = [self.dataModels objectAtIndex:indexPath.item];
-            break;
-        }
-    }
-    
-    /*
-    NSString *stringDataModle = (NSString *)dataModle;
-    return stringDataModle;
-    */
-    
-    CJImageUploadItem *baseUploadItem = (CJImageUploadItem *)dataModle;
-    baseUploadItem.indexPath = indexPath;
-    return baseUploadItem;
-}
-
 /**
  *  设置或者更新Cell
  *
@@ -186,14 +160,10 @@ static NSString *CJUploadCollectionViewCellAddID = @"CJUploadCollectionViewCellA
  */
 - (void)operateCell:(CJUploadCollectionViewCell *)cell withDataModelIndexPath:(NSIndexPath *)indexPath isSettingOperate:(BOOL)isSettingOperate {
     
-    if (isSettingOperate) {
-        /* 从数据源中获取每个indexPath要用什么dataModel来赋值 */
-        /*
-        NSString *dataModel = [self getDataModelAtIndexPath:indexPath];
-        cell.cjTextLabel.text = dataModel;
-        */
-    }
     CJImageUploadItem *dataModel = [self getDataModelAtIndexPath:indexPath];
+    if (isSettingOperate) {
+        dataModel.indexPath = indexPath;
+    }
     
     cell.cjImageView.image = [UIImage imageNamed:@"icon"];
     if (cell.selected) {
@@ -205,7 +175,8 @@ static NSString *CJUploadCollectionViewCellAddID = @"CJUploadCollectionViewCellA
     }
 }
 
-- (void)uploadCell:(CJUploadCollectionViewCell *)cell inCollectionView:(UICollectionView *)collectionView withDataModelIndexPath:(NSIndexPath *)indexPath {
+///完善cell这个view的上传请求
+- (void)uploadCell:(CJUploadCollectionViewCell *)cell withDataModelIndexPath:(NSIndexPath *)indexPath {
     __weak typeof(self)weakSelf = self;
     
     CJImageUploadItem *baseUploadItem = [self getDataModelAtIndexPath:indexPath];
@@ -217,10 +188,15 @@ static NSString *CJUploadCollectionViewCellAddID = @"CJUploadCollectionViewCellA
         CJUploadInfo *uploadInfo = item.uploadInfo;
         [myCell.uploadProgressView updateProgressText:uploadInfo.uploadStatePromptText progressVaule:uploadInfo.progressValue];
     }];
+}
+
+///完善cell的deleteButton的操作
+- (void)deleteCell:(CJUploadCollectionViewCell *)cell inCollectionView:(UICollectionView *)collectionView withDataModelIndexPath:(NSIndexPath *)indexPath {
+    __weak typeof(self)weakSelf = self;
     
-    
+    CJImageUploadItem *baseUploadItem = [self getDataModelAtIndexPath:indexPath];
     [cell setDeleteHandle:^(CJBaseCollectionViewCell *baseCell) {
-        if (baseUploadItem.operation) {
+        if (baseUploadItem.operation) { //如果有请求任务，则还应该取消掉该任务
             [baseUploadItem.operation cancel];
         }
         NSIndexPath *indexPath = [collectionView indexPathForCell:baseCell];
@@ -264,7 +240,7 @@ static NSString *CJUploadCollectionViewCellAddID = @"CJUploadCollectionViewCellA
 - (void)addMediaUploadItemAction {
     NSAssert(self.belongToViewController != nil, @"未设置CJUploadCollectionView的belongToViewController");
     
-    if (self.dataModels.count >= self.maxDataModelCount) {
+    if (self.dataModels.count >= self.maxDataModelShowCount) {
         //[UIGlobal showMessage:@"图片数量已达上限"];
         NSLog(@"所选媒体数量已达上限");
         return;
@@ -414,7 +390,7 @@ static NSString *CJUploadCollectionViewCellAddID = @"CJUploadCollectionViewCellA
     */
     
     MJImagePickerVC * vc = [[MJImagePickerVC alloc] init];
-    vc.maxCount = self.maxDataModelCount - self.dataModels.count;
+    vc.maxCount = self.maxDataModelShowCount - self.dataModels.count;
     vc.callback = ^(NSArray * array){
         for (NSInteger i = 0; i < array.count; i++) {
             MJImageItem *item = array[i];
@@ -439,7 +415,6 @@ static NSString *CJUploadCollectionViewCellAddID = @"CJUploadCollectionViewCellA
                                                      uploadItems:uploadModels];
             [self.dataModels addObject:imageItem];
         }
-        self.currentDataModelCount = [self.dataModels count]; //TODO:重要不要落下了
         
         [self reloadData];
         if (self.pickImageCompleteBlock) {
