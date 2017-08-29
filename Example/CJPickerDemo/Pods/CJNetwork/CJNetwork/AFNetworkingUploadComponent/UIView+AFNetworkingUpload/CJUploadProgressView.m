@@ -46,8 +46,11 @@
     UIView *parentView = self;
     
     self.cjUploadProgressMaskView = [[UIView alloc] initWithFrame:CGRectZero];
-    //self.cjUploadProgressMaskView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.3];
-    self.cjUploadProgressMaskView.backgroundColor = [UIColor redColor];
+    self.cjUploadProgressMaskView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.3];
+    //self.cjUploadProgressMaskView.backgroundColor = [UIColor redColor];
+    UITapGestureRecognizer *tapGR = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(reUpload:)];
+    [self.cjUploadProgressMaskView addGestureRecognizer:tapGR];
+    self.cjUploadProgressMaskView.userInteractionEnabled = YES; //根据上传状态设置是否可以点击
     [parentView addSubview:self.cjUploadProgressMaskView];
     
     self.cjUploadProgressMaskView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -106,6 +109,23 @@
     [self updateUploadProgressMaskViewWithProgressVaule:progressValue];
 }
 
+///**
+// *  根据上传请求的时刻信息来更新视图
+// *
+// *  @param upload 传请求的时刻信息
+// */
+//- (void)updateProgressViewByUploadInfo:(CJUploadInfo *)upload {
+//    self.cjUploadProgressLabel.text = upload.uploadStatePromptText;
+//    [self updateUploadProgressMaskViewWithProgressVaule:upload.progressValue];
+//    
+//    if (upload.uploadState == CJUploadStateSuccess ||
+//        upload.uploadState == CJUploadStateUploading) {
+//        self.cjUploadProgressMaskView.userInteractionEnabled = NO;
+//    } else {
+//        self.cjUploadProgressMaskView.userInteractionEnabled = YES;
+//    }
+//}
+
 /**
  *  更新上传状态的进度
  *
@@ -114,11 +134,6 @@
 - (void)updateUploadProgressMaskViewWithProgressVaule:(CGFloat)progressValue {
     //progressValue等于100不代表成功
     CGFloat remainProgressValue = (100.0-progressValue)/100.0;
-    
-    if (progressValue == 0) {
-        UITapGestureRecognizer *tapGR = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(reUpload:)];
-        [self.cjUploadProgressMaskView addGestureRecognizer:tapGR];
-    }
     
     UIView *parentView = self;
     

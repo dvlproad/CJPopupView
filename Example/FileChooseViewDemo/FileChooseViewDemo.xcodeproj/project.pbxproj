@@ -29,7 +29,6 @@
 		7817E4EC1E30B120007CE2AA /* CJImageUploadItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817E4DD1E30B120007CE2AA /* CJImageUploadItem.m */; };
 		7817E4ED1E30B120007CE2AA /* cjCollectionViewCellAdd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7817E4DF1E30B120007CE2AA /* cjCollectionViewCellAdd@2x.png */; };
 		7817E4EE1E30B120007CE2AA /* cjCollectionViewCellDelete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7817E4E01E30B120007CE2AA /* cjCollectionViewCellDelete@2x.png */; };
-		7817E4EF1E30B120007CE2AA /* CJFileChooseToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7817E4E21E30B120007CE2AA /* CJFileChooseToolBar.m */; };
 		98537DB65239F448E1326DC7 /* libPods-FileChooseViewDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDB7FF6CC25526890A8DB3C /* libPods-FileChooseViewDemoTests.a */; };
 		F0CE7C55E7A4D6D3D93D9AA1 /* libPods-FileChooseViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 539004B0C2EB26792334512E /* libPods-FileChooseViewDemo.a */; };
 /* End PBXBuildFile section */
@@ -95,8 +94,6 @@
 		7817E4DD1E30B120007CE2AA /* CJImageUploadItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJImageUploadItem.m; sourceTree = "<group>"; };
 		7817E4DF1E30B120007CE2AA /* cjCollectionViewCellAdd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cjCollectionViewCellAdd@2x.png"; sourceTree = "<group>"; };
 		7817E4E01E30B120007CE2AA /* cjCollectionViewCellDelete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cjCollectionViewCellDelete@2x.png"; sourceTree = "<group>"; };
-		7817E4E11E30B120007CE2AA /* CJFileChooseToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJFileChooseToolBar.h; sourceTree = "<group>"; };
-		7817E4E21E30B120007CE2AA /* CJFileChooseToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJFileChooseToolBar.m; sourceTree = "<group>"; };
 		8ED68FFC9810319207995153 /* Pods-FileChooseViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FileChooseViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FileChooseViewDemo/Pods-FileChooseViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		9D3E81266553A08ADE0575CA /* Pods-FileChooseViewDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FileChooseViewDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FileChooseViewDemoTests/Pods-FileChooseViewDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BEDB7FF6CC25526890A8DB3C /* libPods-FileChooseViewDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FileChooseViewDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -234,8 +231,6 @@
 			isa = PBXGroup;
 			children = (
 				7817E4C71E30B120007CE2AA /* CJBaseCollectionView */,
-				7817E4E11E30B120007CE2AA /* CJFileChooseToolBar.h */,
-				7817E4E21E30B120007CE2AA /* CJFileChooseToolBar.m */,
 			);
 			path = CJFileChooseView;
 			sourceTree = "<group>";
@@ -562,7 +557,6 @@
 				7817E4E31E30B120007CE2AA /* CJBaseCollectionViewCell.m in Sources */,
 				7817E4EC1E30B120007CE2AA /* CJImageUploadItem.m in Sources */,
 				7817E4E91E30B120007CE2AA /* CJUploadCollectionView.m in Sources */,
-				7817E4EF1E30B120007CE2AA /* CJFileChooseToolBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

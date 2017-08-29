@@ -10,7 +10,7 @@
 
 @implementation UIView (AFNetworkingUpload)
 
-/* 完整的描述请参见文件头部 */ //创建包含会将上传过程中的各个时刻信息返回给制定item的请求
+/* 完整的描述请参见文件头部 */
 - (void)configureUploadRequestForItem:(CJBaseUploadItem *)saveUploadInfoToItem
         andUseUploadInfoConfigureView:(CJUploadProgressView *)uploadProgressView
       uploadRequestConfigureByManager:(AFHTTPSessionManager *)manager
@@ -20,9 +20,10 @@
                 uploadInfoChangeBlock:(void(^)(CJBaseUploadItem *saveUploadInfoToItem))uploadInfoChangeBlock
        dealResopnseForUploadInfoBlock:(CJUploadInfo * (^)(id responseObject))dealResopnseForUploadInfoBlock
 {
-    NSURLSessionDataTask *(^createDetailedUploadRequestBlock)(void) = ^(void) //TOContinue:
-    {
-        NSURLSessionDataTask *operation =
+    
+    NSURLSessionDataTask *operation = saveUploadInfoToItem.operation;
+    if (operation == nil) {
+        operation =
         [AFNetworkingUploadUtil cj_UseManager:manager
                                 postUploadUrl:Url
                                    parameters:parameters
@@ -30,13 +31,6 @@
                          uploadInfoSaveInItem:saveUploadInfoToItem
                         uploadInfoChangeBlock:uploadInfoChangeBlock
                dealResopnseForUploadInfoBlock:dealResopnseForUploadInfoBlock];
-        
-        return operation;
-    };
-    
-    NSURLSessionDataTask *operation = saveUploadInfoToItem.operation;
-    if (operation == nil) {
-        operation = createDetailedUploadRequestBlock();
         
         saveUploadInfoToItem.operation = operation;
     }
@@ -49,8 +43,14 @@
         
         [strongItem.operation cancel];
         
-        NSURLSessionDataTask *newOperation = nil;
-        newOperation = createDetailedUploadRequestBlock();
+        NSURLSessionDataTask *newOperation =
+        [AFNetworkingUploadUtil cj_UseManager:manager
+                                postUploadUrl:Url
+                                   parameters:parameters
+                                  uploadItems:uploadItems
+                         uploadInfoSaveInItem:saveUploadInfoToItem
+                        uploadInfoChangeBlock:uploadInfoChangeBlock
+               dealResopnseForUploadInfoBlock:dealResopnseForUploadInfoBlock];
         
         strongItem.operation = newOperation;
     }];
@@ -59,6 +59,5 @@
     CJUploadInfo *uploadInfo = saveUploadInfoToItem.uploadInfo;
     [uploadProgressView updateProgressText:uploadInfo.uploadStatePromptText progressVaule:uploadInfo.progressValue];//调用此方法避免reload时候显示错误
 }
-
 
 @end

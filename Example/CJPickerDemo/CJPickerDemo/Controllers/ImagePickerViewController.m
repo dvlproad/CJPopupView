@@ -16,7 +16,7 @@
 #import "CJImageUploadItem.h"
 #import "MJImagePickerVC.h"
 
-#import "IjinbuNetworkClient+Login.h"
+//#import "IjinbuNetworkClient+Login.h"
 
 @interface ImagePickerViewController ()
 
@@ -40,12 +40,12 @@
         //[weakSelf.uploadImageCollectionView reloadData];
     }];
     
-    [[IjinbuNetworkClient sharedInstance] requestijinbuLogin_name:@"15800000007" pasd:@"123456" success:^(IjinbuResponseModel *responseModel) {
-        NSLog(@"登录成功");
-    } failure:^(NSError *error) {
-        NSLog(@"登录失败");
-        [SVProgressHUD showErrorWithStatus:@"登录失败"];
-    }];
+//    [[IjinbuNetworkClient sharedInstance] requestijinbuLogin_name:@"15800000007" pasd:@"123456" success:^(IjinbuResponseModel *responseModel) {
+//        NSLog(@"登录成功");
+//    } failure:^(NSError *error) {
+//        NSLog(@"登录失败");
+//        [SVProgressHUD showErrorWithStatus:@"登录失败"];
+//    }];
 }
 
 - (IBAction)pickImageAction:(id)sender {

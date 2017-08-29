@@ -11,7 +11,7 @@
 #import "CJUploadState.h"
 
 /**
- *  上传请求的时刻信息（已包括 CJUploadState 和 CJResponseModel）
+ *  上传请求的时刻信息（已包括 CJUploadState 和 responseModel(已转换成对象后的model)）
  */
 @interface CJUploadInfo : NSObject {
     

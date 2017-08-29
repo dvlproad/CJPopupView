@@ -14,20 +14,15 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - CJBaseScrollView/CJCollectionView/CJBaseCollectionViewCell (0.0.8)
-  - CJBaseScrollView/CJCollectionView/MyEqualCellSizeCollectionView (0.0.8)
+  - CJBaseScrollView/CJCollectionView/CJBaseCollectionViewCell (0.0.9)
+  - CJBaseScrollView/CJCollectionView/MyEqualCellSizeCollectionView (0.0.9)
   - CJBaseUIKit/UIColor+CJCategory (0.0.9)
   - CJBaseUIKit/UIImage+CJCategory (0.0.9)
   - CJFMDBFileManager (0.0.9):
     - FMDB (~> 2.6.2)
-  - CJNetwork/AFNetworkingBaseComponent (0.1.0):
-    - CJNetwork/CJCacheManager
+  - CJNetwork/AFNetworkingUploadComponent (0.1.1):
     - CJNetwork/CJNetworkMonitor
-    - SVProgressHUD (~> 1.1.3)
-  - CJNetwork/AFNetworkingUploadComponent (0.1.0):
-    - CJNetwork/CJNetworkMonitor
-  - CJNetwork/CJCacheManager (0.1.0)
-  - CJNetwork/CJNetworkMonitor (0.1.0):
+  - CJNetwork/CJNetworkMonitor (0.1.1):
     - AFNetworking (~> 3.1.0)
   - CJPopupAction (1.4.2)
   - CJRadio (1.0.3):
@@ -52,15 +47,14 @@ PODS:
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
-  - SVProgressHUD (1.1.3)
+  - SVProgressHUD (2.1.2)
 
 DEPENDENCIES:
-  - CJBaseScrollView/CJCollectionView/CJBaseCollectionViewCell (~> 0.0.8)
-  - CJBaseScrollView/CJCollectionView/MyEqualCellSizeCollectionView (~> 0.0.8)
+  - CJBaseScrollView/CJCollectionView/CJBaseCollectionViewCell (~> 0.0.9)
+  - CJBaseScrollView/CJCollectionView/MyEqualCellSizeCollectionView (~> 0.0.9)
   - CJBaseUIKit/UIColor+CJCategory (~> 0.0.7)
   - CJBaseUIKit/UIImage+CJCategory (~> 0.0.9)
   - CJFMDBFileManager (~> 0.0.9)
-  - CJNetwork/AFNetworkingBaseComponent (~> 0.1.0)
   - CJNetwork/AFNetworkingUploadComponent (~> 0.1.0)
   - CJRadio (~> 1.0.3)
   - DateTools (~> 2.0.0)
@@ -72,13 +66,14 @@ DEPENDENCIES:
   - OpenUDID (~> 1.0.0)
   - PureLayout (~> 3.0.2)
   - SDWebImage (~> 4.0.0)
+  - SVProgressHUD (~> 2.1.2)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  CJBaseScrollView: c95b89622bd5581466702a05366056a5bee121fc
+  CJBaseScrollView: 01e2f19388a1959df302eaf921bbcaad85ca412e
   CJBaseUIKit: 7b3f91fb325dd1800e3afacbeef9a7430f841c83
   CJFMDBFileManager: 5a300875eab7a7fb2872cad625cec910843f74dc
-  CJNetwork: bf89f4c715df1d86cbe4cea9df3a8f990955f425
+  CJNetwork: bc1c8b3a98aa9bc42eca2d6f4a90f92f5869c9b9
   CJPopupAction: e491b5f3fdb9d50dddedf450eeb94e36cc61b749
   CJRadio: 30525fedd08d706a7212ba508a253ba5817c770b
   DateTools: 933ac9c490f21f92127cf690ccd8c397e0126caf
@@ -91,8 +86,8 @@ SPEC CHECKSUMS:
   OpenUDID: e7cb6984c7304906ad20f3a36bf087b025896b6b
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
-  SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: 4e3f3ed83c47ec82205b0564fb86dced1f5fab4b
+PODFILE CHECKSUM: efaa340df11f9125aa07cc02e13388b11338ede1
 
 COCOAPODS: 1.1.0.rc.2
