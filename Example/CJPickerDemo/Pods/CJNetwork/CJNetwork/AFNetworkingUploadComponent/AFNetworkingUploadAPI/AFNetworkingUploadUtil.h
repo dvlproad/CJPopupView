@@ -14,6 +14,10 @@
 #import "CJUploadItemModel.h"   //要上传的数据模型
 #import "CJUploadInfo.h"        //上传请求的时刻信息（已包括 CJUploadState 和 CJResponseModel）
 
+
+///从请求结果response中获取uploadInfo的代码块
+typedef CJUploadInfo * (^CJDealResopnseForUploadInfoBlock)(id responseObject);
+
 @interface AFNetworkingUploadUtil : NSObject
 
 #pragma mark - 上传文件请求的接口

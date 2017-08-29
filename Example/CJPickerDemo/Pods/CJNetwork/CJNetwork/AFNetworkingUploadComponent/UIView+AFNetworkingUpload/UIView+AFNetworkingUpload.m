@@ -10,7 +10,7 @@
 
 @implementation UIView (AFNetworkingUpload)
 
-/* 完整的描述请参见文件头部 */
+/* 完整的描述请参见文件头部 */ //创建包含会将上传过程中的各个时刻信息返回给制定item的请求
 - (void)configureUploadRequestForItem:(CJBaseUploadItem *)saveUploadInfoToItem
         andUseUploadInfoConfigureView:(CJUploadProgressView *)uploadProgressView
       uploadRequestConfigureByManager:(AFHTTPSessionManager *)manager
@@ -20,7 +20,6 @@
                 uploadInfoChangeBlock:(void(^)(CJBaseUploadItem *saveUploadInfoToItem))uploadInfoChangeBlock
        dealResopnseForUploadInfoBlock:(CJUploadInfo * (^)(id responseObject))dealResopnseForUploadInfoBlock
 {
-//    CJDetailedUploadRequestBlock createDetailedUploadRequestBlock = ^(AFHTTPSessionManager *manager, NSString *postUploadUrl, id parameters, NSArray<CJUploadItemModel *> *uploadItems, CJBaseUploadItem *uploadInfoSaveInItem, void(^uploadInfoChangeBlock)(CJBaseUploadItem *saveUploadInfoToItem), CJUploadInfo * (^dealResopnseForUploadInfoBlock)(id responseObject))
     NSURLSessionDataTask *(^createDetailedUploadRequestBlock)(void) = ^(void) //TOContinue:
     {
         NSURLSessionDataTask *operation =
@@ -37,13 +36,7 @@
     
     NSURLSessionDataTask *operation = saveUploadInfoToItem.operation;
     if (operation == nil) {
-        operation = createDetailedUploadRequestBlock(manager,
-                                                     Url,
-                                                     parameters,
-                                                     uploadItems,
-                                                     saveUploadInfoToItem,
-                                                     uploadInfoChangeBlock,
-                                                     dealResopnseForUploadInfoBlock);
+        operation = createDetailedUploadRequestBlock();
         
         saveUploadInfoToItem.operation = operation;
     }
@@ -57,13 +50,7 @@
         [strongItem.operation cancel];
         
         NSURLSessionDataTask *newOperation = nil;
-        newOperation = createDetailedUploadRequestBlock(manager,
-                                                        Url,
-                                                        parameters,
-                                                        uploadItems,
-                                                        saveUploadInfoToItem,
-                                                        uploadInfoChangeBlock,
-                                                        dealResopnseForUploadInfoBlock);
+        newOperation = createDetailedUploadRequestBlock();
         
         strongItem.operation = newOperation;
     }];

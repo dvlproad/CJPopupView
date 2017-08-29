@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <SVProgressHUD/SVProgressHUD.h>
 
 #import "IjinbuResponseModel.h"
 

@@ -40,10 +40,11 @@
         //[weakSelf.uploadImageCollectionView reloadData];
     }];
     
-    [[IjinbuNetworkClient sharedInstance] requestijinbuLogin_name:@"15800000008" pasd:@"123456" success:^(IjinbuResponseModel *responseModel) {
+    [[IjinbuNetworkClient sharedInstance] requestijinbuLogin_name:@"15800000007" pasd:@"123456" success:^(IjinbuResponseModel *responseModel) {
         NSLog(@"登录成功");
     } failure:^(NSError *error) {
         NSLog(@"登录失败");
+        [SVProgressHUD showErrorWithStatus:@"登录失败"];
     }];
 }
 

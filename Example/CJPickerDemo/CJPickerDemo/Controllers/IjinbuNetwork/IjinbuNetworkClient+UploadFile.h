@@ -41,6 +41,17 @@
                                     failure:(HPFailure)failure;
 
 
+/**
+ *  创建上传文件到服务器的方法的代码块：给item设置上传请求，并将上传请求的各个时刻信息uploadInfo①保存到该item上，②同时利用这些uploadInfo设置uploadProgressView
+ *
+ *  @param saveUploadInfoToItem     上传请求的各个时刻信息(正在上传、上传完成)的保存位置
+ *  @param uploadItems              要上传的数据组uploadItems
+ *  @param toWhere                  上传请求需要的参数
+ *  @param uploadInfoChangeBlock    上传请求的时刻信息变化后(正在上传、上传完成都会导致其变化)要执行的操作
+ *
+ *  @return 返回上传文件到服务器的方法的代码块
+ */
++ (NSURLSessionDataTask *(^)(void))createDetailedUploadRequestBlockByRequestUploadItems:(NSArray<CJUploadItemModel *> *)uploadItems toWhere:(NSInteger)toWhere andsaveUploadInfoToItem:(CJBaseUploadItem *)saveUploadInfoToItem uploadInfoChangeBlock:(void(^)(CJBaseUploadItem *item))uploadInfoChangeBlock;
 
 
 @end
