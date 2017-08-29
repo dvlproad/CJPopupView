@@ -1,5 +1,6 @@
-# CJPopup
-弹出视图(包含类似美团的弹出下拉控件CJPDropDownView)
+# CJPopupView
+包含CJPicker和CJPopupView
+CJPopupView中包含类似美团的弹出下拉控件CJRelatedPickerRichView
 
 ## 目录
 包含
