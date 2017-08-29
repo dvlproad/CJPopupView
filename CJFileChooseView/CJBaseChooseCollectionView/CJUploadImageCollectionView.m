@@ -7,20 +7,10 @@
 //
 
 #import "CJUploadImageCollectionView.h"
+#import "CJUploadImageCollectionView+Tap.h"
 #import "CJUploadCollectionViewCell.h"
 
-#import "UIImage+Helper.h"
-
-//#import "NetworkClient+CJUploadFile.h"
-
-
-#import <CJBaseUIKit/UIColor+CJHex.h>
-
 #import "IjinbuNetworkClient+UploadFile.h"
-
-#import "CJUploadImageCollectionView+Tap.h"
-
-
 
 static NSString *CJUploadCollectionViewCellID = @"CJUploadCollectionViewCell";
 static NSString *CJUploadCollectionViewCellAddID = @"CJUploadCollectionViewCellAdd";
@@ -82,11 +72,8 @@ static NSString *CJUploadCollectionViewCellAddID = @"CJUploadCollectionViewCellA
         [self operateCell:cell withDataModelIndexPath:indexPath isSettingOperate:YES];
         
         BOOL shouldUploadDirectly = YES; //TODO:是否直接上传
-        if (shouldUploadDirectly) { //cell显示的时候就开始直接上传
-            [self uploadCell:cell withDataModelIndexPath:indexPath]; //上传操作
-        } else { //不直接上传：则我们一般会有一个统一“上传”的按钮，来让这些上传
-            
-        }
+        [self uploadCell:cell withDataModelIndexPath:indexPath shouldUploadDirectly:shouldUploadDirectly]; //上传操作
+        
         [self deleteCell:cell inCollectionView:collectionView withDataModelIndexPath:indexPath];
         
         
@@ -169,8 +156,18 @@ static NSString *CJUploadCollectionViewCellAddID = @"CJUploadCollectionViewCellA
 }
 
 
-///完善cell这个view的上传请求
-- (void)uploadCell:(CJUploadCollectionViewCell *)cell withDataModelIndexPath:(NSIndexPath *)indexPath {
+/**
+ *  完善cell这个view的上传请求
+ *
+ *  @param cell                 cell
+ *  @param indexPath            indexPath
+ *  @param shouldUploadDirectly 是否直接上传
+ */
+- (void)uploadCell:(CJUploadCollectionViewCell *)cell withDataModelIndexPath:(NSIndexPath *)indexPath shouldUploadDirectly:(BOOL)shouldUploadDirectly {
+    //shouldUploadDirectly:是否直接上传(YES:cell显示的时候就开始直接上传；NO：不直接上传,则我们一般会有一个统一“上传”的按钮，来让这些上传)
+    if (shouldUploadDirectly == NO) {
+        return;
+    }
     
     __weak typeof(self)weakSelf = self;
     void (^uploadInfoChangeBlock)(CJBaseUploadItem *itemThatSaveUploadInfo) = ^(CJBaseUploadItem *itemThatSaveUploadInfo) {
@@ -242,7 +239,7 @@ static NSString *CJUploadCollectionViewCellAddID = @"CJUploadCollectionViewCellA
 }
 
 
-
+///删除第几张图片
 - (void)deletePhoto:(NSInteger)index
 {
     if (self.dataModels.count > index) {

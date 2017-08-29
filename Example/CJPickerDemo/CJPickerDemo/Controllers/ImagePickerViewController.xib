@@ -46,11 +46,19 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xik-ps-Fec">
-                    <rect key="frame" x="82" y="462" width="226" height="30"/>
+                    <rect key="frame" x="74" y="458" width="226" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="reloadCollectionView"/>
                     <connections>
                         <action selector="reloadCollectionView:" destination="-1" eventType="touchUpInside" id="NEE-L4-Jm2"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgn-wy-ydV">
+                    <rect key="frame" x="79" y="524" width="209" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="开始上传/继续上传没上传完的"/>
+                    <connections>
+                        <action selector="uploadUnFinishImageModel:" destination="-1" eventType="touchUpInside" id="UH3-N1-XbO"/>
                     </connections>
                 </button>
             </subviews>

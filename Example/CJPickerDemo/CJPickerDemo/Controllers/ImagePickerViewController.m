@@ -162,6 +162,11 @@
     return imageUploadModel;
 }
 
+///开始上传/继续上传没上传完的
+- (IBAction)uploadUnFinishImageModel:(id)sender {
+    NSLog(@"对collectionView，开始上传/继续上传没上传完的");
+}
+
 
 - (IBAction)reloadCollectionView:(id)sender {
     [self.uploadImageCollectionView reloadData];
