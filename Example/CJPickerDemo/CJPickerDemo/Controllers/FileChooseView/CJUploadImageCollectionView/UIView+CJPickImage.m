@@ -107,8 +107,8 @@
      */
     
     MJImagePickerVC *vc = [[MJImagePickerVC alloc] init];
-    vc.maxCount = canMaxChooseImageCount;
-    vc.callback = ^(NSArray * array){
+    vc.canMaxChooseImageCount = canMaxChooseImageCount;
+    vc.pickCompleteBlock = ^(NSArray * array){
         NSMutableArray *pickerImageModels = [[NSMutableArray alloc] init];
         for (NSInteger i = 0; i < array.count; i++) {
             MJImageItem *item = array[i];

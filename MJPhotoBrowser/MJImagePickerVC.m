@@ -90,53 +90,100 @@
 
 @end
 
+
+
+
 @implementation MJImagePickerVC
 
-- (void)dismiss:(id)sender
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (instancetype)init
-{
-    if (self = [super init]) {
-        _maxCount = 9;
-    }
-    return self;
-}
-
-- (void)dealloc
-{
-    _callback = nil;
+- (void)dealloc {
+    _pickCompleteBlock = nil;
     [[NSNotificationCenter defaultCenter] removeAssociatedObjectForKey:@"groupArray"];
     
 }
 
-
-
--(void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-    [UIGlobal hideHudForView:self.view animated:YES];
+- (instancetype)init {
+    if (self = [super init]) {
+        [self commonInit];
+    }
+    return self;
 }
+
+- (void)commonInit {
+    _canMaxChooseImageCount = 9;
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [_selectedArray  removeAllObjects];
+    _number.text = @"(0)";
+}
+
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+}
+
+- (void)dismiss:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    __weak typeof(self)weakSelf = self;
+    
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent]; 
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(obtainGroupArray:) name:@"groupArray" object:nil];   
     
     
-    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc]initWithTitle:@"相册" style:UIBarButtonItemStylePlain target:self action:@selector(showPhotoes)];
+    UIBarButtonItem *leftItem =
+    [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"相册", nil)
+                                     style:UIBarButtonItemStylePlain
+                                    target:self
+                                    action:@selector(showPhotoes)];
     self.navigationItem.leftBarButtonItem = leftItem;
     
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(dismissVC)];
+    UIBarButtonItem *rightItem =
+    [[UIBarButtonItem alloc]initWithTitle:NSLocalizedString(@"取消", nil)
+                                    style:UIBarButtonItemStylePlain
+                                   target:self
+                                   action:@selector(dismissVC)];
     self.navigationItem.rightBarButtonItem = rightItem;
-        
+    
+    
+    
+    [self setupViews];
 
+    __weak typeof(self)weakSelf = self;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        weakSelf.tableView.refreshHeaderEnabled = NO;
+        BOOL isAuthorization = [MJImagePickerVC checkPhotoLibraryAuthorizationStatus];
+        if(isAuthorization == NO){
+            return;
+        }
+        [NSThread detachNewThreadSelector:@selector(reloadPhotoLibrary) toTarget:weakSelf withObject:nil];
+       //[NSThread detachNewThreadSelector:@selector(obtainData) toTarget:ws withObject:nil]; 
+    });
+    
+    
+    
     _picSections = [[NSMutableArray alloc] init];
+    Section *section = [[Section alloc] init];
+    [_picSections addObject:section];
+    
     _selectedArray = [[NSMutableArray alloc] init];
+}
+
+
+
+
+
+- (void)setupViews {
+    __weak typeof(self)weakSelf = self;
+    
     _tableView = [[HCTableView alloc] init];
     _tableView.delegate = self;
     _tableView.dataSource = self;
@@ -151,7 +198,10 @@
     }];
     
     
-    UIView * bottomView = [[UIView alloc] init];
+    
+    
+    
+    UIView *bottomView = [[UIView alloc] init];
     bottomView.backgroundColor = [UIColor whiteColor];
     bottomView.layer.borderWidth = 1;
     bottomView.layer.borderColor = CJRGBA(209, 209, 209, 1).CGColor;
@@ -173,11 +223,11 @@
     [bottomView addSubview:btnPreiview];
     [btnPreiview addTarget:self action:@selector(preview) forControlEvents:UIControlEventTouchUpInside];
     [btnPreiview mas_makeConstraints:^(MASConstraintMaker *make) {
-         make.centerY.mas_equalTo(bottomView.mas_centerY);
+        make.centerY.mas_equalTo(bottomView.mas_centerY);
         make.left.mas_equalTo(10);
     }];
     
-        
+    
     _number = [[UILabel alloc] init];
     _number.font = [UIFont systemFontOfSize:16.0f];
     _number.text = @"(0)";
@@ -200,35 +250,9 @@
     [btnSent mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.and.bottom.mas_equalTo(0);
         make.width.mas_equalTo(60);
-         make.right.mas_equalTo(_number.mas_left).mas_equalTo(25);
-         make.centerY.mas_equalTo(bottomView.mas_centerY);
+        make.right.mas_equalTo(_number.mas_left).mas_equalTo(25);
+        make.centerY.mas_equalTo(bottomView.mas_centerY);
     }];
-
-    
-    Section * section = [[Section alloc] init];
-    [_picSections addObject:section];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        weakSelf.tableView.refreshHeaderEnabled = NO;
-        ALAuthorizationStatus authStatus = [ALAssetsLibrary authorizationStatus];
-        if(authStatus == AVAuthorizationStatusDenied){
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"请在设备的\"设置-隐私-照片\"中允许访问照片。"
-                                                            message:nil
-                                                           delegate:nil
-                                                  cancelButtonTitle:@"确定"
-                                                  otherButtonTitles:nil];
-            [alert show];
-            return;
-        }
-        [NSThread detachNewThreadSelector:@selector(reloadPhotoLibrary) toTarget:weakSelf withObject:nil];
-       //[NSThread detachNewThreadSelector:@selector(obtainData) toTarget:ws withObject:nil]; 
-    });
-}
-
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    [_selectedArray  removeAllObjects];
-    _number.text = @"(0)";
 }
 
 -(void)obtainGroupArray:(NSNotification *)notic
@@ -240,15 +264,16 @@
 }
 
 
+///点击左上"相册"：进入到相册控制器
 - (void)showPhotoes
 {
-
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"FamilyPerformanceStoryboard" bundle:nil];
-    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"MJphotoSections"];
-    [self.navigationController pushViewController:vc animated:YES];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MJphotoSections" bundle:nil];
+    UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"MJphotoSections"];
+    [self.navigationController pushViewController:viewController animated:YES];
     
 }
 
+///点击右上“取消”
 -(void)dismissVC
 {
     [self dismissViewControllerAnimated:YES completion:nil]; 
@@ -283,7 +308,7 @@
     MJPhotoBrowser *browser = [[MJPhotoBrowser alloc] init];
     browser.currentPhotoIndex = 0; // 弹出相册时显示的第一张图片是？
     browser.photos = photos; // 设置所有的图片
-    browser.maxCount = (int)_maxCount;
+    browser.maxCount = self.canMaxChooseImageCount;
     browser.selectedNum = (int)_selectedArray.count;
      __weak MJPhotoBrowser * view = browser;
     browser.psentCallBack = ^(BOOL success)
@@ -363,8 +388,8 @@
             // DONOTHING
         }
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            if (weakSelf.callback) {
-                weakSelf.callback(array);
+            if (weakSelf.pickCompleteBlock) {
+                weakSelf.pickCompleteBlock(array);
             }
             
             [weakSelf dismissViewControllerAnimated:YES completion:nil];
@@ -496,12 +521,10 @@
     MJPhotoBrowser *browser = [[MJPhotoBrowser alloc] init];
     browser.currentPhotoIndex = sender.index; // 弹出相册时显示的第一张图片是？
     browser.photos = array; // 设置所有的图片
-    browser.maxCount = (int)_maxCount;
-    browser.selectedNum = (int)_selectedArray.count;
+    browser.maxCount = self.canMaxChooseImageCount;
+    browser.selectedNum = self.selectedArray.count;
     
     __weak MJPhotoBrowser * view = browser;
-    
-    
     browser.psentCallBack = ^(BOOL success)
     {
          
@@ -511,7 +534,7 @@
             
             [weakSelf.selectedArray removeObject:photo.imageItem];
             
-            if (photo.imageItem.selected && weakSelf.selectedArray.count < weakSelf.maxCount) {
+            if (photo.imageItem.selected && weakSelf.selectedArray.count < weakSelf.canMaxChooseImageCount) {
                 [weakSelf.selectedArray addObject:photo.imageItem];
             } else {
                 photo.imageItem.selected = NO;
@@ -535,7 +558,7 @@
             
             [weakSelf.selectedArray removeObject:photo.imageItem];
             
-            if (photo.imageItem.selected && weakSelf.selectedArray.count < weakSelf.maxCount) {
+            if (photo.imageItem.selected && weakSelf.selectedArray.count < weakSelf.canMaxChooseImageCount) {
                 [weakSelf.selectedArray addObject:photo.imageItem];
             } else {
                 photo.imageItem.selected = NO;
@@ -560,9 +583,9 @@
     MJImageItem * item = section.array[sender.index];
     item.selected = !item.selected;
     if (item.selected) {
-        if (_selectedArray.count >= _maxCount) {
+        if (_selectedArray.count >= self.canMaxChooseImageCount) {
             item.selected = NO;
-            [UIGlobal showMessage:[NSString stringWithFormat:@"最多只能选%d张图片", (int)_maxCount] inView:self.view];
+            [UIGlobal showMessage:[NSString stringWithFormat:@"最多只能选%zd张图片", self.canMaxChooseImageCount] inView:self.view];
             return;
         }
         [_selectedArray addObject:item];
@@ -712,4 +735,46 @@
     }
     return cell;
 }
+
+
+///检查“相册PhotoLibrary”授权问题
++ (BOOL)checkPhotoLibraryAuthorizationStatus {
+    BOOL isAuthorization = NO;
+    
+    AVAuthorizationStatus authStatus = [ALAssetsLibrary authorizationStatus];
+    switch (authStatus) {
+        case AVAuthorizationStatusAuthorized:   //已授权，可使用
+        {
+            isAuthorization = YES;
+            break;
+        }
+        case AVAuthorizationStatusNotDetermined://未进行授权选择
+        {
+            isAuthorization = YES;
+            break;
+        }
+        case AVAuthorizationStatusRestricted:   //未授权，且用户无法更新，如家长控制情况下
+        case AVAuthorizationStatusDenied:       //用户拒绝App使用
+        {
+            isAuthorization = NO;
+            break;
+        }
+        default:
+        {
+            isAuthorization = NO;
+            break;
+        }
+    }
+    
+    if(isAuthorization == NO) {
+        [[[UIAlertView alloc] initWithTitle:@"无法访问相册"
+                                    message:@"请在设备的\"设置-隐私-照片\"中允许访问照片。"
+                                   delegate:nil
+                          cancelButtonTitle:@"确定"
+                          otherButtonTitles:nil] show];
+    }
+    
+    return isAuthorization;
+}
+
 @end

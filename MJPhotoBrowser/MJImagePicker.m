@@ -14,7 +14,7 @@
 #import "MJPhoto.h"
 #import "MJPhotoBrowser.h"
 #import <JGActionSheet/JGActionSheet.h>
-#import "SDWebImageManager.h"
+#import <SDWebImage/SDWebImageManager.h>
 #import "MJImagePickerVC.h"
 #import <CJBaseUIKit/UIColor+CJHex.h>
 #import "UIGlobal.h"
@@ -47,6 +47,8 @@
 }
 
 @end
+
+
 
 @interface MJImagePicker ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
@@ -84,7 +86,7 @@
     self.clipsToBounds = YES;
     
     self.backgroundColor = [UIColor whiteColor];
-    UILabel * title = [[UILabel alloc] init];
+    UILabel *title = [[UILabel alloc] init];
     title.font = [UIFont systemFontOfSize:15.0f];
     title.textColor = [UIColor blackColor];
     title.backgroundColor = [UIColor clearColor];
@@ -269,8 +271,8 @@
             else
             {
                 MJImagePickerVC * vc = [[MJImagePickerVC alloc] init];
-                vc.maxCount = _limit - self.imageItems.count;
-                vc.callback = ^(NSArray * array){
+                vc.canMaxChooseImageCount = _limit - self.imageItems.count;
+                vc.pickCompleteBlock = ^(NSArray * array){
                     for (int i=0;i<array.count;i++) {
                         MJImageItem *tem = array[i];
                         ImageItem * item = [[ImageItem alloc] init];

@@ -49,7 +49,7 @@
         }
     }
     
-    if (![UIImagePickerControllerUtil checkAuthorizationStatus]) {
+    if (![UIImagePickerControllerUtil checkCameraAuthorizationStatus]) {
         return nil;
     }
     
@@ -174,7 +174,10 @@
     return isSupportCamera;
 }
 
-+ (BOOL)checkAuthorizationStatus {
+
+//+ (BOOL)checkAuthorizationStatusForImageComponentType:(CJDeviceComponentType)imageComponentType {
+///检查“相机Camera“授权问题
++ (BOOL)checkCameraAuthorizationStatus {
     BOOL isAuthorization = NO;
     
     NSString *mediaType = AVMediaTypeVideo;

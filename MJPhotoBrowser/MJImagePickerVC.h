@@ -20,11 +20,10 @@
 
 @end
 
-typedef void (^ImagePickerVCCallback) (NSArray * images);
 
 @interface MJImagePickerVC : UIViewController
 
-@property (nonatomic, assign) NSInteger maxCount;
-@property (nonatomic, copy) ImagePickerVCCallback callback;
+@property (nonatomic, assign) NSInteger canMaxChooseImageCount;     /**< 可一次性选取的最大数目 */
+@property (nonatomic, copy) void (^pickCompleteBlock)(NSArray * images);    /**< 照片选取完毕后 */
 
 @end

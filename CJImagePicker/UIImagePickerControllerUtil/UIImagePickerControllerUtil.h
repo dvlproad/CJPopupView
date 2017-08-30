@@ -9,7 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import <MobileCoreServices/MobileCoreServices.h>
-#import <AVFoundation/AVFoundation.h>
+#import <AVFoundation/AVFoundation.h>   //UIImagePickerController需要使用
+#import <AssetsLibrary/AssetsLibrary.h> //系统相册需要使用
+
+// [iOS判断是否有权限访问相机，相册，定位](http://blog.csdn.net/u013127850/article/details/52160911)
+//typedef NS_ENUM(NSUInteger, CJDeviceComponentType) {
+//    CJDeviceComponentTypeCamera,    /**< 相机 */
+//    CJDeviceComponentTypePhoto,     /**< 相册 */
+//    CJDeviceComponentTypeLocation,  /**< 定位 */
+//};
 
 
 typedef NS_OPTIONS(NSUInteger, CJSaveLocation) {

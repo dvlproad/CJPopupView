@@ -72,6 +72,7 @@
 		787A7E5E1F55FF61009A7F6A /* cjCollectionViewCellAdd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 787A7E541F55FF61009A7F6A /* cjCollectionViewCellAdd@2x.png */; };
 		787A7E5F1F55FF61009A7F6A /* cjCollectionViewCellDelete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 787A7E551F55FF61009A7F6A /* cjCollectionViewCellDelete@2x.png */; };
 		787A7E601F55FF61009A7F6A /* UIView+CJPickImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 787A7E571F55FF61009A7F6A /* UIView+CJPickImage.m */; };
+		78B91EB61F571D66009A8A1C /* MJphotoSections.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78B91EB51F571D66009A8A1C /* MJphotoSections.storyboard */; };
 		78F3AA031E96322E005D3DA4 /* UIImage+fixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F3AA021E96322E005D3DA4 /* UIImage+fixOrientation.m */; };
 		E8004FC4B40B74AFE807D847 /* libPods-CJPickerDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48A6484B73B7E20372FD66E9 /* libPods-CJPickerDemoTests.a */; };
 /* End PBXBuildFile section */
@@ -209,6 +210,7 @@
 		787A7E551F55FF61009A7F6A /* cjCollectionViewCellDelete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cjCollectionViewCellDelete@2x.png"; sourceTree = "<group>"; };
 		787A7E561F55FF61009A7F6A /* UIView+CJPickImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CJPickImage.h"; sourceTree = "<group>"; };
 		787A7E571F55FF61009A7F6A /* UIView+CJPickImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CJPickImage.m"; sourceTree = "<group>"; };
+		78B91EB51F571D66009A8A1C /* MJphotoSections.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MJphotoSections.storyboard; sourceTree = "<group>"; };
 		78F3AA011E96322E005D3DA4 /* UIImage+fixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+fixOrientation.h"; sourceTree = "<group>"; };
 		78F3AA021E96322E005D3DA4 /* UIImage+fixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+fixOrientation.m"; sourceTree = "<group>"; };
 		7CFC980D5F47A54820A32812 /* libPods-CJPickerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CJPickerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -303,6 +305,7 @@
 				784C158D1E8E49620019D652 /* MJPhotoProgressView.m */,
 				784C158E1E8E49620019D652 /* MJphotoSections.h */,
 				784C158F1E8E49620019D652 /* MJphotoSections.m */,
+				78B91EB51F571D66009A8A1C /* MJphotoSections.storyboard */,
 				784C15901E8E49620019D652 /* MJPhotoToolbar.h */,
 				784C15911E8E49620019D652 /* MJPhotoToolbar.m */,
 				784C15921E8E49620019D652 /* MJPhotoView.h */,
@@ -690,6 +693,7 @@
 				784752281E8FA2A400B24507 /* nav_back_blue@2x.png in Resources */,
 				785540AA1E7DC5F800F320E6 /* RelatedPickerViewController.xib in Resources */,
 				785540F51E7DCA9900F320E6 /* city.plist in Resources */,
+				78B91EB61F571D66009A8A1C /* MJphotoSections.storyboard in Resources */,
 				787A7E5F1F55FF61009A7F6A /* cjCollectionViewCellDelete@2x.png in Resources */,
 				785540F61E7DCA9900F320E6 /* line_gray_pickerToolbar.png in Resources */,
 				785540AC1E7DC5F800F320E6 /* RelatedPickerViewController2.xib in Resources */,
