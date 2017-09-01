@@ -13,16 +13,15 @@ target 'CJPickerDemo' do
     pod 'JSONModel', '~> 1.7.0'
     
     pod 'JGActionSheet', '~> 1.0.5'
-#    pod 'TRMJPhotoBrowser', '~> 1.0.6'
+#    pod 'TRCJPhotoBrowser', '~> 1.0.6'
 
     pod 'DateTools', '~> 2.0.0'
     
-    pod 'CJBaseUIKit/UIColor+CJCategory', '~> 0.0.7'
-    pod 'CJBaseUIKit/UIImage+CJCategory', '~> 0.0.9'
+    pod 'CJBaseUIKit/UIColor+CJCategory', '~> 0.0.15'
+    pod 'CJBaseUIKit/UIImage+CJCategory', '~> 0.0.15'
 
     pod 'CJFMDBFileManager', '~> 0.0.9'
     pod 'PureLayout', '~> 3.0.2'
-    pod 'OpenUDID', '~> 1.0.0'
     
     pod 'CJBaseScrollView/CJCollectionView/MyEqualCellSizeCollectionView', '~> 0.0.9'
     pod 'CJBaseScrollView/CJCollectionView/CJBaseCollectionViewCell', '~> 0.0.9' #需要8.0以上

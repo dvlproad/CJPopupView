@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-//#import <TRMJPhotoBrowser/MJPhotoBrowser.h>
-//#import <TRMJPhotoBrowser/MJPhoto.h>
-#import "MJPhotoBrowser.h"
-#import "MJPhoto.h"
+//#import <TRCJPhotoBrowser/CJPhotoBrowser.h>
+//#import <TRCJPhotoBrowser/CJPhotoModel.h>
+#import "CJPhotoBrowser.h"
+#import "CJPhotoModel.h"
 
 #import "CJImageUploadItem.h"
 #import "CJUploadVideoItem.h"
@@ -37,6 +37,6 @@
  *
  *  @return 从相册中选择照片的picker视图控制器
  */
-- (MJImagePickerVC *)choosePhotoPickerWithCanMaxChooseImageCount:(NSInteger)canMaxChooseImageCount pickCompleteBlock:(void (^)(NSArray<CJImageUploadItem *> *pickedImageItems))pickImageCompleteBlock;
+- (CJImagePickerViewController *)choosePhotoPickerWithCanMaxChooseImageCount:(NSInteger)canMaxChooseImageCount pickCompleteBlock:(void (^)(NSArray<CJImageUploadItem *> *pickedImageItems))pickImageCompleteBlock;
 
 @end

@@ -66,7 +66,7 @@
 
 
 /* 完整的描述请参见文件头部 */
-- (MJImagePickerVC *)choosePhotoPickerWithCanMaxChooseImageCount:(NSInteger)canMaxChooseImageCount pickCompleteBlock:(void (^)(NSArray<CJImageUploadItem *> *pickedImageItems))pickImageCompleteBlock {
+- (CJImagePickerViewController *)choosePhotoPickerWithCanMaxChooseImageCount:(NSInteger)canMaxChooseImageCount pickCompleteBlock:(void (^)(NSArray<CJImageUploadItem *> *pickedImageItems))pickImageCompleteBlock {
     /*
      UIImagePickerControllerSourceType sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
      //NSArray<NSString *> *mediaTypes = @[(NSString *)kUTTypeImage];
@@ -106,12 +106,12 @@
      return;
      */
     
-    MJImagePickerVC *vc = [[MJImagePickerVC alloc] init];
+    CJImagePickerViewController *vc = [[CJImagePickerViewController alloc] init];
     vc.canMaxChooseImageCount = canMaxChooseImageCount;
     vc.pickCompleteBlock = ^(NSArray * array){
         NSMutableArray *pickerImageModels = [[NSMutableArray alloc] init];
         for (NSInteger i = 0; i < array.count; i++) {
-            MJImageItem *item = array[i];
+            AlumbImageModel *item = array[i];
             UIImage *image = item.image;
             
             NSString *imageRelativePath = [self saveImageToLocal:image];

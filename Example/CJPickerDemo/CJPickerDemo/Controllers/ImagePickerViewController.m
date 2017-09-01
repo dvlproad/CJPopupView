@@ -14,7 +14,7 @@
 
 #import "CJUploadItemModel.h"
 #import "CJImageUploadItem.h"
-#import "MJImagePickerVC.h"
+#import "CJImagePickerViewController.h"
 
 //#import "IjinbuNetworkClient+Login.h"
 

@@ -10,8 +10,6 @@
 #import "CJUploadImageCollectionView+Tap.h"
 #import "CJUploadCollectionViewCell.h"
 
-//#import "IjinbuNetworkClient+UploadFile.h"
-
 static NSString *CJUploadCollectionViewCellID = @"CJUploadCollectionViewCell";
 static NSString *CJUploadCollectionViewCellAddID = @"CJUploadCollectionViewCellAdd";
 

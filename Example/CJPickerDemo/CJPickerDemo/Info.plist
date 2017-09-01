@@ -30,6 +30,10 @@
 	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>需要您的同意才能读取照片库</string>
+	<key>NSCameraUsageDescription</key>
+	<string>需要您的同意才能访问相机</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>需要您的同意才能访问媒体资料库</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

@@ -16,8 +16,8 @@ PODS:
     - AFNetworking/NSURLSession
   - CJBaseScrollView/CJCollectionView/CJBaseCollectionViewCell (0.0.9)
   - CJBaseScrollView/CJCollectionView/MyEqualCellSizeCollectionView (0.0.9)
-  - CJBaseUIKit/UIColor+CJCategory (0.0.9)
-  - CJBaseUIKit/UIImage+CJCategory (0.0.9)
+  - CJBaseUIKit/UIColor+CJCategory (0.0.15)
+  - CJBaseUIKit/UIImage+CJCategory (0.0.15)
   - CJFMDBFileManager (0.0.9):
     - FMDB (~> 2.6.2)
   - CJNetwork/AFNetworkingUploadComponent (0.1.1):
@@ -42,7 +42,6 @@ PODS:
   - Mantle/extobjc (2.1.0)
   - Masonry (1.0.2)
   - MBProgressHUD (1.0.0)
-  - OpenUDID (1.0.0)
   - PureLayout (3.0.2)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
@@ -52,8 +51,8 @@ PODS:
 DEPENDENCIES:
   - CJBaseScrollView/CJCollectionView/CJBaseCollectionViewCell (~> 0.0.9)
   - CJBaseScrollView/CJCollectionView/MyEqualCellSizeCollectionView (~> 0.0.9)
-  - CJBaseUIKit/UIColor+CJCategory (~> 0.0.7)
-  - CJBaseUIKit/UIImage+CJCategory (~> 0.0.9)
+  - CJBaseUIKit/UIColor+CJCategory (~> 0.0.15)
+  - CJBaseUIKit/UIImage+CJCategory (~> 0.0.15)
   - CJFMDBFileManager (~> 0.0.9)
   - CJNetwork/AFNetworkingUploadComponent (~> 0.1.0)
   - CJRadio (~> 1.0.3)
@@ -63,7 +62,6 @@ DEPENDENCIES:
   - Mantle (~> 2.1.0)
   - Masonry (~> 1.0.2)
   - MBProgressHUD (~> 1.0.0)
-  - OpenUDID (~> 1.0.0)
   - PureLayout (~> 3.0.2)
   - SDWebImage (~> 4.0.0)
   - SVProgressHUD (~> 2.1.2)
@@ -71,7 +69,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   CJBaseScrollView: 01e2f19388a1959df302eaf921bbcaad85ca412e
-  CJBaseUIKit: 7b3f91fb325dd1800e3afacbeef9a7430f841c83
+  CJBaseUIKit: 84703f9196e13faa9b6c5449e6d63bc7a9baf34d
   CJFMDBFileManager: 5a300875eab7a7fb2872cad625cec910843f74dc
   CJNetwork: bc1c8b3a98aa9bc42eca2d6f4a90f92f5869c9b9
   CJPopupAction: e491b5f3fdb9d50dddedf450eeb94e36cc61b749
@@ -83,11 +81,10 @@ SPEC CHECKSUMS:
   Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
-  OpenUDID: e7cb6984c7304906ad20f3a36bf087b025896b6b
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: efaa340df11f9125aa07cc02e13388b11338ede1
+PODFILE CHECKSUM: 98500abd1e251094fc55149eba154733bf7e585c
 
 COCOAPODS: 1.1.0.rc.2
