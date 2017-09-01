@@ -11,8 +11,7 @@
 
 #import "MBProgressHUD+CJPhotoBrowser.h"
 
-#import <JGActionSheet/JGActionSheet.h>
-#import <CJBaseUIKit/UIColor+CJHex.h>
+//#import <JGActionSheet/JGActionSheet.h>
 #import <CJBaseUIKit/UIImage+CJChangeColor.h>
 
 @interface CJPhotoToolbar()
@@ -47,7 +46,7 @@
     self.backgroundColor = [UIColor whiteColor];
     _photos = photos;
     
-    UIColor *blueTextColor = [UIColor cjColorWithHexString:@"#68c2f4"];
+    UIColor *blueTextColor = [UIColor colorWithRed:104/255.0 green:194/255.0 blue:244/255.0 alpha:1]; //#68c2f4
     if (_photos.count > 0) {
         _indexLabel = [[UILabel alloc] init];
         _indexLabel.font = [UIFont boldSystemFontOfSize:20];
@@ -102,7 +101,7 @@
     CJPhotoModel *photo = _photos[_currentPhotoIndex];
     photo.imageItem.selected = !photo.imageItem.selected;
     if (_selectedNum >= _maxCount && photo.imageItem.selected) {
-        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"最多只能选%d张图片", _maxCount] message:nil delegate:nil cancelButtonTitle:@"好" otherButtonTitles: nil];
+        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"最多只能选%zd张图片", _maxCount] message:nil delegate:nil cancelButtonTitle:@"好" otherButtonTitles: nil];
         [alert show];
         photo.imageItem.selected = NO;
         [_btnSelected setImage:[UIImage imageNamed:@"cjAlbumCheckedNormal"] forState:UIControlStateNormal];
@@ -187,19 +186,19 @@
 
 
 
-@interface MJBottomToolbar ()
+@interface CJBottomToolbar ()
 
 @end
-@implementation MJBottomToolbar
+@implementation CJBottomToolbar
 
 -(void)setSendNum:(NSNumber *)sendNum
 {
-    UIColor *blueTextColor = [UIColor cjColorWithHexString:@"#68c2f4"];
+    UIColor *blueTextColor = [UIColor colorWithRed:104/255.0 green:194/255.0 blue:244/255.0 alpha:1]; //#68c2f4
     
     UIView * bottomView = [[UIView alloc] init];
     bottomView.backgroundColor = [UIColor whiteColor];
     bottomView.layer.borderWidth = 1;
-    bottomView.layer.borderColor = CJRGB(209, 209, 209).CGColor;
+    bottomView.layer.borderColor = [UIColor colorWithRed:209/255.0f green:209/255.0f blue:209/255.0f alpha:1].CGColor;
     [self addSubview:bottomView];
     [bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.and.right.mas_equalTo(0);
@@ -257,7 +256,7 @@
 @end
 
 
-@interface MJDeleteToolbar()<UIActionSheetDelegate>
+@interface CJDeleteToolbar()<UIActionSheetDelegate>
 
 @property (nonatomic, strong) UILabel *indexLabel;
 @property (nonatomic, strong) UIButton *backBtn;
@@ -265,7 +264,7 @@
 
 @end
 
-@implementation MJDeleteToolbar
+@implementation CJDeleteToolbar
 
 
 - (void)dealloc
@@ -285,7 +284,8 @@
 - (void)setPhotos:(NSArray *)photos
 {
     self.backgroundColor = [UIColor whiteColor];
-    UIColor *blueTextColor = [UIColor cjColorWithHexString:@"#68c2f4"];
+    
+    UIColor *blueTextColor = [UIColor colorWithRed:104/255.0 green:194/255.0 blue:244/255.0 alpha:1]; //#68c2f4
     
     _photos = photos;
     if (_indexLabel == nil) {

@@ -29,7 +29,7 @@ typedef void (^CurrentNumSentCallback)(NSNumber *currentNum);
 @property (nonatomic, strong) NSArray *photos;
 // 当前展示的图片索引
 @property (nonatomic, assign) NSUInteger currentPhotoIndex;
-@property (nonatomic, copy) MJPhotoToolbarCallback callback;
+@property (nonatomic, copy) CJPhotoToolbarCallback callback;
 @property (nonatomic, copy) void(^backAction)();
 @property (nonatomic, assign) NSInteger maxCount;
 @property (nonatomic, assign) NSInteger selectedNum;

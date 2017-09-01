@@ -9,9 +9,9 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "7.0"
 
-  s.source       = { :git => "https://github.com/dvlproad/CJPopupView.git", :tag => "CJFile_0.0.2" }
-  s.source_files  = "CJPopupView/*.{h,m}"
-  #s.resources = "CJFile/{png}"
+  s.source       = { :git => "https://github.com/dvlproad/CJPopupView.git", :tag => "CJMedia_0.0.1" }
+  s.source_files  = "CJPicker/**/*.{h,m}"
+  #s.resources = "CJPicker/{png}"
   s.frameworks = 'UIKit'
 
   s.deprecated = true

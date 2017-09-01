@@ -13,9 +13,8 @@
 #import <AVFoundation/AVFoundation.h>
 
 #import "CJPhotoBrowser.h"
+#import "MBProgressHUD+CJPhotoBrowser.h"
 #import <CJBaseUIKit/UIImage+CJFixOrientation.h>
-
-#import "CJToast.h"
 
 #import "CJAlumbViewController.h"
 
@@ -290,7 +289,7 @@
         return;
     }
     
-    [CJToast showHUDAddedTo:self.view animated:YES];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     NSMutableArray * array = [[NSMutableArray alloc] init];
     for (AlumbImageModel * item in _selectedArray) {
         if ([item.url hasPrefix:@"assets"]) {
@@ -481,7 +480,8 @@
     if (item.selected) {
         if (_selectedArray.count >= self.canMaxChooseImageCount) {
             item.selected = NO;
-            [CJToast showMessage:[NSString stringWithFormat:@"最多只能选%zd张图片", self.canMaxChooseImageCount] inView:self.view];
+            NSString *message = [NSString stringWithFormat:@"最多只能选%zd张图片", self.canMaxChooseImageCount];
+            [MBProgressHUD showMessag:message toView:self.view];
             return;
         }
         [_selectedArray addObject:item];

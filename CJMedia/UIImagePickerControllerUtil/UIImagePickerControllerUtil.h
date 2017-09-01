@@ -2,8 +2,8 @@
 //  UIImagePickerControllerUtil.h
 //  CameraDemo
 //
-//  Created by 李超前 on 2017/2/16.
-//  Copyright © 2017年 ciyouzen. All rights reserved.
+//  Created by ciyouzen on 14-02-16.
+//  Copyright © 2014年 dvlproad. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

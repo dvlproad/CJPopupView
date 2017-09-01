@@ -9,41 +9,58 @@
 #import <UIKit/UIKit.h>
 #import <MBProgressHUD/MBProgressHUD.h>
 
-typedef void (^MJPhotoToolbarCallback)(BOOL needRefresh) ;
-typedef void (^MJSelectNumCallback)(int selectNum) ;
-@interface CJPhotoToolbar : UIView
+typedef void (^CJPhotoToolbarCallback)(BOOL needRefresh);
+typedef void (^CJSelectNumCallback)(NSInteger selectNum);
+
+@interface CJPhotoToolbar : UIView {
+    
+}
 // 所有的图片对象
 @property (nonatomic, strong) NSArray *photos;
 
 // 当前展示的图片索引
 @property (nonatomic, assign) NSUInteger currentPhotoIndex;
 @property (nonatomic, strong) MBProgressHUD * hud;
-@property (nonatomic, copy) MJPhotoToolbarCallback callback;
-@property (nonatomic, assign) int maxCount;
-@property (nonatomic, assign) int selectedNum;
-@property (nonatomic, copy) MJSelectNumCallback selectNumCallBack;
+@property (nonatomic, copy) CJPhotoToolbarCallback callback;
+@property (nonatomic, assign) NSInteger maxCount;
+@property (nonatomic, assign) NSInteger selectedNum;
+@property (nonatomic, copy) CJSelectNumCallback selectNumCallBack;
 
 @end
 
-typedef void (^MJSentCallback)(BOOL sent) ;
-@interface MJBottomToolbar : UIView
+
+
+
+typedef void (^CJSentCallback)(BOOL sent);
+
+@interface CJBottomToolbar : UIView {
+    
+}
 @property (nonatomic, strong) UIButton *sendBtn;
 @property (nonatomic, strong) NSNumber *sendNum;
 @property (nonatomic, strong) UILabel *number;
 @property (nonatomic, strong) NSString *numStr;
-@property (nonatomic, copy) MJSentCallback sentCallBack;
+@property (nonatomic, copy) CJSentCallback sentCallBack;
 
 @end
 
 
-typedef void (^MJPhotoDeleteToolbarCallback)(NSNumber *currentNum) ;
-@interface MJDeleteToolbar : UIView
+
+
+
+
+
+typedef void (^CJPhotoDeleteToolbarCallback)(NSNumber *currentNum);
+
+@interface CJDeleteToolbar : UIView {
+    
+}
 // 所有的图片对象
 @property (nonatomic, strong) NSArray *photos;
 @property (nonatomic, assign) NSUInteger currentPhotoIndex;
 @property (nonatomic, strong) MBProgressHUD * hud;
-@property (nonatomic, assign) int maxCount;
-@property (nonatomic, assign) int selectedNum;
-@property (nonatomic, copy) MJPhotoDeleteToolbarCallback callback;
+@property (nonatomic, assign) NSInteger maxCount;
+@property (nonatomic, assign) NSInteger selectedNum;
+@property (nonatomic, copy) CJPhotoDeleteToolbarCallback callback;
 @property (nonatomic, copy) void(^backAction)();
 @end

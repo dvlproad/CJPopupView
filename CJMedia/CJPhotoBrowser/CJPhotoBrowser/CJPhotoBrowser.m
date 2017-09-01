@@ -33,8 +33,8 @@
 }
 
 @property (nonatomic, strong) CJPhotoToolbar *toolbar;
-@property (nonatomic, strong) MJBottomToolbar *bottomToolbar;
-@property (nonatomic, strong) MJDeleteToolbar *deleteToolbar;
+@property (nonatomic, strong) CJBottomToolbar *bottomToolbar;
+@property (nonatomic, strong) CJDeleteToolbar *deleteToolbar;
 
 @end
 
@@ -99,7 +99,7 @@
     CGFloat barHeight = 44;
     CGFloat barY = self.view.frame.size.height - barHeight;
     if (_bottomToolbar == nil) {
-        _bottomToolbar = [[MJBottomToolbar alloc] init];
+        _bottomToolbar = [[CJBottomToolbar alloc] init];
     }
     _bottomToolbar.frame = CGRectMake(0, barY, self.view.frame.size.width, barHeight);
     _bottomToolbar.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
@@ -125,7 +125,7 @@
 {
     __weak typeof(self)weakSelf = self;
     CGFloat barHeight = 64;
-    _deleteToolbar = [[MJDeleteToolbar alloc] init];
+    _deleteToolbar = [[CJDeleteToolbar alloc] init];
     _deleteToolbar.frame = CGRectMake(0, 0, self.view.frame.size.width, barHeight);
     _deleteToolbar.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
     _deleteToolbar.photos = _photos;
@@ -180,9 +180,9 @@
     };
     _toolbar.selectedNum = _selectedNum;
     _toolbar.maxCount = _maxCount;
-    _toolbar.selectNumCallBack = ^(int selectNum)
+    _toolbar.selectNumCallBack = ^(NSInteger selectNum)
     {
-        weakSelf.bottomToolbar.numStr = [NSString stringWithFormat:@"%d",selectNum];
+        weakSelf.bottomToolbar.numStr = [NSString stringWithFormat:@"%zd",selectNum];
     };
     [self.view addSubview:_toolbar];
     
