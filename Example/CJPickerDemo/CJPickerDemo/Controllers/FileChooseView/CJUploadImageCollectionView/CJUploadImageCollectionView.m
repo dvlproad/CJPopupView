@@ -33,16 +33,22 @@ static NSString *CJUploadCollectionViewCellAddID = @"CJUploadCollectionViewCellA
         [self.dataModels addObject:item];
     }
     */
-    self.extralItemSetting = CJExtralItemSettingTailing;
+    MyEqualCellSizeSetting *equalCellSizeSetting = [[MyEqualCellSizeSetting alloc] init];
+    //flowLayout.headerReferenceSize = CGSizeMake(110, 135);
+    equalCellSizeSetting.minimumInteritemSpacing = 10;
+    equalCellSizeSetting.minimumLineSpacing = 15;
+    equalCellSizeSetting.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
     
     //以下值必须二选一设置（默认cellWidthFromFixedWidth设置后，另外一个自动失效）
-    self.cellWidthFromPerRowMaxShowCount = 4;
-    //self.cellWidthFromFixedWidth = 50;
+    equalCellSizeSetting.cellWidthFromPerRowMaxShowCount = 4;
+    //equalCellSizeSetting.cellWidthFromFixedWidth = 50;
     
     //以下值，可选设置
-    //self.collectionViewCellHeight = 30;
-    //self.maxDataModelShowCount = 5;
-    self.maxDataModelShowCount = 5; //MAXFLOAT
+    //equalCellSizeSetting.collectionViewCellHeight = 30;
+    equalCellSizeSetting.maxDataModelShowCount = 5;
+    equalCellSizeSetting.extralItemSetting = CJExtralItemSettingTailing;
+    
+    self.equalCellSizeSetting = equalCellSizeSetting;
     
     self.allowsMultipleSelection = YES; //是否打开多选
     

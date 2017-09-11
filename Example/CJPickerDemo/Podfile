@@ -23,8 +23,8 @@ target 'CJPickerDemo' do
     pod 'CJFMDBFileManager', '~> 0.0.9'
     pod 'PureLayout', '~> 3.0.2'
     
-    pod 'CJBaseScrollView/CJCollectionView/MyEqualCellSizeCollectionView', '~> 0.0.9'
-    pod 'CJBaseScrollView/CJCollectionView/CJBaseCollectionViewCell', '~> 0.0.9' #需要8.0以上
+    pod 'CJBaseScrollView/CJCollectionView/MyEqualCellSizeCollectionView', '~> 0.1.0'
+    pod 'CJBaseScrollView/CJCollectionView/CJBaseCollectionViewCell', '~> 0.1.0' #需要8.0以上
     
     pod 'CJNetwork/AFNetworkingUploadComponent', '~> 0.1.0' #需要8.0以上
 end

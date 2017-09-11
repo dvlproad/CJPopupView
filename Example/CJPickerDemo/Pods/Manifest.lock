@@ -14,8 +14,8 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - CJBaseScrollView/CJCollectionView/CJBaseCollectionViewCell (0.0.9)
-  - CJBaseScrollView/CJCollectionView/MyEqualCellSizeCollectionView (0.0.9)
+  - CJBaseScrollView/CJCollectionView/CJBaseCollectionViewCell (0.1.0)
+  - CJBaseScrollView/CJCollectionView/MyEqualCellSizeCollectionView (0.1.0)
   - CJBaseUIKit/UIColor+CJCategory (0.0.15)
   - CJBaseUIKit/UIImage+CJCategory (0.0.15)
   - CJFMDBFileManager (0.0.9):
@@ -49,8 +49,8 @@ PODS:
   - SVProgressHUD (2.1.2)
 
 DEPENDENCIES:
-  - CJBaseScrollView/CJCollectionView/CJBaseCollectionViewCell (~> 0.0.9)
-  - CJBaseScrollView/CJCollectionView/MyEqualCellSizeCollectionView (~> 0.0.9)
+  - CJBaseScrollView/CJCollectionView/CJBaseCollectionViewCell (~> 0.1.0)
+  - CJBaseScrollView/CJCollectionView/MyEqualCellSizeCollectionView (~> 0.1.0)
   - CJBaseUIKit/UIColor+CJCategory (~> 0.0.15)
   - CJBaseUIKit/UIImage+CJCategory (~> 0.0.15)
   - CJFMDBFileManager (~> 0.0.9)
@@ -68,7 +68,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  CJBaseScrollView: 01e2f19388a1959df302eaf921bbcaad85ca412e
+  CJBaseScrollView: d96db98452b696c4288fef844cce214823537e4f
   CJBaseUIKit: 84703f9196e13faa9b6c5449e6d63bc7a9baf34d
   CJFMDBFileManager: 5a300875eab7a7fb2872cad625cec910843f74dc
   CJNetwork: bc1c8b3a98aa9bc42eca2d6f4a90f92f5869c9b9
@@ -85,6 +85,6 @@ SPEC CHECKSUMS:
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: 98500abd1e251094fc55149eba154733bf7e585c
+PODFILE CHECKSUM: 9ebb6f7e1f479cede8f6f212a36945397adef33f
 
 COCOAPODS: 1.1.0.rc.2

@@ -130,21 +130,6 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>02DAFC1D95BDA4DAC60584F2A0FBDCA3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CJFullCenterCollectionViewCell.h</string>
-			<key>path</key>
-			<string>CJBaseScrollView/CJCollectionView/CJBaseCollectionViewCell/CJFullCenterCollectionViewCell.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>02FBFDEA0DFB7217E222E0BC0BC7DCFD</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -182,6 +167,21 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>0431D6F9840DAABAB518DB3656F19556</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>CJBaseCollectionViewCell.h</string>
+			<key>path</key>
+			<string>CJBaseScrollView/CJCollectionView/CJBaseCollectionViewCell/CJBaseCollectionViewCell.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>045FFEDD819A734271DD5DE53C877884</key>
 		<dict>
 			<key>fileRef</key>
@@ -199,6 +199,20 @@
 			<dict>
 				<key>COMPILER_FLAGS</key>
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>054942732BE960FD0DBDCDCB4071DF89</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3A3608A303372987FE8FD9BA07927E1B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
 			</dict>
 		</dict>
 		<key>0563227B6D480B862CA5EF8C36DF51A4</key>
@@ -312,20 +326,6 @@
 			<string>CJRadio/CJRadioButtons/images_arrow/arrowLeft_red@2x.png</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0757C9B9C175C86077938043B39E6A04</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>C14276C6BE136B8A95C1808359C567C6</string>
-				<string>C673DC35BB83FA45A368F2F020740E05</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
 		</dict>
 		<key>07751D6855029BD537C6E5F49BC1D8A5</key>
 		<dict>
@@ -1015,6 +1015,21 @@
 				</array>
 			</dict>
 		</dict>
+		<key>13F8A9535D17B32B07E935B62694B4AB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>CJFullBottomCollectionViewCell.m</string>
+			<key>path</key>
+			<string>CJBaseScrollView/CJCollectionView/CJBaseCollectionViewCell/CJFullBottomCollectionViewCell.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>1436ED5534FB149F7E0114713954CFD1</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1177,7 +1192,7 @@
 		<dict>
 			<key>children</key>
 			<array>
-				<string>A433A6E8C39F88E98BF5513BC8DED3FB</string>
+				<string>C87DBCC0EF4B905B77CAD79DFA8D56F7</string>
 				<string>F790016AE5C8A26DFECD34A03F9D82AD</string>
 			</array>
 			<key>isa</key>
@@ -1186,21 +1201,6 @@
 			<string>CJBaseScrollView</string>
 			<key>path</key>
 			<string>CJBaseScrollView</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>15F7400C54729F5B99FB7AF69DB009C9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CJBaseCollectionViewCell.h</string>
-			<key>path</key>
-			<string>CJBaseScrollView/CJCollectionView/CJBaseCollectionViewCell/CJBaseCollectionViewCell.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1475,21 +1475,6 @@
 			<key>targetProxy</key>
 			<string>44C96298D81EA925ACFCB38F3B1E917D</string>
 		</dict>
-		<key>1956171923D6761B8F11191ECD8015DE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>CJFullBottomCollectionViewCell.m</string>
-			<key>path</key>
-			<string>CJBaseScrollView/CJCollectionView/CJBaseCollectionViewCell/CJFullBottomCollectionViewCell.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>198B11EA9378ED6A0A26C58D7F11B377</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1595,21 +1580,6 @@
 					<string>Public</string>
 				</array>
 			</dict>
-		</dict>
-		<key>1AA4BBA2A78A19EE4AC66A9C4C59826D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>MyEqualCellSizeCollectionView.h</string>
-			<key>path</key>
-			<string>CJBaseScrollView/CJCollectionView/MyEqualCellSizeCollectionView/MyEqualCellSizeCollectionView.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>1B0E3C8A537C5F3293DEC68D07FC640D</key>
 		<dict>
@@ -1777,6 +1747,21 @@
 			<string>AFURLResponseSerialization.m</string>
 			<key>path</key>
 			<string>AFNetworking/AFURLResponseSerialization.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1DE49DBB170A3137C7710E76306CCBEC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>CJBaseCollectionViewCell.m</string>
+			<key>path</key>
+			<string>CJBaseScrollView/CJCollectionView/CJBaseCollectionViewCell/CJBaseCollectionViewCell.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1964,6 +1949,20 @@
 			<string>DateTools/DateTools/DTConstants.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>22899D94B80976E2D5A95EAC88405AA5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>ED7222C324B56D407C2300BE88132FE6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
 		<key>22BD45C616C6FAC66927A42A9986B22A</key>
 		<dict>
@@ -2830,6 +2829,21 @@
 			<key>productType</key>
 			<string>com.apple.product-type.library.static</string>
 		</dict>
+		<key>3257D39B94DC5DF87E7F01966716DB8C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>CJFullBottomCollectionViewCell.h</string>
+			<key>path</key>
+			<string>CJBaseScrollView/CJCollectionView/CJBaseCollectionViewCell/CJFullBottomCollectionViewCell.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>326A543AD4E39A2DAECA1CD385E3AEA2</key>
 		<dict>
 			<key>fileRef</key>
@@ -3150,7 +3164,7 @@
 			<key>name</key>
 			<string>CJBaseScrollView</string>
 			<key>target</key>
-			<string>E6614698237977F5FA660B0A834C8128</string>
+			<string>72A6271C431E7915A1AE007878DBDEA6</string>
 			<key>targetProxy</key>
 			<string>9CF8710E98F92D2DD3DA1687C01B857B</string>
 		</dict>
@@ -3416,6 +3430,36 @@
 			<string>FMDatabase.h</string>
 			<key>path</key>
 			<string>src/fmdb/FMDatabase.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3A2856881A0363AA45EF79FE772C7966</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>CJFullCenterCollectionViewCell.m</string>
+			<key>path</key>
+			<string>CJBaseScrollView/CJCollectionView/CJBaseCollectionViewCell/CJFullCenterCollectionViewCell.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3A3608A303372987FE8FD9BA07927E1B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MyEqualCellSizeSetting.h</string>
+			<key>path</key>
+			<string>CJBaseScrollView/CJCollectionView/MyEqualCellSizeCollectionView/MyEqualCellSizeSetting.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -3821,6 +3865,13 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>4289F8CFE4894B8F4A5B99570FCF3041</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A825F32E51A0E6F7E620CD5AE69FB083</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>429880A0041987157A55BF92DB9C753B</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -4097,6 +4148,20 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
+		<key>47888AF2725DEC5256DFDCC8E2C7A458</key>
+		<dict>
+			<key>fileRef</key>
+			<string>529D3922CDBCBAAA09CB5ED9E1A6CD4D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
 		<key>47B205AA06738655973990EE09F217DD</key>
 		<dict>
 			<key>explicitFileType</key>
@@ -4354,6 +4419,24 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>4A8D6D2FD403215E72FCD13EFC3A51F3</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0431D6F9840DAABAB518DB3656F19556</string>
+				<string>1DE49DBB170A3137C7710E76306CCBEC</string>
+				<string>3257D39B94DC5DF87E7F01966716DB8C</string>
+				<string>13F8A9535D17B32B07E935B62694B4AB</string>
+				<string>529D3922CDBCBAAA09CB5ED9E1A6CD4D</string>
+				<string>3A2856881A0363AA45EF79FE772C7966</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>CJBaseCollectionViewCell</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>4B2A9C1D31855DF96AE0EE9A4B7A94D7</key>
 		<dict>
 			<key>fileRef</key>
@@ -4473,6 +4556,50 @@
 			<string>3881683A5FB0CFC14F9CE9069644093B</string>
 			<key>remoteInfo</key>
 			<string>CJNetwork</string>
+		</dict>
+		<key>4C39801906635B8D898472DFF913E403</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>8AAA5E48C25AA5DAD1A71726483CF8CA</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=appletvos*]</key>
+				<string></string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string></string>
+				<key>CODE_SIGN_IDENTITY[sdk=watchos*]</key>
+				<string></string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/CJBaseScrollView/CJBaseScrollView-prefix.pch</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
 		</dict>
 		<key>4C4A712A3E4DE58E262DC0C69815D38B</key>
 		<dict>
@@ -4750,6 +4877,21 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>529D3922CDBCBAAA09CB5ED9E1A6CD4D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>CJFullCenterCollectionViewCell.h</string>
+			<key>path</key>
+			<string>CJBaseScrollView/CJCollectionView/CJBaseCollectionViewCell/CJFullCenterCollectionViewCell.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>52B96AC796E60DBF61A11151FD25CEE8</key>
 		<dict>
 			<key>fileRef</key>
@@ -4778,20 +4920,6 @@
 			<string>libCJBaseScrollView.a</string>
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>52E3B81DAECF79FDDB07662677275D22</key>
-		<dict>
-			<key>fileRef</key>
-			<string>02DAFC1D95BDA4DAC60584F2A0FBDCA3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
 		</dict>
 		<key>530FD65C498B21E3CC0C04855EB59B4C</key>
 		<dict>
@@ -5538,20 +5666,6 @@
 				</array>
 			</dict>
 		</dict>
-		<key>5D867C6DB1100EB0693EBD8111D045B5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>15F7400C54729F5B99FB7AF69DB009C9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
 		<key>5E2B49452BE0A8B18AF26BDE2E48737F</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -5622,20 +5736,6 @@
 			<string>RadioButton.m</string>
 			<key>path</key>
 			<string>CJRadio/CJRadioButtons/RadioButton.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E9B7E66BA6BE644B0C23429FFCA8300</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>1AA4BBA2A78A19EE4AC66A9C4C59826D</string>
-				<string>D3BF0CCD157722FC5D0E819A308FADAE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>MyEqualCellSizeCollectionView</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -5864,6 +5964,13 @@
 			<key>targetProxy</key>
 			<string>9AD9B56FA5F06BB8A88E350BE589689F</string>
 		</dict>
+		<key>639A67FACEB576FF506873370128E605</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1DE49DBB170A3137C7710E76306CCBEC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>63AA965071BA324C4895210BEB0A7FBD</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -5893,6 +6000,20 @@
 			<string>AFNetworking/AFHTTPSessionManager.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6470B9AFF9642DEE49E4CD3CA5FF4352</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0431D6F9840DAABAB518DB3656F19556</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
 		<key>64794FD5475EDCB3A479C328FB2F1277</key>
 		<dict>
@@ -5988,6 +6109,50 @@
 			<string>257E925FF75016E66AA0AFC8583DE750</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>670392C3A1C235489D118C7C228E996E</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>8AAA5E48C25AA5DAD1A71726483CF8CA</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=appletvos*]</key>
+				<string></string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string></string>
+				<key>CODE_SIGN_IDENTITY[sdk=watchos*]</key>
+				<string></string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/CJBaseScrollView/CJBaseScrollView-prefix.pch</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
 		</dict>
 		<key>6712FE37658820F69E824CA977B801D0</key>
 		<dict>
@@ -6631,6 +6796,31 @@
 				</array>
 			</dict>
 		</dict>
+		<key>72A6271C431E7915A1AE007878DBDEA6</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>99846CA4BE4E403A54CC62C59282A767</string>
+			<key>buildPhases</key>
+			<array>
+				<string>9AB0C12E89A3C4B4B514D9D20A64EB8F</string>
+				<string>E92829E1524E306985FE751134DD4617</string>
+				<string>A701A8E246DF8ABC0482A7425DA8AD27</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>CJBaseScrollView</string>
+			<key>productName</key>
+			<string>CJBaseScrollView</string>
+			<key>productReference</key>
+			<string>52D1688562C50AD9DF4198B9E4F2D935</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
 		<key>72C70C02C9F7FF6CFC4CDC1205C68E64</key>
 		<dict>
 			<key>fileRef</key>
@@ -7110,33 +7300,12 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>796D0AC3EC19D38A1F9532610F314FB3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>87DC6F24F6E6F90D82DE2699BC2846CC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>79F8D05F4201291038B41327E1E15821</key>
 		<dict>
 			<key>fileRef</key>
 			<string>893EF0C95D755B77E9FE10A679402A4F</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-		</dict>
-		<key>7A81268198D2F7755B00055F6AD2DFE5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1AA4BBA2A78A19EE4AC66A9C4C59826D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
 		</dict>
 		<key>7A8F95E63BA19F44D85E5ED65908DFC5</key>
 		<dict>
@@ -7323,13 +7492,6 @@
 		<dict>
 			<key>fileRef</key>
 			<string>91FAF04D88D36271614C77B59DB14DB7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7F255B56B3D759D946AF7CC8B5C313DC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B6037CA77BBA46465F6879A013D63CF5</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -7520,6 +7682,20 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>842F12790B50287D80E940F627F643CF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3257D39B94DC5DF87E7F01966716DB8C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
 		<key>84C41CB8F088BEF3E2FD4D083A4325FA</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -7587,6 +7763,22 @@
 			<string>RadioButton.h</string>
 			<key>path</key>
 			<string>CJRadio/CJRadioButtons/RadioButton.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>85B019D0C80795904B7CA0C89557F4DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>ED7222C324B56D407C2300BE88132FE6</string>
+				<string>EFF8AFD87F2A150934545989A6276255</string>
+				<string>3A3608A303372987FE8FD9BA07927E1B</string>
+				<string>B064E493FB2660EB896AC40306F4818D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>MyEqualCellSizeCollectionView</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -8707,6 +8899,20 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>99846CA4BE4E403A54CC62C59282A767</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>4C39801906635B8D898472DFF913E403</string>
+				<string>670392C3A1C235489D118C7C228E996E</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
 		<key>99D8C610BC84BE231C5D3D280F3B12AF</key>
 		<dict>
 			<key>fileRef</key>
@@ -8835,6 +9041,24 @@
 			<string>FC65B994AD8CEF88A96768B07045852E</string>
 			<key>productType</key>
 			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>9AB0C12E89A3C4B4B514D9D20A64EB8F</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>639A67FACEB576FF506873370128E605</string>
+				<string>C8BEF39DEAAFE9277F47D55C37B7FCEF</string>
+				<string>CA5EF52C3FA2A6F5036D80358F075520</string>
+				<string>C2337C388160A31DD64CC15ECC1A2A01</string>
+				<string>F8CB42CA326616A114503CE9B164E2FF</string>
+				<string>DE8462A7B59F5EB0CD1F7FEBAF882474</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
 		<key>9AD9B56FA5F06BB8A88E350BE589689F</key>
 		<dict>
@@ -9006,7 +9230,7 @@
 			<key>proxyType</key>
 			<string>1</string>
 			<key>remoteGlobalIDString</key>
-			<string>E6614698237977F5FA660B0A834C8128</string>
+			<string>72A6271C431E7915A1AE007878DBDEA6</string>
 			<key>remoteInfo</key>
 			<string>CJBaseScrollView</string>
 		</dict>
@@ -9189,20 +9413,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>A433A6E8C39F88E98BF5513BC8DED3FB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F82F84E033446C5CF9EED8ECB35FB749</string>
-				<string>5E9B7E66BA6BE644B0C23429FFCA8300</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>CJCollectionView</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>A44AF130E4C5313CD193D9BF68853026</key>
 		<dict>
 			<key>fileRef</key>
@@ -9295,6 +9505,23 @@
 			<string>CJUIKit/UIImage+CJCategory/UIImage+CJFixOrientation.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A701A8E246DF8ABC0482A7425DA8AD27</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>6470B9AFF9642DEE49E4CD3CA5FF4352</string>
+				<string>842F12790B50287D80E940F627F643CF</string>
+				<string>47888AF2725DEC5256DFDCC8E2C7A458</string>
+				<string>22899D94B80976E2D5A95EAC88405AA5</string>
+				<string>054942732BE960FD0DBDCDCB4071DF89</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
 		<key>A750388AC66547029D96D13ECCD69916</key>
 		<dict>
@@ -9557,13 +9784,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>ABBBE10BA0317EFDDF213DB0451012B0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D3BF0CCD157722FC5D0E819A308FADAE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>ABDEDB7DB7D150F91D345D28D4F38FDB</key>
 		<dict>
 			<key>fileRef</key>
@@ -9758,22 +9978,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>AF5C9713BDD2449CB30BA37777DF91E0</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>5D867C6DB1100EB0693EBD8111D045B5</string>
-				<string>CE13F9C95468B6D8FEC09FC5D1CBB49D</string>
-				<string>52E3B81DAECF79FDDB07662677275D22</string>
-				<string>7A81268198D2F7755B00055F6AD2DFE5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
 		<key>AF62B956405F7734F5A9B8F3FD4B1B96</key>
 		<dict>
 			<key>fileRef</key>
@@ -9796,13 +10000,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>AFC69CCE6ABE215710FA97F70262B268</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B6740EF9D992A7B3144ED61CD20526D5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>B03AFDA89AF589395E1E46E2F7622551</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -9815,6 +10012,21 @@
 			<string>PBXFrameworksBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
+		</dict>
+		<key>B064E493FB2660EB896AC40306F4818D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MyEqualCellSizeSetting.m</string>
+			<key>path</key>
+			<string>CJBaseScrollView/CJCollectionView/MyEqualCellSizeCollectionView/MyEqualCellSizeSetting.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>B08D17C401AD365D55E532AF1C3C341F</key>
 		<dict>
@@ -10046,21 +10258,6 @@
 			<string>EXTScope.m</string>
 			<key>path</key>
 			<string>Mantle/extobjc/EXTScope.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B6740EF9D992A7B3144ED61CD20526D5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>CJFullCenterCollectionViewCell.m</string>
-			<key>path</key>
-			<string>CJBaseScrollView/CJCollectionView/CJBaseCollectionViewCell/CJFullCenterCollectionViewCell.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -10525,13 +10722,6 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>BD187268FED14B76119F61AD91880CFB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FA0738989E3E1A09A0637E76914AF57C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>BD7294666E5107C71937E5176CA40804</key>
 		<dict>
 			<key>fileRef</key>
@@ -10700,50 +10890,6 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>C14276C6BE136B8A95C1808359C567C6</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>8AAA5E48C25AA5DAD1A71726483CF8CA</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=appletvos*]</key>
-				<string></string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string></string>
-				<key>CODE_SIGN_IDENTITY[sdk=watchos*]</key>
-				<string></string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/CJBaseScrollView/CJBaseScrollView-prefix.pch</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string></string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
 		<key>C1B65C3D849FEE4FB5298A8135A765DA</key>
 		<dict>
 			<key>fileRef</key>
@@ -10775,6 +10921,13 @@
 		<dict>
 			<key>fileRef</key>
 			<string>1CFDDB57F9E6EEB3CB00D99A5D4A8D0F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C2337C388160A31DD64CC15ECC1A2A01</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3A2856881A0363AA45EF79FE772C7966</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -11086,50 +11239,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>C673DC35BB83FA45A368F2F020740E05</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>8AAA5E48C25AA5DAD1A71726483CF8CA</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=appletvos*]</key>
-				<string></string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string></string>
-				<key>CODE_SIGN_IDENTITY[sdk=watchos*]</key>
-				<string></string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/CJBaseScrollView/CJBaseScrollView-prefix.pch</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string></string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
 		<key>C6B77C71AFDCDEF3B5290F81288E3B6C</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -11270,6 +11379,27 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
+		<key>C87DBCC0EF4B905B77CAD79DFA8D56F7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4A8D6D2FD403215E72FCD13EFC3A51F3</string>
+				<string>85B019D0C80795904B7CA0C89557F4DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>CJCollectionView</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C8BEF39DEAAFE9277F47D55C37B7FCEF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B6037CA77BBA46465F6879A013D63CF5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>C9012B0F07AED82E8628A8B69C801080</key>
 		<dict>
 			<key>fileRef</key>
@@ -11332,6 +11462,13 @@
 			<string>../Target Support Files/CJRadio</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CA5EF52C3FA2A6F5036D80358F075520</key>
+		<dict>
+			<key>fileRef</key>
+			<string>13F8A9535D17B32B07E935B62694B4AB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>CABEE2DAF5521FEA5EF941B88DF28173</key>
 		<dict>
@@ -11505,20 +11642,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>CE13F9C95468B6D8FEC09FC5D1CBB49D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E7C4F2D0F928CA1315DAF09567998324</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
 		<key>CF900E031466D215A5E1C944F1D9596B</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -11673,13 +11796,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>D29D4B88F71160329ED67D020638E8C0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A825F32E51A0E6F7E620CD5AE69FB083</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>D2A51B76415F74910871F48E56A3DDC7</key>
 		<dict>
 			<key>containerPortal</key>
@@ -11749,21 +11865,6 @@
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
-		<key>D3BF0CCD157722FC5D0E819A308FADAE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>MyEqualCellSizeCollectionView.m</string>
-			<key>path</key>
-			<string>CJBaseScrollView/CJCollectionView/MyEqualCellSizeCollectionView/MyEqualCellSizeCollectionView.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>D3D9F12613E23AD64C1FA5F7081A3668</key>
 		<dict>
 			<key>fileRef</key>
@@ -11807,7 +11908,7 @@
 			<key>targets</key>
 			<array>
 				<string>928353533005A4198EBDA5B700D37B64</string>
-				<string>E6614698237977F5FA660B0A834C8128</string>
+				<string>72A6271C431E7915A1AE007878DBDEA6</string>
 				<string>31DEC8B09C000EAD7C15C55FFC626306</string>
 				<string>245E18FFA7556814889A7E5BF4D132F2</string>
 				<string>3881683A5FB0CFC14F9CE9069644093B</string>
@@ -12033,13 +12134,6 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>D96025BFEA25CA4AB385D53340140D87</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1956171923D6761B8F11191ECD8015DE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>D961EF7E3C702CCD6CF1940051C297AF</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -12210,6 +12304,13 @@
 			<string>FMDB-dummy.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DC62FA74B100FA1963585C15959AE0F3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>87DC6F24F6E6F90D82DE2699BC2846CC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>DC8579C657135E3C32AB580A48C6D524</key>
 		<dict>
@@ -12388,6 +12489,13 @@
 			<string>src/fmdb/FMDB.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE8462A7B59F5EB0CD1F7FEBAF882474</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B064E493FB2660EB896AC40306F4818D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>DEA58153FB5697F194A75823AA7B2331</key>
 		<dict>
@@ -12620,20 +12728,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>E27351AAD38ADF8562EC8AC294CE134A</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>796D0AC3EC19D38A1F9532610F314FB3</string>
-				<string>D29D4B88F71160329ED67D020638E8C0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
 		<key>E2831224054012EACBF1132B9BD07D73</key>
 		<dict>
 			<key>fileRef</key>
@@ -12783,31 +12877,6 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
-		<key>E6614698237977F5FA660B0A834C8128</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>0757C9B9C175C86077938043B39E6A04</string>
-			<key>buildPhases</key>
-			<array>
-				<string>F10C66AD0CB77724F1924521AFFFD5B7</string>
-				<string>E27351AAD38ADF8562EC8AC294CE134A</string>
-				<string>AF5C9713BDD2449CB30BA37777DF91E0</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>CJBaseScrollView</string>
-			<key>productName</key>
-			<string>CJBaseScrollView</string>
-			<key>productReference</key>
-			<string>52D1688562C50AD9DF4198B9E4F2D935</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
 		<key>E668718691226F3728ED1067652083E8</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -12926,21 +12995,6 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>E7C4F2D0F928CA1315DAF09567998324</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CJFullBottomCollectionViewCell.h</string>
-			<key>path</key>
-			<string>CJBaseScrollView/CJCollectionView/CJBaseCollectionViewCell/CJFullBottomCollectionViewCell.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>E867ECA4749C636F873644C124B3D88F</key>
 		<dict>
 			<key>fileRef</key>
@@ -12991,6 +13045,20 @@
 			</array>
 			<key>isa</key>
 			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>E92829E1524E306985FE751134DD4617</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>DC62FA74B100FA1963585C15959AE0F3</string>
+				<string>4289F8CFE4894B8F4A5B99570FCF3041</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
@@ -13196,6 +13264,21 @@
 				</array>
 			</dict>
 		</dict>
+		<key>ED7222C324B56D407C2300BE88132FE6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MyEqualCellSizeCollectionView.h</string>
+			<key>path</key>
+			<string>CJBaseScrollView/CJCollectionView/MyEqualCellSizeCollectionView/MyEqualCellSizeCollectionView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>EE29DB573D678D71AF74F8F0E281846C</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -13342,6 +13425,21 @@
 				</array>
 			</dict>
 		</dict>
+		<key>EFF8AFD87F2A150934545989A6276255</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MyEqualCellSizeCollectionView.m</string>
+			<key>path</key>
+			<string>CJBaseScrollView/CJCollectionView/MyEqualCellSizeCollectionView/MyEqualCellSizeCollectionView.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>F0D2DF741E4223975FD166C5C101479F</key>
 		<dict>
 			<key>fileRef</key>
@@ -13355,23 +13453,6 @@
 					<string>Public</string>
 				</array>
 			</dict>
-		</dict>
-		<key>F10C66AD0CB77724F1924521AFFFD5B7</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>BD187268FED14B76119F61AD91880CFB</string>
-				<string>7F255B56B3D759D946AF7CC8B5C313DC</string>
-				<string>D96025BFEA25CA4AB385D53340140D87</string>
-				<string>AFC69CCE6ABE215710FA97F70262B268</string>
-				<string>ABBBE10BA0317EFDDF213DB0451012B0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
 		</dict>
 		<key>F157FE07EC6F90CFFF04824496FE891E</key>
 		<dict>
@@ -13729,23 +13810,12 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>F82F84E033446C5CF9EED8ECB35FB749</key>
+		<key>F8CB42CA326616A114503CE9B164E2FF</key>
 		<dict>
-			<key>children</key>
-			<array>
-				<string>15F7400C54729F5B99FB7AF69DB009C9</string>
-				<string>FA0738989E3E1A09A0637E76914AF57C</string>
-				<string>E7C4F2D0F928CA1315DAF09567998324</string>
-				<string>1956171923D6761B8F11191ECD8015DE</string>
-				<string>02DAFC1D95BDA4DAC60584F2A0FBDCA3</string>
-				<string>B6740EF9D992A7B3144ED61CD20526D5</string>
-			</array>
+			<key>fileRef</key>
+			<string>EFF8AFD87F2A150934545989A6276255</string>
 			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>CJBaseCollectionViewCell</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>F8F04199D2392F2EC7429598352CAA75</key>
 		<dict>
@@ -13801,21 +13871,6 @@
 			<string>text</string>
 			<key>path</key>
 			<string>Pods-CJPickerDemoTests-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FA0738989E3E1A09A0637E76914AF57C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>CJBaseCollectionViewCell.m</string>
-			<key>path</key>
-			<string>CJBaseScrollView/CJCollectionView/CJBaseCollectionViewCell/CJBaseCollectionViewCell.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>

@@ -33,7 +33,7 @@
     self.uploadImageCollectionView.belongToViewController = self;
     self.uploadImageCollectionView.useToUploadItemToWhere = 0;
     self.uploadImageCollectionView.mediaType = CJMediaTypeImage;
-    self.uploadImageCollectionView.maxDataModelShowCount = 5;
+    self.uploadImageCollectionView.equalCellSizeSetting.maxDataModelShowCount = 5;
     
 //    __weak typeof(self)weakSelf = self;
     [self.uploadImageCollectionView setPickImageCompleteBlock:^{

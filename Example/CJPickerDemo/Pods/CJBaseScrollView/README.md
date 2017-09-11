@@ -20,6 +20,9 @@ A demo contain scrollView、tableView、collectionView
 ## CollectionView的自定义
 参考文档：[横向排列数据的UICollectionview](http://blog.csdn.net/shengpeng3344/article/details/51673707) 其中包含可以拖动cell的示例
 
+## MyEqualCellSizeCollectionView
+一个只有一个分区且分区中的每个cell大小相等的集合视图(cell的大小可通过方法①设置cell的固定大小和方法②通过设置每行最大显示的cell个数获得)
+
 
 ## UIScrollView+AutoLayout
 [iOS中Xcode使用UIScrollView+AutoLayout轻松实现滚动布局](http://www.2cto.com/kf/201604/503132.html)
