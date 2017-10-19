@@ -2,8 +2,8 @@
 //  MyEqualCellSizeCollectionView.m
 //  AllScrollViewDemo
 //
-//  Created by dvlproad on 2016/4/10.
-//  Copyright © 2016年 ciyouzen. All rights reserved.
+//  Created by ciyouzen on 2016/4/10.
+//  Copyright © 2016年 dvlproad. All rights reserved.
 //
 
 #import "MyEqualCellSizeCollectionView.h"
@@ -365,7 +365,6 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
         CGFloat validWidth = collectionViewWidth - sectionInset.left - sectionInset.right;
         CGFloat cellsWidth = validWidth - minimumInteritemSpacing*(perRowMaxShowCount-1);
         collectionViewCellWidth = floorf(cellsWidth/perRowMaxShowCount);
-        
     }
     
     
@@ -395,55 +394,6 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
     height += sectionInset.top + sectionInset.bottom;
     
     return height;
-}
-
-/**
- *  计算通过每行可显示的最多个数得出的每个cell的宽度(只有通过每行可显示的最多个数来设置每个cell的宽度，而通过cell的固定宽度来设置每个cell的宽度的不需要用到此方法)
- *
- *  @param cellWidthFromPerRowMaxShowCount  每行可显示的最多个数
- *  @param collectionView                   在哪个集合视图中(用于得到宽度)
- *  @param equalCellSizeSetting             已经设置好的一些设置（用于得到真正用于cell的宽度）
- *
- *  @return 每个cell的宽度
- */
-+ (CGFloat)cellWidthFromPerRowMaxShowCount:(NSInteger)cellWidthFromPerRowMaxShowCount
-                          inCollectionView:(UICollectionView *)collectionView
-                   withEqualCellSizeSetting:(MyEqualCellSizeSetting *)equalCellSizeSetting
-{
-    CGFloat width = CGRectGetWidth(collectionView.frame);
-    
-    CGFloat validWith = width-equalCellSizeSetting.sectionInset.left-equalCellSizeSetting.sectionInset.right;
-    CGFloat cellsValidWith = validWith -equalCellSizeSetting.minimumInteritemSpacing*(cellWidthFromPerRowMaxShowCount-1);
-    CGFloat collectionViewCellWidth = floorf(cellsValidWith/cellWidthFromPerRowMaxShowCount);
-    
-    return collectionViewCellWidth;
-}
-
-
-
-#pragma mark - Public
-/* 完整的描述请参见文件头部 */
-- (void)reloadDataByStoreBeforeState:(BOOL)store {
-    if (store == NO) {
-        [super reloadData];
-        
-    } else {
-        //是否要保持原来的选中状态，如果是的话，请在刷新前，记录下之前的有哪些IndexPath被选中
-        NSArray *oldIndexPathsForSelectedItems = [self indexPathsForSelectedItems];
-        //NSLog(@"oldIndexPathsForSelectedItems = %@", oldIndexPathsForSelectedItems);
-        
-        [super reloadData];
-        //NSArray *indexPathsForSelectedItems1 = [self indexPathsForSelectedItems];
-        //NSLog(@"reload后获取的indexPathsForSelectedItems1为空，即 = %@", indexPathsForSelectedItems1);
-        
-        for (NSIndexPath *indexPath in oldIndexPathsForSelectedItems) {
-            [self selectItemAtIndexPath:indexPath
-                               animated:NO
-                         scrollPosition:UICollectionViewScrollPositionNone];
-        }
-        //NSArray *indexPathsForSelectedItems2 = [self indexPathsForSelectedItems];
-        //NSLog(@"reload后设置好之前的选中项后获取indexPathsForSelectedItems2 = %@", indexPathsForSelectedItems2);
-    }
 }
 
 @end

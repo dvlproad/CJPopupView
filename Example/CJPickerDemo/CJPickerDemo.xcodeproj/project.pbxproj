@@ -57,7 +57,6 @@
 		785540ED1E7DCA9900F320E6 /* CJDefaultDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 785540D91E7DCA9900F320E6 /* CJDefaultDatePicker.m */; };
 		785540EE1E7DCA9900F320E6 /* CJIndependentPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 785540DB1E7DCA9900F320E6 /* CJIndependentPickerView.m */; };
 		785540EF1E7DCA9900F320E6 /* CJRelatedPickerRichView.m in Sources */ = {isa = PBXBuildFile; fileRef = 785540DD1E7DCA9900F320E6 /* CJRelatedPickerRichView.m */; };
-		785540F01E7DCA9900F320E6 /* CJDefaultToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 785540E01E7DCA9900F320E6 /* CJDefaultToolbar.m */; };
 		785540F11E7DCA9900F320E6 /* CJComponentDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 785540E31E7DCA9900F320E6 /* CJComponentDataModel.m */; };
 		785540F21E7DCA9900F320E6 /* CJComponentDataModelUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 785540E51E7DCA9900F320E6 /* CJComponentDataModelUtil.m */; };
 		785540F31E7DCA9900F320E6 /* CJDataModelSample.m in Sources */ = {isa = PBXBuildFile; fileRef = 785540E71E7DCA9900F320E6 /* CJDataModelSample.m */; };
@@ -181,8 +180,6 @@
 		785540DB1E7DCA9900F320E6 /* CJIndependentPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJIndependentPickerView.m; sourceTree = "<group>"; };
 		785540DC1E7DCA9900F320E6 /* CJRelatedPickerRichView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJRelatedPickerRichView.h; sourceTree = "<group>"; };
 		785540DD1E7DCA9900F320E6 /* CJRelatedPickerRichView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJRelatedPickerRichView.m; sourceTree = "<group>"; };
-		785540DF1E7DCA9900F320E6 /* CJDefaultToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDefaultToolbar.h; sourceTree = "<group>"; };
-		785540E01E7DCA9900F320E6 /* CJDefaultToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDefaultToolbar.m; sourceTree = "<group>"; };
 		785540E21E7DCA9900F320E6 /* CJComponentDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJComponentDataModel.h; sourceTree = "<group>"; };
 		785540E31E7DCA9900F320E6 /* CJComponentDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJComponentDataModel.m; sourceTree = "<group>"; };
 		785540E41E7DCA9900F320E6 /* CJComponentDataModelUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJComponentDataModelUtil.h; sourceTree = "<group>"; };
@@ -534,21 +531,11 @@
 				785540DB1E7DCA9900F320E6 /* CJIndependentPickerView.m */,
 				785540DC1E7DCA9900F320E6 /* CJRelatedPickerRichView.h */,
 				785540DD1E7DCA9900F320E6 /* CJRelatedPickerRichView.m */,
-				785540DE1E7DCA9900F320E6 /* CJToolbar */,
 				785540E11E7DCA9900F320E6 /* Models */,
 				785540E81E7DCA9900F320E6 /* Resources */,
 			);
 			name = CJPicker;
 			path = ../../../CJPicker;
-			sourceTree = "<group>";
-		};
-		785540DE1E7DCA9900F320E6 /* CJToolbar */ = {
-			isa = PBXGroup;
-			children = (
-				785540DF1E7DCA9900F320E6 /* CJDefaultToolbar.h */,
-				785540E01E7DCA9900F320E6 /* CJDefaultToolbar.m */,
-			);
-			path = CJToolbar;
 			sourceTree = "<group>";
 		};
 		785540E11E7DCA9900F320E6 /* Models */ = {
@@ -813,13 +800,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CJPickerDemo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		465E6A6F536E38E73C47A52E /* [CP] Copy Pods Resources */ = {
@@ -843,13 +833,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CJPickerDemoTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		83B94EA52109504F0469BA65 /* [CP] Embed Pods Frameworks */ = {
@@ -873,9 +866,20 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CJPickerDemo/Pods-CJPickerDemo-resources.sh",
+				"${PODS_ROOT}/CJFMDBFileManager/CJFMDBFileManager/demofmdb.db",
+				"${PODS_ROOT}/CJRadio/CJRadio/CJRadioButtons/images_arrow/arrowDown_dark.png",
+				"${PODS_ROOT}/CJRadio/CJRadio/CJRadioButtons/images_arrow/arrowLeft_gray@2x.png",
+				"${PODS_ROOT}/CJRadio/CJRadio/CJRadioButtons/images_arrow/arrowLeft_red@2x.png",
+				"${PODS_ROOT}/CJRadio/CJRadio/CJRadioButtons/images_arrow/arrowRight_gray@2x.png",
+				"${PODS_ROOT}/CJRadio/CJRadio/CJRadioButtons/images_arrow/arrowRight_red@2x.png",
+				"${PODS_ROOT}/CJRadio/CJRadio/CJRadioButtons/images_arrow/arrowUp_white@2x.png",
+				"${PODS_ROOT}/DateTools/DateTools/DateTools/DateTools.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -919,7 +923,6 @@
 				7806B6E21F59F6840077362F /* AlumbSectionDataModel.m in Sources */,
 				785540A91E7DC5F800F320E6 /* RelatedPickerViewController.m in Sources */,
 				784C15741E8E44850019D652 /* ImagePickerViewController.m in Sources */,
-				785540F01E7DCA9900F320E6 /* CJDefaultToolbar.m in Sources */,
 				785540ED1E7DCA9900F320E6 /* CJDefaultDatePicker.m in Sources */,
 				7806B6EA1F59F6840077362F /* CJPhotoModel.m in Sources */,
 				7806B6E91F59F6840077362F /* MBProgressHUD+CJPhotoBrowser.m in Sources */,

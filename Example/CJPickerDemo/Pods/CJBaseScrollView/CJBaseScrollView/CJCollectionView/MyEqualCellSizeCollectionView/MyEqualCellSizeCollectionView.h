@@ -2,8 +2,8 @@
 //  MyEqualCellSizeCollectionView.h
 //  AllScrollViewDemo
 //
-//  Created by dvlproad on 2016/4/10.
-//  Copyright © 2016年 ciyouzen. All rights reserved.
+//  Created by ciyouzen on 2016/4/10.
+//  Copyright © 2016年 dvlproad. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -70,14 +70,6 @@ typedef void (^CJDidTapCollectionViewItemBlock)(UICollectionView *collectionView
       withEqualCellSizeSetting:(MyEqualCellSizeSetting *)equalCellSizeSetting
                  showExtraItem:(BOOL)showExtraItem
          maxDataModelShowCount:(NSInteger)maxDataModelShowCount;
-
-
-/**
- *  根据是否要保存之前已选择的cell来更新视图
- *
- *  @param store    是否要保存之前已选择的cell
- */
-- (void)reloadDataByStoreBeforeState:(BOOL)store;
 
 
 @end

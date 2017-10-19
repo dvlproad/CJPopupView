@@ -1,8 +1,8 @@
 //
 //  CJDefaultToolbar.m
-//  CJPickerDemo
+//  CJUIKitDemo
 //
-//  Created by 李超前 on 2017/3/19.
+//  Created by ciyouzen on 2017/3/19.
 //  Copyright © 2017年 dvlproad. All rights reserved.
 //
 
@@ -87,6 +87,7 @@
 - (void)setOption:(CJDefaultToolbarOption)option {
     _option = option;
     
+    //知识点(iOS11):[iOS11 UIToolBar Contentview](https://stackoverflow.com/questions/46107640/ios11-uitoolbar-contentview)
     NSMutableArray *toolbarItems = [[NSMutableArray alloc] init];
     if (option & CJDefaultToolbarOptionCancel) {
         UIBarButtonItem *bbitem_cancel = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(cancelAction:)];

@@ -1,8 +1,8 @@
 //
 //  CJDefaultToolbar.h
-//  CJPickerDemo
+//  CJUIKitDemo
 //
-//  Created by 李超前 on 2017/3/19.
+//  Created by ciyouzen on 2017/3/19.
 //  Copyright © 2017年 dvlproad. All rights reserved.
 //
 
@@ -14,6 +14,7 @@ typedef NS_OPTIONS(NSUInteger, CJDefaultToolbarOption) {
     CJDefaultToolbarOptionValue = 1 << 2,   /**< 是否有值显示 */
 };
 
+//CJPicker中经常会用到
 @interface CJDefaultToolbar : UIToolbar
 
 @property (nonatomic, copy) void (^confirmHandle)(void);    /**< 点击确定执行的操作 */

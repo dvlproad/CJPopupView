@@ -1,6 +1,6 @@
 //
 //  UIView+AFNetworkingUpload.m
-//  CommonAFNUtilDemo
+//  CJNetworkDemo
 //
 //  Created by 李超前 on 2017/8/27.
 //  Copyright © 2017年 dvlproad. All rights reserved.

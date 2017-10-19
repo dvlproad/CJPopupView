@@ -1,6 +1,6 @@
 //
 //  AFNetworkingUploadUtil.h
-//  CommonAFNUtilDemo
+//  CJNetworkDemo
 //
 //  Created by ciyouzen on 2016/06/07.
 //  Copyright © 2016年 dvlproad. All rights reserved.
@@ -14,11 +14,12 @@
 #import "CJUploadItemModel.h"   //要上传的数据模型
 #import "CJUploadInfo.h"        //上传请求的时刻信息（已包括 CJUploadState 和 responseModel(已转换成对象后的model)）
 
+
 @interface AFNetworkingUploadUtil : NSObject
 
 #pragma mark - 上传文件请求的接口
 /**
- *  上传文件请求（uploadInfo：上传请求的各个时刻信息）
+ *  上传文件的请求方法：除了上传文件，还对上传过程中的各个时刻信息的进行保存(uploadInfo：上传请求的各个时刻信息）
  *
  *  @param manager      manager
  *  @param Url          Url

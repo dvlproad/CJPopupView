@@ -19,6 +19,7 @@ target 'CJPickerDemo' do
     
     pod 'CJBaseUIKit/UIColor+CJCategory', '~> 0.0.15'
     pod 'CJBaseUIKit/UIImage+CJCategory', '~> 0.0.15'
+    pod 'CJBaseUIKit/UIToolbar', '~> 0.0.18'
 
     pod 'CJFMDBFileManager', '~> 0.0.9'
     pod 'PureLayout', '~> 3.0.2'

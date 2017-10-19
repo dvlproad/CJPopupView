@@ -1,9 +1,9 @@
 //
 //  AFHTTPSessionManager+CJUploadFile.m
-//  CommonAFNUtilDemo
+//  CJNetworkDemo
 //
-//  Created by dvlproad on 2016/10/5.
-//  Copyright © 2017年 ciyouzen. All rights reserved.
+//  Created by ciyouzen on 2016/10/5.
+//  Copyright © 2017年 dvlproad. All rights reserved.
 //
 
 #import "AFHTTPSessionManager+CJUploadFile.h"
