@@ -17,15 +17,18 @@ target 'CJPickerDemo' do
 
     pod 'DateTools', '~> 2.0.0'
     
-    pod 'CJBaseUIKit/UIColor+CJCategory', '~> 0.0.15'
-    pod 'CJBaseUIKit/UIImage+CJCategory', '~> 0.0.15'
-    pod 'CJBaseUIKit/UIToolbar', '~> 0.0.18'
-
-    pod 'CJFMDBFileManager', '~> 0.0.9'
+    pod 'CJBaseUIKit/UIToolbar', '~> 0.1.4'
+    pod 'CJBaseUIKit/CJCollectionView/MyEqualCellSizeCollectionView', '~> 0.1.4'
+    pod 'CJBaseUIKit/CJCollectionView/CJBaseCollectionViewCell', '~> 0.1.4' #需要8.0以上
+    
+#    pod 'CJMedia/UIImagePickerControllerUtil', '~> 0.0.1'
+#    pod 'CJMedia/CJPhotoBrowser', '~> 0.0.1'
+    
+    pod 'CJFile/CJFileManager', '~> 0.0.2'
+    
     pod 'PureLayout', '~> 3.0.2'
     
-    pod 'CJBaseScrollView/CJCollectionView/MyEqualCellSizeCollectionView', '~> 0.1.0'
-    pod 'CJBaseScrollView/CJCollectionView/CJBaseCollectionViewCell', '~> 0.1.0' #需要8.0以上
+    
     
     pod 'CJNetwork/AFNetworkingUploadComponent', '~> 0.1.0' #需要8.0以上
 end

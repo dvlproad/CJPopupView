@@ -44,7 +44,7 @@
 //@property (weak,nonatomic,readonly) NSArray     * originImageItems;
 //@property (assign,nonatomic       ) NSInteger          maxImageCount;//default is 5.
 //@property (assign,nonatomic       ) BOOL               showImageAddItem;//default is yes;
-//@property (copy,nonatomic         ) void(^pickPhotoBlock    )();
+//@property (copy,nonatomic         ) void(^pickPhotoBlock    )(void);
 //
 ///**
 // *  语音获取设置

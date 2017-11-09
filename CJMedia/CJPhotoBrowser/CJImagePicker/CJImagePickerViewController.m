@@ -14,7 +14,7 @@
 
 #import "CJPhotoBrowser.h"
 #import "MBProgressHUD+CJPhotoBrowser.h"
-#import <CJBaseUIKit/UIImage+CJFixOrientation.h>
+#import "CJAlumbImageUtil.h"
 
 #import "CJAlumbViewController.h"
 
@@ -296,7 +296,8 @@
 
             ALAssetsLibrary *assetLibrary=[[ALAssetsLibrary alloc] init];
             [assetLibrary assetForURL:[NSURL URLWithString:item.url] resultBlock:^(ALAsset *asset)  {
-                UIImage * image =[UIImage imageWithCGImage:asset.defaultRepresentation.fullScreenImage].cj_fixOrientation;
+                UIImage *image = [UIImage imageWithCGImage:asset.defaultRepresentation.fullScreenImage];
+                image = [CJAlumbImageUtil cj_fixOrientation:image];
                 NSData *data = UIImageJPEGRepresentation(image, 0.8);
                 NSString * path = [NSString stringWithFormat:@"%.0f.jpg", [[NSDate date] timeIntervalSince1970] * 1000];
                 

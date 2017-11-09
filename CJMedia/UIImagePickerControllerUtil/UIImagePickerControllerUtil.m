@@ -12,7 +12,7 @@
 
 @property (nonatomic, copy) void(^pickImageFinishBlock)(UIImage *image);
 @property (nonatomic, copy) void(^pickVideoFinishBlock)(UIImage *firstImage);
-@property (nonatomic, copy) void(^pickCancelBlock)();
+@property (nonatomic, copy) void(^pickCancelBlock)(void);
 
 
 @end
@@ -37,7 +37,7 @@
                                           isVideo:(BOOL)isVideo
                              pickImageFinishBlock:(void(^)(UIImage *image))pickImageFinishBlock
                              pickVideoFinishBlock:(void(^)(UIImage *firstImage))pickVideoFinishBlock
-                                  pickCancelBlock:(void(^)())pickCancelBlock
+                                  pickCancelBlock:(void(^)(void))pickCancelBlock
 {
     self.pickImageFinishBlock = pickImageFinishBlock;
     self.pickVideoFinishBlock = pickVideoFinishBlock;

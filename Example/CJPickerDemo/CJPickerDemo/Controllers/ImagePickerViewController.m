@@ -10,10 +10,9 @@
 #import "UIImagePickerControllerUtil.h"
 
 #import <JGActionSheet/JGActionSheet.h>
-#import <CJFMDBFileManager/CJFileManager.h>
+#import <CJFile/CJFileManager+SaveFileData.h>
 
 #import "CJUploadItemModel.h"
-#import "CJImageUploadItem.h"
 #import "CJImagePickerViewController.h"
 
 //#import "IjinbuNetworkClient+Login.h"
@@ -28,24 +27,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = NSLocalizedString(@"图片选择", nil);
-    
-    
-    self.uploadImageCollectionView.belongToViewController = self;
-    self.uploadImageCollectionView.useToUploadItemToWhere = 0;
-    self.uploadImageCollectionView.mediaType = CJMediaTypeImage;
-    self.uploadImageCollectionView.equalCellSizeSetting.maxDataModelShowCount = 5;
-    
-//    __weak typeof(self)weakSelf = self;
-    [self.uploadImageCollectionView setPickImageCompleteBlock:^{
-        //[weakSelf.uploadImageCollectionView reloadData];
-    }];
-    
-//    [[IjinbuNetworkClient sharedInstance] requestijinbuLogin_name:@"15800000007" pasd:@"123456" success:^(IjinbuResponseModel *responseModel) {
-//        NSLog(@"登录成功");
-//    } failure:^(NSError *error) {
-//        NSLog(@"登录失败");
-//        [SVProgressHUD showErrorWithStatus:@"登录失败"];
-//    }];
 }
 
 - (IBAction)pickImageAction:(id)sender {
@@ -98,25 +79,6 @@
     
 }
 
-///通过 "拍照" 和 "从手机相册选择" 两种方式选择到图片后
-- (void)finishChooseImage:(UIImage *)image {
-    NSMutableArray<CJUploadItemModel *> *uploadModels = [[NSMutableArray alloc] init];
-    CJUploadItemModel *imageUploadModel = [self saveImageToLocal:image];
-    [uploadModels addObject:imageUploadModel];
-    
-//    CJImageUploadItem *imageItem =
-//    [[CJImageUploadItem alloc] initWithShowImage:image
-//                          imageLocalRelativePath:imageRelativePath
-//                                     uploadItems:uploadModels];
-    
-    //         [self.dataModels addObject:imageItem];
-    //
-    //         [self reloadData];
-    //         if (self.pickImageCompleteBlock) {
-    //             self.pickImageCompleteBlock();
-    //         }
-}
-
 /**< 从相册中选择照片 */
 - (void)choosePhoto {
     //*
@@ -140,6 +102,14 @@
     [self presentViewController:imagePickerController animated:YES completion:nil];
 }
 
+///通过 "拍照" 和 "从手机相册选择" 两种方式选择到图片后
+- (void)finishChooseImage:(UIImage *)image {
+    self.imageView.image = image;
+    
+    NSMutableArray<CJUploadItemModel *> *uploadModels = [[NSMutableArray alloc] init];
+    CJUploadItemModel *imageUploadModel = [self saveImageToLocal:image];
+    [uploadModels addObject:imageUploadModel];
+}
 
 /**< 保存图片到本地 */
 - (CJUploadItemModel *)saveImageToLocal:(UIImage *)image {
@@ -149,10 +119,13 @@
     NSString *identifier = [[NSProcessInfo processInfo] globallyUniqueString];
     NSString *imageName = [identifier stringByAppendingPathExtension:@"jpg"];
     
-    NSString *imageRelativePath = [CJFileManager saveFileData:imageData
-                                                withFileName:imageName
-                                          inSubDirectoryPath:@"UploadImage"
-                                         searchPathDirectory:NSCachesDirectory];
+    NSString *fileRelativePath =
+    [CJFileManager getLocalDirectoryPathType:CJLocalPathTypeRelative
+                          bySubDirectoryPath:@"UploadImage"
+                       inSearchPathDirectory:NSCachesDirectory
+                             createIfNoExist:YES];
+    [CJFileManager saveFileData:imageData withFileName:imageName toRelativeDirectoryPath:fileRelativePath];
+    
     
     CJUploadItemModel *imageUploadModel = [[CJUploadItemModel alloc] init];
     imageUploadModel.uploadItemType = CJUploadItemTypeImage;
@@ -160,16 +133,6 @@
     imageUploadModel.uploadItemName = imageName;
     
     return imageUploadModel;
-}
-
-///开始上传/继续上传没上传完的
-- (IBAction)uploadUnFinishImageModel:(id)sender {
-    NSLog(@"对collectionView，开始上传/继续上传没上传完的");
-}
-
-
-- (IBAction)reloadCollectionView:(id)sender {
-    [self.uploadImageCollectionView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {

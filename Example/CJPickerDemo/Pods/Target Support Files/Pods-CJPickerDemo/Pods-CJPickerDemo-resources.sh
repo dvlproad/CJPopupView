@@ -84,7 +84,6 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "${PODS_ROOT}/CJFMDBFileManager/CJFMDBFileManager/demofmdb.db"
   install_resource "${PODS_ROOT}/CJRadio/CJRadio/CJRadioButtons/images_arrow/arrowDown_dark.png"
   install_resource "${PODS_ROOT}/CJRadio/CJRadio/CJRadioButtons/images_arrow/arrowLeft_gray@2x.png"
   install_resource "${PODS_ROOT}/CJRadio/CJRadio/CJRadioButtons/images_arrow/arrowLeft_red@2x.png"
@@ -95,7 +94,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "${PODS_ROOT}/CJFMDBFileManager/CJFMDBFileManager/demofmdb.db"
   install_resource "${PODS_ROOT}/CJRadio/CJRadio/CJRadioButtons/images_arrow/arrowDown_dark.png"
   install_resource "${PODS_ROOT}/CJRadio/CJRadio/CJRadioButtons/images_arrow/arrowLeft_gray@2x.png"
   install_resource "${PODS_ROOT}/CJRadio/CJRadio/CJRadioButtons/images_arrow/arrowLeft_red@2x.png"

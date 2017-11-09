@@ -10,9 +10,7 @@
 #import "CJPhotoModel.h"
 
 #import "MBProgressHUD+CJPhotoBrowser.h"
-
-//#import <JGActionSheet/JGActionSheet.h>
-#import <CJBaseUIKit/UIImage+CJChangeColor.h>
+#import "CJAlumbImageUtil.h"
 
 @interface CJPhotoToolbar()
 
@@ -65,7 +63,8 @@
     // 返回按钮
     _backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     
-    UIImage *backButtonImage = [[UIImage imageNamed:@"nav_back_blue"] cj_imageWithTintColor:blueTextColor];
+    UIImage *backButtonImage = [UIImage imageNamed:@"nav_back_blue"];
+    backButtonImage = [CJAlumbImageUtil cj_changeImage:backButtonImage withTintColor:blueTextColor];
     [_backBtn setImage:backButtonImage forState:(UIControlStateNormal)];
     [_backBtn addTarget:self action:@selector(backACT) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_backBtn];
@@ -307,7 +306,8 @@
         // 保存图片按钮
         _backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         
-        UIImage *backButtonImage = [[UIImage imageNamed:@"nav_back_blue"] cj_imageWithTintColor:blueTextColor];
+        UIImage *backButtonImage = [UIImage imageNamed:@"nav_back_blue"];
+        backButtonImage = [CJAlumbImageUtil cj_changeImage:backButtonImage withTintColor:blueTextColor];
         [_backBtn setImage:backButtonImage forState:(UIControlStateNormal)];
         [_backBtn addTarget:self action:@selector(backACT) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_backBtn];

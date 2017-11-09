@@ -30,7 +30,7 @@ typedef void (^CurrentNumSentCallback)(NSNumber *currentNum);
 // 当前展示的图片索引
 @property (nonatomic, assign) NSUInteger currentPhotoIndex;
 @property (nonatomic, copy) CJPhotoToolbarCallback callback;
-@property (nonatomic, copy) void(^backAction)();
+@property (nonatomic, copy) void(^backAction)(void);
 @property (nonatomic, assign) NSInteger maxCount;
 @property (nonatomic, assign) NSInteger selectedNum;
 @property (nonatomic,assign)  BOOL isDelete;

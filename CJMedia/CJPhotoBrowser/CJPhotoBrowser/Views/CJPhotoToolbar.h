@@ -62,5 +62,5 @@ typedef void (^CJPhotoDeleteToolbarCallback)(NSNumber *currentNum);
 @property (nonatomic, assign) NSInteger maxCount;
 @property (nonatomic, assign) NSInteger selectedNum;
 @property (nonatomic, copy) CJPhotoDeleteToolbarCallback callback;
-@property (nonatomic, copy) void(^backAction)();
+@property (nonatomic, copy) void(^backAction)(void);
 @end

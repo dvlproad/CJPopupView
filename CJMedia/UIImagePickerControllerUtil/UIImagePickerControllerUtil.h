@@ -36,7 +36,7 @@ typedef NS_OPTIONS(NSUInteger, CJSaveLocation) {
                                           isVideo:(BOOL)isVideo
                              pickImageFinishBlock:(void(^)(UIImage *image))pickImageFinishBlock
                              pickVideoFinishBlock:(void(^)(UIImage *firstImage))pickVideoFinishBlock
-                                  pickCancelBlock:(void(^)())pickCancelBlock;
+                                  pickCancelBlock:(void(^)(void))pickCancelBlock;
 
 //+ (UIImagePickerController *)createImagePickerControllerWithSourceType:(UIImagePickerControllerSourceType)sourceType;
 

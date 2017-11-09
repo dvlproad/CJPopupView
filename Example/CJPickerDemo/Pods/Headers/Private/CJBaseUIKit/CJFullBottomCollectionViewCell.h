@@ -1,0 +1,1 @@
+../../../CJBaseUIKit/CJUIKit/CJBaseScrollView/CJCollectionView/CJBaseCollectionViewCell/CJFullBottomCollectionViewCell.h
