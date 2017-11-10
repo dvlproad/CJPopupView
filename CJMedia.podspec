@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CJMedia"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "自定义的多媒体(相册、图片、视频等)相关组件"
   s.homepage     = "https://github.com/dvlproad/CJPopupView"
 
@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "7.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/CJPopupView.git", :tag => "CJMedia_0.0.2" }
+  s.source       = { :git => "https://github.com/dvlproad/CJPopupView.git", :tag => "CJMedia_0.0.3" }
   # s.source_files  = "CJMedia/*.{h,m}"
 
   s.frameworks = "UIKit"
@@ -42,10 +42,16 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
 
-
   s.subspec 'UIImagePickerControllerUtil' do |ss|
     ss.source_files = "CJMedia/UIImagePickerControllerUtil/**/*.{h,m}"
     #ss.frameworks = "MediaPlayer"
+  end
+
+  s.subspec 'MySingleImagePickerController' do |ss|
+    ss.source_files = "CJMedia/MySingleImagePickerController/**/*.{h,m}"
+    #ss.frameworks = "MediaPlayer"
+
+    ss.dependency 'CJMedia/UIImagePickerControllerUtil'
   end
 
   

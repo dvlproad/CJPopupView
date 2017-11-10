@@ -8,6 +8,7 @@
 
 #import "ImagePickerViewController.h"
 #import "UIImagePickerControllerUtil.h"
+#import "MySingleImagePickerController.h"
 
 #import <JGActionSheet/JGActionSheet.h>
 #import <CJFile/CJFileManager+SaveFileData.h>
@@ -59,11 +60,20 @@
     UIImagePickerControllerSourceType sourceType = UIImagePickerControllerSourceTypeCamera;
     //NSArray<NSString *> *mediaTypes = @[(NSString *)kUTTypeImage,(NSString *)kUTTypeMovie];
     
-    UIImagePickerControllerUtil *imagePickerControllerUtil = [UIImagePickerControllerUtil sharedInstance];
-    imagePickerControllerUtil.saveLocation = CJSaveLocationNone;
+    BOOL supportSourceType = [UIImagePickerControllerUtil checkSupportSourceType:sourceType];
+    if (!supportSourceType) {
+        return;
+    }
     
-    UIImagePickerController *imagePickerController =
-    [imagePickerControllerUtil createWithSourceType:sourceType isVideo:NO pickImageFinishBlock:^(UIImage *image) {
+    MySingleImagePickerController *singleImagePickerController = [[MySingleImagePickerController alloc] initWithSourceType:sourceType isVideo:NO];
+    if (singleImagePickerController == nil) {
+        return;
+    }
+
+    
+    singleImagePickerController.saveLocation = CJSaveLocationNone;
+    
+    [singleImagePickerController pickImageFinishBlock:^(UIImage *image) {
         
         [self finishChooseImage:image];
         
@@ -73,10 +83,7 @@
         
     }];
     
-    if (imagePickerController) {
-        [self presentViewController:imagePickerController animated:YES completion:nil];
-    }
-    
+    [self presentViewController:singleImagePickerController animated:YES completion:nil];
 }
 
 /**< 从相册中选择照片 */
@@ -86,11 +93,18 @@
     UIImagePickerControllerSourceType sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     //NSArray<NSString *> *mediaTypes = @[(NSString *)kUTTypeImage];
     
-    UIImagePickerControllerUtil *imagePickerControllerUtil = [UIImagePickerControllerUtil sharedInstance];
-    imagePickerControllerUtil.saveLocation = CJSaveLocationNone;
+    BOOL supportSourceType = [UIImagePickerControllerUtil checkSupportSourceType:sourceType];
+    if (!supportSourceType) {
+        return;
+    }
     
-    UIImagePickerController *imagePickerController =
-    [imagePickerControllerUtil createWithSourceType:sourceType isVideo:NO pickImageFinishBlock:^(UIImage *image)
+    MySingleImagePickerController *singleImagePickerController = [[MySingleImagePickerController alloc] initWithSourceType:sourceType isVideo:NO];
+    if (singleImagePickerController == nil) {
+        return;
+    }
+    singleImagePickerController.saveLocation = CJSaveLocationNone;
+    
+    [singleImagePickerController pickImageFinishBlock:^(UIImage *image)
      {
          [self finishChooseImage:image];
          
@@ -99,7 +113,7 @@
      }];
      //*/
     
-    [self presentViewController:imagePickerController animated:YES completion:nil];
+    [self presentViewController:singleImagePickerController animated:YES completion:nil];
 }
 
 ///通过 "拍照" 和 "从手机相册选择" 两种方式选择到图片后
