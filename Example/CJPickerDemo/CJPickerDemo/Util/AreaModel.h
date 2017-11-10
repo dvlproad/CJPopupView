@@ -2,7 +2,7 @@
 //  AreaModel.h
 //  CJPickerDemo
 //
-//  Created by 李超前 on 2017/1/29.
+//  Created by ciyouzen on 2017/1/29.
 //  Copyright © 2017年 dvlproad. All rights reserved.
 //
 #import <JSONModel/JSONModel.h>

@@ -3,7 +3,7 @@
 //  AllScrollViewDemo
 //
 //  Created by dvlproad on 2016/11/23.
-//  Copyright © 2016年 ciyouzen. All rights reserved.
+//  Copyright © 2016年 dvlproad. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

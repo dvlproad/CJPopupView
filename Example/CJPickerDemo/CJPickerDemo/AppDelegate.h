@@ -2,8 +2,8 @@
 //  AppDelegate.h
 //  CJPickerDemo
 //
-//  Created by lichq on 9/7/15.
-//  Copyright (c) 2015 ciyouzen. All rights reserved.
+//  Created by ciyouzen on 9/7/15.
+//  Copyright (c) 2015 dvlproad. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

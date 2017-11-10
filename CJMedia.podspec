@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CJMedia"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "自定义的多媒体(相册、图片、视频等)相关组件"
   s.homepage     = "https://github.com/dvlproad/CJPopupView"
 
@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "7.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/CJPopupView.git", :tag => "CJMedia_0.0.3" }
+  s.source       = { :git => "https://github.com/dvlproad/CJPopupView.git", :tag => "CJMedia_0.0.4" }
   # s.source_files  = "CJMedia/*.{h,m}"
 
   s.frameworks = "UIKit"

@@ -2,7 +2,7 @@
 //  CJAlumbImageUtil.m
 //  CJPickerDemo
 //
-//  Created by 李超前 on 2017/11/10.
+//  Created by ciyouzen on 2017/11/10.
 //  Copyright © 2017年 dvlproad. All rights reserved.
 //
 
@@ -117,5 +117,30 @@
     
     return tintedImage;
 }
+
+
+
+/* 完整的描述请参见文件头部 */
++ (UIImage *)cj_transformImage:(UIImage *)image toMinificationSize:(CGSize)size {
+    CGFloat ratioWidth = image.size.width/size.width;    //宽度缩小的倍数
+    CGFloat ratioHeight = image.size.height/size.height; //高度缩小的倍数
+    if (ratioWidth > ratioHeight) {
+        size.height = size.width/ratioWidth;
+    } else {
+        size.width = size.height/ratioHeight;
+    }
+    
+    return [self cj_transformImage:image toSize:size];
+}
+
++ (UIImage *)cj_transformImage:(UIImage *)image toSize:(CGSize)size {
+    UIGraphicsBeginImageContext(size);  //创建一个bitmap的context
+    [image drawInRect:CGRectMake(0, 0, size.width, size.height)];//绘制改变大小的图片
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();//从当前context中创建一个改变大小后的图片
+    UIGraphicsEndImageContext();    // 使当前的context出堆栈
+    
+    return newImage;   //返回新的改变大小后的图片
+}
+
 
 @end
