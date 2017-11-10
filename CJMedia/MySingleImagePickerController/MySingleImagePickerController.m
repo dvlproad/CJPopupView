@@ -19,32 +19,24 @@
 
 @implementation MySingleImagePickerController
 
-- (MySingleImagePickerController *)initWithSourceType:(UIImagePickerControllerSourceType)sourceType
-                                          isVideo:(BOOL)isVideo
-{
+- (instancetype)init {
     self = [super init];
     if (self) {
-        MySingleImagePickerController *imagePickerController = self;
-        
-        imagePickerController.sourceType = sourceType;
-        if (sourceType == UIImagePickerControllerSourceTypeCamera) {
-            imagePickerController.cameraDevice = UIImagePickerControllerCameraDeviceRear;//后置摄像头
-        }
-        
-        if (isVideo) {
-            imagePickerController.mediaTypes = @[(NSString *)kUTTypeMovie];
-            imagePickerController.videoQuality = UIImagePickerControllerQualityTypeIFrame1280x720;
-            imagePickerController.cameraCaptureMode = UIImagePickerControllerCameraCaptureModeVideo;//设置摄像头模式（拍照，录制视频）
-        } else {
-            imagePickerController.mediaTypes = @[(NSString *)kUTTypeImage];//默认
-        }
-        
-        
-        //imagePickerController.allowsEditing = YES; //默认是NO
-        imagePickerController.delegate = self;
+        self.delegate = self;
     }
     
     return self;
+}
+
+- (void)setSingleMediaTypeForVideo:(BOOL)isVideo {
+    //NSArray<NSString *> *mediaTypes = @[(NSString *)kUTTypeImage,(NSString *)kUTTypeMovie];
+    if (isVideo) {
+        self.mediaTypes = @[(NSString *)kUTTypeMovie];
+        self.videoQuality = UIImagePickerControllerQualityTypeIFrame1280x720;
+        self.cameraCaptureMode = UIImagePickerControllerCameraCaptureModeVideo;//设置摄像头模式（拍照，录制视频）
+    } else {
+        self.mediaTypes = @[(NSString *)kUTTypeImage];//默认
+    }
 }
 
 - (void)pickImageFinishBlock:(void(^)(UIImage *image))pickImageFinishBlock

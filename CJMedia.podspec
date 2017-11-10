@@ -42,8 +42,8 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
 
-  s.subspec 'UIImagePickerControllerUtil' do |ss|
-    ss.source_files = "CJMedia/UIImagePickerControllerUtil/**/*.{h,m}"
+  s.subspec 'CJValidateAuthorizationUtil' do |ss|
+    ss.source_files = "CJMedia/CJValidateAuthorizationUtil/**/*.{h,m}"
     #ss.frameworks = "MediaPlayer"
   end
 
@@ -51,7 +51,7 @@ Pod::Spec.new do |s|
     ss.source_files = "CJMedia/MySingleImagePickerController/**/*.{h,m}"
     #ss.frameworks = "MediaPlayer"
 
-    ss.dependency 'CJMedia/UIImagePickerControllerUtil'
+    ss.dependency 'CJMedia/CJValidateAuthorizationUtil'
   end
 
   
@@ -59,6 +59,7 @@ Pod::Spec.new do |s|
     ss.source_files = "CJMedia/CJPhotoBrowser/**/*.{h,m}"
     ss.resources = "CJMedia/CJPhotoBrowser/**/*.{png,xib,bundle}"
 
+    ss.dependency 'CJMedia/CJValidateAuthorizationUtil'
     ss.dependency 'Masonry'
     ss.dependency 'MBProgressHUD'
     ss.dependency 'SDWebImage'

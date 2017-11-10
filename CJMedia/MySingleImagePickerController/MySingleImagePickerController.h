@@ -23,9 +23,7 @@ typedef NS_OPTIONS(NSUInteger, CJSaveLocation) {
 }
 @property (nonatomic, assign) CJSaveLocation saveLocation;
 
-
-- (MySingleImagePickerController *)initWithSourceType:(UIImagePickerControllerSourceType)sourceType
-                                              isVideo:(BOOL)isVideo;
+- (void)setSingleMediaTypeForVideo:(BOOL)isVideo;
 
 - (void)pickImageFinishBlock:(void(^)(UIImage *image))pickImageFinishBlock
         pickVideoFinishBlock:(void(^)(UIImage *firstImage))pickVideoFinishBlock

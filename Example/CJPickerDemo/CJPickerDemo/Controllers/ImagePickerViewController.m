@@ -7,7 +7,7 @@
 //
 
 #import "ImagePickerViewController.h"
-#import "UIImagePickerControllerUtil.h"
+#import "CJValidateAuthorizationUtil.h"
 #import "MySingleImagePickerController.h"
 
 #import <JGActionSheet/JGActionSheet.h>
@@ -57,22 +57,14 @@
 
 /**< 拍照 */
 - (void)takePhoto {
-    UIImagePickerControllerSourceType sourceType = UIImagePickerControllerSourceTypeCamera;
-    //NSArray<NSString *> *mediaTypes = @[(NSString *)kUTTypeImage,(NSString *)kUTTypeMovie];
-    
-    BOOL supportSourceType = [UIImagePickerControllerUtil checkSupportSourceType:sourceType];
-    if (!supportSourceType) {
+    BOOL isCameraEnable = [CJValidateAuthorizationUtil checkEnableForDeviceComponentType:CJDeviceComponentTypeCamera inViewController:self];
+    if (!isCameraEnable) {
         return;
     }
     
-    MySingleImagePickerController *singleImagePickerController = [[MySingleImagePickerController alloc] initWithSourceType:sourceType isVideo:NO];
-    if (singleImagePickerController == nil) {
-        return;
-    }
-
-    
+    MySingleImagePickerController *singleImagePickerController = [[MySingleImagePickerController alloc] init];
+    [singleImagePickerController setSingleMediaTypeForVideo:NO];
     singleImagePickerController.saveLocation = CJSaveLocationNone;
-    
     [singleImagePickerController pickImageFinishBlock:^(UIImage *image) {
         
         [self finishChooseImage:image];
@@ -88,22 +80,14 @@
 
 /**< 从相册中选择照片 */
 - (void)choosePhoto {
-    //*
-    
-    UIImagePickerControllerSourceType sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    //NSArray<NSString *> *mediaTypes = @[(NSString *)kUTTypeImage];
-    
-    BOOL supportSourceType = [UIImagePickerControllerUtil checkSupportSourceType:sourceType];
-    if (!supportSourceType) {
+    BOOL isAlbumEnable = [CJValidateAuthorizationUtil checkEnableForDeviceComponentType:CJDeviceComponentTypeAlbum inViewController:self];
+    if (!isAlbumEnable) {
         return;
     }
     
-    MySingleImagePickerController *singleImagePickerController = [[MySingleImagePickerController alloc] initWithSourceType:sourceType isVideo:NO];
-    if (singleImagePickerController == nil) {
-        return;
-    }
+    MySingleImagePickerController *singleImagePickerController = [[MySingleImagePickerController alloc] init];
+    [singleImagePickerController setSingleMediaTypeForVideo:NO];
     singleImagePickerController.saveLocation = CJSaveLocationNone;
-    
     [singleImagePickerController pickImageFinishBlock:^(UIImage *image)
      {
          [self finishChooseImage:image];

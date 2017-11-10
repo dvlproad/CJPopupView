@@ -64,10 +64,10 @@
 		785540F51E7DCA9900F320E6 /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 785540EA1E7DCA9900F320E6 /* city.plist */; };
 		785540F61E7DCA9900F320E6 /* line_gray_pickerToolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 785540EB1E7DCA9900F320E6 /* line_gray_pickerToolbar.png */; };
 		785540F71E7DCA9900F320E6 /* line_gray_pickerToolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 785540EC1E7DCA9900F320E6 /* line_gray_pickerToolbar@2x.png */; };
+		786FD7261FB5CAC300076B16 /* CJValidateAuthorizationUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 786FD7251FB5CAC300076B16 /* CJValidateAuthorizationUtil.m */; };
 		787A7E581F55FF61009A7F6A /* CJFileChooseToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 787A7E451F55FF61009A7F6A /* CJFileChooseToolBar.m */; };
 		78B307751F5899B7009869F2 /* CJToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B307741F5899B7009869F2 /* CJToast.m */; };
 		803131DB1FB5BA9F000BD3B9 /* MySingleImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 803131D71FB5BA9F000BD3B9 /* MySingleImagePickerController.m */; };
-		803131E01FB5BCFE000BD3B9 /* UIImagePickerControllerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 803131DF1FB5BCFE000BD3B9 /* UIImagePickerControllerUtil.m */; };
 		E8004FC4B40B74AFE807D847 /* libPods-CJPickerDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48A6484B73B7E20372FD66E9 /* libPods-CJPickerDemoTests.a */; };
 /* End PBXBuildFile section */
 
@@ -184,6 +184,8 @@
 		785540EA1E7DCA9900F320E6 /* city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city.plist; sourceTree = "<group>"; };
 		785540EB1E7DCA9900F320E6 /* line_gray_pickerToolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line_gray_pickerToolbar.png; sourceTree = "<group>"; };
 		785540EC1E7DCA9900F320E6 /* line_gray_pickerToolbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "line_gray_pickerToolbar@2x.png"; sourceTree = "<group>"; };
+		786FD7241FB5CAC300076B16 /* CJValidateAuthorizationUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJValidateAuthorizationUtil.h; sourceTree = "<group>"; };
+		786FD7251FB5CAC300076B16 /* CJValidateAuthorizationUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJValidateAuthorizationUtil.m; sourceTree = "<group>"; };
 		787A7E441F55FF61009A7F6A /* CJFileChooseToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJFileChooseToolBar.h; sourceTree = "<group>"; };
 		787A7E451F55FF61009A7F6A /* CJFileChooseToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJFileChooseToolBar.m; sourceTree = "<group>"; };
 		78B307731F5899B7009869F2 /* CJToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJToast.h; sourceTree = "<group>"; };
@@ -191,8 +193,6 @@
 		7CFC980D5F47A54820A32812 /* libPods-CJPickerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CJPickerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		803131D61FB5BA9F000BD3B9 /* MySingleImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySingleImagePickerController.h; sourceTree = "<group>"; };
 		803131D71FB5BA9F000BD3B9 /* MySingleImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySingleImagePickerController.m; sourceTree = "<group>"; };
-		803131DE1FB5BCFE000BD3B9 /* UIImagePickerControllerUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImagePickerControllerUtil.h; sourceTree = "<group>"; };
-		803131DF1FB5BCFE000BD3B9 /* UIImagePickerControllerUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImagePickerControllerUtil.m; sourceTree = "<group>"; };
 		C1F60C217BF39A336659F486 /* Pods-CJPickerDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJPickerDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CJPickerDemoTests/Pods-CJPickerDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		FFF7E9411648FED90F9269C4 /* Pods-CJPickerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJPickerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CJPickerDemo/Pods-CJPickerDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -247,7 +247,7 @@
 		7806B6AD1F59F6840077362F /* CJMedia */ = {
 			isa = PBXGroup;
 			children = (
-				803131DD1FB5BCFE000BD3B9 /* UIImagePickerControllerUtil */,
+				786FD7231FB5CAC300076B16 /* CJValidateAuthorizationUtil */,
 				803131D51FB5BA9F000BD3B9 /* MySingleImagePickerController */,
 				7806B6AE1F59F6840077362F /* CJPhotoBrowser */,
 			);
@@ -548,6 +548,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		786FD7231FB5CAC300076B16 /* CJValidateAuthorizationUtil */ = {
+			isa = PBXGroup;
+			children = (
+				786FD7241FB5CAC300076B16 /* CJValidateAuthorizationUtil.h */,
+				786FD7251FB5CAC300076B16 /* CJValidateAuthorizationUtil.m */,
+			);
+			path = CJValidateAuthorizationUtil;
+			sourceTree = "<group>";
+		};
 		787A7E431F55FF61009A7F6A /* FileChooseView */ = {
 			isa = PBXGroup;
 			children = (
@@ -575,15 +584,6 @@
 				803131D71FB5BA9F000BD3B9 /* MySingleImagePickerController.m */,
 			);
 			path = MySingleImagePickerController;
-			sourceTree = "<group>";
-		};
-		803131DD1FB5BCFE000BD3B9 /* UIImagePickerControllerUtil */ = {
-			isa = PBXGroup;
-			children = (
-				803131DE1FB5BCFE000BD3B9 /* UIImagePickerControllerUtil.h */,
-				803131DF1FB5BCFE000BD3B9 /* UIImagePickerControllerUtil.m */,
-			);
-			path = UIImagePickerControllerUtil;
 			sourceTree = "<group>";
 		};
 		89C091EA116A1744804C2005 /* Frameworks */ = {
@@ -668,6 +668,7 @@
 				TargetAttributes = {
 					7855405F1E7DC53F00F320E6 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = FZ5YDHE5JZ;
 						ProvisioningStyle = Automatic;
 					};
 					785540781E7DC53F00F320E6 = {
@@ -888,7 +889,7 @@
 				785540AB1E7DC5F800F320E6 /* RelatedPickerViewController2.m in Sources */,
 				7806B6DF1F59F6840077362F /* CJImagePickerViewController+UpdateGroupArray.m in Sources */,
 				785540AE1E7DC5F800F320E6 /* GroupDataUtil.m in Sources */,
-				803131E01FB5BCFE000BD3B9 /* UIImagePickerControllerUtil.m in Sources */,
+				786FD7261FB5CAC300076B16 /* CJValidateAuthorizationUtil.m in Sources */,
 				78B307751F5899B7009869F2 /* CJToast.m in Sources */,
 				7806B6EC1F59F6840077362F /* CJPhotoProgressView.m in Sources */,
 				7806B6E51F59F6840077362F /* CJMultiColumnPhotoTableViewCell.m in Sources */,
@@ -1047,6 +1048,7 @@
 			baseConfigurationReference = 396C552B187BFD49AA5B0CE1 /* Pods-CJPickerDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FZ5YDHE5JZ;
 				INFOPLIST_FILE = CJPickerDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1060,6 +1062,7 @@
 			baseConfigurationReference = FFF7E9411648FED90F9269C4 /* Pods-CJPickerDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FZ5YDHE5JZ;
 				INFOPLIST_FILE = CJPickerDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
