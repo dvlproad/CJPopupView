@@ -1,27 +1,9 @@
 PODS:
-  - AFNetworking (3.1.0):
-    - AFNetworking/NSURLSession (= 3.1.0)
-    - AFNetworking/Reachability (= 3.1.0)
-    - AFNetworking/Security (= 3.1.0)
-    - AFNetworking/Serialization (= 3.1.0)
-    - AFNetworking/UIKit (= 3.1.0)
-  - AFNetworking/NSURLSession (3.1.0):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.1.0)
-  - AFNetworking/Security (3.1.0)
-  - AFNetworking/Serialization (3.1.0)
-  - AFNetworking/UIKit (3.1.0):
-    - AFNetworking/NSURLSession
   - CJBaseUIKit/CJCollectionView/CJBaseCollectionViewCell (0.1.4)
   - CJBaseUIKit/CJCollectionView/MyEqualCellSizeCollectionView (0.1.4)
+  - CJBaseUIKit/CJToast (0.1.4):
+    - MBProgressHUD
   - CJBaseUIKit/UIToolbar (0.1.4)
-  - CJFile/CJFileManager (0.0.2)
-  - CJNetwork/AFNetworkingUploadComponent (0.1.2):
-    - CJNetwork/CJNetworkMonitor
-  - CJNetwork/CJNetworkMonitor (0.1.2):
-    - AFNetworking (~> 3.1.0)
   - CJPopupAction (1.4.2)
   - CJRadio (1.0.3):
     - CJRadio/CJRadioButtons (= 1.0.3)
@@ -46,9 +28,8 @@ PODS:
 DEPENDENCIES:
   - CJBaseUIKit/CJCollectionView/CJBaseCollectionViewCell (~> 0.1.4)
   - CJBaseUIKit/CJCollectionView/MyEqualCellSizeCollectionView (~> 0.1.4)
+  - CJBaseUIKit/CJToast (~> 0.1.4)
   - CJBaseUIKit/UIToolbar (~> 0.1.4)
-  - CJFile/CJFileManager (~> 0.0.2)
-  - CJNetwork/AFNetworkingUploadComponent (~> 0.1.0)
   - CJRadio (~> 1.0.3)
   - DateTools (~> 2.0.0)
   - JGActionSheet (~> 1.0.5)
@@ -61,10 +42,7 @@ DEPENDENCIES:
   - SVProgressHUD (~> 2.1.2)
 
 SPEC CHECKSUMS:
-  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   CJBaseUIKit: fb0f19af45291d3e9232d2be94f7aff41448e03c
-  CJFile: 0b7c5e328318a7443638cf564b5f3d5d530c7df3
-  CJNetwork: b806691372fe233a5998e3d2494e9c9a1c11ce59
   CJPopupAction: e491b5f3fdb9d50dddedf450eeb94e36cc61b749
   CJRadio: 30525fedd08d706a7212ba508a253ba5817c770b
   DateTools: 933ac9c490f21f92127cf690ccd8c397e0126caf
@@ -77,6 +55,6 @@ SPEC CHECKSUMS:
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: 83d7597d2a825d7d3898541a2e15d9fcef050009
+PODFILE CHECKSUM: f31f1fa72e0d587c1eb2b49e7c461220eb2d3a52
 
 COCOAPODS: 1.4.0.beta.1

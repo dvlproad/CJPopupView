@@ -7,14 +7,13 @@
 //
 
 #import "ImagePickerViewController.h"
+
 #import "CJValidateAuthorizationUtil.h"
 #import "MySingleImagePickerController.h"
+#import "CJImagePickerViewController.h"
 
 #import <JGActionSheet/JGActionSheet.h>
-#import <CJFile/CJFileManager+SaveFileData.h>
 
-#import "CJUploadItemModel.h"
-#import "CJImagePickerViewController.h"
 
 //#import "IjinbuNetworkClient+Login.h"
 
@@ -103,35 +102,8 @@
 ///通过 "拍照" 和 "从手机相册选择" 两种方式选择到图片后
 - (void)finishChooseImage:(UIImage *)image {
     self.imageView.image = image;
-    
-    NSMutableArray<CJUploadItemModel *> *uploadModels = [[NSMutableArray alloc] init];
-    CJUploadItemModel *imageUploadModel = [self saveImageToLocal:image];
-    [uploadModels addObject:imageUploadModel];
 }
 
-/**< 保存图片到本地 */
-- (CJUploadItemModel *)saveImageToLocal:(UIImage *)image {
-    NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
-    
-    //文件名
-    NSString *identifier = [[NSProcessInfo processInfo] globallyUniqueString];
-    NSString *imageName = [identifier stringByAppendingPathExtension:@"jpg"];
-    
-    NSString *fileRelativePath =
-    [CJFileManager getLocalDirectoryPathType:CJLocalPathTypeRelative
-                          bySubDirectoryPath:@"UploadImage"
-                       inSearchPathDirectory:NSCachesDirectory
-                             createIfNoExist:YES];
-    [CJFileManager saveFileData:imageData withFileName:imageName toRelativeDirectoryPath:fileRelativePath];
-    
-    
-    CJUploadItemModel *imageUploadModel = [[CJUploadItemModel alloc] init];
-    imageUploadModel.uploadItemType = CJUploadItemTypeImage;
-    imageUploadModel.uploadItemData = imageData;
-    imageUploadModel.uploadItemName = imageName;
-    
-    return imageUploadModel;
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

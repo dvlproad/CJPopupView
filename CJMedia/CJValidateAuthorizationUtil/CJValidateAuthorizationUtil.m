@@ -115,9 +115,9 @@
     BOOL isAuthorization = NO;
     
     if ([[[UIDevice currentDevice] systemVersion] floatValue] < 8.0) {
-        AVAuthorizationStatus authStatus = [ALAssetsLibrary authorizationStatus];
-        if (authStatus == AVAuthorizationStatusRestricted ||
-            authStatus == AVAuthorizationStatusDenied) {
+        ALAuthorizationStatus authStatus = [ALAssetsLibrary authorizationStatus];
+        if (authStatus == ALAuthorizationStatusRestricted ||
+            authStatus == ALAuthorizationStatusDenied) {
             isAuthorization = NO;
         } else {
             isAuthorization = YES;

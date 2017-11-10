@@ -29,12 +29,6 @@
 		7806B6ED1F59F6840077362F /* CJPhotoToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7806B6D71F59F6840077362F /* CJPhotoToolbar.m */; };
 		7806B6EE1F59F6840077362F /* CJPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7806B6D91F59F6840077362F /* CJPhotoView.m */; };
 		7806EB971FB4BE3B00A3EF4E /* CJAlumbImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 7806EB961FB4BE3B00A3EF4E /* CJAlumbImageUtil.m */; };
-		781030131F59E6D800A5A043 /* CJToast_error.png in Resources */ = {isa = PBXBuildFile; fileRef = 7810300D1F59E6D800A5A043 /* CJToast_error.png */; };
-		781030141F59E6D800A5A043 /* CJToast_error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7810300E1F59E6D800A5A043 /* CJToast_error@2x.png */; };
-		781030151F59E6D800A5A043 /* CJToast_error@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7810300F1F59E6D800A5A043 /* CJToast_error@3x.png */; };
-		781030161F59E6D800A5A043 /* CJToast_success.png in Resources */ = {isa = PBXBuildFile; fileRef = 781030101F59E6D800A5A043 /* CJToast_success.png */; };
-		781030171F59E6D800A5A043 /* CJToast_success@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 781030111F59E6D800A5A043 /* CJToast_success@2x.png */; };
-		781030181F59E6D800A5A043 /* CJToast_success@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 781030121F59E6D800A5A043 /* CJToast_success@3x.png */; };
 		784C15741E8E44850019D652 /* ImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 784C15721E8E44850019D652 /* ImagePickerViewController.m */; };
 		784C15751E8E44850019D652 /* ImagePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 784C15731E8E44850019D652 /* ImagePickerViewController.xib */; };
 		785540651E7DC53F00F320E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 785540641E7DC53F00F320E6 /* main.m */; };
@@ -66,7 +60,6 @@
 		785540F71E7DCA9900F320E6 /* line_gray_pickerToolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 785540EC1E7DCA9900F320E6 /* line_gray_pickerToolbar@2x.png */; };
 		786FD7261FB5CAC300076B16 /* CJValidateAuthorizationUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 786FD7251FB5CAC300076B16 /* CJValidateAuthorizationUtil.m */; };
 		787A7E581F55FF61009A7F6A /* CJFileChooseToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 787A7E451F55FF61009A7F6A /* CJFileChooseToolBar.m */; };
-		78B307751F5899B7009869F2 /* CJToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B307741F5899B7009869F2 /* CJToast.m */; };
 		803131DB1FB5BA9F000BD3B9 /* MySingleImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 803131D71FB5BA9F000BD3B9 /* MySingleImagePickerController.m */; };
 		E8004FC4B40B74AFE807D847 /* libPods-CJPickerDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48A6484B73B7E20372FD66E9 /* libPods-CJPickerDemoTests.a */; };
 /* End PBXBuildFile section */
@@ -129,12 +122,6 @@
 		7806B6D91F59F6840077362F /* CJPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJPhotoView.m; sourceTree = "<group>"; };
 		7806EB951FB4BE3B00A3EF4E /* CJAlumbImageUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CJAlumbImageUtil.h; sourceTree = "<group>"; };
 		7806EB961FB4BE3B00A3EF4E /* CJAlumbImageUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CJAlumbImageUtil.m; sourceTree = "<group>"; };
-		7810300D1F59E6D800A5A043 /* CJToast_error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CJToast_error.png; sourceTree = "<group>"; };
-		7810300E1F59E6D800A5A043 /* CJToast_error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CJToast_error@2x.png"; sourceTree = "<group>"; };
-		7810300F1F59E6D800A5A043 /* CJToast_error@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CJToast_error@3x.png"; sourceTree = "<group>"; };
-		781030101F59E6D800A5A043 /* CJToast_success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CJToast_success.png; sourceTree = "<group>"; };
-		781030111F59E6D800A5A043 /* CJToast_success@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CJToast_success@2x.png"; sourceTree = "<group>"; };
-		781030121F59E6D800A5A043 /* CJToast_success@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CJToast_success@3x.png"; sourceTree = "<group>"; };
 		784C15711E8E44850019D652 /* ImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerViewController.h; sourceTree = "<group>"; };
 		784C15721E8E44850019D652 /* ImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerViewController.m; sourceTree = "<group>"; };
 		784C15731E8E44850019D652 /* ImagePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagePickerViewController.xib; sourceTree = "<group>"; };
@@ -188,8 +175,6 @@
 		786FD7251FB5CAC300076B16 /* CJValidateAuthorizationUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJValidateAuthorizationUtil.m; sourceTree = "<group>"; };
 		787A7E441F55FF61009A7F6A /* CJFileChooseToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJFileChooseToolBar.h; sourceTree = "<group>"; };
 		787A7E451F55FF61009A7F6A /* CJFileChooseToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJFileChooseToolBar.m; sourceTree = "<group>"; };
-		78B307731F5899B7009869F2 /* CJToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJToast.h; sourceTree = "<group>"; };
-		78B307741F5899B7009869F2 /* CJToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJToast.m; sourceTree = "<group>"; };
 		7CFC980D5F47A54820A32812 /* libPods-CJPickerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CJPickerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		803131D61FB5BA9F000BD3B9 /* MySingleImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySingleImagePickerController.h; sourceTree = "<group>"; };
 		803131D71FB5BA9F000BD3B9 /* MySingleImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySingleImagePickerController.m; sourceTree = "<group>"; };
@@ -385,19 +370,6 @@
 			path = CJAlumbImageUtil;
 			sourceTree = "<group>";
 		};
-		7810300C1F59E6D800A5A043 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				7810300D1F59E6D800A5A043 /* CJToast_error.png */,
-				7810300E1F59E6D800A5A043 /* CJToast_error@2x.png */,
-				7810300F1F59E6D800A5A043 /* CJToast_error@3x.png */,
-				781030101F59E6D800A5A043 /* CJToast_success.png */,
-				781030111F59E6D800A5A043 /* CJToast_success@2x.png */,
-				781030121F59E6D800A5A043 /* CJToast_success@3x.png */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		785540571E7DC53F00F320E6 = {
 			isa = PBXGroup;
 			children = (
@@ -429,7 +401,6 @@
 				7855406A1E7DC53F00F320E6 /* ViewController.m */,
 				7806B6AD1F59F6840077362F /* CJMedia */,
 				7806B61B1F59EB4E0077362F /* Resources */,
-				78B307721F5899B7009869F2 /* CJToast */,
 				785540D71E7DCA9900F320E6 /* CJPicker */,
 				785540961E7DC5F800F320E6 /* Controllers */,
 				785540A01E7DC5F800F320E6 /* Util */,
@@ -566,17 +537,6 @@
 			path = FileChooseView;
 			sourceTree = "<group>";
 		};
-		78B307721F5899B7009869F2 /* CJToast */ = {
-			isa = PBXGroup;
-			children = (
-				78B307731F5899B7009869F2 /* CJToast.h */,
-				78B307741F5899B7009869F2 /* CJToast.m */,
-				7810300C1F59E6D800A5A043 /* Resources */,
-			);
-			name = CJToast;
-			path = ../../../../CJUIKit/CJUIKit/CJToast;
-			sourceTree = "<group>";
-		};
 		803131D51FB5BA9F000BD3B9 /* MySingleImagePickerController */ = {
 			isa = PBXGroup;
 			children = (
@@ -710,11 +670,9 @@
 			files = (
 				785540731E7DC53F00F320E6 /* LaunchScreen.storyboard in Resources */,
 				785540AF1E7DC5F800F320E6 /* RadioButton_Slider.xib in Resources */,
-				781030181F59E6D800A5A043 /* CJToast_success@3x.png in Resources */,
 				785540AA1E7DC5F800F320E6 /* RelatedPickerViewController.xib in Resources */,
 				7806B61E1F59EB4E0077362F /* CJAvatar@2x.png in Resources */,
 				785540F51E7DCA9900F320E6 /* city.plist in Resources */,
-				781030161F59E6D800A5A043 /* CJToast_success.png in Resources */,
 				785540F61E7DCA9900F320E6 /* line_gray_pickerToolbar.png in Resources */,
 				785540AC1E7DC5F800F320E6 /* RelatedPickerViewController2.xib in Resources */,
 				784C15751E8E44850019D652 /* ImagePickerViewController.xib in Resources */,
@@ -723,14 +681,10 @@
 				7806B6E71F59F6840077362F /* CJPhotoBrowser.bundle in Resources */,
 				785540F41E7DCA9900F320E6 /* area.plist in Resources */,
 				785540A81E7DC5F800F320E6 /* PickerViewController.xib in Resources */,
-				781030131F59E6D800A5A043 /* CJToast_error.png in Resources */,
 				7806B61F1F59EB4E0077362F /* nav_back_blue@2x.png in Resources */,
 				7806B6E31F59F6840077362F /* cjAlbumCheckedNormal@2x.png in Resources */,
 				7855406E1E7DC53F00F320E6 /* Main.storyboard in Resources */,
-				781030141F59E6D800A5A043 /* CJToast_error@2x.png in Resources */,
-				781030171F59E6D800A5A043 /* CJToast_success@2x.png in Resources */,
 				785540F71E7DCA9900F320E6 /* line_gray_pickerToolbar@2x.png in Resources */,
-				781030151F59E6D800A5A043 /* CJToast_error@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -824,6 +778,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CJPickerDemo/Pods-CJPickerDemo-resources.sh",
+				"${PODS_ROOT}/CJBaseUIKit/CJUIKit/CJToast/Resources/CJToast_error.png",
+				"${PODS_ROOT}/CJBaseUIKit/CJUIKit/CJToast/Resources/CJToast_error@2x.png",
+				"${PODS_ROOT}/CJBaseUIKit/CJUIKit/CJToast/Resources/CJToast_error@3x.png",
+				"${PODS_ROOT}/CJBaseUIKit/CJUIKit/CJToast/Resources/CJToast_success.png",
+				"${PODS_ROOT}/CJBaseUIKit/CJUIKit/CJToast/Resources/CJToast_success@2x.png",
+				"${PODS_ROOT}/CJBaseUIKit/CJUIKit/CJToast/Resources/CJToast_success@3x.png",
 				"${PODS_ROOT}/CJRadio/CJRadio/CJRadioButtons/images_arrow/arrowDown_dark.png",
 				"${PODS_ROOT}/CJRadio/CJRadio/CJRadioButtons/images_arrow/arrowLeft_gray@2x.png",
 				"${PODS_ROOT}/CJRadio/CJRadio/CJRadioButtons/images_arrow/arrowLeft_red@2x.png",
@@ -890,7 +850,6 @@
 				7806B6DF1F59F6840077362F /* CJImagePickerViewController+UpdateGroupArray.m in Sources */,
 				785540AE1E7DC5F800F320E6 /* GroupDataUtil.m in Sources */,
 				786FD7261FB5CAC300076B16 /* CJValidateAuthorizationUtil.m in Sources */,
-				78B307751F5899B7009869F2 /* CJToast.m in Sources */,
 				7806B6EC1F59F6840077362F /* CJPhotoProgressView.m in Sources */,
 				7806B6E51F59F6840077362F /* CJMultiColumnPhotoTableViewCell.m in Sources */,
 				7806B6EB1F59F6840077362F /* CJPhotoLoadingView.m in Sources */,

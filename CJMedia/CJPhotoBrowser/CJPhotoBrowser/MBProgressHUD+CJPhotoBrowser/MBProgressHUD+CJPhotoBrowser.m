@@ -53,7 +53,9 @@
     // 隐藏时候从父控件中移除
     hud.removeFromSuperViewOnHide = YES;
     // YES代表需要蒙版效果
-    hud.dimBackground = YES;
+    hud.backgroundView.style = MBProgressHUDBackgroundStyleSolidColor;
+    hud.backgroundView.color = [UIColor colorWithWhite:0.f alpha:0.1f];
+    
     return hud;
 }
 @end
