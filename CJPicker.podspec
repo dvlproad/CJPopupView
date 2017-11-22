@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "CJPicker"
-  s.version      = "1.2.0"
+  s.version      = "1.3.0"
   s.summary      = "A custom view which contain UIPickerView/UIDatePicker and UIToolbar as subViews."
 
   s.description  = <<-DESC
@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/dvlproad/CJPopupView.git", :tag => "CJPicker_1.2.0" }
+  s.source       = { :git => "https://github.com/dvlproad/CJPopupView.git", :tag => "CJPicker_1.3.0" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -88,10 +88,5 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
-
-  s.subspec 'CJToolbar' do |ss|
-    ss.source_files = "CJPicker/CJToolbar/**/*.{h,m}"
-    # ss.resources = "CJPicker/CJToolbar/**/*.{png,xib}"
-  end
 
 end

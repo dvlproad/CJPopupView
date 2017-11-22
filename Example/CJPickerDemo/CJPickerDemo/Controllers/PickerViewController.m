@@ -13,7 +13,8 @@
 #import "CJRelatedPickerRichView.h"
 #import "GroupDataUtil.h"
 
-#import <UIView+CJPopupInView.h>
+#import <CJBaseUIKit/CJDefaultToolbar.h>
+#import <CJPopupAction/UIView+CJPopupInView.h>
 
 @interface PickerViewController () <CJRelatedPickerRichViewDelegate>
 {
@@ -39,7 +40,11 @@
     
     if (picker_birthday == nil) {
         picker_birthday = [[CJDefaultDatePicker alloc] init];
-        picker_birthday.toolbar.option = CJDefaultToolbarOptionConfirm | CJDefaultToolbarOptionValue | CJDefaultToolbarOptionCancel;
+        
+        CJDefaultToolbar *toolbar = [[CJDefaultToolbar alloc] initWithFrame:CGRectZero];
+        [picker_birthday addToolbar:toolbar];
+        
+        toolbar.option = CJDefaultToolbarOptionConfirm | CJDefaultToolbarOptionValue | CJDefaultToolbarOptionCancel;
         
         __weak typeof(picker_birthday)weakpicker_birthday = picker_birthday;
         [picker_birthday setValueChangedHandel:^(UIDatePicker *datePicker) {
@@ -64,14 +69,14 @@
             NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
             dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
             NSString *dateString = [dateFormatter stringFromDate:localDate];
-            [weakpicker_birthday.toolbar updateShowingValue:dateString];
+            [toolbar updateShowingValue:dateString];
         }];
         
-        [picker_birthday.toolbar setCancelHandle:^{
+        [toolbar setCancelHandle:^{
             [weakpicker_birthday cj_hidePopupView];
         }];
         
-        [picker_birthday.toolbar setConfirmHandle:^{
+        [toolbar setConfirmHandle:^{
             NSDate *selDate = weakpicker_birthday.datePicker.date;
             NSString *value = [NSString stringWithFormat:@"%@", selDate];
             [[[UIAlertView alloc]initWithTitle:@"所选日期为" message:value delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
@@ -130,7 +135,11 @@
         picker_weight = [[CJIndependentPickerView alloc] init];
         
         __weak typeof(picker_weight)weakpicker_weight = picker_weight;
-        [picker_weight.toolbar setConfirmHandle:^{
+        
+        CJDefaultToolbar *toolbar = [[CJDefaultToolbar alloc] initWithFrame:CGRectZero];
+        [picker_weight addToolbar:toolbar];
+        
+        [toolbar setConfirmHandle:^{
             NSString *integer = @"", *decimal = @"", *unit = @"";
             
             for (int indexC = 0; indexC < weakpicker_weight.datas.count; indexC++) {

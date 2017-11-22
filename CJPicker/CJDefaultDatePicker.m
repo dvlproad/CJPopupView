@@ -77,8 +77,11 @@
                                   attribute:NSLayoutAttributeBottom
                                  multiplier:1
                                    constant:0]];
-    
-    CJDefaultToolbar *toolbar = [[CJDefaultToolbar alloc] initWithFrame:CGRectZero];
+
+    self.datePicker = datePicker;
+}
+
+- (void)addToolbar:(UIToolbar *)toolbar {
     [self addSubview:toolbar];
     toolbar.translatesAutoresizingMaskIntoConstraints = NO;
     [self addConstraint:
@@ -116,9 +119,6 @@
                                   attribute:NSLayoutAttributeNotAnAttribute
                                  multiplier:1
                                    constant:44]];
-
-    self.datePicker = datePicker;
-    self.toolbar = toolbar;
 }
 
 
