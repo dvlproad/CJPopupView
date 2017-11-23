@@ -18,9 +18,9 @@
 
 @interface PickerViewController () <CJRelatedPickerRichViewDelegate>
 {
-    CJDefaultDatePicker *picker_birthday;
-    CJIndependentPickerView *picker_weight;
-    CJRelatedPickerRichView *picker_area;
+    CJDefaultDatePicker *birthdayPicker;
+    CJIndependentPickerView *weightPicker;
+    CJRelatedPickerRichView *areaPicker;
 }
 
 @end
@@ -35,19 +35,18 @@
 
 
 - (IBAction)chooseBirthday:(id)sender{
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
-    
-    if (picker_birthday == nil) {
-        picker_birthday = [[CJDefaultDatePicker alloc] init];
+    if (birthdayPicker == nil) {
+        birthdayPicker = [[CJDefaultDatePicker alloc] init];
         
         CJDefaultToolbar *toolbar = [[CJDefaultToolbar alloc] initWithFrame:CGRectZero];
-        [picker_birthday addToolbar:toolbar];
+        [birthdayPicker addToolbar:toolbar];
+        
+        NSDateFormatter *dateFormatter = birthdayPicker.dateFormatter;
         
         toolbar.option = CJDefaultToolbarOptionConfirm | CJDefaultToolbarOptionValue | CJDefaultToolbarOptionCancel;
         
-        __weak typeof(picker_birthday)weakpicker_birthday = picker_birthday;
-        [picker_birthday setValueChangedHandel:^(UIDatePicker *datePicker) {
+        __weak typeof(birthdayPicker)weakbirthdayPicker = birthdayPicker;
+        [birthdayPicker setValueChangedHandel:^(UIDatePicker *datePicker) {
             UIDatePicker *m_datePicker = datePicker;
             
             NSDate *date = m_datePicker.date;
@@ -66,37 +65,44 @@
                 NSLog(@"当前选择日期太大");
             }
             
-            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-            dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
             NSString *dateString = [dateFormatter stringFromDate:localDate];
             [toolbar updateShowingValue:dateString];
         }];
         
         [toolbar setCancelHandle:^{
-            [weakpicker_birthday cj_hidePopupView];
+            [weakbirthdayPicker cj_hidePopupView];
         }];
         
         [toolbar setConfirmHandle:^{
-            NSDate *selDate = weakpicker_birthday.datePicker.date;
-            NSString *value = [NSString stringWithFormat:@"%@", selDate];
-            [[[UIAlertView alloc]initWithTitle:@"所选日期为" message:value delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
+            NSDate *selDate = weakbirthdayPicker.datePicker.date;
             
-            [weakpicker_birthday cj_hidePopupView];
+            dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+            NSString *selDateString = [dateFormatter stringFromDate:selDate];
+            
+            [[[UIAlertView alloc]initWithTitle:@"所选日期为" message:selDateString delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
+            
+            [weakbirthdayPicker cj_hidePopupView];
         }];
         
-        picker_birthday.datePicker.datePickerMode = UIDatePickerModeDate;
-        picker_birthday.datePicker.maximumDate = [NSDate date];
-        picker_birthday.datePicker.minimumDate = [dateFormatter dateFromString:@"1900-01-01"];;
+        
+        birthdayPicker.datePicker.datePickerMode = UIDatePickerModeDate;
+        birthdayPicker.datePicker.maximumDate = [NSDate date];
+        birthdayPicker.datePicker.minimumDate = [dateFormatter dateFromString:@"1900-01-01"];
+        
+        birthdayPicker.datePicker.date = [dateFormatter dateFromString:@"1989-12-27"];
     }
+    NSDateFormatter *dateFormatter = birthdayPicker.dateFormatter;
+    dateFormatter.dateFormat = @"yyyy-MM-dd";
+    NSString *dateString = [dateFormatter stringFromDate:birthdayPicker.datePicker.date];
     
+    CJDefaultToolbar *toolbar = (CJDefaultToolbar *)birthdayPicker.toolbar;
+    [toolbar updateShowingValue:dateString];
     
-    picker_birthday.datePicker.date = [dateFormatter dateFromString:@"1989-12-27"];
-    
-    [picker_birthday cj_popupInWindowAtPosition:CJWindowPositionBottom animationType:CJAnimationTypeNormal showComplete:^{
+    [birthdayPicker cj_popupInWindowAtPosition:CJWindowPositionBottom animationType:CJAnimationTypeNormal showComplete:^{
         NSLog(@"显示完成");
     } tapBlankComplete:^() {
         NSLog(@"点击背景完成");
-        [picker_birthday cj_hidePopupView];
+        [birthdayPicker cj_hidePopupView];
         
     }];
     
@@ -104,46 +110,46 @@
 
 
 - (IBAction)chooseArea:(id)sender{
-    if (picker_area == nil) {
-        picker_area = [[CJRelatedPickerRichView alloc] initWithFrame:CGRectMake(0, 0, 200, 162)];
+    if (areaPicker == nil) {
+        areaPicker = [[CJRelatedPickerRichView alloc] initWithFrame:CGRectMake(0, 0, 200, 162)];
         
         NSMutableArray *componentDataModels = [GroupDataUtil groupDataAllArea];
         
-        [picker_area setComponentDataModels:componentDataModels];
-        [picker_area updateTableViewBackgroundColor:[UIColor greenColor] inComponent:0];
-        [picker_area updateTableViewBackgroundColor:[UIColor yellowColor] inComponent:1];
-        [picker_area updateTableViewBackgroundColor:[UIColor greenColor] inComponent:2];
-        [picker_area setDelegate:self];
+        [areaPicker setComponentDataModels:componentDataModels];
+        [areaPicker updateTableViewBackgroundColor:[UIColor greenColor] inComponent:0];
+        [areaPicker updateTableViewBackgroundColor:[UIColor yellowColor] inComponent:1];
+        [areaPicker updateTableViewBackgroundColor:[UIColor greenColor] inComponent:2];
+        [areaPicker setDelegate:self];
     }
     
-//    picker_area.selecteds_default = @[@"福建", @"泉州", @"安溪县"];
+//    areaPicker.selecteds_default = @[@"福建", @"泉州", @"安溪县"];
     
     
     
     
-    [picker_area cj_popupInWindowAtPosition:CJWindowPositionBottom animationType:CJAnimationTypeNormal showComplete:^{
+    [areaPicker cj_popupInWindowAtPosition:CJWindowPositionBottom animationType:CJAnimationTypeNormal showComplete:^{
         NSLog(@"显示完成");
     } tapBlankComplete:^() {
         NSLog(@"点击背景完成");
-        [picker_area cj_hidePopupView];
+        [areaPicker cj_hidePopupView];
     }];
 }
 
 
 - (IBAction)chooseWeight:(id)sender{
-    if (picker_weight == nil) {
-        picker_weight = [[CJIndependentPickerView alloc] init];
+    if (weightPicker == nil) {
+        weightPicker = [[CJIndependentPickerView alloc] init];
         
-        __weak typeof(picker_weight)weakpicker_weight = picker_weight;
+        __weak typeof(weightPicker)weakweightPicker = weightPicker;
         
         CJDefaultToolbar *toolbar = [[CJDefaultToolbar alloc] initWithFrame:CGRectZero];
-        [picker_weight addToolbar:toolbar];
+        [weightPicker addToolbar:toolbar];
         
         [toolbar setConfirmHandle:^{
             NSString *integer = @"", *decimal = @"", *unit = @"";
             
-            for (int indexC = 0; indexC < weakpicker_weight.datas.count; indexC++) {
-                NSString *string = [weakpicker_weight.selecteds objectAtIndex:indexC];
+            for (int indexC = 0; indexC < weakweightPicker.datas.count; indexC++) {
+                NSString *string = [weakweightPicker.selecteds objectAtIndex:indexC];
                 if (indexC == 0) {
                     integer = string;
                 }else if (indexC == 1){
@@ -155,7 +161,7 @@
             NSString *value = [NSString stringWithFormat:@"%@.%@.%@", integer, decimal, unit];
             [[[UIAlertView alloc]initWithTitle:@"最后的值为" message:value delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
             
-            [weakpicker_weight cj_hidePopupView];
+            [weakweightPicker cj_hidePopupView];
         }];
         NSMutableArray *integers = [[NSMutableArray alloc]init];
         for (int i = 40; i < 100; i++) {
@@ -169,18 +175,18 @@
         
         NSArray *units = @[@"kg", @"磅"];
         
-        picker_weight.datas = @[integers, decimals, units];
-        picker_weight.tag = 1000;
+        weightPicker.datas = @[integers, decimals, units];
+        weightPicker.tag = 1000;
     }
     
-    picker_weight.selecteds_default = @[@"60", @"5", @"kg"];
+    weightPicker.selecteds_default = @[@"60", @"5", @"kg"];
     
     
-    [picker_weight cj_popupInWindowAtPosition:CJWindowPositionBottom animationType:CJAnimationTypeNormal showComplete:^{
+    [weightPicker cj_popupInWindowAtPosition:CJWindowPositionBottom animationType:CJAnimationTypeNormal showComplete:^{
         NSLog(@"显示完成");
     } tapBlankComplete:^() {
         NSLog(@"点击背景完成");
-        [picker_weight cj_hidePopupView];
+        [weightPicker cj_hidePopupView];
     }];
 }
 
@@ -230,21 +236,21 @@
     
     [[[UIAlertView alloc]initWithTitle:@"最后的值为" message:string delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
     
-    [picker_area cj_hidePopupView];
+    [areaPicker cj_hidePopupView];
 
 }
 
 
 - (void)dealloc{
-    [picker_birthday cj_hidePopupView];
-    picker_birthday = nil;
+    [birthdayPicker cj_hidePopupView];
+    birthdayPicker = nil;
     
-    [picker_weight cj_hidePopupView];
-    picker_weight = nil;
+    [weightPicker cj_hidePopupView];
+    weightPicker = nil;
     
-    [picker_area cj_hidePopupView];
-    picker_area.delegate = nil;
-    picker_area = nil;
+    [areaPicker cj_hidePopupView];
+    areaPicker.delegate = nil;
+    areaPicker = nil;
 }
 
 
