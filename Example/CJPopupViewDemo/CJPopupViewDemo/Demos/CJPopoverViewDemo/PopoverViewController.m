@@ -7,7 +7,9 @@
 //
 
 #import "PopoverViewController.h"
-#import "CJPopoverView.h"
+#import "CJPopoverListView.h"
+
+#import "PopoverView.h"
 
 @interface PopoverViewController ()
 
@@ -19,6 +21,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = NSLocalizedString(@"PopoverView箭头", nil);
+    
+    
+    PopoverView *popoverView = [[PopoverView alloc] init];
+    [popoverView setFrame:CGRectMake(100, 100, 100, 44)];
+    [self.view addSubview:popoverView];
 }
 
 
@@ -35,7 +42,7 @@
                         @"从底到底SlideBottomBottom",
                         @"渐隐Fade"];
     NSArray *images = @[@"image1.png", @"image1.png", @"image1.png", @"image1.png"];
-    CJPopoverView *pop = [[CJPopoverView alloc] initWithPoint:point titles:titles images:images];
+    CJPopoverListView *pop = [[CJPopoverListView alloc] initWithPoint:point titles:titles images:images];
     pop.selectRowAtIndex = ^(NSInteger index){
         NSLog(@"select index:%ld", index);
         [btn setTitle:titles[index] forState:UIControlStateNormal];
@@ -48,7 +55,7 @@
     CGPoint point = [btn.superview convertPoint:point_origin toView:self.view];
     
     NSArray *titles = @[@"pop_item1", @"pop_item2", @"pop_item3"];
-    CJPopoverView *pop = [[CJPopoverView alloc] initWithPoint:point titles:titles images:nil];
+    CJPopoverListView *pop = [[CJPopoverListView alloc] initWithPoint:point titles:titles images:nil];
     pop.selectRowAtIndex = ^(NSInteger index){
         NSLog(@"select index:%ld", index);
         [btn setTitle:titles[index] forState:UIControlStateNormal];

@@ -1,23 +1,21 @@
 //
-//  CJPopoverView.m
+//  CJPopoverListView.m
 //  CJPopoverViewDemo
 //
-//  Created by lichq on 6/24/15.
-//  Copyright (c) 2015 ciyouzen. All rights reserved.
+//  Created by ciyouzen on 6/24/15.
+//  Copyright (c) 2015 dvlproad. All rights reserved.
 //
 
-#import "CJPopoverView.h"
+#import "CJPopoverListView.h"
 
 #define kArrowHeight 10.f
-#define kArrowCurvature 6.f
 #define SPACE 2.f
 #define ROW_HEIGHT 44.f
 #define TITLE_FONT [UIFont systemFontOfSize:16]
 
-#define COLOR_PopoverView_Boder [UIColor colorWithRed:200/255.0f green:199/255.0f blue:204/255.0f alpha:1.0f]
 #define COLOR_PopoverView_BG    [UIColor colorWithRed:245/255.0f green:245/255.0f blue:245/255.0f alpha:1.0f]
 
-@interface CJPopoverView ()<UITableViewDataSource, UITableViewDelegate>
+@interface CJPopoverListView ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *titleArray;
@@ -32,7 +30,7 @@
 
 
 
-@implementation CJPopoverView
+@implementation CJPopoverListView
 
 
 - (id)initWithFrame:(CGRect)frame
@@ -40,7 +38,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        self.borderColor = COLOR_PopoverView_Boder;
+        self.borderColor = [UIColor colorWithRed:200/255.0f green:199/255.0f blue:204/255.0f alpha:1.0f];
         self.backgroundColor = [UIColor clearColor];
         
     }
@@ -273,109 +271,26 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
-    
-    /*
-     *
-     * *
-     ****   ****
-     *         *
-     *         *
-     *         *
-     *         *
-     *         *
-     *         *
-     ***********
-     */
-    
-    
-    [self.borderColor set]; //设置线条颜色
-    
-    
-    
-    if (isArrowDown == NO) {
-        CGRect frame = CGRectMake(0, 10, self.bounds.size.width, self.bounds.size.height - kArrowHeight);
-        
-        float xMin = CGRectGetMinX(frame);
-        float yMin = CGRectGetMinY(frame);
-        
-        float xMax = CGRectGetMaxX(frame);
-        float yMax = CGRectGetMaxY(frame);
-        
-        
-        CGPoint arrowPoint = [self convertPoint:self.showPoint fromView:_handerView];
-        
-        UIBezierPath *popoverPath = [UIBezierPath bezierPath];
-        [popoverPath moveToPoint:CGPointMake(xMin, yMin)];//左上角
-        
-        /********************向上的箭头**********************/
-        [popoverPath addLineToPoint:CGPointMake(arrowPoint.x - kArrowHeight, yMin)];//left side
-        [popoverPath addCurveToPoint:arrowPoint
-                       controlPoint1:CGPointMake(arrowPoint.x - kArrowHeight + kArrowCurvature, yMin)
-                       controlPoint2:arrowPoint];//actual arrow point
-        
-        [popoverPath addCurveToPoint:CGPointMake(arrowPoint.x + kArrowHeight, yMin)
-                       controlPoint1:arrowPoint
-                       controlPoint2:CGPointMake(arrowPoint.x + kArrowHeight - kArrowCurvature, yMin)];//right side
-        /********************向上的箭头**********************/
-        
-        
-        [popoverPath addLineToPoint:CGPointMake(xMax, yMin)];//右上角
-        
-        [popoverPath addLineToPoint:CGPointMake(xMax, yMax)];//右下角
-        
-        [popoverPath addLineToPoint:CGPointMake(xMin, yMax)];//左下角
-        
-        //填充颜色
-        [COLOR_PopoverView_BG setFill];
-        [popoverPath fill];
-        
-        [popoverPath closePath];
-        [popoverPath stroke];
-    }else{
-        
-        CGRect frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height - kArrowHeight);
-        
-        float xMin = CGRectGetMinX(frame);
-        float yMin = CGRectGetMinY(frame);
-        
-        float xMax = CGRectGetMaxX(frame);
-        float yMax = CGRectGetMaxY(frame);
-        
-        self.backgroundColor = [UIColor redColor];
-        
-        CGPoint arrowPoint = [self convertPoint:self.showPoint fromView:_handerView];
-        
-        UIBezierPath *popoverPath = [UIBezierPath bezierPath];
-        [popoverPath moveToPoint:CGPointMake(xMin, yMax)];//左下角
-        
-        /********************向上的箭头**********************/
-        [popoverPath addLineToPoint:CGPointMake(arrowPoint.x - kArrowHeight, yMax)];//left side
-        
-        [popoverPath addCurveToPoint:arrowPoint
-                       controlPoint1:CGPointMake(arrowPoint.x - kArrowHeight + kArrowCurvature, yMax)
-                       controlPoint2:arrowPoint];//actual arrow point
-        
-        [popoverPath addCurveToPoint:CGPointMake(arrowPoint.x + kArrowHeight, yMax)
-                       controlPoint1:arrowPoint
-                       controlPoint2:CGPointMake(arrowPoint.x + kArrowHeight - kArrowCurvature, yMax)];//right side
-        /********************向上的箭头**********************/
-        
-        
-        [popoverPath addLineToPoint:CGPointMake(xMax, yMax)];//右上角
-        
-        [popoverPath addLineToPoint:CGPointMake(xMax, yMin)];//右下角
-        
-        [popoverPath addLineToPoint:CGPointMake(xMin, yMin)];//左下角
-        
-        //填充颜色
-        [COLOR_PopoverView_BG setFill];
-        [popoverPath fill];
-        
-        [popoverPath closePath];
-        [popoverPath stroke];
+    CJArrowDirection arrowDirection = CJArrowDirectionUp;
+    if (isArrowDown) {
+        arrowDirection = CJArrowDirectionDown;
     }
+    CGPoint arrowPoint = [self convertPoint:self.showPoint fromView:_handerView];
     
+    CGFloat arrowHeight = kArrowHeight;
+    CGFloat arrowCurvature = 6.0f;
+    UIColor *arrowBorderColor = self.borderColor;
+    UIColor *arrowFillColor = COLOR_PopoverView_BG;
+    
+    [CJDrawRectUtil drawArrowInRect:rect
+                 withArrowDirection:arrowDirection
+                         arrowPoint:arrowPoint
+                        arrowHeight:arrowHeight
+                     arrowCurvature:arrowCurvature
+                   arrowBorderColor:arrowBorderColor
+                     arrowFillColor:arrowFillColor];
 }
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

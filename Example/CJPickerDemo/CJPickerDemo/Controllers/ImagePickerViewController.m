@@ -17,7 +17,10 @@
 
 //#import "IjinbuNetworkClient+Login.h"
 
-@interface ImagePickerViewController ()
+@interface ImagePickerViewController () {
+    
+}
+@property (nonatomic, strong) MySingleImagePickerController *singleImagePickerController;
 
 @end
 
@@ -54,6 +57,24 @@
     [sheet showInView:self.view animated:YES];
 }
 
+- (MySingleImagePickerController *)singleImagePickerController {
+    if (_singleImagePickerController == nil) {
+        MySingleImagePickerController *singleImagePickerController = [[MySingleImagePickerController alloc] init];
+        [singleImagePickerController setSingleMediaTypeForVideo:NO];
+        singleImagePickerController.saveLocation = CJSaveLocationNone;
+        [singleImagePickerController pickImageFinishBlock:^(UIImage *image) {
+            [self finishChooseImage:image];
+            
+        } pickVideoFinishBlock:nil pickCancelBlock:^{
+            
+        }];
+        
+        _singleImagePickerController = singleImagePickerController;
+    }
+    
+    return _singleImagePickerController;
+}
+
 /**< 拍照 */
 - (void)takePhoto {
     BOOL isCameraEnable = [CJValidateAuthorizationUtil checkEnableForDeviceComponentType:CJDeviceComponentTypeCamera inViewController:self];
@@ -61,20 +82,7 @@
         return;
     }
     
-    MySingleImagePickerController *singleImagePickerController = [[MySingleImagePickerController alloc] init];
-    [singleImagePickerController setSingleMediaTypeForVideo:NO];
-    singleImagePickerController.saveLocation = CJSaveLocationNone;
-    [singleImagePickerController pickImageFinishBlock:^(UIImage *image) {
-        
-        [self finishChooseImage:image];
-        
-    } pickVideoFinishBlock:^(UIImage *firstImage) {
-        
-    } pickCancelBlock:^{
-        
-    }];
-    
-    [self presentViewController:singleImagePickerController animated:YES completion:nil];
+    [self presentViewController:self.singleImagePickerController animated:YES completion:nil];
 }
 
 /**< 从相册中选择照片 */
@@ -84,19 +92,7 @@
         return;
     }
     
-    MySingleImagePickerController *singleImagePickerController = [[MySingleImagePickerController alloc] init];
-    [singleImagePickerController setSingleMediaTypeForVideo:NO];
-    singleImagePickerController.saveLocation = CJSaveLocationNone;
-    [singleImagePickerController pickImageFinishBlock:^(UIImage *image)
-     {
-         [self finishChooseImage:image];
-         
-     } pickVideoFinishBlock:nil pickCancelBlock:^{
-         
-     }];
-     //*/
-    
-    [self presentViewController:singleImagePickerController animated:YES completion:nil];
+    [self presentViewController:self.singleImagePickerController animated:YES completion:nil];
 }
 
 ///通过 "拍照" 和 "从手机相册选择" 两种方式选择到图片后

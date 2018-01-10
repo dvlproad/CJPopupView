@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3E0C8BBB4FE893BBDAD3E989 /* libPods-CJPopupViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A56CCC1C1850BEC4C894854 /* libPods-CJPopupViewDemo.a */; };
+		781F242C20065F2C007429AB /* CJDrawRectUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 781F242B20065F2C007429AB /* CJDrawRectUtil.m */; };
+		781F242F20066119007429AB /* PopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 781F242E20066119007429AB /* PopoverView.m */; };
 		7836591C1ED066C600AF7591 /* CJMaskGuideHUD+addHUDSubview.m in Sources */ = {isa = PBXBuildFile; fileRef = 783659071ED066C600AF7591 /* CJMaskGuideHUD+addHUDSubview.m */; };
 		7836591D1ED066C600AF7591 /* CJMaskGuideHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 783659091ED066C600AF7591 /* CJMaskGuideHUD.m */; };
 		7836591E1ED066C600AF7591 /* cjMaskGuideArrowDownWhite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7836590B1ED066C600AF7591 /* cjMaskGuideArrowDownWhite@2x.png */; };
@@ -20,7 +22,7 @@
 		783659251ED066C600AF7591 /* CJMaskGuide_ButtonOKBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 783659141ED066C600AF7591 /* CJMaskGuide_ButtonOKBG@2x.png */; };
 		783659261ED066C600AF7591 /* CJMaskGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 783659161ED066C600AF7591 /* CJMaskGuideView.m */; };
 		783659271ED066C600AF7591 /* UIImage+Mask.m in Sources */ = {isa = PBXBuildFile; fileRef = 783659181ED066C600AF7591 /* UIImage+Mask.m */; };
-		783659281ED066C600AF7591 /* CJPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7836591B1ED066C600AF7591 /* CJPopoverView.m */; };
+		783659281ED066C600AF7591 /* CJPopoverListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7836591B1ED066C600AF7591 /* CJPopoverListView.m */; };
 		783659401ED06AD900AF7591 /* IMMaskButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7836593F1ED06AD900AF7591 /* IMMaskButton@2x.png */; };
 		783659451ED06AE200AF7591 /* NewerGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 783659431ED06AE200AF7591 /* NewerGuideViewController.m */; };
 		783659461ED06AE200AF7591 /* NewerGuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 783659441ED06AE200AF7591 /* NewerGuideViewController.xib */; };
@@ -75,6 +77,10 @@
 		2E5C687844C70BED0EA66D19 /* libPods-CJPopupViewDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CJPopupViewDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		473BD9FC3E5E15C5EF042AE2 /* Pods-CJPopupViewDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJPopupViewDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CJPopupViewDemoTests/Pods-CJPopupViewDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		53278C475033A6887EA344B5 /* Pods-CJPopupViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJPopupViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CJPopupViewDemo/Pods-CJPopupViewDemo.release.xcconfig"; sourceTree = "<group>"; };
+		781F242A20065F2C007429AB /* CJDrawRectUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CJDrawRectUtil.h; sourceTree = "<group>"; };
+		781F242B20065F2C007429AB /* CJDrawRectUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CJDrawRectUtil.m; sourceTree = "<group>"; };
+		781F242D20066118007429AB /* PopoverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopoverView.h; sourceTree = "<group>"; };
+		781F242E20066119007429AB /* PopoverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopoverView.m; sourceTree = "<group>"; };
 		783659061ED066C600AF7591 /* CJMaskGuideHUD+addHUDSubview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CJMaskGuideHUD+addHUDSubview.h"; sourceTree = "<group>"; };
 		783659071ED066C600AF7591 /* CJMaskGuideHUD+addHUDSubview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CJMaskGuideHUD+addHUDSubview.m"; sourceTree = "<group>"; };
 		783659081ED066C600AF7591 /* CJMaskGuideHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJMaskGuideHUD.h; sourceTree = "<group>"; };
@@ -91,8 +97,8 @@
 		783659161ED066C600AF7591 /* CJMaskGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJMaskGuideView.m; sourceTree = "<group>"; };
 		783659171ED066C600AF7591 /* UIImage+Mask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Mask.h"; sourceTree = "<group>"; };
 		783659181ED066C600AF7591 /* UIImage+Mask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Mask.m"; sourceTree = "<group>"; };
-		7836591A1ED066C600AF7591 /* CJPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJPopoverView.h; sourceTree = "<group>"; };
-		7836591B1ED066C600AF7591 /* CJPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJPopoverView.m; sourceTree = "<group>"; };
+		7836591A1ED066C600AF7591 /* CJPopoverListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJPopoverListView.h; sourceTree = "<group>"; };
+		7836591B1ED066C600AF7591 /* CJPopoverListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJPopoverListView.m; sourceTree = "<group>"; };
 		7836593F1ED06AD900AF7591 /* IMMaskButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IMMaskButton@2x.png"; sourceTree = "<group>"; };
 		783659421ED06AE200AF7591 /* NewerGuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewerGuideViewController.h; sourceTree = "<group>"; };
 		783659431ED06AE200AF7591 /* NewerGuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewerGuideViewController.m; sourceTree = "<group>"; };
@@ -228,8 +234,10 @@
 		783659191ED066C600AF7591 /* CJPopoverView */ = {
 			isa = PBXGroup;
 			children = (
-				7836591A1ED066C600AF7591 /* CJPopoverView.h */,
-				7836591B1ED066C600AF7591 /* CJPopoverView.m */,
+				7836591A1ED066C600AF7591 /* CJPopoverListView.h */,
+				7836591B1ED066C600AF7591 /* CJPopoverListView.m */,
+				781F242A20065F2C007429AB /* CJDrawRectUtil.h */,
+				781F242B20065F2C007429AB /* CJDrawRectUtil.m */,
 			);
 			path = CJPopoverView;
 			sourceTree = "<group>";
@@ -359,6 +367,8 @@
 				78E57F001E9DD1E6002CDB9F /* PopoverViewController.h */,
 				78E57F011E9DD1E6002CDB9F /* PopoverViewController.m */,
 				78E57F021E9DD1E6002CDB9F /* PopoverViewController.xib */,
+				781F242D20066118007429AB /* PopoverView.h */,
+				781F242E20066119007429AB /* PopoverView.m */,
 			);
 			path = CJPopoverViewDemo;
 			sourceTree = "<group>";
@@ -659,10 +669,12 @@
 			files = (
 				783659271ED066C600AF7591 /* UIImage+Mask.m in Sources */,
 				78E57F171E9DD509002CDB9F /* SheetViewController.m in Sources */,
+				781F242C20065F2C007429AB /* CJDrawRectUtil.m in Sources */,
 				784B7DA01E7FB03300299457 /* ViewController.m in Sources */,
 				784B7D9D1E7FB03300299457 /* AppDelegate.m in Sources */,
+				781F242F20066119007429AB /* PopoverView.m in Sources */,
 				78E57F071E9DD1E6002CDB9F /* MaskGuideHUDViewController.m in Sources */,
-				783659281ED066C600AF7591 /* CJPopoverView.m in Sources */,
+				783659281ED066C600AF7591 /* CJPopoverListView.m in Sources */,
 				78E57F091E9DD1E6002CDB9F /* SubGuideView.m in Sources */,
 				7836591C1ED066C600AF7591 /* CJMaskGuideHUD+addHUDSubview.m in Sources */,
 				78E57F0B1E9DD1E6002CDB9F /* PopoverViewController.m in Sources */,
