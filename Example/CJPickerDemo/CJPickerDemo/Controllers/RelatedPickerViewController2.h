@@ -16,7 +16,7 @@
 @interface RelatedPickerViewController2 : UIViewController <CJRelatedPickerRichViewDelegate> {
     
 }
-@property (nonatomic, weak) IBOutlet RadioButtons *radioButtons;
+@property (nonatomic, weak) IBOutlet CJRadioButtons *radioButtons;
 @property (nonatomic, strong) NSArray *titles;
 
 @property (nonatomic, strong) IBOutlet CJRelatedPickerRichView *groupTableView1;

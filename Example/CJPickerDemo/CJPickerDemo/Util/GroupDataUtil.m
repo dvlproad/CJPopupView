@@ -50,8 +50,8 @@
     
     NSMutableArray *componentDataModels = [CJComponentDataModelUtil selectedIndexs:@[@"0", @"0"] inDictionarys:component0Datas sortByCategoryKeys:sortOrders categoryValueKeys:categoryValueKeys];
     
-    NSArray *array = [StateModel arrayOfModelsFromDictionaries:component0Datas error:nil];
-    NSLog(@"array = %@", array);
+    //NSArray *array = [StateModel arrayOfModelsFromDictionaries:component0Datas error:nil];
+    //NSLog(@"array = %@", array);
     
 //    for (NSDictionary *dictionary in component0Datas) {
 //        CJDataModelSample2 *dataModelSample = [[CJDataModelSample2 alloc] initWithDictionary:dictionary error:nil];
@@ -97,8 +97,8 @@
     NSArray *categoryValueKeys = @[kCategoryValue, kCategoryValue, @""];
     
     
-    NSArray *array = [StateModel arrayOfModelsFromDictionaries:component0Datas error:nil];
-    NSLog(@"array = %@", array);
+    //NSArray *array = [StateModel arrayOfModelsFromDictionaries:component0Datas error:nil];
+    //NSLog(@"array = %@", array);
     
     
     NSMutableArray *componentDataModels = [CJComponentDataModelUtil selectedIndexs:@[@"0", @"1", @"0"] inDictionarys:component0Datas sortByCategoryKeys:sortOrders categoryValueKeys:categoryValueKeys];
@@ -130,8 +130,8 @@
     NSArray *sortOrders = @[@"state", @"city", @""];
     NSArray *categoryValueKeys = @[@"cities", @"areas", @""];
     
-    NSArray *array = [StateModel arrayOfModelsFromDictionaries:component0Datas error:nil];
-    NSLog(@"array = %@", array);
+    //NSArray *array = [StateModel arrayOfModelsFromDictionaries:component0Datas error:nil];
+    //NSLog(@"array = %@", array);
     
     NSMutableArray *componentDataModels = [CJComponentDataModelUtil selectedIndexs:@[@"0", @"0", @"0"] inDictionarys:component0Datas sortByCategoryKeys:sortOrders categoryValueKeys:categoryValueKeys];
     
@@ -143,7 +143,7 @@
     NSArray *component0Datas = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"area.plist" ofType:nil]];
 
     NSArray *array = [StateModel arrayOfModelsFromDictionaries:component0Datas error:nil];
-    NSLog(@"array = %@", array);
+    //NSLog(@"array = %@", array);
     
     return array;
 }

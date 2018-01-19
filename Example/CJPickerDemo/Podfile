@@ -9,7 +9,9 @@ target 'CJPickerDemo' do
     pod 'SVProgressHUD', '~> 2.1.2'
     pod 'SDWebImage', '~> 4.0.0'
     
-    pod 'CJRadio', '~> 1.0.3' #已包含pod 'CJPopupAction', '~> 1.4.2'
+    pod 'CJRadio', '~> 1.0.7' #已包含pod 'CJPopupAction', '~> 1.4.5'
+    pod 'CJPopupAction', '~> 1.4.5'
+    
     pod 'JSONModel', '~> 1.7.0'
     
     pod 'JGActionSheet', '~> 1.0.5'

@@ -1,15 +1,24 @@
 #目录
-1、RadioButtons
+1、CJRadioButtons
 单选按钮的组合
 
-2、RadioComposeView
+2、CJCycleComposeView
 单选视图
 
 3、CJButtonControllerView
 类似网易新闻左右滑动的控制器的“父类”（为1和2的结合使用）
 
 
-## 一、RadioButtons
+循环滚动的视图组合
+
+* 方案①：5 1 2 3 4 5 1
+* 方案②：Left:center:right:
+* 方案③：SDCycleScrollView
+
+其他参考：[图片轮播图浅析](http://www.2cto.com/kf/201606/517055.html)
+
+
+## 一、CJRadioButtons
 单选按钮的组合
 
 #### Screenshots
@@ -67,7 +76,7 @@
 即当使用除法计算width时候，为了避免计算出来的值受除后，余数太多，除不尽(eg:102.66666666666667)，而造成的之后在通过左右箭头点击来寻找”要找的按钮“的时候，计算出现问题（”要找的按钮“需与“左右侧箭头的最左最右侧值”进行精确的比较），所以这里我们需要一个整数值，故我们这边选择向上取整。
 
 
-## 二、RadioComposeView
+## 二、CJCycleComposeView
 ```
 //1、初始化
 - (void)viewDidLoad {

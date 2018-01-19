@@ -98,7 +98,8 @@
     CJDefaultToolbar *toolbar = (CJDefaultToolbar *)birthdayPicker.toolbar;
     [toolbar updateShowingValue:dateString];
     
-    [birthdayPicker cj_popupInWindowAtPosition:CJWindowPositionBottom animationType:CJAnimationTypeNormal showComplete:^{
+    CGFloat popupViewHeight = CGRectGetHeight(birthdayPicker.frame);
+    [birthdayPicker cj_popupInBottomWindow:CJAnimationTypeNormal withHeight:popupViewHeight showComplete:^{
         NSLog(@"显示完成");
     } tapBlankComplete:^() {
         NSLog(@"点击背景完成");
@@ -125,9 +126,9 @@
 //    areaPicker.selecteds_default = @[@"福建", @"泉州", @"安溪县"];
     
     
-    
-    
-    [areaPicker cj_popupInWindowAtPosition:CJWindowPositionBottom animationType:CJAnimationTypeNormal showComplete:^{
+    areaPicker.frame = CGRectMake(0, 0, 400, 162);
+    CGFloat popupViewHeight = CGRectGetHeight(areaPicker.frame);
+    [areaPicker cj_popupInBottomWindow:CJAnimationTypeNormal withHeight:popupViewHeight showComplete:^{
         NSLog(@"显示完成");
     } tapBlankComplete:^() {
         NSLog(@"点击背景完成");
@@ -181,8 +182,8 @@
     
     weightPicker.selecteds_default = @[@"60", @"5", @"kg"];
     
-    
-    [weightPicker cj_popupInWindowAtPosition:CJWindowPositionBottom animationType:CJAnimationTypeNormal showComplete:^{
+    CGFloat popupViewHeight = CGRectGetHeight(weightPicker.frame);
+    [weightPicker cj_popupInBottomWindow:CJAnimationTypeNormal withHeight:popupViewHeight showComplete:^{
         NSLog(@"显示完成");
     } tapBlankComplete:^() {
         NSLog(@"点击背景完成");

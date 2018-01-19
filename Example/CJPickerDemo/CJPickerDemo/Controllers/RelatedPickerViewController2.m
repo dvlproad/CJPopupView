@@ -9,12 +9,12 @@
 #import "RelatedPickerViewController2.h"
 
 #define kDefaultMaxShowCount    5
-#import "CJRadioButtonsPopupSample.h"
+#import <CJRadio/MyRadioButtonsPopupSample.h>
 
 @interface RelatedPickerViewController2 () <CJRadioButtonsPopupSampleDataSource>
 
-@property (nonatomic, strong) CJRadioButtonsPopupSample *radioButtonsDropDownSample;
-@property (nonatomic, strong) CJRadioButtonsPopupSample *radioButtonsDropDownSample2;
+@property (nonatomic, strong) MyRadioButtonsPopupSample *radioButtonsDropDownSample;
+@property (nonatomic, strong) MyRadioButtonsPopupSample *radioButtonsDropDownSample2;
 
 @end
 
@@ -25,7 +25,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     NSArray *titles = @[@"人物", @"爱好", @"其他", @"地区"];
-    CJRadioButtonsPopupSample *radioButtonsDropDownSample = [[CJRadioButtonsPopupSample alloc] init];
+    MyRadioButtonsPopupSample *radioButtonsDropDownSample = [[MyRadioButtonsPopupSample alloc] init];
     [radioButtonsDropDownSample setFrame:CGRectMake(20, 200, 380, 40)];
     [radioButtonsDropDownSample setupWithTitles:titles
                                   dropDownImage:[UIImage imageNamed:@"arrowDown_dark"]
@@ -41,7 +41,7 @@
 //    @[@"总价", @"80万以下", @"80-120万", @"120-200万", @"200万以上"];
     
     NSArray *titles2 = @[@"人物", @"爱好", @"其他", @"地区"];
-    CJRadioButtonsPopupSample *radioButtonsDropDownSample2 = [[CJRadioButtonsPopupSample alloc] init];
+    MyRadioButtonsPopupSample *radioButtonsDropDownSample2 = [[MyRadioButtonsPopupSample alloc] init];
     [radioButtonsDropDownSample2 setFrame:CGRectMake(20, 400, 380, 40)];
     [radioButtonsDropDownSample2 setupWithTitles:titles2
                                   dropDownImage:[UIImage imageNamed:@"arrowDown_dark"]
@@ -59,7 +59,7 @@
     [self.radioButtonsDropDownSample scollToCurrentSelectedViewWithAnimated:NO];
 }
 
-- (UIView *)cj_RadioButtonsPopupSample:(CJRadioButtonsPopupSample *)radioButtonsPopupSample viewForButtonIndex:(NSInteger)index {
+- (UIView *)cj_RadioButtonsPopupSample:(MyRadioButtonsPopupSample *)radioButtonsPopupSample viewForButtonIndex:(NSInteger)index {
     /*
     UIView *popupView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 0, 200)];
     popupView.backgroundColor = [UIColor greenColor];
@@ -211,8 +211,8 @@
     
     UIView *pickActionView = relatedPickerRichView.pickActionView;
     [pickActionView cj_hideExtendViewAnimated:YES];
-    if ([pickActionView isKindOfClass:[CJRadioButtonsPopupSample class]]) {
-        CJRadioButtonsPopupSample *radioButtonsDropDownSample = (CJRadioButtonsPopupSample *)pickActionView;
+    if ([pickActionView isKindOfClass:[MyRadioButtonsPopupSample class]]) {
+        MyRadioButtonsPopupSample *radioButtonsDropDownSample = (MyRadioButtonsPopupSample *)pickActionView;
         
         [radioButtonsDropDownSample changeCurrentRadioButtonStateAndTitle:text];
         [radioButtonsDropDownSample setSelectedNone];

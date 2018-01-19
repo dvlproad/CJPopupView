@@ -1,16 +1,20 @@
 PODS:
-  - CJBaseUIKit/CJCollectionView/CJBaseCollectionViewCell (0.1.4)
-  - CJBaseUIKit/CJCollectionView/MyEqualCellSizeCollectionView (0.1.4)
-  - CJBaseUIKit/CJToast (0.1.4):
+  - CJBaseUIKit/CJCollectionView/CJBaseCollectionViewCell (0.1.9)
+  - CJBaseUIKit/CJCollectionView/MyEqualCellSizeCollectionView (0.1.9)
+  - CJBaseUIKit/CJToast (0.1.9):
     - MBProgressHUD
-  - CJBaseUIKit/UIToolbar (0.1.4)
-  - CJPopupAction (1.4.2)
-  - CJRadio (1.0.3):
-    - CJRadio/CJRadioButtons (= 1.0.3)
-    - CJRadio/CJRadioComposeView (= 1.0.3)
-  - CJRadio/CJRadioButtons (1.0.3):
-    - CJPopupAction (~> 1.4.2)
-  - CJRadio/CJRadioComposeView (1.0.3)
+  - CJBaseUIKit/UIToolbar (0.1.9)
+  - CJPopupAction (1.4.5)
+  - CJRadio (1.0.7):
+    - CJRadio/CJCycleComposeView (= 1.0.7)
+    - CJRadio/CJRadioButtonCycleComposeView (= 1.0.7)
+    - CJRadio/CJRadioButtons (= 1.0.7)
+  - CJRadio/CJCycleComposeView (1.0.7)
+  - CJRadio/CJRadioButtonCycleComposeView (1.0.7):
+    - CJRadio/CJCycleComposeView
+    - CJRadio/CJRadioButtons
+  - CJRadio/CJRadioButtons (1.0.7):
+    - CJPopupAction
   - DateTools (2.0.0)
   - JGActionSheet (1.0.5)
   - JSONModel (1.7.0)
@@ -30,7 +34,8 @@ DEPENDENCIES:
   - CJBaseUIKit/CJCollectionView/MyEqualCellSizeCollectionView (~> 0.1.4)
   - CJBaseUIKit/CJToast (~> 0.1.4)
   - CJBaseUIKit/UIToolbar (~> 0.1.4)
-  - CJRadio (~> 1.0.3)
+  - CJPopupAction (~> 1.4.5)
+  - CJRadio (~> 1.0.7)
   - DateTools (~> 2.0.0)
   - JGActionSheet (~> 1.0.5)
   - JSONModel (~> 1.7.0)
@@ -42,9 +47,9 @@ DEPENDENCIES:
   - SVProgressHUD (~> 2.1.2)
 
 SPEC CHECKSUMS:
-  CJBaseUIKit: fb0f19af45291d3e9232d2be94f7aff41448e03c
-  CJPopupAction: e491b5f3fdb9d50dddedf450eeb94e36cc61b749
-  CJRadio: 30525fedd08d706a7212ba508a253ba5817c770b
+  CJBaseUIKit: 2e96dd6119fe3930f22cbc0f5d8f96a19b8de9ce
+  CJPopupAction: 8429a2915f5f1de8215473f8923515bb2b13bc27
+  CJRadio: 9b099b8a521b20bd020d56ea0e1dd966cb1d36c7
   DateTools: 933ac9c490f21f92127cf690ccd8c397e0126caf
   JGActionSheet: 2cfca820b57a11ec4b4a5655d45ee599fbeddc05
   JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
@@ -55,6 +60,6 @@ SPEC CHECKSUMS:
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: f31f1fa72e0d587c1eb2b49e7c461220eb2d3a52
+PODFILE CHECKSUM: cbe639f26156c19ab075acac8f5d6a61bd770e78
 
-COCOAPODS: 1.4.0.beta.1
+COCOAPODS: 1.3.1
