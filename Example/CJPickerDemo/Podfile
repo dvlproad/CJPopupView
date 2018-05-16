@@ -25,6 +25,11 @@ target 'CJPickerDemo' do
     pod 'CJBaseUIKit/CJCollectionView/CJBaseCollectionViewCell', '~> 0.1.4' #需要8.0以上
     
     pod 'PureLayout', '~> 3.0.2'
+    
+    
+    # CJMedia 库中的 CJUploadImagePickerUtil 需要依赖的库
+    pod 'CJNetwork/AFNetworkingUploadComponent', '~> 0.2.1'
+    pod 'CJFile/CJFileManager'
 end
 
 target 'CJPickerDemoTests' do

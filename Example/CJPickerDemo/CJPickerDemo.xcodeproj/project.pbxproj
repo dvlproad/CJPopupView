@@ -31,6 +31,10 @@
 		7806EB971FB4BE3B00A3EF4E /* CJAlumbImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 7806EB961FB4BE3B00A3EF4E /* CJAlumbImageUtil.m */; };
 		784C15741E8E44850019D652 /* ImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 784C15721E8E44850019D652 /* ImagePickerViewController.m */; };
 		784C15751E8E44850019D652 /* ImagePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 784C15731E8E44850019D652 /* ImagePickerViewController.xib */; };
+		78516AB720AC8EB700C0BFAF /* CJImageUploadItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 78516AB320AC8EB700C0BFAF /* CJImageUploadItem.m */; };
+		78516AB820AC8EB700C0BFAF /* CJUploadVideoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 78516AB420AC8EB700C0BFAF /* CJUploadVideoItem.m */; };
+		78516AB920AC8EB700C0BFAF /* CJUploadImagePickerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 78516AB620AC8EB700C0BFAF /* CJUploadImagePickerUtil.m */; };
+		78516ABD20AC9E2000C0BFAF /* CJNormalImagePickerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 78516ABC20AC9E2000C0BFAF /* CJNormalImagePickerUtil.m */; };
 		785540651E7DC53F00F320E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 785540641E7DC53F00F320E6 /* main.m */; };
 		785540681E7DC53F00F320E6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 785540671E7DC53F00F320E6 /* AppDelegate.m */; };
 		7855406B1E7DC53F00F320E6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7855406A1E7DC53F00F320E6 /* ViewController.m */; };
@@ -125,6 +129,14 @@
 		784C15711E8E44850019D652 /* ImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerViewController.h; sourceTree = "<group>"; };
 		784C15721E8E44850019D652 /* ImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerViewController.m; sourceTree = "<group>"; };
 		784C15731E8E44850019D652 /* ImagePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagePickerViewController.xib; sourceTree = "<group>"; };
+		78516AB020AC8EB700C0BFAF /* CJUploadImagePickerUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJUploadImagePickerUtil.h; sourceTree = "<group>"; };
+		78516AB220AC8EB700C0BFAF /* CJUploadVideoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJUploadVideoItem.h; sourceTree = "<group>"; };
+		78516AB320AC8EB700C0BFAF /* CJImageUploadItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJImageUploadItem.m; sourceTree = "<group>"; };
+		78516AB420AC8EB700C0BFAF /* CJUploadVideoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJUploadVideoItem.m; sourceTree = "<group>"; };
+		78516AB520AC8EB700C0BFAF /* CJImageUploadItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJImageUploadItem.h; sourceTree = "<group>"; };
+		78516AB620AC8EB700C0BFAF /* CJUploadImagePickerUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJUploadImagePickerUtil.m; sourceTree = "<group>"; };
+		78516ABB20AC9E2000C0BFAF /* CJNormalImagePickerUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJNormalImagePickerUtil.h; sourceTree = "<group>"; };
+		78516ABC20AC9E2000C0BFAF /* CJNormalImagePickerUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJNormalImagePickerUtil.m; sourceTree = "<group>"; };
 		785540601E7DC53F00F320E6 /* CJPickerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CJPickerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		785540641E7DC53F00F320E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		785540661E7DC53F00F320E6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -232,6 +244,8 @@
 		7806B6AD1F59F6840077362F /* CJMedia */ = {
 			isa = PBXGroup;
 			children = (
+				78516ABA20AC9E2000C0BFAF /* CJNormalImagePickerUtil */,
+				78516AAF20AC8EB700C0BFAF /* CJUploadImagePickerUtil */,
 				786FD7231FB5CAC300076B16 /* CJValidateAuthorizationUtil */,
 				803131D51FB5BA9F000BD3B9 /* MySingleImagePickerController */,
 				7806B6AE1F59F6840077362F /* CJPhotoBrowser */,
@@ -368,6 +382,36 @@
 				7806EB961FB4BE3B00A3EF4E /* CJAlumbImageUtil.m */,
 			);
 			path = CJAlumbImageUtil;
+			sourceTree = "<group>";
+		};
+		78516AAF20AC8EB700C0BFAF /* CJUploadImagePickerUtil */ = {
+			isa = PBXGroup;
+			children = (
+				78516AB020AC8EB700C0BFAF /* CJUploadImagePickerUtil.h */,
+				78516AB620AC8EB700C0BFAF /* CJUploadImagePickerUtil.m */,
+				78516AB120AC8EB700C0BFAF /* Models */,
+			);
+			path = CJUploadImagePickerUtil;
+			sourceTree = "<group>";
+		};
+		78516AB120AC8EB700C0BFAF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				78516AB520AC8EB700C0BFAF /* CJImageUploadItem.h */,
+				78516AB320AC8EB700C0BFAF /* CJImageUploadItem.m */,
+				78516AB220AC8EB700C0BFAF /* CJUploadVideoItem.h */,
+				78516AB420AC8EB700C0BFAF /* CJUploadVideoItem.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		78516ABA20AC9E2000C0BFAF /* CJNormalImagePickerUtil */ = {
+			isa = PBXGroup;
+			children = (
+				78516ABB20AC9E2000C0BFAF /* CJNormalImagePickerUtil.h */,
+				78516ABC20AC9E2000C0BFAF /* CJNormalImagePickerUtil.m */,
+			);
+			path = CJNormalImagePickerUtil;
 			sourceTree = "<group>";
 		};
 		785540571E7DC53F00F320E6 = {
@@ -566,7 +610,6 @@
 				7855405C1E7DC53F00F320E6 /* Sources */,
 				7855405D1E7DC53F00F320E6 /* Frameworks */,
 				7855405E1E7DC53F00F320E6 /* Resources */,
-				E32CA88DBF8BEA785FE6AFEC /* [CP] Embed Pods Frameworks */,
 				CBE39E8C45C9899F82E6A1DA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -586,8 +629,6 @@
 				785540751E7DC53F00F320E6 /* Sources */,
 				785540761E7DC53F00F320E6 /* Frameworks */,
 				785540771E7DC53F00F320E6 /* Resources */,
-				83B94EA52109504F0469BA65 /* [CP] Embed Pods Frameworks */,
-				465E6A6F536E38E73C47A52E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -723,21 +764,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		465E6A6F536E38E73C47A52E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CJPickerDemoTests/Pods-CJPickerDemoTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6634A7AF06279E637B38E0B1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -754,21 +780,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		83B94EA52109504F0469BA65 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CJPickerDemoTests/Pods-CJPickerDemoTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CBE39E8C45C9899F82E6A1DA /* [CP] Copy Pods Resources */ = {
@@ -795,26 +806,24 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CJToast_error.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CJToast_error@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CJToast_error@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CJToast_success.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CJToast_success@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CJToast_success@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/arrowDown_dark.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/arrowLeft_gray@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/arrowLeft_red@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/arrowRight_gray@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/arrowRight_red@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/arrowUp_white@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DateTools.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CJPickerDemo/Pods-CJPickerDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E32CA88DBF8BEA785FE6AFEC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CJPickerDemo/Pods-CJPickerDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -839,6 +848,7 @@
 				7806B6E21F59F6840077362F /* AlumbSectionDataModel.m in Sources */,
 				785540A91E7DC5F800F320E6 /* RelatedPickerViewController.m in Sources */,
 				784C15741E8E44850019D652 /* ImagePickerViewController.m in Sources */,
+				78516ABD20AC9E2000C0BFAF /* CJNormalImagePickerUtil.m in Sources */,
 				785540ED1E7DCA9900F320E6 /* CJDefaultDatePicker.m in Sources */,
 				7806B6EA1F59F6840077362F /* CJPhotoModel.m in Sources */,
 				7806B6E91F59F6840077362F /* MBProgressHUD+CJPhotoBrowser.m in Sources */,
@@ -850,11 +860,14 @@
 				7806B6DF1F59F6840077362F /* CJImagePickerViewController+UpdateGroupArray.m in Sources */,
 				785540AE1E7DC5F800F320E6 /* GroupDataUtil.m in Sources */,
 				786FD7261FB5CAC300076B16 /* CJValidateAuthorizationUtil.m in Sources */,
+				78516AB720AC8EB700C0BFAF /* CJImageUploadItem.m in Sources */,
 				7806B6EC1F59F6840077362F /* CJPhotoProgressView.m in Sources */,
 				7806B6E51F59F6840077362F /* CJMultiColumnPhotoTableViewCell.m in Sources */,
 				7806B6EB1F59F6840077362F /* CJPhotoLoadingView.m in Sources */,
+				78516AB820AC8EB700C0BFAF /* CJUploadVideoItem.m in Sources */,
 				785540F31E7DCA9900F320E6 /* CJDataModelSample.m in Sources */,
 				7806B6E01F59F6840077362F /* CJImagePickerViewController.m in Sources */,
+				78516AB920AC8EB700C0BFAF /* CJUploadImagePickerUtil.m in Sources */,
 				785540F11E7DCA9900F320E6 /* CJComponentDataModel.m in Sources */,
 				7806EB971FB4BE3B00A3EF4E /* CJAlumbImageUtil.m in Sources */,
 				7806B6DE1F59F6840077362F /* CJPhotoGroupTableViewCell.m in Sources */,

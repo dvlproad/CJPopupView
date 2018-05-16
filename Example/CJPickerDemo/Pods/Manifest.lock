@@ -1,9 +1,27 @@
 PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
   - CJBaseUIKit/CJCollectionView/CJBaseCollectionViewCell (0.1.9)
   - CJBaseUIKit/CJCollectionView/MyEqualCellSizeCollectionView (0.1.9)
   - CJBaseUIKit/CJToast (0.1.9):
     - MBProgressHUD
   - CJBaseUIKit/UIToolbar (0.1.9)
+  - CJFile/CJFileManager (0.0.8)
+  - CJNetwork/AFNetworkingUploadComponent (0.2.1):
+    - AFNetworking
   - CJPopupAction (1.4.5)
   - CJRadio (1.0.7):
     - CJRadio/CJCycleComposeView (= 1.0.7)
@@ -34,6 +52,8 @@ DEPENDENCIES:
   - CJBaseUIKit/CJCollectionView/MyEqualCellSizeCollectionView (~> 0.1.4)
   - CJBaseUIKit/CJToast (~> 0.1.4)
   - CJBaseUIKit/UIToolbar (~> 0.1.4)
+  - CJFile/CJFileManager
+  - CJNetwork/AFNetworkingUploadComponent (~> 0.2.1)
   - CJPopupAction (~> 1.4.5)
   - CJRadio (~> 1.0.7)
   - DateTools (~> 2.0.0)
@@ -46,8 +66,29 @@ DEPENDENCIES:
   - SDWebImage (~> 4.0.0)
   - SVProgressHUD (~> 2.1.2)
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
+    - CJBaseUIKit
+    - CJFile
+    - CJNetwork
+    - CJPopupAction
+    - CJRadio
+    - DateTools
+    - JGActionSheet
+    - JSONModel
+    - Mantle
+    - Masonry
+    - MBProgressHUD
+    - PureLayout
+    - SDWebImage
+    - SVProgressHUD
+
 SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   CJBaseUIKit: 2e96dd6119fe3930f22cbc0f5d8f96a19b8de9ce
+  CJFile: 18e461ec96ee07ba501b1e19f2ddde4a38bec8aa
+  CJNetwork: f6536df5e2afd43a7d716ade67a6dd55bd5daf8b
   CJPopupAction: 8429a2915f5f1de8215473f8923515bb2b13bc27
   CJRadio: 9b099b8a521b20bd020d56ea0e1dd966cb1d36c7
   DateTools: 933ac9c490f21f92127cf690ccd8c397e0126caf
@@ -60,6 +101,6 @@ SPEC CHECKSUMS:
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: cbe639f26156c19ab075acac8f5d6a61bd770e78
+PODFILE CHECKSUM: 1129fe595a393f1182c3fd3c652b28fa0765ea78
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.5.0
