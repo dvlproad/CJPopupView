@@ -17,13 +17,12 @@
            videoLocalRelativePath:(NSString *)videoLocalRelativePath
                  uploadFileModels:(NSArray<CJUploadFileModel *> *)uploadFileModels
 {
-    self = [super init];
+    self = [super initWithUploadFileModels:uploadFileModels];
     if (self) {
         self.image = [self adjustImageWithImage:showImage];
         
         self.imageLocalRelativePath = imageLocalRelativePath;
         self.videoLocalRelativePath = videoLocalRelativePath;
-        self.uploadFileModels = [NSMutableArray arrayWithArray:uploadFileModels];
     }
     
     return self;

@@ -99,10 +99,7 @@
     
     
     //图片
-    CJUploadFileModel *imageUploadModel = [[CJUploadFileModel alloc] init];
-    imageUploadModel.uploadItemType = CJUploadItemTypeImage;
-    imageUploadModel.uploadItemData = imageData;
-    imageUploadModel.uploadItemName = imageName;
+    CJUploadFileModel *imageUploadModel = [[CJUploadFileModel alloc] initWithItemType:CJUploadItemTypeImage itemName:imageName itemData:imageData];
     
     
     CJImageUploadFileModelsOwner *imageItem =

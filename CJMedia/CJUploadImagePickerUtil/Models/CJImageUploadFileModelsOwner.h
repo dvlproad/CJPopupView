@@ -6,9 +6,9 @@
 //  Copyright © 2017年 dvlproad. All rights reserved.
 //
 
-#import <CJNetwork/CJBaseUploadItem.h>
+#import <CJNetwork/CJUploadFileModelsOwner.h>
 
-@interface CJImageUploadFileModelsOwner : CJBaseUploadItem
+@interface CJImageUploadFileModelsOwner : CJUploadFileModelsOwner
 
 @property (nonatomic, strong) NSIndexPath *indexPath;
 @property (nonatomic, strong) UIImage *image;

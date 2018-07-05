@@ -6,9 +6,9 @@
 //  Copyright © 2017年 dvlproad. All rights reserved.
 //
 
-#import <CJNetwork/CJBaseUploadItem.h>
+#import <CJNetwork/CJUploadFileModelsOwner.h>
 
-@interface CJVideoUploadFileModelsOwner : CJBaseUploadItem
+@interface CJVideoUploadFileModelsOwner : CJUploadFileModelsOwner
 
 @property (nonatomic, strong) UIImage *image;   /**< 预览图 */
 @property (nonatomic, copy) NSString *imageLocalRelativePath; /**< 预览图的本地相对路径 */

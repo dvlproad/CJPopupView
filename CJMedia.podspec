@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
-
+  #验证方法：pod lib lint CJMedia.podspec --allow-warnings --use-libraries --verbose
   s.name         = "CJMedia"
-  s.version      = "0.0.6"
+  s.version      = "0.0.7"
   s.summary      = "自定义的多媒体(相册、图片、视频等)相关组件"
   s.homepage     = "https://github.com/dvlproad/CJPopupView"
 
@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/CJPopupView.git", :tag => "CJMedia_0.0.6" }
+  s.source       = { :git => "https://github.com/dvlproad/CJPopupView.git", :tag => "CJMedia_0.0.7" }
   # s.source_files  = "CJMedia/*.{h,m}"
 
   s.frameworks = "UIKit"

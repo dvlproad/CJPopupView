@@ -1,13 +1,13 @@
 //
-//  CJUploadInfo.m
+//  CJUploadMomentInfo.m
 //  CJNetworkDemo
 //
 //  Created by ciyouzen on 2017/8/26.
 //  Copyright © 2017年 dvlproad. All rights reserved.
 //
 
-#import "CJUploadInfo.h"
+#import "CJUploadMomentInfo.h"
 
-@implementation CJUploadInfo
+@implementation CJUploadMomentInfo
 
 @end

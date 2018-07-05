@@ -16,12 +16,11 @@
            imageLocalRelativePath:(NSString *)imageLocalRelativePath
                  uploadFileModels:(NSArray<CJUploadFileModel *> *)uploadFileModels
 {
-    self = [super init];
+    self = [super initWithUploadFileModels:uploadFileModels];
     if (self) {
         self.image = [self adjustImageWithImage:showImage];
         
         self.localRelativePath = imageLocalRelativePath;
-        self.uploadFileModels = [NSMutableArray arrayWithArray:uploadFileModels];
     }
     
     return self;

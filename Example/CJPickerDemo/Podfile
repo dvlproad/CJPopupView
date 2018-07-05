@@ -28,7 +28,7 @@ target 'CJPickerDemo' do
     
     
     # CJMedia 库中的 CJUploadImagePickerUtil 需要依赖的库
-    pod 'CJNetwork/AFNetworkingUploadComponent', '~> 0.2.1'
+    pod 'CJNetwork/AFNetworkingUploadComponent', '~> 0.3.0'
     pod 'CJFile/CJFileManager'
 end
 

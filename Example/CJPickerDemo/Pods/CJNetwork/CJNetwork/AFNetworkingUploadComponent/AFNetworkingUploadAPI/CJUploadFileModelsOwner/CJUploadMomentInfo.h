@@ -1,5 +1,5 @@
 //
-//  CJUploadInfo.h
+//  CJUploadMomentInfo.h
 //  CJNetworkDemo
 //
 //  Created by ciyouzen on 2017/8/26.
@@ -8,16 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-#import "CJUploadState.h"
+#import "CJUploadMomentState.h"
 
 /**
- *  上传请求的时刻信息（已包括 CJUploadState 和 responseModel(已转换成对象后的model)）
+ *  上传请求的时刻信息（已包括 CJUploadMomentState 和 responseModel(已转换成对象后的model)）
  */
-@interface CJUploadInfo : NSObject {
+@interface CJUploadMomentInfo : NSObject {
     
 }
 
-@property (nonatomic, assign) CJUploadState uploadState;
+@property (nonatomic, assign) CJUploadMomentState uploadState;
 @property (nonatomic, copy) NSString *uploadStatePromptText;
 
 //过程中参数
