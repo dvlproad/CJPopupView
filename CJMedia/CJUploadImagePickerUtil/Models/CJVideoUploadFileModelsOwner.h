@@ -1,5 +1,5 @@
 //
-//  CJUploadVideoItem.h
+//  CJVideoUploadFileModelsOwner.h
 //  CJPickerDemo
 //
 //  Created by ciyouzen on 2017/2/23.
@@ -8,7 +8,7 @@
 
 #import <CJNetwork/CJBaseUploadItem.h>
 
-@interface CJUploadVideoItem : CJBaseUploadItem
+@interface CJVideoUploadFileModelsOwner : CJBaseUploadItem
 
 @property (nonatomic, strong) UIImage *image;   /**< 预览图 */
 @property (nonatomic, copy) NSString *imageLocalRelativePath; /**< 预览图的本地相对路径 */
@@ -22,7 +22,7 @@
  *  @param videoLocalRelativePath   视频的本地相对路径
  *  @param uploadFileModels         该item需要执行的上传
  *
- *  return CJUploadVideoItem
+ *  return CJVideoUploadFileModelsOwner
  */
 - (instancetype)initWithShowImage:(UIImage *)showImage
            imageLocalRelativePath:(NSString *)imageLocalRelativePath

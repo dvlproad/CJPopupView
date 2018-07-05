@@ -31,8 +31,8 @@
 		7806EB971FB4BE3B00A3EF4E /* CJAlumbImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 7806EB961FB4BE3B00A3EF4E /* CJAlumbImageUtil.m */; };
 		784C15741E8E44850019D652 /* ImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 784C15721E8E44850019D652 /* ImagePickerViewController.m */; };
 		784C15751E8E44850019D652 /* ImagePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 784C15731E8E44850019D652 /* ImagePickerViewController.xib */; };
-		78516AB720AC8EB700C0BFAF /* CJImageUploadItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 78516AB320AC8EB700C0BFAF /* CJImageUploadItem.m */; };
-		78516AB820AC8EB700C0BFAF /* CJUploadVideoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 78516AB420AC8EB700C0BFAF /* CJUploadVideoItem.m */; };
+		78516AB720AC8EB700C0BFAF /* CJImageUploadFileModelsOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = 78516AB320AC8EB700C0BFAF /* CJImageUploadFileModelsOwner.m */; };
+		78516AB820AC8EB700C0BFAF /* CJVideoUploadFileModelsOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = 78516AB420AC8EB700C0BFAF /* CJVideoUploadFileModelsOwner.m */; };
 		78516AB920AC8EB700C0BFAF /* CJUploadImagePickerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 78516AB620AC8EB700C0BFAF /* CJUploadImagePickerUtil.m */; };
 		78516ABD20AC9E2000C0BFAF /* CJNormalImagePickerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 78516ABC20AC9E2000C0BFAF /* CJNormalImagePickerUtil.m */; };
 		785540651E7DC53F00F320E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 785540641E7DC53F00F320E6 /* main.m */; };
@@ -130,10 +130,10 @@
 		784C15721E8E44850019D652 /* ImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerViewController.m; sourceTree = "<group>"; };
 		784C15731E8E44850019D652 /* ImagePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagePickerViewController.xib; sourceTree = "<group>"; };
 		78516AB020AC8EB700C0BFAF /* CJUploadImagePickerUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJUploadImagePickerUtil.h; sourceTree = "<group>"; };
-		78516AB220AC8EB700C0BFAF /* CJUploadVideoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJUploadVideoItem.h; sourceTree = "<group>"; };
-		78516AB320AC8EB700C0BFAF /* CJImageUploadItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJImageUploadItem.m; sourceTree = "<group>"; };
-		78516AB420AC8EB700C0BFAF /* CJUploadVideoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJUploadVideoItem.m; sourceTree = "<group>"; };
-		78516AB520AC8EB700C0BFAF /* CJImageUploadItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJImageUploadItem.h; sourceTree = "<group>"; };
+		78516AB220AC8EB700C0BFAF /* CJVideoUploadFileModelsOwner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJVideoUploadFileModelsOwner.h; sourceTree = "<group>"; };
+		78516AB320AC8EB700C0BFAF /* CJImageUploadFileModelsOwner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJImageUploadFileModelsOwner.m; sourceTree = "<group>"; };
+		78516AB420AC8EB700C0BFAF /* CJVideoUploadFileModelsOwner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJVideoUploadFileModelsOwner.m; sourceTree = "<group>"; };
+		78516AB520AC8EB700C0BFAF /* CJImageUploadFileModelsOwner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJImageUploadFileModelsOwner.h; sourceTree = "<group>"; };
 		78516AB620AC8EB700C0BFAF /* CJUploadImagePickerUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJUploadImagePickerUtil.m; sourceTree = "<group>"; };
 		78516ABB20AC9E2000C0BFAF /* CJNormalImagePickerUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJNormalImagePickerUtil.h; sourceTree = "<group>"; };
 		78516ABC20AC9E2000C0BFAF /* CJNormalImagePickerUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJNormalImagePickerUtil.m; sourceTree = "<group>"; };
@@ -397,10 +397,10 @@
 		78516AB120AC8EB700C0BFAF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				78516AB520AC8EB700C0BFAF /* CJImageUploadItem.h */,
-				78516AB320AC8EB700C0BFAF /* CJImageUploadItem.m */,
-				78516AB220AC8EB700C0BFAF /* CJUploadVideoItem.h */,
-				78516AB420AC8EB700C0BFAF /* CJUploadVideoItem.m */,
+				78516AB520AC8EB700C0BFAF /* CJImageUploadFileModelsOwner.h */,
+				78516AB320AC8EB700C0BFAF /* CJImageUploadFileModelsOwner.m */,
+				78516AB220AC8EB700C0BFAF /* CJVideoUploadFileModelsOwner.h */,
+				78516AB420AC8EB700C0BFAF /* CJVideoUploadFileModelsOwner.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -860,11 +860,11 @@
 				7806B6DF1F59F6840077362F /* CJImagePickerViewController+UpdateGroupArray.m in Sources */,
 				785540AE1E7DC5F800F320E6 /* GroupDataUtil.m in Sources */,
 				786FD7261FB5CAC300076B16 /* CJValidateAuthorizationUtil.m in Sources */,
-				78516AB720AC8EB700C0BFAF /* CJImageUploadItem.m in Sources */,
+				78516AB720AC8EB700C0BFAF /* CJImageUploadFileModelsOwner.m in Sources */,
 				7806B6EC1F59F6840077362F /* CJPhotoProgressView.m in Sources */,
 				7806B6E51F59F6840077362F /* CJMultiColumnPhotoTableViewCell.m in Sources */,
 				7806B6EB1F59F6840077362F /* CJPhotoLoadingView.m in Sources */,
-				78516AB820AC8EB700C0BFAF /* CJUploadVideoItem.m in Sources */,
+				78516AB820AC8EB700C0BFAF /* CJVideoUploadFileModelsOwner.m in Sources */,
 				785540F31E7DCA9900F320E6 /* CJDataModelSample.m in Sources */,
 				7806B6E01F59F6840077362F /* CJImagePickerViewController.m in Sources */,
 				78516AB920AC8EB700C0BFAF /* CJUploadImagePickerUtil.m in Sources */,

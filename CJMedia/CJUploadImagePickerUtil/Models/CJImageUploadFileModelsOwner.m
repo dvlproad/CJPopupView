@@ -1,15 +1,15 @@
 //
-//  CJImageUploadItem.m
+//  CJImageUploadFileModelsOwner.m
 //  CJPickerDemo
 //
 //  Created by ciyouzen on 2017/1/19.
 //  Copyright © 2017年 dvlproad. All rights reserved.
 //
 
-#import "CJImageUploadItem.h"
+#import "CJImageUploadFileModelsOwner.h"
 #import "CJAlumbImageUtil.h"
 
-@implementation CJImageUploadItem
+@implementation CJImageUploadFileModelsOwner
 
 /** 完整的描述请参见文件头部 */
 - (instancetype)initWithShowImage:(UIImage *)showImage

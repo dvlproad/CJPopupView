@@ -1,5 +1,5 @@
 //
-//  CJImageUploadItem.h
+//  CJImageUploadFileModelsOwner.h
 //  CJPickerDemo
 //
 //  Created by ciyouzen on 2017/1/19.
@@ -8,7 +8,7 @@
 
 #import <CJNetwork/CJBaseUploadItem.h>
 
-@interface CJImageUploadItem : CJBaseUploadItem
+@interface CJImageUploadFileModelsOwner : CJBaseUploadItem
 
 @property (nonatomic, strong) NSIndexPath *indexPath;
 @property (nonatomic, strong) UIImage *image;
@@ -21,7 +21,7 @@
  *  @param imageLocalRelativePath   图片的本地相对路径
  *  @param uploadFileModels         该item需要执行的上传
  *
- *  return CJImageUploadItem
+ *  return CJImageUploadFileModelsOwner
  */
 - (instancetype)initWithShowImage:(UIImage *)showImage
            imageLocalRelativePath:(NSString *)imageLocalRelativePath
