@@ -174,15 +174,15 @@
 
 #pragma mark - 不支持/无权限问题
 /**
- *  没有权限，弹出权限弹窗
+ *  权限信息的显示或权限弹窗(如果viewController不为空，会在该viewController中弹出权限弹窗)
  *
  *  @param deviceComponentType  这个弹窗是要给谁的
  *  @param isForWholeDevice     这个弹窗是否是针对整个设备权限
- *  @param viewController       在哪个视图控制器中弹窗
+ *  @param viewController       在哪个视图控制器中弹窗(可以为nil,为nil不会不会有弹窗)
  */
 + (void)showAlertForDeviceComponentType:(CJDeviceComponentType)deviceComponentType
                     andIsForWholeDevice:(BOOL)isForWholeDevice
-                                   inViewController:(UIViewController *)viewController
+                       inViewController:(UIViewController *)viewController
 {
     NSString *title = @"";
     NSString *message = @"";
@@ -195,6 +195,11 @@
     } else if (deviceComponentType == CJDeviceComponentTypeLocation) {
         title = @"无法定位";
         message = @"请在“设置-隐私-定位服务”选项中允许应用访问你的位置";
+    }
+    
+    if (viewController == nil) {
+        NSLog(@"功能权限信息提示:\n%@\n%@", title, message);
+        return;
     }
     
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];

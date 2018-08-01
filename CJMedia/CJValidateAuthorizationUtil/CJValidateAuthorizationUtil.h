@@ -24,10 +24,10 @@ typedef NS_ENUM(NSUInteger, CJDeviceComponentType) {
 }
 
 /**
- *  检查是否able该功能，disable的时候会弹出权限弹窗
+ *  检查是否able该功能，disable的时候，如果viewController不为空，会在该viewController中弹出权限弹窗
  *
  *  @param deviceComponentType  那个弹窗是要给谁的
- *  @param viewController       在哪个视图控制器中弹那个窗
+ *  @param viewController       在哪个视图控制器中弹那个窗(可以为nil,为nil不会不会有弹窗)
  */
 + (BOOL)checkEnableForDeviceComponentType:(CJDeviceComponentType)deviceComponentType
                          inViewController:(UIViewController *)viewController;
