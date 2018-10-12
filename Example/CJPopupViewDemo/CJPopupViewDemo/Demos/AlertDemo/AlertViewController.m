@@ -82,7 +82,7 @@
 
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    printf("User Pressed Button %d\n", buttonIndex + 1);
+    printf("User Pressed Button %ld\n", buttonIndex + 1);
     if (buttonIndex == alertView.firstOtherButtonIndex) {
         UITextField *tfName = [alertView textFieldAtIndex:0];
         UITextField *tfPasd = [alertView textFieldAtIndex:1];

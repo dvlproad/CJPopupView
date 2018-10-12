@@ -83,16 +83,18 @@
 {
     [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(hide:) object:nil];
     if (animated || _hidenAnimation) {
+        __weak typeof(self)weakSelf = self;
+        
         CGAffineTransform small = CGAffineTransformMakeScale(0.01f, 0.01f);
         [UIView animateWithDuration:0.25 delay:0.f usingSpringWithDamping:1.0f initialSpringVelocity:0.0f options:UIViewAnimationOptionBeginFromCurrentState animations:^{
-            self.transform = small;
+            weakSelf.transform = small;
             
-            CGFloat centerX = CGRectGetMidX(_lightFrame);
-            CGFloat centerY = CGRectGetMidY(_lightFrame);
-            self.center = CGPointMake(centerX, centerY);
+            CGFloat centerX = CGRectGetMidX(weakSelf.lightFrame);
+            CGFloat centerY = CGRectGetMidY(weakSelf.lightFrame);
+            weakSelf.center = CGPointMake(centerX, centerY);
             
         } completion:^(BOOL finished) {
-            [self removeFromSuperview];
+            [weakSelf removeFromSuperview];
         }];
     } else {
         [self removeFromSuperview];

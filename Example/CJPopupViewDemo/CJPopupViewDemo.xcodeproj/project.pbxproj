@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3E0C8BBB4FE893BBDAD3E989 /* libPods-CJPopupViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A56CCC1C1850BEC4C894854 /* libPods-CJPopupViewDemo.a */; };
+		7808D5BC2170E94C007FC851 /* UIButton+CJPopoverListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7808D5BB2170E94C007FC851 /* UIButton+CJPopoverListView.m */; };
 		781F242C20065F2C007429AB /* CJDrawRectUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 781F242B20065F2C007429AB /* CJDrawRectUtil.m */; };
 		781F242F20066119007429AB /* PopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 781F242E20066119007429AB /* PopoverView.m */; };
 		7836591C1ED066C600AF7591 /* CJMaskGuideHUD+addHUDSubview.m in Sources */ = {isa = PBXBuildFile; fileRef = 783659071ED066C600AF7591 /* CJMaskGuideHUD+addHUDSubview.m */; };
@@ -77,6 +78,8 @@
 		2E5C687844C70BED0EA66D19 /* libPods-CJPopupViewDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CJPopupViewDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		473BD9FC3E5E15C5EF042AE2 /* Pods-CJPopupViewDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJPopupViewDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CJPopupViewDemoTests/Pods-CJPopupViewDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		53278C475033A6887EA344B5 /* Pods-CJPopupViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJPopupViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CJPopupViewDemo/Pods-CJPopupViewDemo.release.xcconfig"; sourceTree = "<group>"; };
+		7808D5BA2170E94C007FC851 /* UIButton+CJPopoverListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+CJPopoverListView.h"; sourceTree = "<group>"; };
+		7808D5BB2170E94C007FC851 /* UIButton+CJPopoverListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CJPopoverListView.m"; sourceTree = "<group>"; };
 		781F242A20065F2C007429AB /* CJDrawRectUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CJDrawRectUtil.h; sourceTree = "<group>"; };
 		781F242B20065F2C007429AB /* CJDrawRectUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CJDrawRectUtil.m; sourceTree = "<group>"; };
 		781F242D20066118007429AB /* PopoverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopoverView.h; sourceTree = "<group>"; };
@@ -236,6 +239,8 @@
 			children = (
 				7836591A1ED066C600AF7591 /* CJPopoverListView.h */,
 				7836591B1ED066C600AF7591 /* CJPopoverListView.m */,
+				7808D5BA2170E94C007FC851 /* UIButton+CJPopoverListView.h */,
+				7808D5BB2170E94C007FC851 /* UIButton+CJPopoverListView.m */,
 				781F242A20065F2C007429AB /* CJDrawRectUtil.h */,
 				781F242B20065F2C007429AB /* CJDrawRectUtil.m */,
 			);
@@ -424,8 +429,6 @@
 				784B7D911E7FB03300299457 /* Sources */,
 				784B7D921E7FB03300299457 /* Frameworks */,
 				784B7D931E7FB03300299457 /* Resources */,
-				2BF425CFDDAC2A593AABB2A8 /* [CP] Embed Pods Frameworks */,
-				B16EACEACF8D3BA944D4E91C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -444,8 +447,6 @@
 				784B7DAA1E7FB03300299457 /* Sources */,
 				784B7DAB1E7FB03300299457 /* Frameworks */,
 				784B7DAC1E7FB03300299457 /* Resources */,
-				F43DB4E885D524376980F0AF /* [CP] Embed Pods Frameworks */,
-				201B8B9B42AE18C5BF8DFEB6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -481,7 +482,7 @@
 		784B7D8D1E7FB03300299457 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = dvlproad;
 				TargetAttributes = {
 					784B7D941E7FB03300299457 = {
@@ -576,43 +577,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CJPopupViewDemo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		201B8B9B42AE18C5BF8DFEB6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CJPopupViewDemoTests/Pods-CJPopupViewDemoTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2BF425CFDDAC2A593AABB2A8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CJPopupViewDemo/Pods-CJPopupViewDemo-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4287DA5BFB3519DC8371C976 /* [CP] Check Pods Manifest.lock */ = {
@@ -621,43 +595,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CJPopupViewDemoTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		B16EACEACF8D3BA944D4E91C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CJPopupViewDemo/Pods-CJPopupViewDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F43DB4E885D524376980F0AF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CJPopupViewDemoTests/Pods-CJPopupViewDemoTests-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -681,6 +628,7 @@
 				7836591D1ED066C600AF7591 /* CJMaskGuideHUD.m in Sources */,
 				784B7D9A1E7FB03300299457 /* main.m in Sources */,
 				78E57F061E9DD1E6002CDB9F /* CustomMaskGuideHUD.m in Sources */,
+				7808D5BC2170E94C007FC851 /* UIButton+CJPopoverListView.m in Sources */,
 				783659451ED06AE200AF7591 /* NewerGuideViewController.m in Sources */,
 				783659261ED066C600AF7591 /* CJMaskGuideView.m in Sources */,
 				78E57F111E9DD319002CDB9F /* AlertViewController.m in Sources */,
@@ -747,15 +695,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -795,15 +751,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -834,7 +798,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CJPopupViewDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.CJPopupViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -847,7 +811,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CJPopupViewDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.CJPopupViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

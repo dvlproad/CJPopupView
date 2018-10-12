@@ -12,7 +12,7 @@ CJPopupView中包含类似美团的弹出下拉控件CJRelatedPickerRichView
 	
 	②、CJRelatedPickerView
 	
-2. CJPopoverView 带箭头的弹出视图
+2. CJPopoverView 带箭头的弹出列表视图
 3. CJDragView 可悬浮拖动的视图
 4. CJMaskGuideHUD 镂空的引导视图
 5. CJMaskGuideView 镂空的引导视图2
@@ -342,10 +342,14 @@ a pop view 一个带箭号的弹出视图
 
 
 ## 修改记录
+#### 总
 CJPopupView 在2.0.0之前实际上是现在CJPopupAction.
 
 
+#### CJPopoverListView
+* 2018-10-12 V2.1.0
 
+> 1. CJPopoverView改名为CJPopoverListView
 
 
 

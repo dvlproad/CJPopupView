@@ -13,7 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *title;
 @property (weak, nonatomic) IBOutlet UIButton *confirmBtn;
 
-@property (nonatomic, copy) void(^confirmBlock)();
+@property (nonatomic, copy) void(^confirmBlock)(void);
 
 - (void)setText:(NSString *)text;
 

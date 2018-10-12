@@ -10,8 +10,12 @@
 #import "CJPopoverListView.h"
 
 #import "PopoverView.h"
+#import "UIButton+CJPopoverListView.h"
 
-@interface PopoverViewController ()
+@interface PopoverViewController () {
+    
+}
+@property (nonatomic, strong) NSArray<NSString *> *environmentTitles;
 
 @end
 
@@ -23,9 +27,34 @@
     self.title = NSLocalizedString(@"PopoverView箭头", nil);
     
     
+    CGFloat navigationBarHeight = self.navigationController.navigationBar.bounds.size.height;
+    CGRect statusBarFrame = [[UIApplication sharedApplication] statusBarFrame];
+    CGFloat statusBarHeight = CGRectGetHeight(statusBarFrame);
+    CGFloat topHeight = navigationBarHeight + statusBarHeight;
+    
+    UIButton *changeEnvironmentButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [changeEnvironmentButton setBackgroundColor:[UIColor colorWithRed:0.4 green:0.3 blue:0.4 alpha:0.5]];
+    [changeEnvironmentButton setTitle:NSLocalizedString(@"改变环境", nil) forState:UIControlStateNormal];
+    [changeEnvironmentButton addTarget:self action:@selector(changeEnvironment:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:changeEnvironmentButton];
+    [changeEnvironmentButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.view).mas_offset(20);
+        make.right.mas_equalTo(self.view).mas_offset(-20);
+        make.top.mas_equalTo(self.view).mas_offset(topHeight);
+        make.height.mas_equalTo(44);
+    }];
+    NSArray *environmentTitles = @[@"Product(生产环境)",
+                                   @"PreProduct(预生产环境)",
+                                   @"Develop1(开发环境1)",
+                                   @"Develop2(开发环境2)"
+                                   ];
+    self.environmentTitles = environmentTitles;
+    [changeEnvironmentButton setTitle:environmentTitles[2] forState:UIControlStateNormal];
+    
     PopoverView *popoverView = [[PopoverView alloc] init];
-    [popoverView setFrame:CGRectMake(100, 100, 100, 44)];
+    [popoverView setFrame:CGRectMake(100, 200, 100, 44)];
     [self.view addSubview:popoverView];
+    
 }
 
 
@@ -41,7 +70,11 @@
                         @"从右到左SlideRightLeft",
                         @"从底到底SlideBottomBottom",
                         @"渐隐Fade"];
-    NSArray *images = @[@"image1.png", @"image1.png", @"image1.png", @"image1.png"];
+    NSArray *images = @[[UIImage imageNamed:@"image1.png"],
+                        [UIImage imageNamed:@"image1.png"],
+                        [UIImage imageNamed:@"image1.png"],
+                        [UIImage imageNamed:@"image1.png"]
+                        ];
     CJPopoverListView *pop = [[CJPopoverListView alloc] initWithPoint:point titles:titles images:images];
     pop.selectRowAtIndex = ^(NSInteger index){
         NSLog(@"select index:%ld", index);
@@ -62,6 +95,13 @@
     };
     [pop showPopoverView];
 }
+
+- (IBAction)changeEnvironment:(UIButton *)button {
+    [button cj_showDownPopoverListViewWithTitles:self.environmentTitles selectRowBlock:^(NSInteger selectedIndex) {
+        NSLog(@"selectedIndex = %ld", selectedIndex);
+    }];
+}
+
 
 
 - (void)didReceiveMemoryWarning {

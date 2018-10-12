@@ -8,7 +8,7 @@
 
 #import "SheetViewController.h"
 
-@interface SheetViewController ()
+@interface SheetViewController () <UIActionSheetDelegate>
 
 @end
 
@@ -29,7 +29,7 @@
 }
 
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
-    printf("User Pressed Button %d\n", buttonIndex + 1);
+    printf("User Pressed Button %ld\n", buttonIndex + 1);
 }
 
 

@@ -1,6 +1,6 @@
 //
 //  CJPopoverListView.m
-//  CJPopoverViewDemo
+//  CJPopupViewDemo
 //
 //  Created by ciyouzen on 6/24/15.
 //  Copyright (c) 2015 dvlproad. All rights reserved.
@@ -8,18 +8,19 @@
 
 #import "CJPopoverListView.h"
 
-#define kArrowHeight 10.f
-#define SPACE 2.f
-#define ROW_HEIGHT 44.f
-#define TITLE_FONT [UIFont systemFontOfSize:16]
+static const NSInteger kArrowHeight = 10.f;
+static const NSInteger kCellRowHeight = 44.f;
 
-#define COLOR_PopoverView_BG    [UIColor colorWithRed:245/255.0f green:245/255.0f blue:245/255.0f alpha:1.0f]
+#define KPOPOVERView_SPACE      2.f
+#define KPOPOVERView_TITLE_FONT [UIFont systemFontOfSize:16]
+#define KPOPOVERView_BG_COLOR   [UIColor colorWithRed:245/255.0f green:245/255.0f blue:245/255.0f alpha:1.0f]
 
-@interface CJPopoverListView ()<UITableViewDataSource, UITableViewDelegate>
-
+@interface CJPopoverListView () <UITableViewDataSource, UITableViewDelegate> {
+    BOOL isArrowDown;
+}
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) NSArray *titleArray;
-@property (nonatomic, strong) NSArray *imageArray;
+@property (nonatomic, strong) NSArray<NSString *> *titleArray;
+@property (nonatomic, strong) NSArray<UIImage *> *imageArray;
 @property (nonatomic) CGPoint showPoint;
 
 @property (nonatomic, strong) UIButton *handerView;
@@ -32,15 +33,12 @@
 
 @implementation CJPopoverListView
 
-
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
         self.borderColor = [UIColor colorWithRed:200/255.0f green:199/255.0f blue:204/255.0f alpha:1.0f];
         self.backgroundColor = [UIColor clearColor];
-        
     }
     return self;
 }
@@ -56,25 +54,25 @@
         self.frame = [self getViewFrame];
         
         [self addSubview:self.tableView];
-        
     }
     return self;
 }
 
--(CGRect)getViewFrame
+- (CGRect)getViewFrame
 {
     CGRect frame = CGRectZero;
     
-    frame.size.height = [self.titleArray count] * ROW_HEIGHT + SPACE + kArrowHeight;
+    frame.size.height = [self.titleArray count] * kCellRowHeight + KPOPOVERView_SPACE + kArrowHeight;
     
     for (NSString *title in self.titleArray) {
-        NSDictionary *attributes = @{NSFontAttributeName: TITLE_FONT};
+        NSDictionary *attributes = @{NSFontAttributeName:KPOPOVERView_TITLE_FONT};
         NSAttributedString *attributedText =
         [[NSAttributedString alloc] initWithString:title attributes:attributes];
         
-        CGRect rect = [attributedText boundingRectWithSize:(CGSize){300, 100}
-                                                   options:NSStringDrawingUsesLineFragmentOrigin
-                                                   context:nil];
+        CGRect rect =
+        [attributedText boundingRectWithSize:(CGSize){300, 100}
+                                     options:NSStringDrawingUsesLineFragmentOrigin
+                                     context:nil];
         CGFloat width = rect.size.width;
         
         frame.size.width = MAX(width, frame.size.width);
@@ -153,11 +151,12 @@
         return;
     }
     
+    __weak typeof(self)weakSelf = self;
     [UIView animateWithDuration:0.3f animations:^{
-        self.transform = CGAffineTransformMakeScale(0.1f, 0.1f);
-        self.alpha = 0.f;
+        weakSelf.transform = CGAffineTransformMakeScale(0.1f, 0.1f);
+        weakSelf.alpha = 0.f;
     } completion:^(BOOL finished) {
-        [_handerView removeFromSuperview];
+        [weakSelf.handerView removeFromSuperview];
     }];
     
 }
@@ -172,15 +171,15 @@
     }
     
     CGRect rect = self.frame;
-    rect.origin.x = SPACE;
+    rect.origin.x = KPOPOVERView_SPACE;
     if (isArrowDown == NO) {
-        rect.origin.y = kArrowHeight + SPACE;
+        rect.origin.y = kArrowHeight + KPOPOVERView_SPACE;
     }else{
-        rect.origin.y = SPACE;
+        rect.origin.y = KPOPOVERView_SPACE;
     }
     
-    rect.size.width -= SPACE * 2;
-    rect.size.height -= (SPACE - kArrowHeight);
+    rect.size.width -= KPOPOVERView_SPACE * 2;
+    rect.size.height -= (KPOPOVERView_SPACE - kArrowHeight);
     
     self.tableView = [[UITableView alloc] initWithFrame:rect style:UITableViewStylePlain];
     _tableView.delegate = self;
@@ -217,30 +216,30 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         
-        cell.frame = CGRectMake(0, 0, cell.frame.size.width, ROW_HEIGHT);//额外增加
+        cell.frame = CGRectMake(0, 0, cell.frame.size.width, kCellRowHeight);//额外增加
         
         if ([_imageArray count] == 0) {
             CGRect labFrame = CGRectMake(5, 0, cell.frame.size.width-5, cell.frame.size.height);
             UILabel *lab = [[UILabel alloc]initWithFrame:labFrame];
             lab.text = [_titleArray objectAtIndex:indexPath.row];
-            lab.font = TITLE_FONT;
+            lab.font = KPOPOVERView_TITLE_FONT;
             [cell.contentView addSubview:lab];
         }else{
             CGRect imageFrame = CGRectMake(5, 5, 34, 34);
             UIImageView *imageV = [[UIImageView alloc]initWithFrame:imageFrame];
-            imageV.image = [UIImage imageNamed:[_imageArray objectAtIndex:indexPath.row]];
+            imageV.image = [_imageArray objectAtIndex:indexPath.row];
             [cell.contentView addSubview:imageV];
             
             CGRect labFrame = CGRectMake(45, 0, cell.frame.size.width-50, cell.frame.size.height);
             UILabel *lab = [[UILabel alloc]initWithFrame:labFrame];
             lab.text = [_titleArray objectAtIndex:indexPath.row];
-            lab.font = TITLE_FONT;
+            lab.font = KPOPOVERView_TITLE_FONT;
             [cell.contentView addSubview:lab];
         }
     }
     
     cell.backgroundView = [[UIView alloc] init];
-    cell.backgroundView.backgroundColor = COLOR_PopoverView_BG;
+    cell.backgroundView.backgroundColor = KPOPOVERView_BG_COLOR;
     
     if ([[UIDevice currentDevice].systemVersion floatValue] >= 7.0) {
         cell.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
@@ -262,7 +261,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return ROW_HEIGHT;
+    return kCellRowHeight;
 }
 
 
@@ -280,7 +279,7 @@
     CGFloat arrowHeight = kArrowHeight;
     CGFloat arrowCurvature = 6.0f;
     UIColor *arrowBorderColor = self.borderColor;
-    UIColor *arrowFillColor = COLOR_PopoverView_BG;
+    UIColor *arrowFillColor = KPOPOVERView_BG_COLOR;
     
     [CJDrawRectUtil drawArrowInRect:rect
                  withArrowDirection:arrowDirection

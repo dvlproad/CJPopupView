@@ -1,17 +1,17 @@
 Pod::Spec.new do |s|
-
+  #验证方法：pod lib lint CJPopupView.podspec --allow-warnings --use-libraries --verbose
   s.name         = "CJPopupView"
-  s.version      = "2.0.4"
+  s.version      = "2.1.0"
   s.summary      = "自定义的几乎所有弹出视图"
   s.homepage     = "https://github.com/dvlproad/CJPopupView"
 
   s.description  = <<-DESC
-                  1、CJPopoverView带箭号的弹出视图：a pop view with arrow
-                  2、CJDragView 可悬浮拖动的视图
-                  3、CJMaskGuideHUD 镂空的引导视图
-                  4、CJMaskGuideView 镂空的引导视图2
+                  - CJPopupView/CJPopoverView：带箭号的弹出视图(a pop view with arrow)
+                  - CJPopupView/CJDragView：可悬浮拖动的视图
+                  - CJPopupView/CJMaskGuideHUD：镂空的引导视图
+                  - CJPopupView/CJMaskGuideView：镂空的引导视图2
 
-                   A longer description of CJPopupAction in Markdown format.
+                   A longer description of CJPopupView in Markdown format.
 
                    * Think: Why did you write this? What is the focus? What does it do?
                    * CocoaPods will be using this to generate tags, and improve search results.
@@ -28,11 +28,11 @@ Pod::Spec.new do |s|
   #}
   s.license      = "MIT"
 
-  s.author   = { "lichq" => "" }
+  s.author   = { "dvlproad" => "" }
 
   s.platform     = :ios, "7.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/CJPopupView.git", :tag => "CJPopupView_2.0.4" }
+  s.source       = { :git => "https://github.com/dvlproad/CJPopupView.git", :tag => "CJPopupView_2.1.0" }
   # s.source_files  = "CJPopupView/*.{h,m}"
 
   s.frameworks = "UIKit"
