@@ -36,13 +36,22 @@
     [changeEnvironmentButton setBackgroundColor:[UIColor colorWithRed:0.4 green:0.3 blue:0.4 alpha:0.5]];
     [changeEnvironmentButton setTitle:NSLocalizedString(@"改变环境", nil) forState:UIControlStateNormal];
     [changeEnvironmentButton addTarget:self action:@selector(changeEnvironment:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:changeEnvironmentButton];
-    [changeEnvironmentButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.view).mas_offset(20);
-        make.right.mas_equalTo(self.view).mas_offset(-20);
-        make.top.mas_equalTo(self.view).mas_offset(topHeight);
-        make.height.mas_equalTo(44);
-    }];
+    
+    
+    if (self.navigationController) {
+        self.navigationItem.titleView = changeEnvironmentButton;
+    } else {
+        [self.view addSubview:changeEnvironmentButton];
+        CGRect statusBarFrame = [[UIApplication sharedApplication] statusBarFrame];
+        CGFloat statusBarHeight = CGRectGetHeight(statusBarFrame);
+        [changeEnvironmentButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self.view).mas_offset(statusBarHeight);
+            make.height.mas_equalTo(44);
+            make.right.mas_equalTo(self.view).mas_offset(-10);
+            make.left.mas_equalTo(self.view).mas_offset(10);
+        }];
+    }
+    
     NSArray *environmentTitles = @[@"Product(生产环境)",
                                    @"PreProduct(预生产环境)",
                                    @"Develop1(开发环境1)",

@@ -15,11 +15,16 @@
 - (void)cj_showDownPopoverListViewWithTitles:(NSArray<NSString *> *)titles
                               selectRowBlock:(void (^)(NSInteger selectedIndex))selectRowBlock
 {
-    //UIView *convertToView = self.view;
-    UIView *convertToView = self.superview;
+    UIView *dropPopoverListOwner = self; //由哪个视图弹出带箭头的列表视图,默认self,有时是navigationBar
+    if ([self.superview.superview.superview isKindOfClass:[UINavigationBar class]]) {
+        dropPopoverListOwner = (UINavigationBar *)self.superview.superview.superview;
+    }
     
-    CGPoint point_origin = CGPointMake(self.center.x, self.center.y + self.frame.size.height/2);
-    CGPoint point = [self.superview convertPoint:point_origin toView:convertToView];
+    //UIView *convertToView = popoverListUpperView.view;
+    UIView *convertToView = dropPopoverListOwner.superview;
+    
+    CGPoint point_origin = CGPointMake(dropPopoverListOwner.center.x, dropPopoverListOwner.center.y + dropPopoverListOwner.frame.size.height/2);
+    CGPoint point = [dropPopoverListOwner.superview convertPoint:point_origin toView:convertToView];
     
     CJPopoverListView *popoverView = [[CJPopoverListView alloc] initWithPoint:point titles:titles images:nil];
     popoverView.selectRowAtIndex = ^(NSInteger index) {

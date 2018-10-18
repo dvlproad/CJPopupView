@@ -36,7 +36,6 @@ static const NSInteger kCellRowHeight = 44.f;
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
         self.borderColor = [UIColor colorWithRed:200/255.0f green:199/255.0f blue:204/255.0f alpha:1.0f];
         self.backgroundColor = [UIColor clearColor];
     }
