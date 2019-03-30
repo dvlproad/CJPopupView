@@ -22,6 +22,9 @@ typedef NS_ENUM(NSUInteger, RadioButtonPositionType) {
 @property (nonatomic, strong) UIScrollView *scrollView; //滚动视图（用于radiobutton过多时的滑动）
 @property (nonatomic, strong) UIView *contentView;      //scrollView上的contentView
 @property (nonatomic, assign) NSInteger oldSelectedIndex;   /**< 之前选中的按钮的index值（当该值为默认的－1时，表示都没有选中） */
+
+
+//lineImageView
 @property (nonatomic, strong) UIImageView *lineImageView;
 @property (nonatomic, strong) NSLayoutConstraint *lineImageViewHeightLayoutConstraint;
 @property (nonatomic, strong) NSLayoutConstraint *lineImageViewWidthLayoutConstraint;
@@ -31,14 +34,6 @@ typedef NS_ENUM(NSUInteger, RadioButtonPositionType) {
 
 
 @implementation CJRadioButtons
-
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-        [self cjRadioButtons_commonInit];
-    }
-    return self;
-}
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -762,9 +757,9 @@ typedef NS_ENUM(NSUInteger, RadioButtonPositionType) {
                     animated:(BOOL)animated
 {
     if (selectedIt && self.showBottomLineView) {
-        CGFloat lineImageViewX = CGRectGetMinX(targetRadioButton.frame);
-        CGFloat lineImageViewWidth = CGRectGetWidth(targetRadioButton.frame);
+        CGFloat lineImageViewWidth = self.bottomLineViewWidth == 0 ? CGRectGetWidth(targetRadioButton.frame) : self.bottomLineViewWidth;
         CGFloat lineImageViewHeight = self.bottomLineViewHeight == 0 ? 1 : self.bottomLineViewHeight;
+        CGFloat lineImageViewX = CGRectGetMidX(targetRadioButton.frame) - lineImageViewWidth/2;
         
         [UIView animateWithDuration:0.3 animations:^{
             self.lineImageViewLeftLayoutConstraint.constant = lineImageViewX;

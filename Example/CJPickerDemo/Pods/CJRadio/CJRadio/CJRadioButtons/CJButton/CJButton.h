@@ -26,7 +26,7 @@ typedef void(^CJButtonStateChangeCompleteBlock)(CJButton *CJButton);
 @interface CJButton : UIView {
     
 }
-@property (nonatomic, assign) CJButtonImagePosition imagePosition; /**< 图片的位置（必须设置） */
+@property (nonatomic, assign) CJButtonImagePosition imagePosition; /**< 图片的位置（必须设置,如果设为CJButtonImagePositionNone则不会添加图片） */
 
 @property (nonatomic, copy) void (^tapAction)(CJButton *cjButton);
 

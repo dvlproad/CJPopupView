@@ -8,8 +8,7 @@
 
 #import "CJNormalImagePickerUtil.h"
 #import <AVFoundation/AVFoundation.h>
-
-#import "CJValidateAuthorizationUtil.h"
+#import <CJBaseHelper/AuthorizationCJHelper.h>
 #import "MySingleImagePickerController.h"
 #import "CJImagePickerViewController.h"
 
@@ -21,7 +20,7 @@
          withPickImageFinishBlock:(void (^)(UIImage *image))pickImageFinishBlock
                   pickCancelBlock:(void(^)(void))pickCancelBlock
 {
-    BOOL isCameraEnable = [CJValidateAuthorizationUtil checkEnableForDeviceComponentType:CJDeviceComponentTypeCamera inViewController:viewController];
+    BOOL isCameraEnable = [AuthorizationCJHelper checkEnableForDeviceComponentType:CJDeviceComponentTypeCamera inViewController:viewController];
     if (!isCameraEnable) {
         return;
     }
@@ -40,7 +39,7 @@
          withCanMaxChooseImageCount:(NSInteger)canMaxChooseImageCount
                pickImageFinishBlock:(void (^)(NSArray<UIImage *> *image))pickImageFinishBlock
 {
-    BOOL isAlbumEnable = [CJValidateAuthorizationUtil checkEnableForDeviceComponentType:CJDeviceComponentTypeAlbum inViewController:viewController];
+    BOOL isAlbumEnable = [AuthorizationCJHelper checkEnableForDeviceComponentType:CJDeviceComponentTypeAlbum inViewController:viewController];
     if (!isAlbumEnable) {
         return;
     }

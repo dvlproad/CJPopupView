@@ -8,8 +8,7 @@
 
 #import "CJImagePickerViewController.h"
 #import "CJImagePickerViewController+UpdateGroupArray.h"
-
-#import "CJValidateAuthorizationUtil.h"
+#import <CJBaseHelper/AuthorizationCJHelper.h>
 
 #import "CJMultiColumnPhotoTableViewCell.h"
 
@@ -105,7 +104,7 @@
 
     __weak typeof(self)weakSelf = self;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        BOOL isAlbumEnable = [CJValidateAuthorizationUtil checkEnableForDeviceComponentType:CJDeviceComponentTypeAlbum inViewController:self];
+        BOOL isAlbumEnable = [AuthorizationCJHelper checkEnableForDeviceComponentType:CJDeviceComponentTypeAlbum inViewController:self];
         if(isAlbumEnable == NO){
             return;
         }

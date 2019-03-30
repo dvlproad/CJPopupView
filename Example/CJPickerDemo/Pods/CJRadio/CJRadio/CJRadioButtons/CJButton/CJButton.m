@@ -16,14 +16,6 @@
     [self cjButton_commonInit];
 }
 
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-        [self cjButton_commonInit];
-    }
-    return self;
-}
-
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
@@ -91,6 +83,7 @@
     self.label = [[UILabel alloc] initWithFrame:CGRectZero];
     self.label.textAlignment = NSTextAlignmentCenter;
     self.label.numberOfLines = 0;
+    //self.label.backgroundColor = [UIColor greenColor];
     
     switch (imagePosition) {
         case CJButtonImagePositionNone:

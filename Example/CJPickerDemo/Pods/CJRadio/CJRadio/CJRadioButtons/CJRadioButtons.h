@@ -10,7 +10,7 @@
 
 #import "CJButton.h"
 
-typedef NS_ENUM(NSUInteger, RadioButtonType) {
+typedef NS_ENUM(NSUInteger, CJRadioButtonType) {
     RadioButtonTypeNormal = 0,
     RadioButtonTypeCanDrop,
     RadioButtonTypeCanSlider    //RadioButtonTypeCanSlider 等价于RadioButtonTypeNormal
@@ -18,7 +18,7 @@ typedef NS_ENUM(NSUInteger, RadioButtonType) {
 
 @class CJRadioButtons;
 
-@protocol RadioButtonsDataSource <NSObject>
+@protocol CJRadioButtonsDataSource <NSObject>
 @required
 - (NSInteger)cj_numberOfComponentsInRadioButtons:(CJRadioButtons *)radioButtons;
 
@@ -40,7 +40,7 @@ typedef NS_ENUM(NSUInteger, RadioButtonType) {
 
 
 
-@protocol RadioButtonsDelegate <NSObject>
+@protocol CJRadioButtonsDelegate <NSObject>
 @required
 - (void)cj_radioButtons:(CJRadioButtons *)radioButtons chooseIndex:(NSInteger)index_cur oldIndex:(NSInteger)index_old;
 
@@ -58,15 +58,16 @@ typedef NS_ENUM(NSUInteger, RadioButtonType) {
 @property (nonatomic, strong, readonly) NSArray<CJButton *> *radioButtons;/**< 所有的单选按钮数组 */
 @property (nonatomic, assign, readonly) NSInteger currentSelectedIndex;   /**< 当前选中的按钮的index值（当该值为默认的－1时，表示都没有选中） */
 
-@property (nonatomic, weak) id <RadioButtonsDataSource> dataSource;
-@property (nonatomic, weak) id <RadioButtonsDelegate> delegate;
+@property (nonatomic, weak) id <CJRadioButtonsDataSource> dataSource;
+@property (nonatomic, weak) id <CJRadioButtonsDelegate> delegate;
 
-@property (nonatomic, assign) RadioButtonType radioButtonType;
+@property (nonatomic, assign) CJRadioButtonType radioButtonType;
 @property (nonatomic, assign) BOOL hideSeparateLine;    /**< 是否隐藏分割线(默认NO) */
 @property (nonatomic, assign) BOOL showBottomLineView;  /**< 是否显示底部线 */
 @property (nonatomic, strong) UIImage *bottomLineImage; /**< 底部线的图片 */
-@property (nonatomic, strong) UIColor *bottomLineColor; /**< 底部线的图片 */
-@property (nonatomic, assign) CGFloat bottomLineViewHeight;  /**< 底部线的图片的高度（默认1） */
+@property (nonatomic, strong) UIColor *bottomLineColor; /**< 底部线的背景色 */
+@property (nonatomic, assign) CGFloat bottomLineViewHeight; /**< 底部线的图片的高度（默认1） */
+@property (nonatomic, assign) CGFloat bottomLineViewWidth;  /**< 底部线的图片的宽度（无设置时候等于按钮宽度） */
 
 /**
  *  当数据源改变时，可调用此接口更新视图

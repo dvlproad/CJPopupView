@@ -5,28 +5,29 @@
 //  Created by ciyouzen on 2017/1/29.
 //  Copyright © 2017年 dvlproad. All rights reserved.
 //
-#import <JSONModel/JSONModel.h>
 
-@protocol CityModel
+#import <Foundation/Foundation.h>
 
-@end
-
-@interface StateModel : JSONModel
+@interface CityModel : NSObject
 
 @property (nonatomic, copy) NSString *text;
 @property (nonatomic, assign) NSInteger containValueCount;
-@property (nonatomic, strong) NSArray<CityModel> *members;
+@property (nonatomic, strong) NSMutableArray *members;
 
 @end
 
 
-@interface CityModel : JSONModel
+
+@interface StateModel : NSObject
 
 @property (nonatomic, copy) NSString *text;
 @property (nonatomic, assign) NSInteger containValueCount;
-@property (nonatomic, strong) NSArray *members;
+@property (nonatomic, strong) NSMutableArray<CityModel *> *members;
 
 @end
+
+
+
 
 
 

@@ -46,16 +46,19 @@
 
 
 //设置CJRadioButtons需要的数据
+@property (nonatomic, assign) BOOL hideSeparateLine;    /**< 是否隐藏分割线(默认NO) */
 @property (nonatomic, assign) BOOL showBottomLineView;  /**< 是否显示底部线 */
 @property (nonatomic, strong) UIImage *bottomLineImage; /**< 底部线的图片 */
 @property (nonatomic, strong) UIColor *bottomLineColor; /**< 底部线的图片 */
 @property (nonatomic, assign) CGFloat bottomLineViewHeight;  /**< 底部线的图片的高度（默认1） */
+@property (nonatomic, assign) CGFloat bottomLineViewWidth;  /**< 底部线的图片的宽度（无设置时候等于按钮宽度） */
 
 @property (nonatomic, assign) CGFloat radioButtonsHeight;   /**< 控件radioButtons的高度 */
 //@property (nonatomic, assign) CGFloat radioButtonsLeftViewWdith;    /**< 控件radioButtons左侧视图的宽度 */
 //@property (nonatomic, assign) CGFloat radioButtonsRightViewWdith;    /**< 控件radioButtons右侧视图的宽度 */
 
 //设置CJCycleComposeView需要的数据
+@property (nonatomic, assign) CJCycleComposeViewScrollType scrollType;  /**< 滑动类型 */
 @property (nonatomic, strong) UIViewController *componentViewParentViewController;
 
 //设置Self其他设置需要的数据

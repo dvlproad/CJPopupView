@@ -29,6 +29,7 @@
 		7806B6ED1F59F6840077362F /* CJPhotoToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7806B6D71F59F6840077362F /* CJPhotoToolbar.m */; };
 		7806B6EE1F59F6840077362F /* CJPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7806B6D91F59F6840077362F /* CJPhotoView.m */; };
 		7806EB971FB4BE3B00A3EF4E /* CJAlumbImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 7806EB961FB4BE3B00A3EF4E /* CJAlumbImageUtil.m */; };
+		780BAFA1224F3A4700AD0411 /* DemoPopupRadioButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 780BAFA0224F3A4700AD0411 /* DemoPopupRadioButtons.m */; };
 		784C15741E8E44850019D652 /* ImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 784C15721E8E44850019D652 /* ImagePickerViewController.m */; };
 		784C15751E8E44850019D652 /* ImagePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 784C15731E8E44850019D652 /* ImagePickerViewController.xib */; };
 		78516AB720AC8EB700C0BFAF /* CJImageUploadFileModelsOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = 78516AB320AC8EB700C0BFAF /* CJImageUploadFileModelsOwner.m */; };
@@ -62,7 +63,6 @@
 		785540F51E7DCA9900F320E6 /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 785540EA1E7DCA9900F320E6 /* city.plist */; };
 		785540F61E7DCA9900F320E6 /* line_gray_pickerToolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 785540EB1E7DCA9900F320E6 /* line_gray_pickerToolbar.png */; };
 		785540F71E7DCA9900F320E6 /* line_gray_pickerToolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 785540EC1E7DCA9900F320E6 /* line_gray_pickerToolbar@2x.png */; };
-		786FD7261FB5CAC300076B16 /* CJValidateAuthorizationUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 786FD7251FB5CAC300076B16 /* CJValidateAuthorizationUtil.m */; };
 		787A7E581F55FF61009A7F6A /* CJFileChooseToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 787A7E451F55FF61009A7F6A /* CJFileChooseToolBar.m */; };
 		803131DB1FB5BA9F000BD3B9 /* MySingleImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 803131D71FB5BA9F000BD3B9 /* MySingleImagePickerController.m */; };
 		E8004FC4B40B74AFE807D847 /* libPods-CJPickerDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48A6484B73B7E20372FD66E9 /* libPods-CJPickerDemoTests.a */; };
@@ -126,6 +126,8 @@
 		7806B6D91F59F6840077362F /* CJPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJPhotoView.m; sourceTree = "<group>"; };
 		7806EB951FB4BE3B00A3EF4E /* CJAlumbImageUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CJAlumbImageUtil.h; sourceTree = "<group>"; };
 		7806EB961FB4BE3B00A3EF4E /* CJAlumbImageUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CJAlumbImageUtil.m; sourceTree = "<group>"; };
+		780BAF9F224F3A4700AD0411 /* DemoPopupRadioButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoPopupRadioButtons.h; sourceTree = "<group>"; };
+		780BAFA0224F3A4700AD0411 /* DemoPopupRadioButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoPopupRadioButtons.m; sourceTree = "<group>"; };
 		784C15711E8E44850019D652 /* ImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerViewController.h; sourceTree = "<group>"; };
 		784C15721E8E44850019D652 /* ImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerViewController.m; sourceTree = "<group>"; };
 		784C15731E8E44850019D652 /* ImagePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagePickerViewController.xib; sourceTree = "<group>"; };
@@ -183,8 +185,6 @@
 		785540EA1E7DCA9900F320E6 /* city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city.plist; sourceTree = "<group>"; };
 		785540EB1E7DCA9900F320E6 /* line_gray_pickerToolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line_gray_pickerToolbar.png; sourceTree = "<group>"; };
 		785540EC1E7DCA9900F320E6 /* line_gray_pickerToolbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "line_gray_pickerToolbar@2x.png"; sourceTree = "<group>"; };
-		786FD7241FB5CAC300076B16 /* CJValidateAuthorizationUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJValidateAuthorizationUtil.h; sourceTree = "<group>"; };
-		786FD7251FB5CAC300076B16 /* CJValidateAuthorizationUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJValidateAuthorizationUtil.m; sourceTree = "<group>"; };
 		787A7E441F55FF61009A7F6A /* CJFileChooseToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJFileChooseToolBar.h; sourceTree = "<group>"; };
 		787A7E451F55FF61009A7F6A /* CJFileChooseToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJFileChooseToolBar.m; sourceTree = "<group>"; };
 		7CFC980D5F47A54820A32812 /* libPods-CJPickerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CJPickerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -246,7 +246,6 @@
 			children = (
 				78516ABA20AC9E2000C0BFAF /* CJNormalImagePickerUtil */,
 				78516AAF20AC8EB700C0BFAF /* CJUploadImagePickerUtil */,
-				786FD7231FB5CAC300076B16 /* CJValidateAuthorizationUtil */,
 				803131D51FB5BA9F000BD3B9 /* MySingleImagePickerController */,
 				7806B6AE1F59F6840077362F /* CJPhotoBrowser */,
 			);
@@ -384,6 +383,15 @@
 			path = CJAlumbImageUtil;
 			sourceTree = "<group>";
 		};
+		780BAF9E224F3A2E00AD0411 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				780BAF9F224F3A4700AD0411 /* DemoPopupRadioButtons.h */,
+				780BAFA0224F3A4700AD0411 /* DemoPopupRadioButtons.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		78516AAF20AC8EB700C0BFAF /* CJUploadImagePickerUtil */ = {
 			isa = PBXGroup;
 			children = (
@@ -499,6 +507,7 @@
 				784C15711E8E44850019D652 /* ImagePickerViewController.h */,
 				784C15721E8E44850019D652 /* ImagePickerViewController.m */,
 				784C15731E8E44850019D652 /* ImagePickerViewController.xib */,
+				780BAF9E224F3A2E00AD0411 /* Views */,
 				787A7E431F55FF61009A7F6A /* FileChooseView */,
 			);
 			path = Controllers;
@@ -561,15 +570,6 @@
 				785540EC1E7DCA9900F320E6 /* line_gray_pickerToolbar@2x.png */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		786FD7231FB5CAC300076B16 /* CJValidateAuthorizationUtil */ = {
-			isa = PBXGroup;
-			children = (
-				786FD7241FB5CAC300076B16 /* CJValidateAuthorizationUtil.h */,
-				786FD7251FB5CAC300076B16 /* CJValidateAuthorizationUtil.m */,
-			);
-			path = CJValidateAuthorizationUtil;
 			sourceTree = "<group>";
 		};
 		787A7E431F55FF61009A7F6A /* FileChooseView */ = {
@@ -689,6 +689,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -788,7 +789,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CJPickerDemo/Pods-CJPickerDemo-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-CJPickerDemo/Pods-CJPickerDemo-resources.sh",
 				"${PODS_ROOT}/CJBaseUIKit/CJBaseUIKit/CJToast/Resources/CJToast_error.png",
 				"${PODS_ROOT}/CJBaseUIKit/CJBaseUIKit/CJToast/Resources/CJToast_error@2x.png",
 				"${PODS_ROOT}/CJBaseUIKit/CJBaseUIKit/CJToast/Resources/CJToast_error@3x.png",
@@ -823,7 +824,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CJPickerDemo/Pods-CJPickerDemo-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CJPickerDemo/Pods-CJPickerDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -852,6 +853,7 @@
 				785540ED1E7DCA9900F320E6 /* CJDefaultDatePicker.m in Sources */,
 				7806B6EA1F59F6840077362F /* CJPhotoModel.m in Sources */,
 				7806B6E91F59F6840077362F /* MBProgressHUD+CJPhotoBrowser.m in Sources */,
+				780BAFA1224F3A4700AD0411 /* DemoPopupRadioButtons.m in Sources */,
 				785540A71E7DC5F800F320E6 /* PickerViewController.m in Sources */,
 				785540651E7DC53F00F320E6 /* main.m in Sources */,
 				785540F21E7DCA9900F320E6 /* CJComponentDataModelUtil.m in Sources */,
@@ -859,7 +861,6 @@
 				785540AB1E7DC5F800F320E6 /* RelatedPickerViewController2.m in Sources */,
 				7806B6DF1F59F6840077362F /* CJImagePickerViewController+UpdateGroupArray.m in Sources */,
 				785540AE1E7DC5F800F320E6 /* GroupDataUtil.m in Sources */,
-				786FD7261FB5CAC300076B16 /* CJValidateAuthorizationUtil.m in Sources */,
 				78516AB720AC8EB700C0BFAF /* CJImageUploadFileModelsOwner.m in Sources */,
 				7806B6EC1F59F6840077362F /* CJPhotoProgressView.m in Sources */,
 				7806B6E51F59F6840077362F /* CJMultiColumnPhotoTableViewCell.m in Sources */,

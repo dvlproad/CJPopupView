@@ -15,6 +15,7 @@
            withUploadRequestByManager:(AFHTTPSessionManager *)manager
                                   Url:(NSString *)Url
                                params:(id)params
+                         settingModel:(CJRequestSettingModel *)settingModel
                               fileKey:(NSString *)fileKey
                        fileValueOwner:(CJUploadFileModelsOwner *)fileValueOwner
           uploadMomentInfoChangeBlock:(void(^)(CJUploadFileModelsOwner *momentInfoOwner))uploadMomentInfoChangeBlock
@@ -26,6 +27,7 @@
         operation =
         [manager cj_postUploadUrl:Url
                            params:params
+                     settingModel:settingModel
                           fileKey:fileKey
                    fileValueOwner:fileValueOwner
       uploadMomentInfoChangeBlock:uploadMomentInfoChangeBlock
@@ -45,6 +47,7 @@ getUploadMomentInfoFromResopnseBlock:getUploadMomentInfoFromResopnseBlock];
         NSURLSessionDataTask *newOperation =
         [manager cj_postUploadUrl:Url
                            params:params
+                     settingModel:settingModel
                           fileKey:fileKey
                    fileValueOwner:fileValueOwner
       uploadMomentInfoChangeBlock:uploadMomentInfoChangeBlock

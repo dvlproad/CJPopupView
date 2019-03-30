@@ -14,7 +14,7 @@
 #import "GroupDataUtil.h"
 
 #import <CJBaseUIKit/CJDefaultToolbar.h>
-#import <CJPopupAction/UIView+CJPopupInView.h>
+#import <CJBaseUIKit/UIView+CJShowExtendView.h>
 
 @interface PickerViewController () <CJRelatedPickerRichViewDelegate>
 {
@@ -33,7 +33,7 @@
 }
 
 
-
+/// 生日选择
 - (IBAction)chooseBirthday:(id)sender{
     if (birthdayPicker == nil) {
         birthdayPicker = [[CJDefaultDatePicker alloc] init];
@@ -99,7 +99,9 @@
     [toolbar updateShowingValue:dateString];
     
     CGFloat popupViewHeight = CGRectGetHeight(birthdayPicker.frame);
-    [birthdayPicker cj_popupInBottomWindow:CJAnimationTypeNormal withHeight:popupViewHeight showComplete:^{
+    
+    UIColor *blankBGColor = [UIColor colorWithRed:.16 green:.17 blue:.21 alpha:.6];
+    [birthdayPicker cj_popupInBottomWindow:CJAnimationTypeNormal withHeight:popupViewHeight blankBGColor:blankBGColor showComplete:^{
         NSLog(@"显示完成");
     } tapBlankComplete:^() {
         NSLog(@"点击背景完成");
@@ -110,6 +112,7 @@
 }
 
 
+/// 地区选择
 - (IBAction)chooseArea:(id)sender{
     if (areaPicker == nil) {
         areaPicker = [[CJRelatedPickerRichView alloc] initWithFrame:CGRectMake(0, 0, 200, 162)];
@@ -128,7 +131,8 @@
     
     areaPicker.frame = CGRectMake(0, 0, 400, 162);
     CGFloat popupViewHeight = CGRectGetHeight(areaPicker.frame);
-    [areaPicker cj_popupInBottomWindow:CJAnimationTypeNormal withHeight:popupViewHeight showComplete:^{
+    UIColor *blankBGColor = [UIColor colorWithRed:.16 green:.17 blue:.21 alpha:.6];
+    [areaPicker cj_popupInBottomWindow:CJAnimationTypeNormal withHeight:popupViewHeight blankBGColor:blankBGColor showComplete:^{
         NSLog(@"显示完成");
     } tapBlankComplete:^() {
         NSLog(@"点击背景完成");
@@ -137,6 +141,7 @@
 }
 
 
+/// 体重选择
 - (IBAction)chooseWeight:(id)sender{
     if (weightPicker == nil) {
         weightPicker = [[CJIndependentPickerView alloc] init];
@@ -183,7 +188,8 @@
     weightPicker.selecteds_default = @[@"60", @"5", @"kg"];
     
     CGFloat popupViewHeight = CGRectGetHeight(weightPicker.frame);
-    [weightPicker cj_popupInBottomWindow:CJAnimationTypeNormal withHeight:popupViewHeight showComplete:^{
+    UIColor *blankBGColor = [UIColor colorWithRed:.16 green:.17 blue:.21 alpha:.6];
+    [weightPicker cj_popupInBottomWindow:CJAnimationTypeNormal withHeight:popupViewHeight blankBGColor:blankBGColor showComplete:^{
         NSLog(@"显示完成");
     } tapBlankComplete:^() {
         NSLog(@"点击背景完成");

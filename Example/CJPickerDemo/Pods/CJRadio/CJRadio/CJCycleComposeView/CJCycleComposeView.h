@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+///滑动类型
 typedef NS_ENUM(NSUInteger, CJCycleComposeViewScrollType) {
     CJCycleComposeViewScrollTypeNormal,
     CJCycleComposeViewScrollTypeBanScrollHorizontal,      /**< 禁用水平方向滑动 */
@@ -64,7 +65,7 @@ typedef NS_ENUM(NSUInteger, CJCycleComposeViewScrollType) {
 }
 @property (nonatomic, weak) id <CJCycleComposeViewDataSource> dataSource;
 @property (nonatomic, weak) id <CJCycleComposeViewDelegate> delegate;
-@property (nonatomic, assign) CJCycleComposeViewScrollType scrollType;
+@property (nonatomic, assign) CJCycleComposeViewScrollType scrollType;  /**< 滑动类型 */
 @property (nonatomic, assign, readonly) NSInteger currentShowViewIndex; /**< 当前显示的视图(即中视图)上的视图内容在所有view中的位置 */
 
 //当所添加的view不足三个的时候，需要多用到以下这一个参数

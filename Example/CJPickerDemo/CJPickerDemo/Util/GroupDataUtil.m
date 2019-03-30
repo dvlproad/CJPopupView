@@ -142,10 +142,26 @@
 + (NSArray<StateModel *> *)groupDataAllArea22 {
     NSArray *component0Datas = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"area.plist" ofType:nil]];
 
-    NSArray *array = [StateModel arrayOfModelsFromDictionaries:component0Datas error:nil];
-    //NSLog(@"array = %@", array);
+    NSMutableArray *stateModels = [[NSMutableArray alloc] init];
+    for (NSDictionary *dict in component0Datas) {
+        StateModel *stateModel = [[StateModel alloc] init];
+        stateModel.text = dict[@"state"];
+        
+        NSArray *memberDicts = dict[@"cities"];
+        NSMutableArray *cityModels = [[NSMutableArray alloc] init];
+        for (NSDictionary *memberDict in memberDicts) {
+            CityModel *cityModel = [[CityModel alloc] init];
+            cityModel.text = memberDict[@"city"];
+            cityModel.members = memberDict[@"areas"];
+            [cityModels addObject:cityModel];
+        }
+        stateModel.members = cityModels;
+        
+        [stateModels addObject:stateModel];
+    }
+
     
-    return array;
+    return stateModels;
 }
 
 @end

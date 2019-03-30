@@ -8,7 +8,7 @@
 
 #import "CJRadioButtonCycleComposeView.h"
 
-@interface CJRadioButtonCycleComposeView () <RadioButtonsDataSource, RadioButtonsDelegate, CJCycleComposeViewDataSource, CJCycleComposeViewDelegate> {
+@interface CJRadioButtonCycleComposeView () <CJRadioButtonsDataSource, CJRadioButtonsDelegate, CJCycleComposeViewDataSource, CJCycleComposeViewDelegate> {
     BOOL isDelegateDoneInRadioButton; //避免点击单选按钮的时候，delegate执行两次
     
 }
@@ -26,14 +26,6 @@
 
 @implementation CJRadioButtonCycleComposeView
 
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-        [self commonInit];
-    }
-    return self;
-}
-
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
@@ -48,12 +40,6 @@
         [self commonInit];
     }
     return self;
-}
-
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    
-    [self commonInit];
 }
 
 - (void)commonInit {
@@ -86,6 +72,12 @@
     self.sliderRadioButtons.showBottomLineView = showBottomLineView;
 }
 
+- (void)setHideSeparateLine:(BOOL)hideSeparateLine {
+    _hideSeparateLine = hideSeparateLine;
+    
+    self.sliderRadioButtons.hideSeparateLine = hideSeparateLine;
+}
+
 - (void)setBottomLineImage:(UIImage *)bottomLineImage {
     _bottomLineImage = bottomLineImage;
     
@@ -104,11 +96,25 @@
     self.sliderRadioButtons.bottomLineViewHeight = bottomLineViewHeight;
 }
 
+- (void)setBottomLineViewWidth:(CGFloat)bottomLineViewWidth {
+    _bottomLineViewWidth = bottomLineViewWidth;
+    
+    self.sliderRadioButtons.bottomLineViewWidth = bottomLineViewWidth;
+}
+
+#pragma mark - 设置CJCycleComposeView的附加设置
+- (void)setScrollType:(CJCycleComposeViewScrollType)scrollType {
+    _scrollType = scrollType;
+    
+    self.cycleComposeView.scrollType = scrollType;
+}
+
+
 #pragma mark - reloadData
 - (void)reloadData {
     self.radioButtonsHeightLayoutConstraint.constant = self.radioButtonsHeight;
     self.sliderRadioButtons.dataSource = self;
-    self.cycleComposeView.dataSource = self;
+    self.cycleComposeView.dataSource = self; //该set方法有reload操作
 }
 
 
@@ -133,29 +139,32 @@
     [self addSubview:radioButtonsLeftView];
     radioButtonsLeftView.translatesAutoresizingMaskIntoConstraints = NO;
     //top
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:radioButtonsLeftView
-                                                     attribute:NSLayoutAttributeTop
-                                                     relatedBy:NSLayoutRelationEqual
-                                                        toItem:self
-                                                     attribute:NSLayoutAttributeTop
-                                                    multiplier:1
-                                                      constant:0]];
+    [self addConstraint:
+     [NSLayoutConstraint constraintWithItem:radioButtonsLeftView
+                                  attribute:NSLayoutAttributeTop
+                                  relatedBy:NSLayoutRelationEqual
+                                     toItem:self
+                                  attribute:NSLayoutAttributeTop
+                                 multiplier:1
+                                   constant:0]];
     //bottom
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:radioButtonsLeftView
-                                                     attribute:NSLayoutAttributeBottom
-                                                     relatedBy:NSLayoutRelationEqual
-                                                        toItem:self.sliderRadioButtons
-                                                     attribute:NSLayoutAttributeBottom
-                                                    multiplier:1
-                                                      constant:0]];
+    [self addConstraint:
+     [NSLayoutConstraint constraintWithItem:radioButtonsLeftView
+                                  attribute:NSLayoutAttributeBottom
+                                  relatedBy:NSLayoutRelationEqual
+                                     toItem:self.sliderRadioButtons
+                                  attribute:NSLayoutAttributeBottom
+                                 multiplier:1
+                                   constant:0]];
     //left
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:radioButtonsLeftView
-                                                     attribute:NSLayoutAttributeLeft
-                                                     relatedBy:NSLayoutRelationEqual
-                                                        toItem:self
-                                                     attribute:NSLayoutAttributeLeft
-                                                    multiplier:1
-                                                      constant:0]];
+    [self addConstraint:
+     [NSLayoutConstraint constraintWithItem:radioButtonsLeftView
+                                  attribute:NSLayoutAttributeLeft
+                                  relatedBy:NSLayoutRelationEqual
+                                     toItem:self
+                                  attribute:NSLayoutAttributeLeft
+                                 multiplier:1
+                                   constant:0]];
     //width
     self.radioButtonsLeftViewWidthLayoutConstraint =
     [NSLayoutConstraint constraintWithItem:radioButtonsLeftView
@@ -175,29 +184,32 @@
     [self addSubview:radioButtonsRightView];
     radioButtonsRightView.translatesAutoresizingMaskIntoConstraints = NO;
     //top
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:radioButtonsRightView
-                                                     attribute:NSLayoutAttributeTop
-                                                     relatedBy:NSLayoutRelationEqual
-                                                        toItem:self
-                                                     attribute:NSLayoutAttributeTop
-                                                    multiplier:1
-                                                      constant:0]];
+    [self addConstraint:
+     [NSLayoutConstraint constraintWithItem:radioButtonsRightView
+                                  attribute:NSLayoutAttributeTop
+                                  relatedBy:NSLayoutRelationEqual
+                                     toItem:self
+                                  attribute:NSLayoutAttributeTop
+                                 multiplier:1
+                                   constant:0]];
     //bottom
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:radioButtonsRightView
-                                                     attribute:NSLayoutAttributeBottom
-                                                     relatedBy:NSLayoutRelationEqual
-                                                        toItem:self.sliderRadioButtons
-                                                     attribute:NSLayoutAttributeBottom
-                                                    multiplier:1
-                                                      constant:0]];
+    [self addConstraint:
+     [NSLayoutConstraint constraintWithItem:radioButtonsRightView
+                                  attribute:NSLayoutAttributeBottom
+                                  relatedBy:NSLayoutRelationEqual
+                                     toItem:self.sliderRadioButtons
+                                  attribute:NSLayoutAttributeBottom
+                                 multiplier:1
+                                   constant:0]];
     //right
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:radioButtonsRightView
-                                                     attribute:NSLayoutAttributeRight
-                                                     relatedBy:NSLayoutRelationEqual
-                                                        toItem:self
-                                                     attribute:NSLayoutAttributeRight
-                                                    multiplier:1
-                                                      constant:0]];
+    [self addConstraint:
+     [NSLayoutConstraint constraintWithItem:radioButtonsRightView
+                                  attribute:NSLayoutAttributeRight
+                                  relatedBy:NSLayoutRelationEqual
+                                     toItem:self
+                                  attribute:NSLayoutAttributeRight
+                                 multiplier:1
+                                   constant:0]];
     //width
     self.radioButtonsRightViewWidthLayoutConstraint =
     [NSLayoutConstraint constraintWithItem:radioButtonsRightView
@@ -210,7 +222,7 @@
     [self addConstraint:self.radioButtonsRightViewWidthLayoutConstraint];
 }
 
-#pragma mark - RadioButtonsDataSource
+#pragma mark - CJRadioButtonsDataSource
 - (NSInteger)cj_defaultShowIndexInRadioButtons:(CJRadioButtons *)radioButtons {
     return self.defaultSelectedIndex;
 }
@@ -262,7 +274,7 @@
 }
 
 
-#pragma mark - RadioButtonsDelegate & CJCycleComposeViewDelegate
+#pragma mark - CJRadioButtonsDelegate & CJCycleComposeViewDelegate
 - (void)cj_radioButtons:(CJRadioButtons *)radioButtons chooseIndex:(NSInteger)index_cur oldIndex:(NSInteger)index_old {
     isDelegateDoneInRadioButton = YES;
     //NSLog(@"index_old = %ld, index_cur = %ld", index_old, index_cur);

@@ -7,12 +7,10 @@
 //
 
 #import "ImagePickerViewController.h"
-
-#import "CJValidateAuthorizationUtil.h"
+#import <CJBaseHelper/AuthorizationCJHelper.h>
+#import <JGActionSheet/JGActionSheet.h>
 #import "MySingleImagePickerController.h"
 #import "CJImagePickerViewController.h"
-
-#import <JGActionSheet/JGActionSheet.h>
 
 
 //#import "IjinbuNetworkClient+Login.h"
@@ -77,21 +75,23 @@
 
 /**< 拍照 */
 - (void)takePhoto {
-    BOOL isCameraEnable = [CJValidateAuthorizationUtil checkEnableForDeviceComponentType:CJDeviceComponentTypeCamera inViewController:self];
+    BOOL isCameraEnable = [AuthorizationCJHelper checkEnableForDeviceComponentType:CJDeviceComponentTypeCamera inViewController:self];
     if (!isCameraEnable) {
         return;
     }
     
+    self.singleImagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
     [self presentViewController:self.singleImagePickerController animated:YES completion:nil];
 }
 
 /**< 从相册中选择照片 */
 - (void)choosePhoto {
-    BOOL isAlbumEnable = [CJValidateAuthorizationUtil checkEnableForDeviceComponentType:CJDeviceComponentTypeAlbum inViewController:self];
+    BOOL isAlbumEnable = [AuthorizationCJHelper checkEnableForDeviceComponentType:CJDeviceComponentTypeAlbum inViewController:self];
     if (!isAlbumEnable) {
         return;
     }
     
+    self.singleImagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     [self presentViewController:self.singleImagePickerController animated:YES completion:nil];
 }
 

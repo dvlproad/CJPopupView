@@ -42,6 +42,10 @@
           bezelViewColor:(UIColor *)bezelViewColor
           hideAfterDelay:(NSTimeInterval)delay
 {
+    if (message.length == 0) {
+        NSLog(@"toast message length == 0");
+        return;
+    }
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     
     CGFloat margin = 10;
@@ -52,23 +56,33 @@
     
     CGFloat labelMaxWidth = CGRectGetWidth(view.frame) - 4*margin;
     UIFont *hudLabelFont = hud.label.font;
-    CGFloat textWidth = [self getTextSizeFromString:message withFont:hudLabelFont].width;
+    CGFloat labelWidth = labelMaxWidth;
+    CGSize maxSize = CGSizeMake(labelWidth, CGFLOAT_MAX);
+    CGSize textSize = [self getTextSizeFromString:message withFont:hudLabelFont maxSize:maxSize lineBreakMode:NSLineBreakByCharWrapping paragraphStyle:nil];
     
-    if (textWidth < labelMaxWidth) {
-        hud.mode = MBProgressHUDModeText;
-        if (labelTextColor) {
-            hud.label.textColor = labelTextColor;
-        }
-        if (bezelViewColor) {
-            hud.bezelView.color = bezelViewColor;
-        }
-        
-        
-        hud.minSize = CGSizeMake(200, 30);
-        
-        hud.label.text = message;
-        
-    } else {
+    //由于 MBProgressHUD 的label的numberOfLines为1，所以label只支持单行显示。(附detailsLabel支持多行)
+    //情况①当文本太长时候，需要多行显示，所以如果要显示的字符串超过单行最大长度，我们则改为用自定义的label显示；
+    //情况②当使用\n时候，一样的道理，也无法显示多行，所以干脆直接放弃到原本的label
+//    if (textSize.width < labelMaxWidth) {
+//        hud.mode = MBProgressHUDModeText;
+//        //hud.label.numberOfLines = 0;
+//        if (labelTextColor) {
+//            hud.label.textColor = labelTextColor;
+//            //hud.detailsLabel.textColor = labelTextColor;
+//        }
+//        if (bezelViewColor) {
+//            hud.bezelView.color = bezelViewColor;
+//        }
+//
+//
+//        hud.minSize = CGSizeMake(200, 80);
+//
+//        hud.label.text = message;
+//        //hud.detailsLabel.text = message;
+//
+//    }
+//    else
+    {
         hud.mode = MBProgressHUDModeCustomView;
         if (labelTextColor) {
             hud.label.textColor = labelTextColor;
@@ -77,12 +91,8 @@
             hud.bezelView.color = bezelViewColor;
         }
         
-        CGFloat labelWidth = labelMaxWidth;
-        CGSize maxSize = CGSizeMake(labelWidth, CGFLOAT_MAX);
-        CGSize textSize = [self getTextSizeFromString:message withFont:hudLabelFont maxSize:maxSize mode:NSLineBreakByCharWrapping];
-        
         UILabel *label = [[UILabel alloc] init];
-        label.textAlignment = NSTextAlignmentLeft;
+        label.textAlignment = NSTextAlignmentCenter;
         label.font = hudLabelFont;
         label.textColor = hud.label.textColor;
         label.numberOfLines = 0;
@@ -102,6 +112,7 @@
 
 
 #pragma mark - Text And Image
+/*
 + (void)shortShowError:(NSString *)error toView:(UIView *)view
 {
     //NSString *imageName = @"CJToast.bundle/error";
@@ -117,6 +128,7 @@
     UIImage *image = [UIImage imageNamed:imageName];
     [self shortShowMessage:success image:image toView:view];
 }
+*/
 
 /* 完整的描述请参见文件头部 */
 + (void)shortShowMessage:(NSString *)message image:(UIImage *)image toView:(UIView *)view
@@ -147,7 +159,8 @@
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     hud.backgroundView.style = MBProgressHUDBackgroundStyleSolidColor;
     hud.backgroundView.color = [UIColor colorWithWhite:0.f alpha:0.1f];
-    hud.contentColor = [UIColor colorWithRed:0.f green:0.6f blue:0.7f alpha:1.f];
+    hud.contentColor = [UIColor whiteColor]; //等待框文字颜色
+    hud.bezelView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.76]; //等待框背景色
     
     if (message) {
         hud.label.text = message;
@@ -155,6 +168,41 @@
     
     return hud;
 }
+
+///* 完整的描述请参见文件头部 */
+//+ (MBProgressHUD *)createChrysanthemumHUDWithRightMessage:(NSString *)message toView:(UIView *)view
+//{
+//    if (view == nil) {
+//        view = [UIApplication sharedApplication].keyWindow;
+//    }
+//    
+//    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
+//    
+//    // Set the custom view mode to show any view.
+//    hud.mode = MBProgressHUDModeCustomView;
+//    // Set an image view with a checkmark.
+//    
+//    
+//    UIView *customView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 400, 200)];
+//    customView.backgroundColor = [UIColor redColor];
+//    
+//    UIImage *image = [[UIImage imageNamed:@"CJToast_success"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+//    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 100-40/2, 40, 40)];
+//    imageView.image = image;
+//    [customView addSubview:imageView];
+//    
+//    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(40, 100-30/2, 140, 30)];
+//    label.backgroundColor = [UIColor orangeColor];
+//    label.text = message;
+//    label.textAlignment = NSTextAlignmentCenter;
+//    [customView addSubview:label];
+//   
+//    hud.customView = customView;
+//    hud.square = YES;
+//    hud.label.text = message;
+//    
+//    return hud;
+//}
 
 
 #pragma mark - HUD
@@ -171,37 +219,27 @@
 
 
 #pragma mark - Private
-//以下两个获取textSize取自NSString+CJTextSize
+//以下获取textSize方法取自NSString+CJTextSize
 + (CGSize)getTextSizeFromString:(NSString *)string withFont:(UIFont *)font
-{
-    if (string.length == 0)
-    return CGSizeZero;
-    if ([string respondsToSelector:@selector(sizeWithAttributes:)])
-    {
-        CGSize size = [string sizeWithAttributes:@{NSFontAttributeName:font}];
-        return CGSizeMake(ceil(size.width), ceil(size.height));
-    }
-    else
-    {
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
-        return [string sizeWithFont:font];
-#pragma clang diagnostic pop
-    }
-}
-
-+ (CGSize)getTextSizeFromString:(NSString *)string withFont:(UIFont *)font maxSize:(CGSize)maxSize mode:(NSLineBreakMode)mode
+                        maxSize:(CGSize)maxSize
+                  lineBreakMode:(NSLineBreakMode)lineBreakMode
+                 paragraphStyle:(NSMutableParagraphStyle *)paragraphStyle
 {
     if (string.length == 0) {
         return CGSizeZero;
     }
     
-    if ([string respondsToSelector:@selector(boundingRectWithSize:options:attributes:context:)]) {
+    if ([self respondsToSelector:@selector(boundingRectWithSize:options:attributes:context:)]) {
+        if (paragraphStyle == nil) {
+            paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+            paragraphStyle.lineBreakMode = lineBreakMode;
+        }
         
-        NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-        paragraphStyle.lineBreakMode = mode;
-        NSDictionary *attributes = @{NSFontAttributeName:           font,
-                                     NSParagraphStyleAttributeName: paragraphStyle};
+        NSDictionary *attributes = @{NSParagraphStyleAttributeName: paragraphStyle,
+                                     NSFontAttributeName:           font,
+                                     //NSForegroundColorAttributeName:textColor
+                                     //NSKernAttributeName:           @1.5f       //字体间距
+                                     };
         
         NSStringDrawingOptions options = NSStringDrawingUsesLineFragmentOrigin;
         
@@ -216,7 +254,7 @@
     {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
-        return [string sizeWithFont:font constrainedToSize:maxSize lineBreakMode:mode];
+        return [string sizeWithFont:font constrainedToSize:maxSize lineBreakMode:lineBreakMode];
 #pragma clang diagnostic push
     }
 }

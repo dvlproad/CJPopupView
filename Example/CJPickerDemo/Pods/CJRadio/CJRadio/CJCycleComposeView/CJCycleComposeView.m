@@ -151,7 +151,7 @@
     
     //滑动到显示的视图(即中视图)
     if (self.delegate && [self.delegate respondsToSelector:@selector(cj_cycleComposeView:didChangeToIndex:)]) {
-        NSLog(@"centerViewIndex = %zd", centerViewIndex);
+        //NSLog(@"centerViewIndex = %zd", centerViewIndex);
         if (self.viewsOriginCount < 3 && centerViewIndex+1 >= 3) {
             centerViewIndex -= self.viewsOriginCount;
         }
@@ -247,38 +247,42 @@
     view.translatesAutoresizingMaskIntoConstraints = NO;
     /* width、height、top是不变的所以这里可以先写 */
     //width
-    [_scrollView addConstraint:[NSLayoutConstraint constraintWithItem:view
-                                                           attribute:NSLayoutAttributeWidth
-                                                           relatedBy:NSLayoutRelationEqual
-                                                              toItem:_scrollView
-                                                           attribute:NSLayoutAttributeWidth
-                                                          multiplier:1
-                                                            constant:0]];
+    [_scrollView addConstraint:
+     [NSLayoutConstraint constraintWithItem:view
+                                  attribute:NSLayoutAttributeWidth
+                                  relatedBy:NSLayoutRelationEqual
+                                     toItem:_scrollView
+                                  attribute:NSLayoutAttributeWidth
+                                 multiplier:1
+                                   constant:0]];
     //height
-    [_scrollView addConstraint:[NSLayoutConstraint constraintWithItem:view
-                                                           attribute:NSLayoutAttributeHeight
-                                                           relatedBy:NSLayoutRelationEqual
-                                                              toItem:_scrollView
-                                                           attribute:NSLayoutAttributeHeight
-                                                          multiplier:1
-                                                            constant:0]];
+    [_scrollView addConstraint:
+     [NSLayoutConstraint constraintWithItem:view
+                                  attribute:NSLayoutAttributeHeight
+                                  relatedBy:NSLayoutRelationEqual
+                                     toItem:_scrollView
+                                  attribute:NSLayoutAttributeHeight
+                                 multiplier:1
+                                   constant:0]];
     //top
-    [contentView addConstraint:[NSLayoutConstraint constraintWithItem:view
-                                                            attribute:NSLayoutAttributeTop
-                                                            relatedBy:NSLayoutRelationEqual
-                                                               toItem:contentView
-                                                            attribute:NSLayoutAttributeTop
-                                                           multiplier:1
-                                                             constant:0]];
+    [contentView addConstraint:
+     [NSLayoutConstraint constraintWithItem:view
+                                  attribute:NSLayoutAttributeTop
+                                  relatedBy:NSLayoutRelationEqual
+                                     toItem:contentView
+                                  attribute:NSLayoutAttributeTop
+                                 multiplier:1
+                                   constant:0]];
     /* 计算left要多少 */
     //left
-    [_scrollView addConstraint:[NSLayoutConstraint constraintWithItem:view
-                                                           attribute:NSLayoutAttributeLeft
-                                                           relatedBy:NSLayoutRelationEqual
-                                                              toItem:_scrollView
-                                                           attribute:NSLayoutAttributeLeft
-                                                          multiplier:1
-                                                            constant:0]];
+    [_scrollView addConstraint:
+     [NSLayoutConstraint constraintWithItem:view
+                                  attribute:NSLayoutAttributeLeft
+                                  relatedBy:NSLayoutRelationEqual
+                                     toItem:_scrollView
+                                  attribute:NSLayoutAttributeLeft
+                                 multiplier:1
+                                   constant:0]];
     
     //
     _viewL = view;
@@ -291,38 +295,42 @@
     view.translatesAutoresizingMaskIntoConstraints = NO;
     /* width、height、top是不变的所以这里可以先写 */
     //width
-    [_scrollView addConstraint:[NSLayoutConstraint constraintWithItem:view
-                                                           attribute:NSLayoutAttributeWidth
-                                                           relatedBy:NSLayoutRelationEqual
-                                                              toItem:_scrollView
-                                                           attribute:NSLayoutAttributeWidth
-                                                          multiplier:1
-                                                            constant:0]];
+    [_scrollView addConstraint:
+     [NSLayoutConstraint constraintWithItem:view
+                                  attribute:NSLayoutAttributeWidth
+                                  relatedBy:NSLayoutRelationEqual
+                                     toItem:_scrollView
+                                  attribute:NSLayoutAttributeWidth
+                                 multiplier:1
+                                   constant:0]];
     //height
-    [_scrollView addConstraint:[NSLayoutConstraint constraintWithItem:view
-                                                           attribute:NSLayoutAttributeHeight
-                                                           relatedBy:NSLayoutRelationEqual
-                                                              toItem:_scrollView
-                                                           attribute:NSLayoutAttributeHeight
-                                                          multiplier:1
-                                                            constant:0]];
+    [_scrollView addConstraint:
+     [NSLayoutConstraint constraintWithItem:view
+                                  attribute:NSLayoutAttributeHeight
+                                  relatedBy:NSLayoutRelationEqual
+                                     toItem:_scrollView
+                                  attribute:NSLayoutAttributeHeight
+                                 multiplier:1
+                                   constant:0]];
     //top
-    [contentView addConstraint:[NSLayoutConstraint constraintWithItem:view
-                                                            attribute:NSLayoutAttributeTop
-                                                            relatedBy:NSLayoutRelationEqual
-                                                               toItem:contentView
-                                                            attribute:NSLayoutAttributeTop
-                                                           multiplier:1
-                                                             constant:0]];
+    [contentView addConstraint:
+     [NSLayoutConstraint constraintWithItem:view
+                                  attribute:NSLayoutAttributeTop
+                                  relatedBy:NSLayoutRelationEqual
+                                     toItem:contentView
+                                  attribute:NSLayoutAttributeTop
+                                 multiplier:1
+                                   constant:0]];
     /* 计算left要多少 */
     //left
-    [_scrollView addConstraint:[NSLayoutConstraint constraintWithItem:view
-                                                           attribute:NSLayoutAttributeLeft
-                                                           relatedBy:NSLayoutRelationEqual
-                                                              toItem:_viewL
-                                                           attribute:NSLayoutAttributeRight
-                                                          multiplier:1
-                                                            constant:0]];
+    [_scrollView addConstraint:
+     [NSLayoutConstraint constraintWithItem:view
+                                  attribute:NSLayoutAttributeLeft
+                                  relatedBy:NSLayoutRelationEqual
+                                     toItem:_viewL
+                                  attribute:NSLayoutAttributeRight
+                                 multiplier:1
+                                   constant:0]];
     
     //
     _viewC = view;
@@ -336,38 +344,42 @@
     view.translatesAutoresizingMaskIntoConstraints = NO;
     /* width、height、top是不变的所以这里可以先写 */
     //width
-    [_scrollView addConstraint:[NSLayoutConstraint constraintWithItem:view
-                                                           attribute:NSLayoutAttributeWidth
-                                                           relatedBy:NSLayoutRelationEqual
-                                                              toItem:_scrollView
-                                                           attribute:NSLayoutAttributeWidth
-                                                          multiplier:1
-                                                            constant:0]];
+    [_scrollView addConstraint:
+     [NSLayoutConstraint constraintWithItem:view
+                                  attribute:NSLayoutAttributeWidth
+                                  relatedBy:NSLayoutRelationEqual
+                                     toItem:_scrollView
+                                  attribute:NSLayoutAttributeWidth
+                                 multiplier:1
+                                   constant:0]];
     //height
-    [_scrollView addConstraint:[NSLayoutConstraint constraintWithItem:view
-                                                           attribute:NSLayoutAttributeHeight
-                                                           relatedBy:NSLayoutRelationEqual
-                                                              toItem:_scrollView
-                                                           attribute:NSLayoutAttributeHeight
-                                                          multiplier:1
-                                                            constant:0]];
+    [_scrollView addConstraint:
+     [NSLayoutConstraint constraintWithItem:view
+                                  attribute:NSLayoutAttributeHeight
+                                  relatedBy:NSLayoutRelationEqual
+                                     toItem:_scrollView
+                                  attribute:NSLayoutAttributeHeight
+                                 multiplier:1
+                                   constant:0]];
     //top
-    [contentView addConstraint:[NSLayoutConstraint constraintWithItem:view
-                                                            attribute:NSLayoutAttributeTop
-                                                            relatedBy:NSLayoutRelationEqual
-                                                               toItem:contentView
-                                                            attribute:NSLayoutAttributeTop
-                                                           multiplier:1
-                                                             constant:0]];
+    [contentView addConstraint:
+     [NSLayoutConstraint constraintWithItem:view
+                                  attribute:NSLayoutAttributeTop
+                                  relatedBy:NSLayoutRelationEqual
+                                     toItem:contentView
+                                  attribute:NSLayoutAttributeTop
+                                 multiplier:1
+                                   constant:0]];
     /* 计算left要多少 */
     //left
-    [_scrollView addConstraint:[NSLayoutConstraint constraintWithItem:view
-                                                           attribute:NSLayoutAttributeLeft
-                                                           relatedBy:NSLayoutRelationEqual
-                                                              toItem:_viewC
-                                                           attribute:NSLayoutAttributeRight
-                                                          multiplier:1
-                                                            constant:0]];
+    [_scrollView addConstraint:
+     [NSLayoutConstraint constraintWithItem:view
+                                  attribute:NSLayoutAttributeLeft
+                                  relatedBy:NSLayoutRelationEqual
+                                     toItem:_viewC
+                                  attribute:NSLayoutAttributeRight
+                                 multiplier:1
+                                   constant:0]];
     
     //
     _viewR = view;
@@ -381,12 +393,12 @@
     self.isDragByMyself = NO;
     
     if (_currentShowViewIndex == showViewIndex) {
-        NSLog(@"选择的index未变化，仍是%zd", showViewIndex);
+        //NSLog(@"选择的index未变化，仍是%zd", showViewIndex);
         return;
     }
     
     NSInteger oldShowViewIndex = _currentShowViewIndex;
-    NSLog(@"由%zd到%zd", oldShowViewIndex, showViewIndex);
+    //NSLog(@"由%zd到%zd", oldShowViewIndex, showViewIndex);
     
     
     BOOL isShowViewIndexLeftThanCurrent = showViewIndex < oldShowViewIndex || (oldShowViewIndex==0 && showViewIndex == self.views.count-1); //目标视图位于左侧的情况
@@ -522,7 +534,7 @@
     }
     //拖动drag的时候才会执行
     CGFloat contentOffsetX = scrollView.contentOffset.x;
-    NSLog(@"drag结束时contentOffsetX = %.1f", contentOffsetX);
+    //NSLog(@"drag结束时contentOffsetX = %.1f", contentOffsetX);
     CGFloat width = CGRectGetWidth(scrollView.frame);
     NSInteger maxIndex = self.views.count-1;
     
