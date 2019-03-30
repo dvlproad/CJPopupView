@@ -7,7 +7,6 @@
 //
 
 #import "PickerViewController.h"
-#import "CJDefaultDatePicker.h"
 #import "CJIndependentPickerView.h"
 //#import "CJRelatedPickerView.h"
 #import "CJRelatedPickerRichView.h"
@@ -18,7 +17,6 @@
 
 @interface PickerViewController () <CJRelatedPickerRichViewDelegate>
 {
-    CJDefaultDatePicker *birthdayPicker;
     CJIndependentPickerView *weightPicker;
     CJRelatedPickerRichView *areaPicker;
 }
@@ -35,80 +33,7 @@
 
 /// 生日选择
 - (IBAction)chooseBirthday:(id)sender{
-    if (birthdayPicker == nil) {
-        birthdayPicker = [[CJDefaultDatePicker alloc] init];
-        
-        CJDefaultToolbar *toolbar = [[CJDefaultToolbar alloc] initWithFrame:CGRectZero];
-        [birthdayPicker addToolbar:toolbar];
-        
-        NSDateFormatter *dateFormatter = birthdayPicker.dateFormatter;
-        
-        toolbar.option = CJDefaultToolbarOptionConfirm | CJDefaultToolbarOptionValue | CJDefaultToolbarOptionCancel;
-        
-        __weak typeof(birthdayPicker)weakbirthdayPicker = birthdayPicker;
-        [birthdayPicker setValueChangedHandel:^(UIDatePicker *datePicker) {
-            UIDatePicker *m_datePicker = datePicker;
-            
-            NSDate *date = m_datePicker.date;
-            NSDate *maximumDate = m_datePicker.maximumDate;
-            NSDate *minimumDate = m_datePicker.minimumDate;
-            
-            NSTimeZone *zone =[NSTimeZone systemTimeZone];
-            NSInteger interval = [zone secondsFromGMTForDate: date];
-            NSDate *localDate =[date dateByAddingTimeInterval: interval];
-            
-            NSLog(@"1当前选择:%@",localDate);
-            
-            if ([date compare:minimumDate] == NSOrderedAscending) {
-                NSLog(@"当前选择日期太小");
-            }else if ([date compare:maximumDate] == NSOrderedDescending) {
-                NSLog(@"当前选择日期太大");
-            }
-            
-            NSString *dateString = [dateFormatter stringFromDate:localDate];
-            [toolbar updateShowingValue:dateString];
-        }];
-        
-        [toolbar setCancelHandle:^{
-            [weakbirthdayPicker cj_hidePopupView];
-        }];
-        
-        [toolbar setConfirmHandle:^{
-            NSDate *selDate = weakbirthdayPicker.datePicker.date;
-            
-            dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
-            NSString *selDateString = [dateFormatter stringFromDate:selDate];
-            
-            [[[UIAlertView alloc]initWithTitle:@"所选日期为" message:selDateString delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
-            
-            [weakbirthdayPicker cj_hidePopupView];
-        }];
-        
-        
-        birthdayPicker.datePicker.datePickerMode = UIDatePickerModeDate;
-        birthdayPicker.datePicker.maximumDate = [NSDate date];
-        birthdayPicker.datePicker.minimumDate = [dateFormatter dateFromString:@"1900-01-01"];
-        
-        birthdayPicker.datePicker.date = [dateFormatter dateFromString:@"1989-12-27"];
-    }
-    NSDateFormatter *dateFormatter = birthdayPicker.dateFormatter;
-    dateFormatter.dateFormat = @"yyyy-MM-dd";
-    NSString *dateString = [dateFormatter stringFromDate:birthdayPicker.datePicker.date];
-    
-    CJDefaultToolbar *toolbar = (CJDefaultToolbar *)birthdayPicker.toolbar;
-    [toolbar updateShowingValue:dateString];
-    
-    CGFloat popupViewHeight = CGRectGetHeight(birthdayPicker.frame);
-    
-    UIColor *blankBGColor = [UIColor colorWithRed:.16 green:.17 blue:.21 alpha:.6];
-    [birthdayPicker cj_popupInBottomWindow:CJAnimationTypeNormal withHeight:popupViewHeight blankBGColor:blankBGColor showComplete:^{
-        NSLog(@"显示完成");
-    } tapBlankComplete:^() {
-        NSLog(@"点击背景完成");
-        [birthdayPicker cj_hidePopupView];
-        
-    }];
-    
+    [[[UIAlertView alloc]initWithTitle:@"请在AppCommonUICollect工程中查看" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
 }
 
 
@@ -248,10 +173,7 @@
 }
 
 
-- (void)dealloc{
-    [birthdayPicker cj_hidePopupView];
-    birthdayPicker = nil;
-    
+- (void)dealloc {
     [weightPicker cj_hidePopupView];
     weightPicker = nil;
     

@@ -53,7 +53,6 @@
 		785540AD1E7DC5F800F320E6 /* AreaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 785540A21E7DC5F800F320E6 /* AreaModel.m */; };
 		785540AE1E7DC5F800F320E6 /* GroupDataUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 785540A41E7DC5F800F320E6 /* GroupDataUtil.m */; };
 		785540AF1E7DC5F800F320E6 /* RadioButton_Slider.xib in Resources */ = {isa = PBXBuildFile; fileRef = 785540A61E7DC5F800F320E6 /* RadioButton_Slider.xib */; };
-		785540ED1E7DCA9900F320E6 /* CJDefaultDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 785540D91E7DCA9900F320E6 /* CJDefaultDatePicker.m */; };
 		785540EE1E7DCA9900F320E6 /* CJIndependentPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 785540DB1E7DCA9900F320E6 /* CJIndependentPickerView.m */; };
 		785540EF1E7DCA9900F320E6 /* CJRelatedPickerRichView.m in Sources */ = {isa = PBXBuildFile; fileRef = 785540DD1E7DCA9900F320E6 /* CJRelatedPickerRichView.m */; };
 		785540F11E7DCA9900F320E6 /* CJComponentDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 785540E31E7DCA9900F320E6 /* CJComponentDataModel.m */; };
@@ -169,8 +168,6 @@
 		785540A31E7DC5F800F320E6 /* GroupDataUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupDataUtil.h; sourceTree = "<group>"; };
 		785540A41E7DC5F800F320E6 /* GroupDataUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupDataUtil.m; sourceTree = "<group>"; };
 		785540A61E7DC5F800F320E6 /* RadioButton_Slider.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RadioButton_Slider.xib; sourceTree = "<group>"; };
-		785540D81E7DCA9900F320E6 /* CJDefaultDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDefaultDatePicker.h; sourceTree = "<group>"; };
-		785540D91E7DCA9900F320E6 /* CJDefaultDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDefaultDatePicker.m; sourceTree = "<group>"; };
 		785540DA1E7DCA9900F320E6 /* CJIndependentPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJIndependentPickerView.h; sourceTree = "<group>"; };
 		785540DB1E7DCA9900F320E6 /* CJIndependentPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJIndependentPickerView.m; sourceTree = "<group>"; };
 		785540DC1E7DCA9900F320E6 /* CJRelatedPickerRichView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJRelatedPickerRichView.h; sourceTree = "<group>"; };
@@ -535,8 +532,6 @@
 		785540D71E7DCA9900F320E6 /* CJPicker */ = {
 			isa = PBXGroup;
 			children = (
-				785540D81E7DCA9900F320E6 /* CJDefaultDatePicker.h */,
-				785540D91E7DCA9900F320E6 /* CJDefaultDatePicker.m */,
 				785540DA1E7DCA9900F320E6 /* CJIndependentPickerView.h */,
 				785540DB1E7DCA9900F320E6 /* CJIndependentPickerView.m */,
 				785540DC1E7DCA9900F320E6 /* CJRelatedPickerRichView.h */,
@@ -850,7 +845,6 @@
 				785540A91E7DC5F800F320E6 /* RelatedPickerViewController.m in Sources */,
 				784C15741E8E44850019D652 /* ImagePickerViewController.m in Sources */,
 				78516ABD20AC9E2000C0BFAF /* CJNormalImagePickerUtil.m in Sources */,
-				785540ED1E7DCA9900F320E6 /* CJDefaultDatePicker.m in Sources */,
 				7806B6EA1F59F6840077362F /* CJPhotoModel.m in Sources */,
 				7806B6E91F59F6840077362F /* MBProgressHUD+CJPhotoBrowser.m in Sources */,
 				780BAFA1224F3A4700AD0411 /* DemoPopupRadioButtons.m in Sources */,
