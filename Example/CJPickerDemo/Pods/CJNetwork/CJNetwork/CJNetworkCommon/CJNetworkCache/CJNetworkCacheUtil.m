@@ -22,7 +22,7 @@
 
 /** 完整的描述请参见文件头部 */
 + (void)cacheResponseObject:(nullable id)responseObject
-                     forUrl:(nullable NSString *)Url
+                     forUrl:(NSString *)Url
                      params:(nullable NSDictionary *)params
           cacheTimeInterval:(NSTimeInterval)cacheTimeInterval
 {
@@ -54,7 +54,7 @@
 }
 
 /** 完整的描述请参见文件头部 */
-+ (id<NSCoding>)requestCacheDataByUrl:(nullable NSString *)Url params:(nullable id)params
++ (id<NSCoding>)requestCacheDataByUrl:(NSString *)Url params:(nullable id)params
 {
     NSString *requestCacheKey = [self getRequestCacheKeyByRequestUrl:Url parameters:params];
     if (nil == requestCacheKey) {
@@ -106,7 +106,7 @@
  *
  *  return  是否删除成功
  */
-+ (BOOL)removeCacheForUrl:(nullable NSString *)Url params:(nullable id)params {
++ (BOOL)removeCacheForUrl:(NSString *)Url params:(nullable id)params {
     NSString *requestCacheKey = [self getRequestCacheKeyByRequestUrl:Url parameters:params];
     if (nil == requestCacheKey) {
         NSLog(@"error: requestCacheKey == nil, 无法读取缓存，提示网络不给力");

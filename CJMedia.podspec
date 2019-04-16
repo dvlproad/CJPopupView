@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   #验证方法：pod lib lint CJMedia.podspec --allow-warnings --use-libraries --verbose
   s.name         = "CJMedia"
-  s.version      = "0.0.8"
+  s.version      = "0.1.0"
   s.summary      = "自定义的多媒体(相册、图片、视频等)相关组件"
   s.homepage     = "https://github.com/dvlproad/CJPopupView"
 
@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/CJPopupView.git", :tag => "CJMedia_0.0.8" }
+  s.source       = { :git => "https://github.com/dvlproad/CJPopupView.git", :tag => "CJMedia_0.1.0" }
   # s.source_files  = "CJMedia/*.{h,m}"
 
   s.frameworks = "UIKit"
@@ -57,24 +57,6 @@ Pod::Spec.new do |s|
     ss.dependency 'MBProgressHUD'
     ss.dependency 'SDWebImage'
     ss.dependency 'CJBaseHelper/AuthorizationCJHelper'
-  end
-
-
-  s.subspec 'CJUploadImagePickerUtil' do |ss|
-    ss.source_files = "CJMedia/CJUploadImagePickerUtil/**/*.{h,m}"
-
-    ss.dependency 'CJMedia/MySingleImagePickerController'
-    ss.dependency 'CJMedia/CJPhotoBrowser'
-
-    ss.dependency 'CJNetwork/AFNetworkingUploadComponent'
-    ss.dependency 'CJFile/CJFileManager'
-  end
-
-  s.subspec 'CJNormalImagePickerUtil' do |ss|
-    ss.source_files = "CJMedia/CJNormalImagePickerUtil/**/*.{h,m}"
-
-    ss.dependency 'CJMedia/MySingleImagePickerController'
-    ss.dependency 'CJMedia/CJPhotoBrowser'
   end
 
 end

@@ -14,18 +14,20 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - CJBaseHelper/AuthorizationCJHelper (0.1.1)
-  - CJBaseHelper/NSObjectCJHelper (0.1.1)
-  - CJBaseUIKit/CJToast (0.4.2):
+  - CJBaseHelper/AuthorizationCJHelper (0.1.4)
+  - CJBaseHelper/NSObjectCJHelper (0.1.4)
+  - CJBaseUIKit/CJToast (0.4.6):
     - MBProgressHUD
-  - CJBaseUIKit/UIToolbar (0.4.2)
-  - CJBaseUIKit/UIView/CJPopupAction (0.4.2)
+  - CJBaseUIKit/UIImage (0.4.6)
+  - CJBaseUIKit/UIToolbar (0.4.6):
+    - CJBaseUIKit/UIImage
+  - CJBaseUIKit/UIView/CJPopupAction (0.4.6)
   - CJComplexUIKit/CJCollectionView/CJBaseCollectionViewCell (0.2.3)
   - CJComplexUIKit/CJCollectionView/MyEqualCellSizeCollectionView (0.2.3)
-  - CJFile/CJFileManager (0.0.8)
-  - CJNetwork/AFNetworkingUploadComponent (0.6.9):
+  - CJFile/CJFileManager (0.0.9)
+  - CJNetwork/AFNetworkingUploadComponent (0.7.0-beta.7):
     - CJNetwork/CJNetworkCommon
-  - CJNetwork/CJNetworkCommon (0.6.9):
+  - CJNetwork/CJNetworkCommon (0.7.0-beta.7):
     - AFNetworking
     - MJExtension
     - YYCache
@@ -43,14 +45,14 @@ PODS:
   - Mantle (2.1.0):
     - Mantle/extobjc (= 2.1.0)
   - Mantle/extobjc (2.1.0)
-  - Masonry (1.0.2)
-  - MBProgressHUD (1.0.0)
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.1.0)
   - MJExtension (3.0.16)
   - PureLayout (3.0.2)
-  - SDWebImage (4.0.0):
-    - SDWebImage/Core (= 4.0.0)
-  - SDWebImage/Core (4.0.0)
-  - SVProgressHUD (2.1.2)
+  - SDWebImage (5.0.1):
+    - SDWebImage/Core (= 5.0.1)
+  - SDWebImage/Core (5.0.1)
+  - SVProgressHUD (2.2.5)
   - YYCache (1.0.4)
 
 DEPENDENCIES:
@@ -62,7 +64,7 @@ DEPENDENCIES:
   - CJComplexUIKit/CJCollectionView/CJBaseCollectionViewCell
   - CJComplexUIKit/CJCollectionView/MyEqualCellSizeCollectionView
   - CJFile/CJFileManager
-  - CJNetwork/AFNetworkingUploadComponent (~> 0.6.9)
+  - CJNetwork/AFNetworkingUploadComponent (~> 0.7.0-beta.7)
   - CJRadio (~> 1.3.0)
   - DateTools
   - JGActionSheet
@@ -95,23 +97,23 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  CJBaseHelper: d9bdeb7f4f6d2e3d58171f2a4220f7c19b2daa1f
-  CJBaseUIKit: afc15a1eaa9c8355373f263af3559e861fab5098
+  CJBaseHelper: dd715e18591da9df5d06364098300591220f0535
+  CJBaseUIKit: 91ac69f363c9346e083bce74d0ceadcd6a2c2f0a
   CJComplexUIKit: 9d1b1219f2e1e04b468c2c78b01f6e8cec9a467b
-  CJFile: 18e461ec96ee07ba501b1e19f2ddde4a38bec8aa
-  CJNetwork: 85c0e85684a4e3f2a31c9bf93ecbac7fbaa853b5
+  CJFile: 6c1e6d55b3b94e8afbaa9f413f131301d15fdc48
+  CJNetwork: c5dc78713a8e65ae4022025e998f48c2fa11b72d
   CJRadio: 327a49306e49ef9877a3a39c630e49ccb6c9580a
   DateTools: 933ac9c490f21f92127cf690ccd8c397e0126caf
   JGActionSheet: 2cfca820b57a11ec4b4a5655d45ee599fbeddc05
   Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
-  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
-  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJExtension: 54dbbf6ee728f1a88e9aad904353d007831c7847
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
-  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
-  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  SDWebImage: 27dd2c9ea07a2252f94557c9fbb6105ee94b74c9
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
 
-PODFILE CHECKSUM: 5dab7452cd260ba018366ab4e4760a7ee69fdc0f
+PODFILE CHECKSUM: 242929adf241217fbe0ca9f7248158fcd6bf9769
 
 COCOAPODS: 1.6.1

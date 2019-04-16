@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface CJRequestSimulateUtil : NSObject
 
 #pragma mark - remoteSimulateApi
@@ -24,5 +26,7 @@
 #pragma mark - localSimulateApi
 /// 开始本地模拟接口请求
 + (void)localSimulateApi:(NSString *)apiSuffix completeBlock:(void (^)(NSDictionary *responseDictionary))completeBlock;
+
+NS_ASSUME_NONNULL_END
 
 @end

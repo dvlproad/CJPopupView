@@ -14,9 +14,9 @@
 - (void)cjConfigureUploadProgressView:(CJUploadProgressView *)uploadProgressView
            withUploadRequestByManager:(AFHTTPSessionManager *)manager
                                   Url:(NSString *)Url
-                               params:(id)params
-                         settingModel:(CJRequestSettingModel *)settingModel
-                              fileKey:(NSString *)fileKey
+                            urlParams:(nullable id)urlParams
+                           formParams:(nullable id)formParams
+                         settingModel:(nullable CJRequestSettingModel *)settingModel
                        fileValueOwner:(CJUploadFileModelsOwner *)fileValueOwner
           uploadMomentInfoChangeBlock:(void(^)(CJUploadFileModelsOwner *momentInfoOwner))uploadMomentInfoChangeBlock
  getUploadMomentInfoFromResopnseBlock:(CJUploadMomentInfo * (^)(id responseObject))getUploadMomentInfoFromResopnseBlock
@@ -25,12 +25,12 @@
     NSURLSessionDataTask *operation = fileValueOwner.operation;
     if (operation == nil) {
         operation =
-        [manager cj_postUploadUrl:Url
-                           params:params
-                     settingModel:settingModel
-                          fileKey:fileKey
-                   fileValueOwner:fileValueOwner
-      uploadMomentInfoChangeBlock:uploadMomentInfoChangeBlock
+        [manager cj_uploadUrl:Url
+                    urlParams:urlParams
+                   formParams:formParams
+                 settingModel:settingModel
+               fileValueOwner:fileValueOwner
+  uploadMomentInfoChangeBlock:uploadMomentInfoChangeBlock
 getUploadMomentInfoFromResopnseBlock:getUploadMomentInfoFromResopnseBlock];
         
         fileValueOwner.operation = operation;
@@ -45,12 +45,12 @@ getUploadMomentInfoFromResopnseBlock:getUploadMomentInfoFromResopnseBlock];
         [strongFileValueOwner.operation cancel];
         
         NSURLSessionDataTask *newOperation =
-        [manager cj_postUploadUrl:Url
-                           params:params
-                     settingModel:settingModel
-                          fileKey:fileKey
-                   fileValueOwner:fileValueOwner
-      uploadMomentInfoChangeBlock:uploadMomentInfoChangeBlock
+        [manager cj_uploadUrl:Url
+                    urlParams:urlParams
+                   formParams:formParams
+                 settingModel:settingModel
+               fileValueOwner:fileValueOwner
+  uploadMomentInfoChangeBlock:uploadMomentInfoChangeBlock
 getUploadMomentInfoFromResopnseBlock:getUploadMomentInfoFromResopnseBlock];
         
         strongFileValueOwner.operation = newOperation;
