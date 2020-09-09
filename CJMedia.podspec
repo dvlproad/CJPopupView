@@ -48,15 +48,5 @@ Pod::Spec.new do |s|
     #ss.frameworks = "MediaPlayer"
   end
 
-  
-  s.subspec 'CJPhotoBrowser' do |ss|
-    ss.source_files = "CJMedia/CJPhotoBrowser/**/*.{h,m}"
-    ss.resources = "CJMedia/CJPhotoBrowser/**/*.{png,xib,bundle}"
-
-    ss.dependency 'Masonry'
-    ss.dependency 'MBProgressHUD'
-    ss.dependency 'SDWebImage'
-    ss.dependency 'CJBaseHelper/AuthorizationCJHelper'
-  end
 
 end

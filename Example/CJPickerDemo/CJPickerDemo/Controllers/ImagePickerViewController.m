@@ -9,7 +9,7 @@
 #import "ImagePickerViewController.h"
 #import <CJBaseHelper/AuthorizationCJHelper.h>
 #import <JGActionSheet/JGActionSheet.h>
-#import "MySingleImagePickerController.h"
+#import "CQSystemImagePickerController.h"
 #import "CJImagePickerViewController.h"
 
 
@@ -18,7 +18,7 @@
 @interface ImagePickerViewController () {
     
 }
-@property (nonatomic, strong) MySingleImagePickerController *singleImagePickerController;
+@property (nonatomic, strong) CQSystemImagePickerController *singleImagePickerController;
 
 @end
 
@@ -55,9 +55,9 @@
     [sheet showInView:self.view animated:YES];
 }
 
-- (MySingleImagePickerController *)singleImagePickerController {
+- (CQSystemImagePickerController *)singleImagePickerController {
     if (_singleImagePickerController == nil) {
-        MySingleImagePickerController *singleImagePickerController = [[MySingleImagePickerController alloc] init];
+        CQSystemImagePickerController *singleImagePickerController = [[CQSystemImagePickerController alloc] init];
         [singleImagePickerController setSingleMediaTypeForVideo:NO];
         singleImagePickerController.saveLocation = CJSaveLocationNone;
         [singleImagePickerController pickImageFinishBlock:^(UIImage *image) {

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MySingleImagePickerController.h"
+#import "CQSystemImagePickerController.h"
 #import "CJImagePickerViewController.h"
 
 #import "CJImageUploadFileModelsOwner.h"
@@ -25,7 +25,7 @@
  *
  *  @return 拍照的picker视图控制器
  */
-+ (MySingleImagePickerController *)takePhotoPickerWithPickCompleteBlock:(void (^)(NSArray<CJImageUploadFileModelsOwner *> *pickedImageItems))pickImageCompleteBlock;
++ (CQSystemImagePickerController *)takePhotoPickerWithPickCompleteBlock:(void (^)(NSArray<CJImageUploadFileModelsOwner *> *pickedImageItems))pickImageCompleteBlock;
 
 
 /**

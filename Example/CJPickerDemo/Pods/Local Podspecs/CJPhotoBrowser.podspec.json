@@ -1,0 +1,33 @@
+{
+  "name": "CJPhotoBrowser",
+  "version": "0.1.0",
+  "summary": "自定义的“图片浏览器",
+  "homepage": "https://github.com/dvlproad/CJPopupView",
+  "description": "*、CJPhotoBrowser：自定义的“图片浏览器CJPhotoBrowser”\n\n A longer description of CJPhotoBrowser in Markdown format.\n\n * Think: Why did you write this? What is the focus? What does it do?\n * CocoaPods will be using this to generate tags, and improve search results.\n * Try to keep it short, snappy and to the point.\n * Finally, don't worry about the indent, CocoaPods strips it!",
+  "license": "MIT",
+  "authors": {
+    "dvlproad": ""
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source": {
+    "git": "https://github.com/dvlproad/CJPopupView.git",
+    "tag": "CJPhotoBrowser_0.1.0"
+  },
+  "frameworks": "UIKit",
+  "requires_arc": true,
+  "source_files": "CJPhotoBrowser/**/*.{h,m}",
+  "resources": "CJPhotoBrowser/**/*.{png,xib,bundle}",
+  "dependencies": {
+    "Masonry": [
+
+    ],
+    "MBProgressHUD": [
+
+    ],
+    "SDWebImage": [
+
+    ]
+  }
+}
