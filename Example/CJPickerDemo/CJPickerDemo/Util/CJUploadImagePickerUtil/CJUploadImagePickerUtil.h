@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CQImagePickerKit/CQImagePickerControllerFactory.h>
+#import <CJImagePickerKit/CJSystemImagePickerController.h>
+#import "CJImagePickerViewController.h"
 
 #import "CJImageUploadFileModelsOwner.h"
 #import "CJVideoUploadFileModelsOwner.h"

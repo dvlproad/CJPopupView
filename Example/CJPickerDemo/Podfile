@@ -8,7 +8,7 @@ target 'CJPickerDemo' do
   pod 'CQDemoKit',            '~> 0.5.2',     :subspecs => ['BaseVC', 'BaseUtil']
   
   pod 'CJPhotoBrowser',      :path => '../../’
-  pod 'CQImagePickerKit/SystemImagePickerController'
+  pod 'CJImagePickerKit/SystemImagePickerController'
   
     #基本的第三方库
     pod 'Masonry'

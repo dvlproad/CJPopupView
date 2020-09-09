@@ -627,7 +627,6 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CJPickerDemo/Pods-CJPickerDemo-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/CJImagePickerKit/CJImagePickerKit.bundle",
 				"${PODS_ROOT}/../../../CJPhotoBrowser/CJPhotoBrowser/CJPhotoBrowser.bundle/error.png",
 				"${PODS_ROOT}/../../../CJPhotoBrowser/CJPhotoBrowser/CJPhotoBrowser.bundle/error@2x.png",
 				"${PODS_ROOT}/../../../CJPhotoBrowser/CJPhotoBrowser/CJPhotoBrowser.bundle/error@3x.png",
@@ -648,7 +647,6 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CJImagePickerKit.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/error.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/error@2x.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/error@3x.png",

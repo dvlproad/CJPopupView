@@ -97,7 +97,6 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/CJImagePickerKit/CJImagePickerKit.bundle"
   install_resource "${PODS_ROOT}/../../../CJPhotoBrowser/CJPhotoBrowser/CJPhotoBrowser.bundle/error.png"
   install_resource "${PODS_ROOT}/../../../CJPhotoBrowser/CJPhotoBrowser/CJPhotoBrowser.bundle/error@2x.png"
   install_resource "${PODS_ROOT}/../../../CJPhotoBrowser/CJPhotoBrowser/CJPhotoBrowser.bundle/error@3x.png"
@@ -117,7 +116,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/CJImagePickerKit/CJImagePickerKit.bundle"
   install_resource "${PODS_ROOT}/../../../CJPhotoBrowser/CJPhotoBrowser/CJPhotoBrowser.bundle/error.png"
   install_resource "${PODS_ROOT}/../../../CJPhotoBrowser/CJPhotoBrowser/CJPhotoBrowser.bundle/error@2x.png"
   install_resource "${PODS_ROOT}/../../../CJPhotoBrowser/CJPhotoBrowser/CJPhotoBrowser.bundle/error@3x.png"

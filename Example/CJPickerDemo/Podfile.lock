@@ -16,19 +16,12 @@ PODS:
     - AFNetworking/NSURLSession
   - CJBaseHelper/AuthorizationCJHelper (0.1.4)
   - CJBaseHelper/NSObjectCJHelper (0.1.4)
-  - CJBaseUIKit/UIColor (0.6.0)
   - CJBaseUIKit/UIImage (0.6.0)
   - CJBaseUIKit/UIToolbar (0.6.0):
     - CJBaseUIKit/UIImage
   - CJBaseUIKit/UIView/CJPopupAction (0.6.0)
   - CJBaseUtil/CJDataUtil (0.5.1)
   - CJFile/CJFileManager (0.0.9)
-  - CJImagePickerKit (0.0.3):
-    - CJImagePickerKit/CustomImagePickerController (= 0.0.3)
-    - CJImagePickerKit/SystemImagePickerController (= 0.0.3)
-  - CJImagePickerKit/CustomImagePickerController (0.0.3):
-    - Masonry
-    - MBProgressHUD
   - CJImagePickerKit/SystemImagePickerController (0.0.3):
     - Masonry
   - CJNetwork/AFNetworkingUploadComponent (0.7.1-beta.1):
@@ -71,18 +64,6 @@ PODS:
     - CJBaseUtil/CJDataUtil
     - CQDemoKit/BaseUtil
     - CQDemoKit/BaseVC/Base
-  - CQImagePickerKit (0.1.3):
-    - CJBaseUIKit/UIColor
-    - CQImagePickerKit/ImagePickerController (= 0.1.3)
-    - CQImagePickerKit/ImagePickerPermissionManager (= 0.1.3)
-    - Masonry
-  - CQImagePickerKit/ImagePickerController (0.1.3):
-    - CJBaseUIKit/UIColor
-    - CJImagePickerKit
-    - Masonry
-  - CQImagePickerKit/ImagePickerPermissionManager (0.1.3):
-    - CJBaseUIKit/UIColor
-    - Masonry
   - Mantle (2.1.1):
     - Mantle/extobjc (= 2.1.1)
   - Mantle/extobjc (2.1.1)
@@ -103,12 +84,12 @@ DEPENDENCIES:
   - CJBaseUIKit/UIToolbar
   - CJBaseUIKit/UIView/CJPopupAction
   - CJFile/CJFileManager
+  - CJImagePickerKit/SystemImagePickerController
   - CJNetwork/AFNetworkingUploadComponent (~> 0.7.0-beta.7)
   - CJPhotoBrowser (from `../../`)
   - CJRadio (~> 1.4.0)
   - CQDemoKit/BaseUtil (~> 0.5.2)
   - CQDemoKit/BaseVC (~> 0.5.2)
-  - CQImagePickerKit
   - Mantle
   - Masonry
   - MBProgressHUD
@@ -119,7 +100,6 @@ DEPENDENCIES:
 SPEC REPOS:
   https://gitee.com/dvlproad/dvlproadSpecs:
     - CJImagePickerKit
-    - CQImagePickerKit
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - CJBaseHelper
@@ -153,7 +133,6 @@ SPEC CHECKSUMS:
   CJPhotoBrowser: 2cc54a6af61680e28d11b593f0bf80740417109a
   CJRadio: d6bb98e614ae834a21801006537a046bb53c7c73
   CQDemoKit: 94f6c3052a056481c0d79e2db5d50130d9e99a91
-  CQImagePickerKit: a85b405eb9502ef953eba359ac9c6ef0a7992fef
   Mantle: 35238ae6f2e2b2d474fa7b67fee82a59fea71915
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
@@ -163,6 +142,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
 
-PODFILE CHECKSUM: 9317990da2784fc32d7b3db3c5f0a3fc64b5024d
+PODFILE CHECKSUM: 04d91b4169471445bc68eb2beda5e2addf8a05ac
 
 COCOAPODS: 1.9.3
