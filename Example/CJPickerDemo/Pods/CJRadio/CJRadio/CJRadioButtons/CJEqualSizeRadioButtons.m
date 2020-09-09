@@ -96,7 +96,7 @@
     return cellWidth;
 }
 
-- (CJButton *)cj_radioButtons:(CJRadioButtons *)radioButtons cellForComponentAtIndex:(NSInteger)index {
+- (CJRadioButton *)cj_radioButtons:(CJRadioButtons *)radioButtons cellForComponentAtIndex:(NSInteger)index {
     NSIndexPath *indexPath = [NSIndexPath indexPathForItem:index inSection:0];
     
     NSAssert(self.configureDataCellBlock != nil, @"未设置configureDataCellBlock");

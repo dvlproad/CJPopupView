@@ -77,12 +77,12 @@
     return sectionWidth;
 }
 
-- (CJButton *)cj_radioButtons:(CJRadioButtons *)radioButtons cellForComponentAtIndex:(NSInteger)index {
-    CJButton *radioButton = [[CJButton alloc] init];
+- (CJRadioButton *)cj_radioButtons:(CJRadioButtons *)radioButtons cellForComponentAtIndex:(NSInteger)index {
+    CJRadioButton *radioButton = [[CJRadioButton alloc] init];
     radioButton.imagePosition = CJButtonImagePositionRight;
     
     radioButton.imageView.image = self.dropDownImage;
-    radioButton.stateChangeCompleteBlock = ^(CJButton *radioButton) {
+    radioButton.stateChangeCompleteBlock = ^(CJRadioButton *radioButton) {
         [UIView animateWithDuration:0.3 animations:^{
             radioButton.imageView.transform = CGAffineTransformRotate(radioButton.imageView.transform, DEGREES_TO_RADIANS(180));
         }];
@@ -165,7 +165,7 @@
                 CGFloat popupViewHeight = CGRectGetHeight(popupView.frame);
                 
                 UIColor *blankBGColor = [UIColor colorWithRed:.16 green:.17 blue:.21 alpha:.6];
-                [popupView cj_popupInBottomWindow:CJAnimationTypeNormal withHeight:popupViewHeight blankBGColor:blankBGColor showComplete:^{
+                [popupView cj_popupInBottomWindow:CJAnimationTypeNormal withHeight:popupViewHeight edgeInsets:UIEdgeInsetsZero blankBGColor:blankBGColor showComplete:^{
                     showComplete(index_cur);
                 } tapBlankComplete:^{
                     tapBlankComplete(index_cur);

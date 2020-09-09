@@ -246,8 +246,8 @@
     return sectionWidth;
 }
 
-- (CJButton *)cj_radioButtons:(CJRadioButtons *)radioButtons cellForComponentAtIndex:(NSInteger)index {
-    CJButton *radioButton = [self.dataSource cj_buttonControllerView:self cellForComponentAtIndex:index];
+- (CJRadioButton *)cj_radioButtons:(CJRadioButtons *)radioButtons cellForComponentAtIndex:(NSInteger)index {
+    CJRadioButton *radioButton = [self.dataSource cj_buttonControllerView:self cellForComponentAtIndex:index];
     
     CJRadioModule *radioModule = [self.radioModules objectAtIndex:index];
     [radioButton setTitle:radioModule.title];

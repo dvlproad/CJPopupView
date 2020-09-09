@@ -11,8 +11,6 @@
 #import "RelatedPickerViewController.h"
 #import "RelatedPickerViewController2.h"
 
-#import "ImagePickerViewController.h"
-
 @interface ViewController ()
 
 @end
@@ -40,10 +38,6 @@
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
-- (IBAction)goImagePickerViewController:(id)sender {
-    ImagePickerViewController *viewController = [[ImagePickerViewController alloc] initWithNibName:@"ImagePickerViewController" bundle:nil];
-    [self.navigationController pushViewController:viewController animated:YES];
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

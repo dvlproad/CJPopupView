@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "CJButton.h"
+#import "CJRadioButton.h"
 
 typedef NS_ENUM(NSUInteger, CJRadioButtonType) {
     RadioButtonTypeNormal = 0,
@@ -22,7 +22,7 @@ typedef NS_ENUM(NSUInteger, CJRadioButtonType) {
 @required
 - (NSInteger)cj_numberOfComponentsInRadioButtons:(CJRadioButtons *)radioButtons;
 
-- (CJButton *)cj_radioButtons:(CJRadioButtons *)radioButtons cellForComponentAtIndex:(NSInteger)index;
+- (CJRadioButton *)cj_radioButtons:(CJRadioButtons *)radioButtons cellForComponentAtIndex:(NSInteger)index;
 
 - (CGFloat)cj_radioButtons:(CJRadioButtons *)radioButtons widthForComponentAtIndex:(NSInteger)index;
 
@@ -51,11 +51,11 @@ typedef NS_ENUM(NSUInteger, CJRadioButtonType) {
 
 
 
-//由于点击CJButton的时候，还要涉及到其他CJButton中图标的变化，所以CJRadioButtons不适合再分开。
+//由于点击CJRadioButton的时候，还要涉及到其他CJRadioButton中图标的变化，所以CJRadioButtons不适合再分开。
 @interface CJRadioButtons : UIView {
     
 }
-@property (nonatomic, strong, readonly) NSArray<CJButton *> *radioButtons;/**< 所有的单选按钮数组 */
+@property (nonatomic, strong, readonly) NSArray<CJRadioButton *> *radioButtons;/**< 所有的单选按钮数组 */
 @property (nonatomic, assign, readonly) NSInteger currentSelectedIndex;   /**< 当前选中的按钮的index值（当该值为默认的－1时，表示都没有选中） */
 
 @property (nonatomic, weak) id <CJRadioButtonsDataSource> dataSource;

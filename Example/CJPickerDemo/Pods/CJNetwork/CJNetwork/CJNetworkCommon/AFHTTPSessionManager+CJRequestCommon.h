@@ -7,7 +7,8 @@
 //
 
 #import <AFNetworking/AFNetworking.h>
-#import "CJRequestSettingModel.h"
+#import "CJRequestCacheSettingModel.h"
+#import "CJRequestLogSettingModel.h"
 #import "CJRequestInfoModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -22,7 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 在请求前根据设置做相应处理
 - (BOOL)__didEventBeforeStartRequestWithUrl:(NSString *)Url
                                      params:(nullable NSDictionary *)params
-                               settingModel:(nullable CJRequestSettingModel *)settingModel
+                          cacheSettingModel:(nullable CJRequestCacheSettingModel *)cacheSettingModel
+                                    logType:(CJRequestLogType)logType
                                     success:(nullable void (^)(CJSuccessRequestInfo * _Nullable successRequestInfo))success;
 
 ///网络请求获取到数据时候执行的方法(responseObject必须是解密后的数据)
@@ -31,7 +33,8 @@ NS_ASSUME_NONNULL_BEGIN
                        isCacheData:(BOOL)isCacheData
                             forUrl:(NSString *)Url
                             params:(nullable id)params
-                      settingModel:(nullable CJRequestSettingModel *)settingModel
+                 cacheSettingModel:(nullable CJRequestCacheSettingModel *)cacheSettingModel
+                           logType:(CJRequestLogType)logType
                            success:(nullable void (^)(CJSuccessRequestInfo * _Nullable successRequestInfo))success;
 
 ///网络请求不到数据的时候（无网 或者 有网但服务器异常等无数据时候）执行的方法
@@ -39,7 +42,7 @@ NS_ASSUME_NONNULL_BEGIN
                  withResponseError:(NSError * _Nullable)error
                             forUrl:(NSString *)Url
                             params:(nullable id)params
-                      settingModel:(nullable CJRequestSettingModel *)settingModel
+                           logType:(CJRequestLogType)logType
                            failure:(nullable void (^)(CJFailureRequestInfo * _Nullable failureRequestInfo))failure;
 
 NS_ASSUME_NONNULL_END

@@ -97,12 +97,7 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "${PODS_ROOT}/CJBaseUIKit/CJBaseUIKit/CJToast/Resources/CJToast_error.png"
-  install_resource "${PODS_ROOT}/CJBaseUIKit/CJBaseUIKit/CJToast/Resources/CJToast_error@2x.png"
-  install_resource "${PODS_ROOT}/CJBaseUIKit/CJBaseUIKit/CJToast/Resources/CJToast_error@3x.png"
-  install_resource "${PODS_ROOT}/CJBaseUIKit/CJBaseUIKit/CJToast/Resources/CJToast_success.png"
-  install_resource "${PODS_ROOT}/CJBaseUIKit/CJBaseUIKit/CJToast/Resources/CJToast_success@2x.png"
-  install_resource "${PODS_ROOT}/CJBaseUIKit/CJBaseUIKit/CJToast/Resources/CJToast_success@3x.png"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/CJImagePickerKit/CJImagePickerKit.bundle"
   install_resource "${PODS_ROOT}/../../../CJPhotoBrowser/CJPhotoBrowser/CJPhotoBrowser.bundle/error.png"
   install_resource "${PODS_ROOT}/../../../CJPhotoBrowser/CJPhotoBrowser/CJPhotoBrowser.bundle/error@2x.png"
   install_resource "${PODS_ROOT}/../../../CJPhotoBrowser/CJPhotoBrowser/CJPhotoBrowser.bundle/error@3x.png"
@@ -119,16 +114,10 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/CJRadio/CJRadio/CJRadioButtons/Resources/arrowRight_gray@2x.png"
   install_resource "${PODS_ROOT}/CJRadio/CJRadio/CJRadioButtons/Resources/arrowRight_red@2x.png"
   install_resource "${PODS_ROOT}/CJRadio/CJRadio/CJRadioButtons/Resources/arrowUp_white@2x.png"
-  install_resource "${PODS_ROOT}/DateTools/DateTools/DateTools/DateTools.bundle"
   install_resource "${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "${PODS_ROOT}/CJBaseUIKit/CJBaseUIKit/CJToast/Resources/CJToast_error.png"
-  install_resource "${PODS_ROOT}/CJBaseUIKit/CJBaseUIKit/CJToast/Resources/CJToast_error@2x.png"
-  install_resource "${PODS_ROOT}/CJBaseUIKit/CJBaseUIKit/CJToast/Resources/CJToast_error@3x.png"
-  install_resource "${PODS_ROOT}/CJBaseUIKit/CJBaseUIKit/CJToast/Resources/CJToast_success.png"
-  install_resource "${PODS_ROOT}/CJBaseUIKit/CJBaseUIKit/CJToast/Resources/CJToast_success@2x.png"
-  install_resource "${PODS_ROOT}/CJBaseUIKit/CJBaseUIKit/CJToast/Resources/CJToast_success@3x.png"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/CJImagePickerKit/CJImagePickerKit.bundle"
   install_resource "${PODS_ROOT}/../../../CJPhotoBrowser/CJPhotoBrowser/CJPhotoBrowser.bundle/error.png"
   install_resource "${PODS_ROOT}/../../../CJPhotoBrowser/CJPhotoBrowser/CJPhotoBrowser.bundle/error@2x.png"
   install_resource "${PODS_ROOT}/../../../CJPhotoBrowser/CJPhotoBrowser/CJPhotoBrowser.bundle/error@3x.png"
@@ -145,7 +134,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_ROOT}/CJRadio/CJRadio/CJRadioButtons/Resources/arrowRight_gray@2x.png"
   install_resource "${PODS_ROOT}/CJRadio/CJRadio/CJRadioButtons/Resources/arrowRight_red@2x.png"
   install_resource "${PODS_ROOT}/CJRadio/CJRadio/CJRadioButtons/Resources/arrowUp_white@2x.png"
-  install_resource "${PODS_ROOT}/DateTools/DateTools/DateTools/DateTools.bundle"
   install_resource "${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
 fi
 

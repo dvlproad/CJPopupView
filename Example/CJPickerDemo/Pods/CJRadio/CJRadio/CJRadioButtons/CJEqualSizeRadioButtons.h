@@ -10,7 +10,7 @@
 #import "CJEqualSizeSettingModel.h"
 
 
-typedef CJButton* (^CJConfigureScrollViewCellBlock)(CJRadioButtons *radioButtons, NSIndexPath *indexPath);
+typedef CJRadioButton* (^CJConfigureScrollViewCellBlock)(CJRadioButtons *radioButtons, NSIndexPath *indexPath);
 typedef void (^CJDidTapScrollViewItemBlock)(CJRadioButtons *radioButtons, NSIndexPath *indexPath); /**< 包括 didSelectItemAtIndexPath 和didDeselectItemAtIndexPath */
 
 @interface CJEqualSizeRadioButtons : CJRadioButtons {

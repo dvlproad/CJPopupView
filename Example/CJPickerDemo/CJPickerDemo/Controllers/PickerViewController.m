@@ -57,7 +57,7 @@
     areaPicker.frame = CGRectMake(0, 0, 400, 162);
     CGFloat popupViewHeight = CGRectGetHeight(areaPicker.frame);
     UIColor *blankBGColor = [UIColor colorWithRed:.16 green:.17 blue:.21 alpha:.6];
-    [areaPicker cj_popupInBottomWindow:CJAnimationTypeNormal withHeight:popupViewHeight blankBGColor:blankBGColor showComplete:^{
+    [areaPicker cj_popupInBottomWindow:CJAnimationTypeNormal withHeight:popupViewHeight edgeInsets:UIEdgeInsetsZero blankBGColor:blankBGColor showComplete:^{
         NSLog(@"显示完成");
     } tapBlankComplete:^() {
         NSLog(@"点击背景完成");
@@ -114,7 +114,7 @@
     
     CGFloat popupViewHeight = CGRectGetHeight(weightPicker.frame);
     UIColor *blankBGColor = [UIColor colorWithRed:.16 green:.17 blue:.21 alpha:.6];
-    [weightPicker cj_popupInBottomWindow:CJAnimationTypeNormal withHeight:popupViewHeight blankBGColor:blankBGColor showComplete:^{
+    [weightPicker cj_popupInBottomWindow:CJAnimationTypeNormal withHeight:popupViewHeight edgeInsets:UIEdgeInsetsZero blankBGColor:blankBGColor showComplete:^{
         NSLog(@"显示完成");
     } tapBlankComplete:^() {
         NSLog(@"点击背景完成");

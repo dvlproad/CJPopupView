@@ -20,7 +20,7 @@
 
 @required
 /** 获取数据源 */
-- (CJButton *)cj_buttonControllerView:(CJRadioButtonCycleComposeView *)buttonControllerView cellForComponentAtIndex:(NSInteger)index;
+- (CJRadioButton *)cj_buttonControllerView:(CJRadioButtonCycleComposeView *)buttonControllerView cellForComponentAtIndex:(NSInteger)index;
 
 @end
 

@@ -16,7 +16,8 @@
                                   Url:(NSString *)Url
                             urlParams:(nullable id)urlParams
                            formParams:(nullable id)formParams
-                         settingModel:(nullable CJRequestSettingModel *)settingModel
+                    cacheSettingModel:(nullable CJRequestCacheSettingModel *)cacheSettingModel
+                              logType:(CJRequestLogType)logType
                        fileValueOwner:(CJUploadFileModelsOwner *)fileValueOwner
           uploadMomentInfoChangeBlock:(void(^)(CJUploadFileModelsOwner *momentInfoOwner))uploadMomentInfoChangeBlock
  getUploadMomentInfoFromResopnseBlock:(CJUploadMomentInfo * (^)(id responseObject))getUploadMomentInfoFromResopnseBlock
@@ -28,7 +29,8 @@
         [manager cj_uploadUrl:Url
                     urlParams:urlParams
                    formParams:formParams
-                 settingModel:settingModel
+            cacheSettingModel:cacheSettingModel
+                      logType:logType
                fileValueOwner:fileValueOwner
   uploadMomentInfoChangeBlock:uploadMomentInfoChangeBlock
 getUploadMomentInfoFromResopnseBlock:getUploadMomentInfoFromResopnseBlock];
@@ -48,7 +50,8 @@ getUploadMomentInfoFromResopnseBlock:getUploadMomentInfoFromResopnseBlock];
         [manager cj_uploadUrl:Url
                     urlParams:urlParams
                    formParams:formParams
-                 settingModel:settingModel
+            cacheSettingModel:cacheSettingModel
+                      logType:logType
                fileValueOwner:fileValueOwner
   uploadMomentInfoChangeBlock:uploadMomentInfoChangeBlock
 getUploadMomentInfoFromResopnseBlock:getUploadMomentInfoFromResopnseBlock];

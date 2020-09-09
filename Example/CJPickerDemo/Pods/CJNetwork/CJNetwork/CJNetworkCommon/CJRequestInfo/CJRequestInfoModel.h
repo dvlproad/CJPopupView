@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CJRequestLogSettingModel.h"
 
 /// 网络请求方法
 typedef NS_ENUM(NSUInteger, CJRequestMethod) {
@@ -14,15 +15,8 @@ typedef NS_ENUM(NSUInteger, CJRequestMethod) {
     CJRequestMethodGET,
 };
 
-/// 网络请求结果显示方式
-typedef NS_ENUM(NSUInteger, CJRequestLogType) {
-    CJRequestLogTypeNone = 0,
-    CJRequestLogTypeClean,
-    CJRequestLogTypeConsoleLog,
-    CJRequestLogTypeSuppendWindow,
-};
 
-
+/// 网络请求的整体信息(包括请求前的request信息和请求后的reponse信息)
 @interface CJRequestInfoModel : NSObject
 
 @property (nonatomic, copy) NSString *Url;              /**< 请求的地址 */

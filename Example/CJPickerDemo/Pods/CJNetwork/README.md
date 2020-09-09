@@ -1,5 +1,13 @@
 # CJNetwork
+
+免费api：[https://api.you-fire.com/youapi/api/index](https://api.you-fire.com/youapi/api/index)
+
+* [免费api-网易新闻](https://api.you-fire.com/youapi/api/detail/2332fc38958311e986e700163e0e0ef0)
+
+
+
 ## 一、功能介绍(Feature introduce)
+
 二次封装AFNetworking，增加实现
 
 * 1、在接口请求中加密、解密

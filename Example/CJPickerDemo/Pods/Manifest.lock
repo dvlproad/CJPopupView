@@ -16,18 +16,24 @@ PODS:
     - AFNetworking/NSURLSession
   - CJBaseHelper/AuthorizationCJHelper (0.1.4)
   - CJBaseHelper/NSObjectCJHelper (0.1.4)
-  - CJBaseUIKit/CJToast (0.4.6):
-    - MBProgressHUD
-  - CJBaseUIKit/UIImage (0.4.6)
-  - CJBaseUIKit/UIToolbar (0.4.6):
+  - CJBaseUIKit/UIColor (0.6.0)
+  - CJBaseUIKit/UIImage (0.6.0)
+  - CJBaseUIKit/UIToolbar (0.6.0):
     - CJBaseUIKit/UIImage
-  - CJBaseUIKit/UIView/CJPopupAction (0.4.6)
-  - CJComplexUIKit/CJCollectionView/CJBaseCollectionViewCell (0.2.3)
-  - CJComplexUIKit/CJCollectionView/MyEqualCellSizeCollectionView (0.2.3)
+  - CJBaseUIKit/UIView/CJPopupAction (0.6.0)
+  - CJBaseUtil/CJDataUtil (0.5.1)
   - CJFile/CJFileManager (0.0.9)
-  - CJNetwork/AFNetworkingUploadComponent (0.7.0-beta.7):
+  - CJImagePickerKit (0.0.3):
+    - CJImagePickerKit/CustomImagePickerController (= 0.0.3)
+    - CJImagePickerKit/SystemImagePickerController (= 0.0.3)
+  - CJImagePickerKit/CustomImagePickerController (0.0.3):
+    - Masonry
+    - MBProgressHUD
+  - CJImagePickerKit/SystemImagePickerController (0.0.3):
+    - Masonry
+  - CJNetwork/AFNetworkingUploadComponent (0.7.1-beta.1):
     - CJNetwork/CJNetworkCommon
-  - CJNetwork/CJNetworkCommon (0.7.0-beta.7):
+  - CJNetwork/CJNetworkCommon (0.7.1-beta.1):
     - AFNetworking
     - MJExtension
     - YYCache
@@ -35,44 +41,74 @@ PODS:
     - Masonry
     - MBProgressHUD
     - SDWebImage
-  - CJRadio (1.3.0):
-    - CJRadio/CJCycleComposeView (= 1.3.0)
-    - CJRadio/CJRadioButtonCycleComposeView (= 1.3.0)
-    - CJRadio/CJRadioButtons (= 1.3.0)
-  - CJRadio/CJCycleComposeView (1.3.0)
-  - CJRadio/CJRadioButtonCycleComposeView (1.3.0):
+  - CJRadio (1.4.0):
+    - CJRadio/CJCycleComposeView (= 1.4.0)
+    - CJRadio/CJRadioButtonCycleComposeView (= 1.4.0)
+    - CJRadio/CJRadioButtons (= 1.4.0)
+  - CJRadio/CJCycleComposeView (1.4.0)
+  - CJRadio/CJRadioButtonCycleComposeView (1.4.0):
     - CJRadio/CJCycleComposeView
     - CJRadio/CJRadioButtons
-  - CJRadio/CJRadioButtons (1.3.0)
-  - DateTools (2.0.0)
-  - JGActionSheet (1.0.5)
-  - Mantle (2.1.0):
-    - Mantle/extobjc (= 2.1.0)
-  - Mantle/extobjc (2.1.0)
+  - CJRadio/CJRadioButtons (1.4.0)
+  - CQDemoKit/BaseUtil (0.5.2)
+  - CQDemoKit/BaseVC (0.5.2):
+    - CQDemoKit/BaseVC/Base (= 0.5.2)
+    - CQDemoKit/BaseVC/Collection (= 0.5.2)
+    - CQDemoKit/BaseVC/ScrollView (= 0.5.2)
+    - CQDemoKit/BaseVC/TableView (= 0.5.2)
+    - CQDemoKit/BaseVC/TextView (= 0.5.2)
+  - CQDemoKit/BaseVC/Base (0.5.2):
+    - Masonry
+  - CQDemoKit/BaseVC/Collection (0.5.2):
+    - CJBaseUtil/CJDataUtil
+    - CQDemoKit/BaseVC/Base
+  - CQDemoKit/BaseVC/ScrollView (0.5.2):
+    - CQDemoKit/BaseVC/Base
+  - CQDemoKit/BaseVC/TableView (0.5.2):
+    - CJBaseUtil/CJDataUtil
+    - CQDemoKit/BaseVC/Base
+  - CQDemoKit/BaseVC/TextView (0.5.2):
+    - CJBaseUtil/CJDataUtil
+    - CQDemoKit/BaseUtil
+    - CQDemoKit/BaseVC/Base
+  - CQImagePickerKit (0.1.3):
+    - CJBaseUIKit/UIColor
+    - CQImagePickerKit/ImagePickerController (= 0.1.3)
+    - CQImagePickerKit/ImagePickerPermissionManager (= 0.1.3)
+    - Masonry
+  - CQImagePickerKit/ImagePickerController (0.1.3):
+    - CJBaseUIKit/UIColor
+    - CJImagePickerKit
+    - Masonry
+  - CQImagePickerKit/ImagePickerPermissionManager (0.1.3):
+    - CJBaseUIKit/UIColor
+    - Masonry
+  - Mantle (2.1.1):
+    - Mantle/extobjc (= 2.1.1)
+  - Mantle/extobjc (2.1.1)
   - Masonry (1.1.0)
-  - MBProgressHUD (1.1.0)
-  - MJExtension (3.0.16)
+  - MBProgressHUD (1.2.0)
+  - MJExtension (3.2.2)
   - PureLayout (3.0.2)
-  - SDWebImage (5.0.1):
-    - SDWebImage/Core (= 5.0.1)
-  - SDWebImage/Core (5.0.1)
+  - SDWebImage (5.8.4):
+    - SDWebImage/Core (= 5.8.4)
+  - SDWebImage/Core (5.8.4)
   - SVProgressHUD (2.2.5)
   - YYCache (1.0.4)
 
 DEPENDENCIES:
+  - AFNetworking (~> 3.2.1)
   - CJBaseHelper/AuthorizationCJHelper
   - CJBaseHelper/NSObjectCJHelper
-  - CJBaseUIKit/CJToast
   - CJBaseUIKit/UIToolbar
   - CJBaseUIKit/UIView/CJPopupAction
-  - CJComplexUIKit/CJCollectionView/CJBaseCollectionViewCell
-  - CJComplexUIKit/CJCollectionView/MyEqualCellSizeCollectionView
   - CJFile/CJFileManager
   - CJNetwork/AFNetworkingUploadComponent (~> 0.7.0-beta.7)
   - CJPhotoBrowser (from `../../`)
-  - CJRadio (~> 1.3.0)
-  - DateTools
-  - JGActionSheet
+  - CJRadio (~> 1.4.0)
+  - CQDemoKit/BaseUtil (~> 0.5.2)
+  - CQDemoKit/BaseVC (~> 0.5.2)
+  - CQImagePickerKit
   - Mantle
   - Masonry
   - MBProgressHUD
@@ -81,16 +117,18 @@ DEPENDENCIES:
   - SVProgressHUD
 
 SPEC REPOS:
+  https://gitee.com/dvlproad/dvlproadSpecs:
+    - CJImagePickerKit
+    - CQImagePickerKit
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - CJBaseHelper
     - CJBaseUIKit
-    - CJComplexUIKit
+    - CJBaseUtil
     - CJFile
     - CJNetwork
     - CJRadio
-    - DateTools
-    - JGActionSheet
+    - CQDemoKit
     - Mantle
     - Masonry
     - MBProgressHUD
@@ -107,23 +145,24 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   CJBaseHelper: dd715e18591da9df5d06364098300591220f0535
-  CJBaseUIKit: 91ac69f363c9346e083bce74d0ceadcd6a2c2f0a
-  CJComplexUIKit: 9d1b1219f2e1e04b468c2c78b01f6e8cec9a467b
+  CJBaseUIKit: d4945467678c73b872c7ddfb5367d4063ff28add
+  CJBaseUtil: 1bbf8d5f831dc12ae4bb06c8b5326bd39f3522e1
   CJFile: 6c1e6d55b3b94e8afbaa9f413f131301d15fdc48
-  CJNetwork: c5dc78713a8e65ae4022025e998f48c2fa11b72d
+  CJImagePickerKit: faa5ece60e82918caaa26fbd2a6b7b2a863c6968
+  CJNetwork: 44d3056c70d4f09eed7cce16aef8deb999400376
   CJPhotoBrowser: 2cc54a6af61680e28d11b593f0bf80740417109a
-  CJRadio: 327a49306e49ef9877a3a39c630e49ccb6c9580a
-  DateTools: 933ac9c490f21f92127cf690ccd8c397e0126caf
-  JGActionSheet: 2cfca820b57a11ec4b4a5655d45ee599fbeddc05
-  Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
+  CJRadio: d6bb98e614ae834a21801006537a046bb53c7c73
+  CQDemoKit: 94f6c3052a056481c0d79e2db5d50130d9e99a91
+  CQImagePickerKit: a85b405eb9502ef953eba359ac9c6ef0a7992fef
+  Mantle: 35238ae6f2e2b2d474fa7b67fee82a59fea71915
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
-  MJExtension: 54dbbf6ee728f1a88e9aad904353d007831c7847
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJExtension: d9b9c74cbdeb724c1e9ecbb157b318276e62e876
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
-  SDWebImage: 27dd2c9ea07a2252f94557c9fbb6105ee94b74c9
+  SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
 
-PODFILE CHECKSUM: 4073ef49891f090a84609e79103aba0375c2a978
+PODFILE CHECKSUM: 9317990da2784fc32d7b3db3c5f0a3fc64b5024d
 
 COCOAPODS: 1.9.3

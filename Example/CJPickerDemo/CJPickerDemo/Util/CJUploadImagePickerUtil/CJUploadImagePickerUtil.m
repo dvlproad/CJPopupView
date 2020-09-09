@@ -15,9 +15,9 @@
 @implementation CJUploadImagePickerUtil
 
 /* 完整的描述请参见文件头部 */
-+ (CQSystemImagePickerController *)takePhotoPickerWithPickCompleteBlock:(void (^)(NSArray<CJImageUploadFileModelsOwner *> *pickedImageItems))pickImageCompleteBlock
++ (CJSystemImagePickerController *)takePhotoPickerWithPickCompleteBlock:(void (^)(NSArray<CJImageUploadFileModelsOwner *> *pickedImageItems))pickImageCompleteBlock
 {
-    CQSystemImagePickerController *singleImagePickerController = [[CQSystemImagePickerController alloc] init];
+    CJSystemImagePickerController *singleImagePickerController = [[CJSystemImagePickerController alloc] init];
     [singleImagePickerController setSingleMediaTypeForVideo:NO];
     singleImagePickerController.saveLocation = CJSaveLocationNone;
     [singleImagePickerController pickImageFinishBlock:^(UIImage *image)

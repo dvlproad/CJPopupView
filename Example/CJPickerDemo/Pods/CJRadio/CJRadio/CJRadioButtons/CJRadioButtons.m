@@ -104,11 +104,11 @@ typedef NS_ENUM(NSUInteger, RadioButtonPositionType) {
     NSMutableArray *radioButtons = [[NSMutableArray alloc] init];
     UIView *lastView = nil;
     for (NSInteger index = 0; index < componentCount; index++) {
-        CJButton *radioButton = [self.dataSource cj_radioButtons:self cellForComponentAtIndex:index];
+        CJRadioButton *radioButton = [self.dataSource cj_radioButtons:self cellForComponentAtIndex:index];
         radioButton.index = index;
         
         __weak typeof(self)weakSelf = self;
-        [radioButton setTapAction:^(CJButton *radioButton) {
+        [radioButton setTapAction:^(CJRadioButton *radioButton) {
             [weakSelf clickRadioButton:radioButton];
         }];
         
@@ -132,7 +132,7 @@ typedef NS_ENUM(NSUInteger, RadioButtonPositionType) {
             UIView *separateLineView = [[UIView alloc] initWithFrame:CGRectZero];
             separateLineView.backgroundColor = [UIColor lightGrayColor];
             
-            CJButton *radioButton = [radioButtons objectAtIndex:index];
+            CJRadioButton *radioButton = [radioButtons objectAtIndex:index];
             [self cj_addSubView:separateLineView toSuperView:self.scrollView afterCurrentView:radioButton withWidth:1];
         }
     }
@@ -205,7 +205,7 @@ typedef NS_ENUM(NSUInteger, RadioButtonPositionType) {
 
 
 //注意radioButton_cur经常有未选中的状态，即经常会有self.currentSelectedIndex == -1的情况
-- (void)clickRadioButton:(CJButton *)radioButton_cur {
+- (void)clickRadioButton:(CJRadioButton *)radioButton_cur {
     NSInteger index_old = self.currentSelectedIndex;
     NSInteger index_cur = radioButton_cur.index;
     
@@ -222,7 +222,7 @@ typedef NS_ENUM(NSUInteger, RadioButtonPositionType) {
             }
             
         }else{              //③、如果有选中,且点击不同index的话，则还需要把之前的那个按钮的状态也改变掉。
-            CJButton *radioButton_old = [self.radioButtons objectAtIndex:index_old];
+            CJRadioButton *radioButton_old = [self.radioButtons objectAtIndex:index_old];
             radioButton_old.selected = !radioButton_old.selected;
             
             radioButton_cur.selected = !radioButton_cur.selected;
@@ -266,14 +266,14 @@ typedef NS_ENUM(NSUInteger, RadioButtonPositionType) {
 
 /** 完整的描述请参见文件头部 */
 - (void)changeCurrentRadioButtonStateAndTitle:(NSString *)title {
-    CJButton *radioButton_cur = [self.radioButtons objectAtIndex:self.currentSelectedIndex];
+    CJRadioButton *radioButton_cur = [self.radioButtons objectAtIndex:self.currentSelectedIndex];
     radioButton_cur.selected = !radioButton_cur.selected;
     [radioButton_cur setTitle:title];
 }
 
 /** 完整的描述请参见文件头部 */
 - (void)changeCurrentRadioButtonState {
-    CJButton *radioButton_cur = [self.radioButtons objectAtIndex:self.currentSelectedIndex];
+    CJRadioButton *radioButton_cur = [self.radioButtons objectAtIndex:self.currentSelectedIndex];
     radioButton_cur.selected = !radioButton_cur.selected;
 }
 
@@ -390,10 +390,10 @@ typedef NS_ENUM(NSUInteger, RadioButtonPositionType) {
 - (void)leftArrowButtonAction:(UIButton *)sender {
     CGFloat contentOffsetX = self.scrollView.contentOffset.x;
     
-    CJButton *targetRadioButton = nil;
+    CJRadioButton *targetRadioButton = nil;
     NSInteger count = self.radioButtons.count;
     for (NSInteger i = 0; i < count; i++) { //从第一个开始找，找到的第一个即是所求
-        CJButton *radioButton = [self.radioButtons objectAtIndex:i];
+        CJRadioButton *radioButton = [self.radioButtons objectAtIndex:i];
         
         /* 确保”要找的按钮“的左侧至少在显示的“左侧箭头的最右侧值”之左 */
         CGFloat minShowX = CGRectGetMinX(radioButton.frame) - contentOffsetX;
@@ -423,10 +423,10 @@ typedef NS_ENUM(NSUInteger, RadioButtonPositionType) {
 - (void)rightArrowButtonAction:(UIButton *)sender {
     CGFloat contentOffsetX = self.scrollView.contentOffset.x;
     
-    CJButton *targetRadioButton = nil;
+    CJRadioButton *targetRadioButton = nil;
     NSInteger count = self.radioButtons.count;
     for (NSInteger i = 0; i < count; i++) {   //从最后一个开始找，找到的第一个即是所求
-        CJButton *radioButton = [self.radioButtons objectAtIndex:i];
+        CJRadioButton *radioButton = [self.radioButtons objectAtIndex:i];
         
         /* 确保”要找的按钮“的左侧至少在显示的屏幕的最左侧之右 */
         CGFloat minShowX = CGRectGetMinX(radioButton.frame) - contentOffsetX;
@@ -462,11 +462,11 @@ typedef NS_ENUM(NSUInteger, RadioButtonPositionType) {
         _currentSelectedIndex = index_cur;
         
         if (index_old != -1) {
-            CJButton *radioButton_old = [self.radioButtons objectAtIndex:self.oldSelectedIndex];
+            CJRadioButton *radioButton_old = [self.radioButtons objectAtIndex:self.oldSelectedIndex];
             radioButton_old.selected = NO;
         }
         
-        CJButton *radioButton_cur = [self.radioButtons objectAtIndex:self.currentSelectedIndex];
+        CJRadioButton *radioButton_cur = [self.radioButtons objectAtIndex:self.currentSelectedIndex];
         radioButton_cur.selected = YES;
         
         [self moveScrollViewToItem:radioButton_cur
@@ -735,7 +735,7 @@ typedef NS_ENUM(NSUInteger, RadioButtonPositionType) {
 - (void)scollToCurrentSelectedViewWithAnimated:(BOOL)animated {
     /* 如果初始有默认选择哪个按钮，则滑动到该按钮位置 */
     if (self.currentSelectedIndex != -1) {
-        CJButton *targetRadioButton = [self.radioButtons objectAtIndex:self.currentSelectedIndex];
+        CJRadioButton *targetRadioButton = [self.radioButtons objectAtIndex:self.currentSelectedIndex];
         
         [self moveScrollViewToItem:targetRadioButton
                      accordingToPositionType:RadioButtonPositionTypeMiddle
@@ -751,7 +751,7 @@ typedef NS_ENUM(NSUInteger, RadioButtonPositionType) {
  *  @param selectedIt           是否选中
  *  @param animated             是否动画
  */
-- (void)moveScrollViewToItem:(CJButton *)targetRadioButton
+- (void)moveScrollViewToItem:(CJRadioButton *)targetRadioButton
      accordingToPositionType:(RadioButtonPositionType)positionType
                andSelectedIt:(BOOL)selectedIt
                     animated:(BOOL)animated
