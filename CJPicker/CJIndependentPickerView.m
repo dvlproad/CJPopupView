@@ -68,7 +68,7 @@
                                      toItem:nil
                                   attribute:NSLayoutAttributeNotAnAttribute
                                  multiplier:1
-                                   constant:216]];  //UIDatePicker默认216的高
+                                   constant:216]];  //UIPickerView默认216的高
     
     [self addConstraint:
      [NSLayoutConstraint constraintWithItem:pickerView
