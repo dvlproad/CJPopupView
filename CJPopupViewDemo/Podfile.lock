@@ -1,0 +1,66 @@
+PODS:
+  - CJPhotoBrowser (0.1.0):
+    - Masonry
+    - MBProgressHUD
+    - SDWebImage
+  - CJPopupView (2.1.0):
+    - CJPopupView/CJMaskGuideHUD (= 2.1.0)
+    - CJPopupView/CJMaskGuideView (= 2.1.0)
+    - CJPopupView/CJPopoverView (= 2.1.0)
+  - CJPopupView/CJMaskGuideHUD (2.1.0)
+  - CJPopupView/CJMaskGuideView (2.1.0)
+  - CJPopupView/CJPopoverView (2.1.0)
+  - CQDemoKit/BaseUtil (0.5.6)
+  - CQDemoKit/BaseVC (0.5.6):
+    - CQDemoKit/BaseVC/Base (= 0.5.6)
+    - CQDemoKit/BaseVC/Collection (= 0.5.6)
+    - CQDemoKit/BaseVC/ScrollView (= 0.5.6)
+    - CQDemoKit/BaseVC/TableView (= 0.5.6)
+    - CQDemoKit/BaseVC/TextView (= 0.5.6)
+  - CQDemoKit/BaseVC/Base (0.5.6):
+    - Masonry
+  - CQDemoKit/BaseVC/Collection (0.5.6):
+    - CQDemoKit/BaseVC/Base
+  - CQDemoKit/BaseVC/ScrollView (0.5.6):
+    - CQDemoKit/BaseVC/Base
+  - CQDemoKit/BaseVC/TableView (0.5.6):
+    - CQDemoKit/BaseVC/Base
+  - CQDemoKit/BaseVC/TextView (0.5.6):
+    - CQDemoKit/BaseUtil
+    - CQDemoKit/BaseVC/Base
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.2.0)
+  - SDWebImage (5.9.4):
+    - SDWebImage/Core (= 5.9.4)
+  - SDWebImage/Core (5.9.4)
+
+DEPENDENCIES:
+  - CJPhotoBrowser (from `../`)
+  - CJPopupView (from `../`)
+  - CQDemoKit/BaseUtil (~> 0.5.6)
+  - CQDemoKit/BaseVC (~> 0.5.6)
+
+SPEC REPOS:
+  trunk:
+    - CQDemoKit
+    - Masonry
+    - MBProgressHUD
+    - SDWebImage
+
+EXTERNAL SOURCES:
+  CJPhotoBrowser:
+    :path: "../"
+  CJPopupView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CJPhotoBrowser: 2cc54a6af61680e28d11b593f0bf80740417109a
+  CJPopupView: c7685f6a0225a89c72d97ea946f2816b5442abaf
+  CQDemoKit: 07874548bcda546e1c4d714cd73b66fd9207a707
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  SDWebImage: b69257f4ab14e9b6a2ef53e910fdf914d8f757c1
+
+PODFILE CHECKSUM: 96336f98af63a43bf76bc83671c1db024435b96e
+
+COCOAPODS: 1.10.0

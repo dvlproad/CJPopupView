@@ -1,1 +1,0 @@
-../../../../../../CJPhotoBrowser/CJAlumbViewController/CJAlumbViewController.h
