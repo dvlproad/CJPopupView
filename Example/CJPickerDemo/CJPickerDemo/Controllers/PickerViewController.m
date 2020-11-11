@@ -31,12 +31,6 @@
 }
 
 
-/// 生日选择
-- (IBAction)chooseBirthday:(id)sender{
-    [[[UIAlertView alloc]initWithTitle:@"请在AppCommonUICollect工程中查看" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
-}
-
-
 /// 地区选择
 - (IBAction)chooseArea:(id)sender{
     if (areaPicker == nil) {

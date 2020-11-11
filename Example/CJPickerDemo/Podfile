@@ -5,16 +5,12 @@ source 'https://github.com/CocoaPods/Specs.git'
 source 'https://gitee.com/dvlproad/dvlproadSpecs'
 
 target 'CJPickerDemo' do
-  pod 'CQDemoKit',            '~> 0.5.2',     :subspecs => ['BaseVC', 'BaseUtil']
+  pod 'CQDemoKit',            '~> 0.5.6',     :subspecs => ['BaseVC', 'BaseUtil']
   
   pod 'CJPhotoBrowser',      :path => '../../’
-  pod 'CJImagePickerKit/SystemImagePickerController'
   
     #基本的第三方库
     pod 'Masonry'
-    pod 'Mantle'
-    pod 'MBProgressHUD'
-    pod 'SVProgressHUD'
     pod 'SDWebImage'
     
     pod 'CJRadio', '~> 1.4.0'
@@ -24,14 +20,6 @@ target 'CJPickerDemo' do
 #    pod 'CJBaseUIKit', :subspecs => ['UIColor', 'UIButton', 'UITextField', 'CJToast', 'CJAlert']
     pod 'CJBaseUIKit', :subspecs => ['UIToolbar', 'UIView/CJPopupAction']
     pod 'CJBaseHelper', :subspecs => ['NSObjectCJHelper', 'AuthorizationCJHelper']
-    
-    pod 'PureLayout', '~> 3.0.2'
-    
-    
-    # CJMedia 库中的 CJUploadImagePickerUtil 需要依赖的库
-    pod 'CJNetwork/AFNetworkingUploadComponent', '~> 0.7.0-beta.7'
-    pod 'AFNetworking', '~> 3.2.1'
-    pod 'CJFile/CJFileManager'
 end
 
 target 'CJPickerDemoTests' do

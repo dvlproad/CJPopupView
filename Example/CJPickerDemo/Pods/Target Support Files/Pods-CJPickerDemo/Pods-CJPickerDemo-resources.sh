@@ -113,7 +113,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/CJRadio/CJRadio/CJRadioButtons/Resources/arrowRight_gray@2x.png"
   install_resource "${PODS_ROOT}/CJRadio/CJRadio/CJRadioButtons/Resources/arrowRight_red@2x.png"
   install_resource "${PODS_ROOT}/CJRadio/CJRadio/CJRadioButtons/Resources/arrowUp_white@2x.png"
-  install_resource "${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_ROOT}/../../../CJPhotoBrowser/CJPhotoBrowser/CJPhotoBrowser.bundle/error.png"
@@ -132,7 +131,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_ROOT}/CJRadio/CJRadio/CJRadioButtons/Resources/arrowRight_gray@2x.png"
   install_resource "${PODS_ROOT}/CJRadio/CJRadio/CJRadioButtons/Resources/arrowRight_red@2x.png"
   install_resource "${PODS_ROOT}/CJRadio/CJRadio/CJRadioButtons/Resources/arrowUp_white@2x.png"
-  install_resource "${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
