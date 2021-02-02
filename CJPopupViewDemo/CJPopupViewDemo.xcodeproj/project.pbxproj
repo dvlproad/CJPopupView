@@ -21,17 +21,6 @@
 		784B7DB31E7FB03400299457 /* CJPopupViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B7DB21E7FB03400299457 /* CJPopupViewDemoTests.m */; };
 		784B7DBE1E7FB03400299457 /* CJPopupViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B7DBD1E7FB03400299457 /* CJPopupViewDemoUITests.m */; };
 		784B7DE61E7FBAAE00299457 /* image1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 784B7DE51E7FBAAE00299457 /* image1@2x.png */; };
-		784B7E101E8191C700299457 /* op1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 784B7E0A1E8191C700299457 /* op1.jpg */; };
-		784B7E111E8191C700299457 /* op2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 784B7E0B1E8191C700299457 /* op2.jpg */; };
-		784B7E121E8191C700299457 /* op3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 784B7E0C1E8191C700299457 /* op3.jpg */; };
-		784B7E131E8191C700299457 /* op4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 784B7E0D1E8191C700299457 /* op4.jpg */; };
-		784B7E141E8191C700299457 /* op5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 784B7E0E1E8191C700299457 /* op5.jpg */; };
-		784B7E151E8191C700299457 /* op6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 784B7E0F1E8191C700299457 /* op6.jpg */; };
-		78E57F061E9DD1E6002CDB9F /* CustomMaskGuideHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E57EF81E9DD1E6002CDB9F /* CustomMaskGuideHUD.m */; };
-		78E57F071E9DD1E6002CDB9F /* MaskGuideHUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E57EFA1E9DD1E6002CDB9F /* MaskGuideHUDViewController.m */; };
-		78E57F081E9DD1E6002CDB9F /* MaskGuideHUDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78E57EFB1E9DD1E6002CDB9F /* MaskGuideHUDViewController.xib */; };
-		78E57F091E9DD1E6002CDB9F /* SubGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E57EFD1E9DD1E6002CDB9F /* SubGuideView.m */; };
-		78E57F0A1E9DD1E6002CDB9F /* SubGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78E57EFE1E9DD1E6002CDB9F /* SubGuideView.xib */; };
 		78E57F0B1E9DD1E6002CDB9F /* PopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E57F011E9DD1E6002CDB9F /* PopoverViewController.m */; };
 		78E57F0C1E9DD1E6002CDB9F /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78E57F021E9DD1E6002CDB9F /* PopoverViewController.xib */; };
 		78E57F111E9DD319002CDB9F /* AlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E57F0F1E9DD319002CDB9F /* AlertViewController.m */; };
@@ -86,20 +75,6 @@
 		784B7DBD1E7FB03400299457 /* CJPopupViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CJPopupViewDemoUITests.m; sourceTree = "<group>"; };
 		784B7DBF1E7FB03400299457 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		784B7DE51E7FBAAE00299457 /* image1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image1@2x.png"; sourceTree = "<group>"; };
-		784B7E0A1E8191C700299457 /* op1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = op1.jpg; sourceTree = "<group>"; };
-		784B7E0B1E8191C700299457 /* op2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = op2.jpg; sourceTree = "<group>"; };
-		784B7E0C1E8191C700299457 /* op3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = op3.jpg; sourceTree = "<group>"; };
-		784B7E0D1E8191C700299457 /* op4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = op4.jpg; sourceTree = "<group>"; };
-		784B7E0E1E8191C700299457 /* op5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = op5.jpg; sourceTree = "<group>"; };
-		784B7E0F1E8191C700299457 /* op6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = op6.jpg; sourceTree = "<group>"; };
-		78E57EF71E9DD1E6002CDB9F /* CustomMaskGuideHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomMaskGuideHUD.h; sourceTree = "<group>"; };
-		78E57EF81E9DD1E6002CDB9F /* CustomMaskGuideHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomMaskGuideHUD.m; sourceTree = "<group>"; };
-		78E57EF91E9DD1E6002CDB9F /* MaskGuideHUDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskGuideHUDViewController.h; sourceTree = "<group>"; };
-		78E57EFA1E9DD1E6002CDB9F /* MaskGuideHUDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaskGuideHUDViewController.m; sourceTree = "<group>"; };
-		78E57EFB1E9DD1E6002CDB9F /* MaskGuideHUDViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MaskGuideHUDViewController.xib; sourceTree = "<group>"; };
-		78E57EFC1E9DD1E6002CDB9F /* SubGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubGuideView.h; sourceTree = "<group>"; };
-		78E57EFD1E9DD1E6002CDB9F /* SubGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubGuideView.m; sourceTree = "<group>"; };
-		78E57EFE1E9DD1E6002CDB9F /* SubGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubGuideView.xib; sourceTree = "<group>"; };
 		78E57F001E9DD1E6002CDB9F /* PopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverViewController.h; sourceTree = "<group>"; };
 		78E57F011E9DD1E6002CDB9F /* PopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverViewController.m; sourceTree = "<group>"; };
 		78E57F021E9DD1E6002CDB9F /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
@@ -221,12 +196,6 @@
 			children = (
 				7836593F1ED06AD900AF7591 /* IMMaskButton@2x.png */,
 				784B7DE51E7FBAAE00299457 /* image1@2x.png */,
-				784B7E0A1E8191C700299457 /* op1.jpg */,
-				784B7E0B1E8191C700299457 /* op2.jpg */,
-				784B7E0C1E8191C700299457 /* op3.jpg */,
-				784B7E0D1E8191C700299457 /* op4.jpg */,
-				784B7E0E1E8191C700299457 /* op5.jpg */,
-				784B7E0F1E8191C700299457 /* op6.jpg */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -237,25 +206,9 @@
 				783659411ED06AE200AF7591 /* CJMaskGuideViewDemo */,
 				78E57F131E9DD4E4002CDB9F /* SheetDemo */,
 				78E57F0D1E9DD236002CDB9F /* AlertDemo */,
-				78E57EF61E9DD1E6002CDB9F /* CJMaskGuideHUDDemo */,
 				78E57EFF1E9DD1E6002CDB9F /* CJPopoverViewDemo */,
 			);
 			path = Demos;
-			sourceTree = "<group>";
-		};
-		78E57EF61E9DD1E6002CDB9F /* CJMaskGuideHUDDemo */ = {
-			isa = PBXGroup;
-			children = (
-				78E57EF71E9DD1E6002CDB9F /* CustomMaskGuideHUD.h */,
-				78E57EF81E9DD1E6002CDB9F /* CustomMaskGuideHUD.m */,
-				78E57EF91E9DD1E6002CDB9F /* MaskGuideHUDViewController.h */,
-				78E57EFA1E9DD1E6002CDB9F /* MaskGuideHUDViewController.m */,
-				78E57EFB1E9DD1E6002CDB9F /* MaskGuideHUDViewController.xib */,
-				78E57EFC1E9DD1E6002CDB9F /* SubGuideView.h */,
-				78E57EFD1E9DD1E6002CDB9F /* SubGuideView.m */,
-				78E57EFE1E9DD1E6002CDB9F /* SubGuideView.xib */,
-			);
-			path = CJMaskGuideHUDDemo;
 			sourceTree = "<group>";
 		};
 		78E57EFF1E9DD1E6002CDB9F /* CJPopoverViewDemo */ = {
@@ -420,22 +373,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				784B7E101E8191C700299457 /* op1.jpg in Resources */,
 				783659461ED06AE200AF7591 /* NewerGuideViewController.xib in Resources */,
-				78E57F081E9DD1E6002CDB9F /* MaskGuideHUDViewController.xib in Resources */,
-				784B7E121E8191C700299457 /* op3.jpg in Resources */,
 				784B7DA81E7FB03300299457 /* LaunchScreen.storyboard in Resources */,
 				783659401ED06AD900AF7591 /* IMMaskButton@2x.png in Resources */,
-				784B7E111E8191C700299457 /* op2.jpg in Resources */,
 				784B7DA51E7FB03300299457 /* Assets.xcassets in Resources */,
 				78E57F181E9DD509002CDB9F /* SheetViewController.xib in Resources */,
-				784B7E151E8191C700299457 /* op6.jpg in Resources */,
 				784B7DA31E7FB03300299457 /* Main.storyboard in Resources */,
-				784B7E141E8191C700299457 /* op5.jpg in Resources */,
 				784B7DE61E7FBAAE00299457 /* image1@2x.png in Resources */,
-				78E57F0A1E9DD1E6002CDB9F /* SubGuideView.xib in Resources */,
 				78E57F121E9DD319002CDB9F /* AlertViewController.xib in Resources */,
-				784B7E131E8191C700299457 /* op4.jpg in Resources */,
 				78E57F0C1E9DD1E6002CDB9F /* PopoverViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -556,11 +501,8 @@
 				784B7DA01E7FB03300299457 /* ViewController.m in Sources */,
 				784B7D9D1E7FB03300299457 /* AppDelegate.m in Sources */,
 				781F242F20066119007429AB /* PopoverView.m in Sources */,
-				78E57F071E9DD1E6002CDB9F /* MaskGuideHUDViewController.m in Sources */,
-				78E57F091E9DD1E6002CDB9F /* SubGuideView.m in Sources */,
 				78E57F0B1E9DD1E6002CDB9F /* PopoverViewController.m in Sources */,
 				784B7D9A1E7FB03300299457 /* main.m in Sources */,
-				78E57F061E9DD1E6002CDB9F /* CustomMaskGuideHUD.m in Sources */,
 				783659451ED06AE200AF7591 /* NewerGuideViewController.m in Sources */,
 				78E57F111E9DD319002CDB9F /* AlertViewController.m in Sources */,
 			);

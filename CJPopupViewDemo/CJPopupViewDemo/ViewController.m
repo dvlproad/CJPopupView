@@ -14,7 +14,6 @@
 #import "PopoverViewController.h"
 
 #import "NewerGuideViewController.h"
-#import "MaskGuideHUDViewController.h"
 
 @interface ViewController ()
 
@@ -45,11 +44,6 @@
 
 - (IBAction)goNewerGuideViewController:(id)sender {
     NewerGuideViewController *viewController = [[NewerGuideViewController alloc] initWithNibName:@"NewerGuideViewController" bundle:nil];
-    [self.navigationController pushViewController:viewController animated:YES];
-}
-
-- (IBAction)goMaskGuideHUDViewController:(id)sender {
-    MaskGuideHUDViewController *viewController = [[MaskGuideHUDViewController alloc] initWithNibName:@"MaskGuideHUDViewController" bundle:nil];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
